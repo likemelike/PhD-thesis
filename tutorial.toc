@@ -1,0 +1,16 @@
+\contentsline {chapter}{\numberline {第一章}前言}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}当前版本编译时间}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {第二章}模板使用说明}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}图片}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}表格}{4}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}普通表格}{4}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}带附注表格}{6}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}跨页表格}{8}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}跨页带附注表格（2025.01.05）}{13}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}伪代码}{18}{section.2.3}%
+\contentsline {section}{\numberline {2.4}定义、公理、定理、命题、推论、引理、示例、假设、注、证明}{23}{section.2.4}%
+\contentsline {section}{\numberline {2.5}脚注}{24}{section.2.5}%
+\contentsline {section}{\numberline {2.6}模板中的各种编号}{24}{section.2.6}%
+\contentsline {chapter}{外文资料原文}{28}{chapter*.37}%
+\contentsline {chapter}{外文资料译文}{31}{chapter*.40}%
+\contentsfinish 

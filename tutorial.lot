@@ -1,0 +1,27 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\cftsetpnumwidth {\widthof {4}-1bp}
+\contentsline {table}{\numberline {2-1}{\ignorespaces $\backslash $cmidrule示例}}{4}{table.caption.11}%
+\cftsetpnumwidth {\widthof {5}-1bp}
+\contentsline {table}{\numberline {2-2}{\ignorespaces \textcolor {DodgerBlue}{\ttfamily 单元格三种水平对齐方式}}}{5}{table.caption.13}%
+\cftsetpnumwidth {\widthof {5}-1bp}
+\contentsline {table}{\numberline {2-3}{\ignorespaces \textcolor {DodgerBlue}{\ttfamily 单元格三种垂直对齐方式}}}{5}{table.caption.14}%
+\cftsetpnumwidth {\widthof {6}-1bp}
+\contentsline {table}{\numberline {2-4}{\ignorespaces 江湖势力背调}}{6}{table.caption.15}%
+\cftsetpnumwidth {\widthof {6}-1bp}
+\contentsline {table}{\numberline {2-5}{\ignorespaces 已习得武功}}{6}{table.caption.17}%
+\cftsetpnumwidth {\widthof {7}-1bp}
+\contentsline {table}{\numberline {2-6}{\ignorespaces 江湖势力背调（基于\textcolor {DodgerBlue}{\ttfamily $\backslash $puttablenotelabel}和\textcolor {DodgerBlue}{\ttfamily $\backslash $tablenoteref}）}}{7}{table.caption.19}%
+\cftsetpnumwidth {\widthof {8}}
+\contentsline {table}{\numberline {2-7}{\ignorespaces 中国计算机学会部分推荐期刊及会议}}{8}{table.2.7}%
+\cftsetpnumwidth {\widthof {11}}
+\contentsline {table}{\numberline {2-8}{\ignorespaces 中国计算机学会部分推荐期刊及会议简表（用于测试跨页表宽低于表题长度的情况）}}{11}{table.2.8}%
+\cftsetpnumwidth {\widthof {14}}
+\contentsline {table}{\numberline {2-9}{\ignorespaces 跨页带附注表格示例}}{14}{table.2.9}%
+\cftsetpnumwidth {\widthof {16}}
+\contentsline {table}{\numberline {2-10}{\ignorespaces 跨页带附注表格恰巧在附注开始处换页示例}}{16}{table.2.10}%
+\cftsetpnumwidth {\widthof {28}-1bp}
+\cftsetpnumwidth {\widthof {28}}
+\cftsetpnumwidth {\widthof {31}-1bp}
+\cftsetpnumwidth {\widthof {31}}
+\contentsfinish 

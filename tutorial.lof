@@ -1,0 +1,18 @@
+\cftsetpnumwidth {\widthof {IX}-1bp}
+\contentsline {figure}{\numberline {0-1}{\ignorespaces TeXstudio编译缩略词表的操作步骤}}{IX}{figure.caption.7}%
+\cftsetpnumwidth {\widthof {IX}-1bp}
+\contentsline {figure}{\numberline {0-2}{\ignorespaces VSCode手动编译缩略词表的操作步骤}}{IX}{figure.caption.8}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\cftsetpnumwidth {\widthof {2}-1bp}
+\contentsline {figure}{\numberline {2-1}{\ignorespaces 锁定仇人}}{2}{figure.caption.9}%
+\cftsetpnumwidth {\widthof {3}-1bp}
+\contentsline {figure}{\numberline {2-2}{\ignorespaces 撩妹是我杨过的被动技能。\subref {fig: 绿萼2}好腼腆的姑娘；\subref {fig: 杨过绿萼}你终于肯笑了；\subref {fig: GG}哦吼}}{3}{figure.caption.10}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{3}{subfigure.2.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{3}{subfigure.2.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{3}{subfigure.2.3}%
+\cftsetpnumwidth {\widthof {21}-1bp}
+\cftsetpnumwidth {\widthof {22}-1bp}
+\cftsetpnumwidth {\widthof {30}-1bp}
+\cftsetpnumwidth {\widthof {33}-1bp}
+\contentsfinish 
