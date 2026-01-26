@@ -1,0 +1,59 @@
+	% 封面示例————“双学位学士”以外的学位论文
+%	\uestccover[<学院名称排版风格>]{<论文题目>}{<学科专业>}{<学号>}{<作者姓名>}{<指导教师>}{<教师职称>}{<学院>} % 单学位学士、研究生通用
+\uestccover{}{}{}{}{}{}{}  % 空封面
+
+\uestccover{城市计算中的高效算法研究}
+            {计算机科学与技术}
+            {202211081351}
+            {李\hspace{1em}科}
+            {商  烁}
+            {教\hspace{1em}授}%{终南山古墓派}
+            {计算机科学与工程学院(网络空间安全学院)}  % 默认将过长的学院名称压缩至下划线宽度
+
+% \uestccover[par]{城市计算中的高效算法研究}
+% {计算机科学与技术}
+% {202211081351}
+% {李\hspace{1em}科}
+% {商  烁}
+% {教\hspace{1em}授}%{终南山古墓派}
+% {计算机科学与工程学院(网络空间安全学院)}  % par参数将过长学院名称换行排版，此参数必影响封面布局，无可避免
+
+
+% 中文扉页，仅研究生用
+\DegLv{}  % 清空文档类选项设置的<申请学位级别>
+\uestczhtitlepage  % 空白中文扉页
+
+\ClsNum{TN828.6}  % \ClsNum{<分类号>}
+\ClsLv{公开}  % \ClsLv{<密级>}
+\UDC{621.39}  % \UDC{<UDC号>}
+\DissertationTitle{城市计算中的高效算法研究}  % \DissertationTitle{<题名>}
+\Author{李科}  % \Author{<作者姓名>}
+\Supervisor{商烁}{教授}{}{}  % \Supervisor{<指导教师>}{<职称>}{<单位名称>}{<单位地址>}
+% 副导师信息，无则注释
+ % \AssociateSupervisor{<副导师名称>}{<职称}>{<单位名称>}{<单位地址>}
+\DegLv{西狂}  % \DegLv{<申请学位级别>}，该信息由文档类选项自动确定，需修改默认内容时使用，否则注释即可
+\Major{玉女素心剑法}  % \Major{<学科专业>}
+\Profield{剑道}  % \Profield{专业学位领域代码}，此为专业学位独有，学术学位用户注释即可
+\Date{1959年1月1日}{1961年1月1日}  % \Date{<论文提交日期>}{<论文答辩日期>}
+\Grant{中华武林}{1961年2月2日}  % \Grant{<学位授予单位>}{<学位授予日期>}
+\Reviewer{黄蓉}{}  % \Reviewer{<答辩委员为主席>}{<评阅人>}
+\uestczhtitlepage
+% \uestczhtitlepage[compress]  % 在compress选项下，“中文扉页”将自动压缩过长职称的字宽，使之不超出官方模板为该内容设定的长度
+
+
+% 英文扉页，仅研究生用
+% \uestcentitlepage{<文题>}{<专业>}{<学号>}{<作者>}{<导师>}{<副导师>}{<学院>}，若无副导师，则将“<副导师>”参数留空即可
+\uestcentitlepage{}{}{}{}{}{}{}  % 空白英文扉页
+\uestcentitlepage{How to Take Revenge When My Father's Murderer is Suspected to Be a Famous Hero}
+                {Jade Lady Soul Sword Technique Jade Lady Soul Sword Technique}
+                {1182000}
+                {Yang Guo}
+                {Grandmaster Dragondaughter Little}{Grandmaster Northern Beggar}
+                {Ancient Tomb Sect Ancient Tomb Sect Ancient Tomb Sect Ancient Tomb Sect}
+
+% 独创性声明：[<签名宽度>]{<日期>}{<作者签名图片1>}[<作者签名图片2 默认值为作者签名图片1>]{<导师签名图片>}，仅研究生用
+\declaration{}{}{}  % 空白独创性声明
+
+\declaration[3cm]{2024年08月31日}{authsign}{spvrsign}
+
+\declaration[3cm]{2024年08月31日}{authsign}[yangguo1]{spvrsign}

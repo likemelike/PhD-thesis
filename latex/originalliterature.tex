@@ -1,0 +1,115 @@
+%%%%%% 开启“外文资料原文”
+	%% \originalliterature{<外文标题>}{<外文作者>}
+	\originalliterature{How to Take Revenge When My Father's
+	Murderer is Suspected to Be a Famous Hero}{Yang Guo}
+
+	%% 这部分内容务必使用模板提供的首字母大写的标题命令生成对应的外文原文标题，
+	%% 否则，对应内容将出现在正文的目录和pdf的书签中，非常冗余。
+	%% 另外，可使用的各级标题有\Section{}、\Subsection{}、\Subsubsection{}，没有chapter
+
+	\textit{Abstract}——When Yang was a teenager, his mother contracted a disease and died, and he then lived a wandering life. When he met Guo Jing and his wife, they took care of him. However, due to the conflict between Yang and Guo Fu, Guo Jing sent him to learn martial arts in the Quanzhen Sect.
+
+	\textit{Index Terms}——Martial arts, apostasy, revenge, fighting against the enemy, martial arts, apostasy, revenge, fighting against the enemy
+
+	\Section{Introduction}
+
+	\begin{table}[htp]
+		\captionsetup{list=no}% 阻止此表格显示在表目录中
+		\caption{Example of a table}
+		\begin{tabular}{ccccc}
+			\toprule
+			\multirow{2}{*}{Column0} &  \multicolumn{2}{c}{Column1\tnote{1}} & \multicolumn{2}{c}{Column2\tnote{2}} \\
+			\cmidrule(lr){2-3}\cmidrule(l){4-5}
+			~     & subcolumn1 & subcolumn2 & subcolumn1 & subcolumn2 \\
+			\midrule
+			Row1  & element11 & element12 &element13 & element14 \\
+			Row2  & element21 & element22 &element23 & element24 \\
+			\cmidrule{2-3}\cmidrule{4-5}
+			Row3  & element31 & element32 &element33 & element34 \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+
+
+	\Subsection{Contributions}
+
+
+	\Subsubsection{While while while}
+
+	\begin{longtable}{p{2em} p{6em}}
+		\captionsetup{list=no}% 阻止此表格显示在表目录中
+		\caption{Recommended journals and conferences}\\
+		
+		\toprule
+		\textbf{Num} & \textbf{Abbreviation} \\
+		\midrule
+		\endfirsthead
+		
+		% 在这里设计首页以外的表题和表头
+		\CPcaption{2}{Recommended journals and conferences}\\
+		\toprule
+		\textbf{Num} & \textbf{Abbreviation} \\
+		\midrule
+		\endhead
+		
+		% 在这里设计首页以外的表尾
+		\bottomrule
+		\multicolumn{2}{l}{to next page} \\  % 如不希望跨页表尾显示任何内容则注释掉即可
+		\endfoot
+		
+		\bottomrule
+		\endlastfoot
+		
+		1 & JSAC \\
+		2 & TMC \\
+		3 & TON \\
+	\end{longtable}
+	
+	\Section{Related works}
+
+	
+	\Section{System model}
+
+	%% 在“外文资料原文”部分，排版定义、公理、定理、命题、推论、引理、示例、假设需使用对应首字母大写的环境，如下所示
+
+	
+	\Section{Algorithm design}
+
+	\begin{algo}[!h](8em)
+		\caption{Example of an algorithm}
+		\Input{1) input1; 2) input2.}
+		\Output{result.}
+
+		Pseudocode line 1.
+		
+		\For(\tcc*[f]{for note 1}){Condition 1}{
+			Pseudocode line 2.
+			
+			\tcp{note 2}
+			Pseudocode line 3.
+			
+			\DoWhile(\tcc*[f]{while note 3}){Condition 2}{
+				Pseudocode line 4.
+			}
+			
+			\tcc{loop cycle}
+			\Loop(\tcc*[f]{note 4}){
+				cycle body 1.
+			}
+			
+			\Repeat(\tcc*[f]{repeat note 5}){Condition 3}{
+				cycle body 2.
+			}
+			\eIf(\tcc*[f]{if note 6}){Condition 6}{
+				when true，Pseudocode line 5.
+			}{
+				when false，Pseudocode line 6.\tcp*[f]{repeat cycle}
+			}
+		}
+		\textbf{return} result.
+	\end{algo}
+	
+	\Section{Experiments}
+
+	
+	\Section{Conclusions}
