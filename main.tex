@@ -1,0 +1,54 @@
+% !TEX Program = xelatex
+\documentclass[doctor, vlined]{DissertUESTC}
+
+\begin{document}
+	% 以下两条命令为高亮示例文档中的关键内容而设，正式撰写时切不可使用
+	\newcommand{\shad}[1]{\textcolor{DodgerBlue}{\ttfamily #1}}
+	\newcommand{\shadcmd}[1]{\shad{$\backslash$#1}}
+	% 下方命令允许跨页排版包含多个行间公式的公式组，可选参数可取值为1,2,3,4，越大表示跨页倾向越高
+	% \allowdisplaybreaks[3]
+	% 当论文中某节的内容接近填满页面且其下紧随几项标题时，LaTeX更倾向于在后续的标题前分页，并且纵向拉伸当前页内容的段间距，以实现纵向分散对齐，也就是很多人在问的现象。这是LaTeX特性。
+	% 出现这种情况的本质原因是用户的内容，尤其是在页面中有些图、表、标题的时候，它们的高度很可能不是正文行距的整数倍，那必然就会出现这种问题。
+	% 如果你觉得Word从上到下直接堆叠内容，然后在页尾留下明显空白的处理方式更合你意，那就使用下方的\raggedbottom命令
+	% \raggedbottom  % 此命令可让LaTeX像Word那样直接堆叠页面内容，而不再默认拉伸段间距，代价是页尾可能会有明显空白
+
+	% \input{latex/00_cover.tex}
+	% \input{latex/01_abstract.tex}
+	
+	\tableofcontents  % 主目录，必要
+	\listoffigures  % 图多则放，反之不放
+	\listoftables  % 表多则放，反之不放
+	\listofsymbs  % 生成主要符号表标题，需要额外维护符号表内容
+	
+	% \input{latex/02_symbols.tex}
+
+	\chapter{前截断章节} %删除前检查是否存在前截断章节
+	\section{当前版本编译时间}
+	\noindent%
+	\begin{center}%
+		\zihao{-2}\bfseries\color{DarkRed}%
+		\zhdigits*{\the\year} 年\zhnumber{\the\month} 月\zhnumber{\the\day} 日\;\xxivtime
+	\end{center}
+
+	% \input{latex/instruction.tex}
+	\input{latex/1_background.tex}
+	\input{latex/2_relatedwork.tex}
+	\input{latex/3_routesearch.tex}
+	\input{latex/4_comovement.tex}
+	\input{latex/5_contact.tex}
+
+	\chapter{后截断章节} %删除前检查是否存在后截断章节
+
+	\acknowledgement
+
+	%% 参考文献部分
+	\nocite{*}% 为了便于在示例文档中展示参考文献而设，正式撰写时需要注释掉
+	% \bibliographystyle{DissertUESTC}% 自v25.03.12版本后，参考文献风格文件由用户设定的论文类型选项自动确定，无需在此手动设置
+	\bibliography{ref}
+
+	% \input{latex/appendix.tex}
+	\input{latex/achivement.tex}
+	% \input{latex/originalliterature.tex}
+	% \input{latex/translatedliterature.tex}
+	
+\end{document}

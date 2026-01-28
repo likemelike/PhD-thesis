@@ -1,0 +1,31 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\cftsetpnumwidth {\widthof {4}-1bp}
+\contentsline {figure}{\numberline {4-1}{\ignorespaces 行程请求和路线}}{4}{figure.caption.5}%
+\contentsline {figure}{\numberline {4-2}{\ignorespaces 行程请求数目$|Q|$的影响}}{16}{figure.caption.10}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {NY}}}{16}{subfigure.2.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {NY}}}{16}{subfigure.2.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {TG}}}{16}{subfigure.2.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {TG}}}{16}{subfigure.2.4}%
+\contentsline {figure}{\numberline {4-3}{\ignorespaces 行程请求到达速率的影响}}{16}{figure.caption.11}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {CPU time}}}{16}{subfigure.3.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Travel time}}}{16}{subfigure.3.2}%
+\contentsline {figure}{\numberline {4-4}{\ignorespaces 参数 $\alpha $ \& $\beta $的影响}}{17}{figure.caption.12}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {CPU time}}}{17}{subfigure.4.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Travel time}}}{17}{subfigure.4.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {CPU time}}}{17}{subfigure.4.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Travel time}}}{17}{subfigure.4.4}%
+\contentsline {figure}{\numberline {4-5}{\ignorespaces 批优化时间间隔T的影响}}{17}{figure.caption.13}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {CPU time}}}{17}{subfigure.5.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Travel time}}}{17}{subfigure.5.2}%
+\cftsetpnumwidth {\widthof {19}-1bp}
+\contentsline {figure}{\numberline {4-6}{\ignorespaces 参数$\epsilon $和预检查策略的影响 \subref {fig5:a} CPU运行时间；\subref {fig5:b} 通行时间；\subref {fig5:a} 预先检查策略的影响评估 }}{19}{figure.caption.14}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{19}{subfigure.6.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{19}{subfigure.6.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{19}{subfigure.6.3}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsfinish 

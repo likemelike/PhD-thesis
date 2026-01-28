@@ -1,0 +1,124 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{教育部国家语言文字工作委员2018}
+教育部国家语言文字工作委员.
+\newblock 通用规范汉字[M].
+\newblock 北京: 语文出版社, 2018.
+
+\bibitem{学位论文编写规范555}
+全国信息与文献标准化技术委员.
+\newblock 学位论文编写规范: GB/T 7713.1-2006[S].
+\newblock 北京: 中国标准出版社, 2007: 17-20.
+
+\bibitem{王晓琰2019关于连续出版会议论文著录格式的探讨}
+王晓琰, 殷建芳, 王晓峰, 等.
+\newblock 关于连续出版会议论文著录格式的探讨[J].
+\newblock 学报编辑丛论, 2019, (0): 162-165.
+
+\bibitem{hu2014domain}
+Hu J, Zhao R, Tian M, et~al.
+\newblock Domain decomposition method based on integral equation for solution of scattering from very thin, conducting cavity[J].
+\newblock IEEE Transactions on Antennas and Propagation, 2014, 62(10): 5344-5348.
+
+\bibitem{bergamasco2015adopting}
+Bergamasco F, Albarelli A, Cosmo L, et~al.
+\newblock Adopting an unconstrained ray model in light-field cameras for 3d shape reconstruction[C].
+\newblock IEEE Conference on Computer Vision and Pattern Recognition, Boston, USA, 2015: 3003-3012.
+
+\bibitem{xue2024survey}
+Xue Q, Ji C, Ma S, et~al.
+\newblock A survey of beam management for mmwave and thz communications towards 6g[J].
+\newblock IEEE Communications Surveys \& Tutorials, 2024: 1-41.
+
+\bibitem{罗杰斯2011}
+罗杰斯.
+\newblock 西方文明史：问题与源头[M].
+\newblock 潘惠霞, 魏婧, 杨艳, 等译.
+\newblock 2版.
+\newblock 大连: 东北财经大学出版社, 2011: 1-353.
+
+\bibitem{harrington1993field}
+Harrington R~F.
+\newblock Field computation by moment methods[M].
+\newblock 3rd ed.
+\newblock New York: Wiley-IEEE Press, 1993: 76-112.
+
+\bibitem{电子文献1}
+Deverell W, gler D.
+\newblock A companion to california history[M/OL].
+\newblock New York: John Wiley \& Sons, 2013: 21-22 (2013-11-15) [2014-06-24].
+\newblock \url{http://dx.doi.org/10.1002/9781444305036}.
+
+\bibitem{电子文献2}
+Clerc M.
+\newblock Discrete particle swarm optimization: a fuzzy combinatorial box[EB/OL].
+\newblock 2010-07-16, \url{http://clere.maurice.free.fr/pso/Fuzzy_Discrere_PSO/Fuzzy_DPSO.html}.
+
+\bibitem{长链接电子文献1}
+Audio B~I~D.
+\newblock In the spotlight: Norman rockwell museum furnishes touchscreen with directional speaker from brown innovations[EB/OL].
+\newblock 2016-11-23, \url{https://www.browninnovations.com/news/2016/11/23/norman-rockwell-museum-furnishes-touchscreen-with-directional-speaker-from-brown-innovations}.
+
+\bibitem{长链接电子文献2}
+Cox D~A.
+\newblock Admiralty gulf[EB/OL].
+\newblock 2015-07-24, \url{https://www.flickr.com/photos/navalsurfaceforces/20039065626/in/photostream}.
+
+\bibitem{陈念永2001毫米波细胞生物效应及抗肿瘤研究}
+陈念永.
+\newblock 毫米波细胞生物效应及抗肿瘤研究[D].
+\newblock 成都: 电子科技大学, 2001: 50-60.
+
+\bibitem{顾春20122}
+顾春.
+\newblock 牢牢把握稳中求进的总基调[N].
+\newblock 人民日报, 2012-03-31 (3).
+
+\bibitem{冯西桥1997}
+冯西桥.
+\newblock 核反应堆压力容器的{LBB}分析[R].
+\newblock 北京: 清华大学核能技术设计研究院, 1997.
+
+\bibitem{肖珍新2012}
+肖珍新.
+\newblock 一种新型排渣阀调节降温装置: ZL201120085830.0[P]. 2012-04-25.
+
+\bibitem{陈念永2001毫米波细胞生物效应及抗肿瘤研究无页码}
+陈念永.
+\newblock 毫米波细胞生物效应及抗肿瘤研究（无页码测试）[D].
+\newblock 成都: 电子科技大学, 2001.
+
+\bibitem{dai2022joint}
+Dai C, Zhu K, Li Z, et~al.
+\newblock Joint decoupled multiple-association and resource allocation in full-duplex heterogeneous cellular networks: A four-sided matching game[J].
+\newblock IEEE Transactions on Wireless Communications, 2022, 21(8): 6464-6477.
+
+\bibitem{khawam2020coordinated}
+Khawam K, Lahoud S, El~Helou M, et~al.
+\newblock Coordinated framework for spectrum allocation and user association in 5g hetnets with mmwave[J].
+\newblock IEEE Transactions on Mobile Computing, 2020, 21(4): 1226-1243.
+
+\bibitem{deng2023gnn}
+Deng W, Liu Y, Li M, et~al.
+\newblock Gnn-aided user association and beam selection for mmwave integrated heterogeneous networks[J].
+\newblock IEEE Wireless Communications Letters, 2023, 12(11): 1836-1840.
+
+\bibitem{qiao2023joint}
+Qiao Y, Niu Y, Han Z, et~al.
+\newblock Joint optimization of resource allocation and user association in multi-frequency cellular networks assisted by ris[J].
+\newblock IEEE Transactions on Vehicular Technology, 2024, 73(1): 826-842.
+
+\bibitem{agarwal2021reduced}
+Agarwal B, Ruffini M, Muntean G~M.
+\newblock Reduced complexity optimal resource allocation for enhanced video quality in a heterogeneous network environment[J].
+\newblock IEEE Transactions on Wireless Communications, 2021, 21(5): 2892-2908.
+
+\bibitem{nwelih2022method}
+Nwelih E.
+\newblock A method for real-time adaptive propagation loss modeling and estimation over los and nlos microcellular radio communication links[J].
+\newblock Journal of Science and Technology Research, 2022, 4(3): 133-140.
+
+\end{thebibliography}

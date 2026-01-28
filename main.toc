@@ -1,0 +1,77 @@
+\contentsline {chapter}{\numberline {第一章}前截断章节}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}当前版本编译时间}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {第二章}绪论}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}研究背景与意义}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}研究目标}{2}{section.2.2}%
+\contentsline {section}{\numberline {2.3}研究所面临的挑战}{2}{section.2.3}%
+\contentsline {section}{\numberline {2.4}研究内容}{2}{section.2.4}%
+\contentsline {section}{\numberline {2.5}论文主要工作与创新点}{2}{section.2.5}%
+\contentsline {section}{\numberline {2.6}论文组织结构}{2}{section.2.6}%
+\contentsline {chapter}{\numberline {第三章}相关技术及相关研究综述}{3}{chapter.3}%
+\contentsline {section}{\numberline {3.1}路线搜索和推荐}{3}{section.3.1}%
+\contentsline {section}{\numberline {3.2}本章小结}{3}{section.3.2}%
+\contentsline {chapter}{\numberline {第四章}动态路网中的交通拥堵缓解：面向行程请求流的持续最优路线组合}{4}{chapter.4}%
+\contentsline {section}{\numberline {4.1}引言}{4}{section.4.1}%
+\contentsline {section}{\numberline {4.2}研究背景及应用场景}{4}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}研究内容与挑战}{5}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}研究成果与贡献}{6}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}问题描述}{6}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Dijkstra 算法}{6}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}位置点间的距离计算}{6}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}问题定义}{6}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}路网及其构成}{6}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}精确遍历算法}{7}{section.4.4}%
+\contentsline {section}{\numberline {4.5}自感知的批处理算法}{7}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}初始路线搜索}{8}{subsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.1.1}路段标签}{8}{subsubsection.4.5.1.1}%
+\contentsline {subsubsection}{\numberline {4.5.1.2}系统内的车流量计算}{8}{subsubsection.4.5.1.2}%
+\contentsline {subsubsection}{\numberline {4.5.1.3}通行时间下界}{8}{subsubsection.4.5.1.3}%
+\contentsline {subsubsection}{\numberline {4.5.1.4}算法描述}{9}{subsubsection.4.5.1.4}%
+\contentsline {subsection}{\numberline {4.5.2}批优化处理}{10}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}交换操作}{11}{subsubsection.4.5.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}预检查策略}{12}{subsubsection.4.5.2.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.3}算法描述}{12}{subsubsection.4.5.2.3}%
+\contentsline {subsection}{\numberline {4.5.3}CORC问题的总体解决方案}{13}{subsection.4.5.3}%
+\contentsline {subsubsection}{\numberline {4.5.3.1}优化间隔}{13}{subsubsection.4.5.3.1}%
+\contentsline {subsubsection}{\numberline {4.5.3.2}算法描述}{14}{subsubsection.4.5.3.2}%
+\contentsline {section}{\numberline {4.6}实验研究}{14}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}实验设定}{14}{subsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.1.1}数据集}{14}{subsubsection.4.6.1.1}%
+\contentsline {subsubsection}{\numberline {4.6.1.2}车流量的计算}{15}{subsubsection.4.6.1.2}%
+\contentsline {subsubsection}{\numberline {4.6.1.3}算法评估设定}{15}{subsubsection.4.6.1.3}%
+\contentsline {subsection}{\numberline {4.6.2}实验结果}{16}{subsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.1}行程请求数目对算法效果的影响}{16}{subsubsection.4.6.2.1}%
+\contentsline {subsubsection}{\numberline {4.6.2.2}行程请求到达速率对算法效果的影响}{18}{subsubsection.4.6.2.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.3}通行时间函数各参数对算法效果的影响}{18}{subsubsection.4.6.2.3}%
+\contentsline {subsubsection}{\numberline {4.6.2.4}优化时间间隔对算法表现的影响}{19}{subsubsection.4.6.2.4}%
+\contentsline {subsubsection}{\numberline {4.6.2.5}参数$\epsilon $和预检查策略对算法表现的影响}{19}{subsubsection.4.6.2.5}%
+\contentsline {section}{\numberline {4.7}本章小结}{20}{section.4.7}%
+\contentsline {chapter}{\numberline {第五章}联合移动模式挖掘}{21}{chapter.5}%
+\contentsline {section}{\numberline {5.1}引言}{21}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}研究背景与意义}{21}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}研究内容与挑战}{21}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}研究成果与贡献}{21}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}问题描述}{21}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}路网及其构成}{21}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Dijkstra 算法}{21}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}位置点间的距离计算}{21}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}问题定义}{21}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}实验研究}{21}{section.5.3}%
+\contentsline {section}{\numberline {5.4}本章小结}{21}{section.5.4}%
+\contentsline {chapter}{\numberline {第六章}时空接触搜索}{22}{chapter.6}%
+\contentsline {section}{\numberline {6.1}引言}{22}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}研究背景与意义}{22}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}研究内容与挑战}{22}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}研究成果与贡献}{22}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.2}问题描述}{22}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}路网及其构成}{22}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Dijkstra 算法}{22}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}位置点间的距离计算}{22}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}问题定义}{22}{subsection.6.2.4}%
+\contentsline {section}{\numberline {6.3}实验研究}{22}{section.6.3}%
+\contentsline {section}{\numberline {6.4}本章小结}{22}{section.6.4}%
+\contentsline {chapter}{\numberline {第七章}后截断章节}{23}{chapter.7}%
+\contentsline {chapter}{致\hspace {1em}谢}{24}{chapter*.15}%
+\contentsline {chapter}{参考文献}{25}{section*.16}%
+\contentsline {chapter}{攻读博士学位期间取得的成果}{27}{chapter*.18}%
+\contentsfinish 

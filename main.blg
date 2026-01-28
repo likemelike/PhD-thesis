@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: DissertUESTC.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: ref.bib
+Warning--I didn't find a database entry for "DBLP:journals/networks/DumitrescuB03"
+Warning--I didn't find a database entry for "DBLP:journals/vldb/SharifzadehKS08"
+Warning--I didn't find a database entry for "DBLP:journals/pvldb/LevinKSS10"
+Warning--I didn't find a database entry for "DBLP:conf/mdm/ShangLPX13"
+Warning--I didn't find a database entry for "DBLP:journals/tkde/LiYM13"
+Warning--I didn't find a database entry for "DBLP:conf/ijcai/ZengCCQCX15"
+Warning--I didn't find a database entry for "DBLP:conf/wise/XuCYSZZL17"
+Warning--I didn't find a database entry for "DBLP:conf/icde/MalviyaMB11"
+Warning--I didn't find a database entry for "DBLP:conf/dasfaa/XuGDSL12"
+Warning--I didn't find a database entry for "Lim2012Stochastic"
+Warning--I didn't find a database entry for "JavaniPath"
+Warning--I didn't find a database entry for "DBLP:conf/ijcai/LiCS20"
+Warning--I didn't find a database entry for "Edsger1959A"
+Warning--there's a number but no volume in 王晓琰2019关于连续出版会议论文著录格式的探讨
+Warning--missing pages in 陈念永2001毫米波细胞生物效应及抗肿瘤研究无页码
+You've used 23 entries,
+            3315 wiz_defined-function locations,
+            846 strings with 9823 characters,
+and the built_in function-call counts, 13973 in all, are:
+= -- 1465
+> -- 216
+< -- 1
++ -- 107
+- -- 54
+* -- 817
+:= -- 1431
+add.period$ -- 72
+call.type$ -- 23
+change.case$ -- 22
+chr.to.int$ -- 3
+cite$ -- 25
+duplicate$ -- 1589
+empty$ -- 1198
+format.name$ -- 65
+if$ -- 3094
+int.to.chr$ -- 0
+int.to.str$ -- 23
+missing$ -- 219
+newline$ -- 124
+num.names$ -- 24
+pop$ -- 710
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 181
+stack$ -- 0
+substring$ -- 1735
+swap$ -- 388
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 100
+width$ -- 25
+write$ -- 259
+(There were 15 warnings)
