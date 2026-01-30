@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  28 JAN 2026 14:40
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  30 JAN 2026 22:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1434,70 +1434,109 @@ Package fontspec Info:
 (fontspec)             - 'normal' (m/n) with NFSS spec.: <->"[./font/Source
 (fontspec)             Han Serif SC]/OT:script=latn;language=dflt;"
 
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count534
+\cp@tempcnt=\count535
+LaTeX Info: Redefining \checkoddpage on input line 59.
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/diagbox/diagbox.sty
+Package: diagbox 2020/02/09 v2.3 Making table heads with diagonal lines
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/pict2e/pict2e.sty
+Package: pict2e 2020/09/30 v0.4b Improved picture commands (HjG,RN,JT)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/pict2e/pict2e.cfg
+File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: xetex.def on input line 112.
+Package pict2e Info: Driver file for pict2e: p2e-xetex.def on input line 114.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/pict2e/p2e-xetex.def
+File: p2e-xetex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks58
+\@arclen=\dimen373
+\@arcrad=\dimen374
+\pIIe@tempdima=\dimen375
+\pIIe@tempdimb=\dimen376
+\pIIe@tempdimc=\dimen377
+\pIIe@tempdimd=\dimen378
+\pIIe@tempdime=\dimen379
+\pIIe@tempdimf=\dimen380
+)
+\diagbox@boxa=\box115
+\diagbox@boxb=\box116
+\diagbox@boxm=\box117
+\diagbox@wd=\dimen381
+\diagbox@ht=\dimen382
+\diagbox@insepl=\dimen383
+\diagbox@insepr=\dimen384
+\diagbox@outsepl=\dimen385
+\diagbox@outsepr=\dimen386
 )
 \symCJKmath=\mathgroup255
 LaTeX Font Info:    Overwriting symbol font `CJKmath' in version `bold'
-(Font)                  TU/SimSun(0)/m/n --> TU/SimSun(0)/b/n on input line 4.
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 4.
+(Font)                  TU/SimSun(0)/m/n --> TU/SimSun(0)/b/n on input line 10.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 10.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 4.
-LaTeX Font Info:    Trying to load font information for T3+cmr on input line 4.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 10.
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 10.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    ... okay on input line 10.
 
 
-Package layouts Warning: Layout scale set to 0.5 on input line 4.
+Package layouts Warning: Layout scale set to 0.5 on input line 10.
 
-Package hyperref Info: Link coloring ON on input line 4.
+Package hyperref Info: Link coloring ON on input line 10.
 (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen387
+\caption@adjustwidth@linewidth=\dimen388
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: scrextend package is loaded.
-\caption@addmargin@hsize=\dimen373
-\caption@addmargin@linewidth=\dimen374
+\caption@addmargin@hsize=\dimen389
+\caption@addmargin@linewidth=\dimen390
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 4.
-\c@lstlisting=\count534
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 10.
+\c@lstlisting=\count536
 Package tocbasic Info: omitting babel extension for `lol'
-(tocbasic)             because of missing \bbl@set@language on input line 4.
+(tocbasic)             because of missing \bbl@set@language on input line 10.
 
-Package chemgreek Info: Activating mapping `fontspec' on line 4.
+Package chemgreek Info: Activating mapping `fontspec' on line 10.
 
  (/usr/local/texlive/2025/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
@@ -1525,51 +1564,35 @@ Underfull \vbox (badness 7869) has occurred while \output is active []
 
 
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
 [1
 
 
-])
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[2]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 107.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 107.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
 
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
-[2] (./main.lof
-LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+[3] (./main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
 
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
-[3
+[4
 
 ] (./main.lot)
 \tf@lot=\write8
@@ -1577,36 +1600,15 @@ Package fancyhdr Warning: \headheight is too small (9.03374pt):
 
 
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
-[4
+[5
 
 ]
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
-[5
+[6
 
 ]
 Chapter 第一章.
 (./latex/1_background.tex
-
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
 
 [1
 
@@ -1614,67 +1616,19 @@ Package fancyhdr Warning: \headheight is too small (9.03374pt):
 Chapter 第二章.
 ) (./latex/2_relatedwork.tex
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
 [2
 
 ]
 Chapter 第三章.
 ) (./latex/3_routesearch.tex
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
 [3
 
 ]
 Chapter 第四章.
-
-Package natbib Warning: Citation `DBLP:journals/networks/DumitrescuB03' on page 4 undefined on input line 11.
-
-
-Package natbib Warning: Citation `DBLP:journals/vldb/SharifzadehKS08' on page 4 undefined on input line 11.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/LevinKSS10' on page 4 undefined on input line 11.
-
-
-Package natbib Warning: Citation `DBLP:conf/mdm/ShangLPX13' on page 4 undefined on input line 11.
-
-
-Package natbib Warning: Citation `DBLP:journals/tkde/LiYM13' on page 4 undefined on input line 11.
-
-
-Package natbib Warning: Citation `DBLP:conf/ijcai/ZengCCQCX15' on page 4 undefined on input line 11.
-
-
-Package natbib Warning: Citation `DBLP:conf/wise/XuCYSZZL17' on page 4 undefined on input line 11.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/MalviyaMB11' on page 4 undefined on input line 11.
-
-
-Package natbib Warning: Citation `DBLP:conf/dasfaa/XuGDSL12' on page 4 undefined on input line 11.
-
 File: fig/section3/ex1.png Graphic file (type bmp)
 <fig/section3/ex1.png>
 
-
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
 
 [4
 
@@ -1683,71 +1637,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
 [5]
-
-Package natbib Warning: Citation `Lim2012Stochastic' on page 6 undefined on input line 43.
-
-
-Package natbib Warning: Citation `JavaniPath' on page 6 undefined on input line 43.
-
-
-Package natbib Warning: Citation `DBLP:conf/ijcai/LiCS20' on page 6 undefined on input line 43.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
 [6]
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
 [7]
-
-Package natbib Warning: Citation `Edsger1959A' on page 8 undefined on input line 98.
-
-
 Underfull \vbox (badness 5245) has occurred while \output is active []
 
 
-
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
 
 [8]
 Underfull \vbox (badness 7667) has occurred while \output is active []
 
 
-
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
 
 [9]
 
@@ -1755,92 +1660,44 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
 [10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
 [11]
-
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
 
 [12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
 [13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
 [14]
-Overfull \hbox (5.38472pt too wide) in paragraph at lines 306--306
+Overfull \hbox (5.38472pt too wide) in paragraph at lines 305--305
 []|[]| 
  []
 
 
-Overfull \hbox (5.38472pt too wide) in paragraph at lines 306--307
+Overfull \hbox (5.38472pt too wide) in paragraph at lines 305--306
 []|[]| 
  []
 
 
-Overfull \hbox (10.6544pt too wide) in paragraph at lines 309--309
+Overfull \hbox (10.6544pt too wide) in paragraph at lines 308--308
 []|[]| 
  []
 
 
-Overfull \hbox (10.6544pt too wide) in paragraph at lines 309--310
+Overfull \hbox (10.6544pt too wide) in paragraph at lines 308--309
 []|[]| 
  []
 
 
-Package natbib Warning: Citation `DBLP:conf/icde/MalviyaMB11' on page 15 undefined on input line 328.
-
-
-Package natbib Warning: Citation `DBLP:conf/dasfaa/XuGDSL12' on page 15 undefined on input line 328.
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
 
 [15]
 File: fig/section3/fig1_NYC_time.png Graphic file (type bmp)
@@ -1869,30 +1726,9 @@ File: fig/section3/fig4_cost.png Graphic file (type bmp)
 <fig/section3/fig4_cost.png>
 
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
 [16]
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
 [17]
-
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
 
 [18]
 File: fig/section3/fig5_time.png Graphic file (type bmp)
@@ -1902,63 +1738,35 @@ File: fig/section3/fig5_cost.png Graphic file (type bmp)
 File: fig/section3/fig6_NY.png Graphic file (type bmp)
 <fig/section3/fig6_NY.png>
 
-Overfull \hbox (13.80188pt too wide) in paragraph at lines 447--456
+Overfull \hbox (13.80188pt too wide) in paragraph at lines 446--455
  [][][][][][] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 460.
+(hyperref)                removing `math shift' on input line 459.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\epsilon' on input line 460.
+(hyperref)                removing `\epsilon' on input line 459.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 460.
+(hyperref)                removing `math shift' on input line 459.
 
 
-
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
 
 [19]) (./latex/4_comovement.tex
-
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
 
 [20]
 Chapter 第五章.
 ) (./latex/5_contact.tex
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
 [21
 
 ]
 Chapter 第六章.
-)
-
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
+) (./latex/6_join.tex
 
 [22
 
@@ -1966,76 +1774,402 @@ Package fancyhdr Warning: \headheight is too small (9.03374pt):
 Chapter 第七章.
 
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
 [23
 
 ]
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
-[24
-
-] (./main.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 61--64
-[] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [][] [] [] [] [] [] [] [] [] [][] [] [] [] [] [] [] [][] [] [] [] [] [] [] [] [] [] [][] [] [] [] [] [] [] [] [] [] [] [] [][] [] [] [] [] [][] [] [] [] [] [] [] [] [] [] [] [] [][] [] [] [] [] [] [] [] [][] []
- []
+Package fontspec Info: 
+(fontspec)             Script 'CJK' not explicitly supported within font
+(fontspec)             'STFangsong'. Check the typeset output, and if it is
+(fontspec)             okay then ignore this warning. Otherwise a different
+(fontspec)             font should be chosen.
 
 
+Package fontspec Info: 
+(fontspec)             Could not resolve font "STFangsong/BI" (it probably
+(fontspec)             doesn't exist).
 
 
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
-[25
+Package fontspec Info: 
+(fontspec)             Could not resolve font "STFangsong/B" (it probably
+(fontspec)             doesn't exist).
 
 
-]) (./latex/achivement.tex
+Package fontspec Info: 
+(fontspec)             Could not resolve font "STFangsong/I" (it probably
+(fontspec)             doesn't exist).
 
 
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
+Package fontspec Info: 
+(fontspec)             Font family 'STFangsong(0)' created for font
+(fontspec)             'STFangsong' with options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"STFangsong/OT:script=hani;language=dflt;"
 
-[26]
+File: fig/section6/intro.png Graphic file (type bmp)
+<fig/section6/intro.png>
+
+
+[24]
+
+LaTeX Warning: Reference `sec:statement' on page 25 undefined on input line 48.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
+[25]
+Underfull \vbox (badness 1448) has occurred while \output is active []
 
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
 
-[27
+
+[26]
+File: fig/section6/lens.png Graphic file (type bmp)
+<fig/section6/lens.png>
+
+
+[27]
+
+[28]
+File: fig/section6/overall example.png Graphic file (type bmp)
+<fig/section6/overall example.png>
+
+
+[29]
+File: fig/section6/ellipse.pdf Graphic file (type pdf)
+<use fig/section6/ellipse.pdf>
+
+
+[30]
+File: fig/section6/ball-tree.pdf Graphic file (type pdf)
+<use fig/section6/ball-tree.pdf>
+
+
+[31]
+Underfull \hbox (badness 1184) in paragraph at lines 291--296
+\TU/SimSun(0)/m/n/12.045 非 叶 节 点 仅 包 含 两 个 子 节 点 不 同，| \TU/times(0)/m/n/12.045 HBall-tree \TU/SimSun(0)/m/n/12.045 通 过 一 种 重 新 划 分  |（\TU/times(0)/m/n/12.045 repartition\TU/SimSun(0)/m/n/12.045 ）|
+ []
+
+
+Underfull \hbox (badness 2020) in paragraph at lines 291--296
+\TU/SimSun(0)/m/n/12.045 技 术，|  使 得 每 个 父 节 点 最 多 可 以 拥 有 三 个 子 节 点。|  每 个 节 点 的 结 构 表 示 为
+ []
+
+
+
+[32]
+
+[33]
+
+[34]
+
+[35]
+
+[36]
+File: fig/section6/geo-num-ctime.png Graphic file (type bmp)
+<fig/section6/geo-num-ctime.png>
+File: fig/section6/pt-num-ctime.png Graphic file (type bmp)
+<fig/section6/pt-num-ctime.png>
+
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 468--473
+ [][][][] 
+ []
+
+File: fig/section6/geo-num-ftime.png Graphic file (type bmp)
+<fig/section6/geo-num-ftime.png>
+File: fig/section6/pt-num-ftime.png Graphic file (type bmp)
+<fig/section6/pt-num-ftime.png>
+
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 482--487
+ [][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[37]
+File: fig/section6/geo-poi-ftime.png Graphic file (type bmp)
+<fig/section6/geo-poi-ftime.png>
+File: fig/section6/pt-poi-ftime.png Graphic file (type bmp)
+<fig/section6/pt-poi-ftime.png>
+
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 499--504
+ [][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[38]
+File: fig/section6/geo-I-ftime.png Graphic file (type bmp)
+<fig/section6/geo-I-ftime.png>
+File: fig/section6/pt-I-ftime.png Graphic file (type bmp)
+<fig/section6/pt-I-ftime.png>
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 526.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\epsilon' on input line 526.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 526.
+
+File: fig/section6/geo-ep-ftime.png Graphic file (type bmp)
+<fig/section6/geo-ep-ftime.png>
+File: fig/section6/pt-ep-ftime.png Graphic file (type bmp)
+<fig/section6/pt-ep-ftime.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[39]
+File: fig/section6/mtree.pdf Graphic file (type pdf)
+<use fig/section6/mtree.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[40]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[41]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[42]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 671.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 671.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 766.
+
+File: fig/section6/geo-sim-ftime.png Graphic file (type bmp)
+<fig/section6/geo-sim-ftime.png>
+
+Overfull \hbox (8.13994pt too wide) in paragraph at lines 774--774
+[]\TU/times(0)/m/n/10.53937 (a)
+ []
+
+
+Overfull \hbox (12.24165pt too wide) in paragraph at lines 774--774
+|\TU/times(0)/m/n/10.53937 Ge-
+ []
+
+
+Overfull \hbox (5.22226pt too wide) in paragraph at lines 774--774
+\TU/times(0)/m/n/10.53937 o-
+ []
+
+
+Overfull \hbox (10.4868pt too wide) in paragraph at lines 774--774
+\TU/times(0)/m/n/10.53937 life| 
+ []
+
+File: fig/section6/pt-sim-ftime.png Graphic file (type bmp)
+<fig/section6/pt-sim-ftime.png>
+
+Overfull \hbox (5.31929pt too wide) in paragraph at lines 778--778
+[]\TU/times(0)/m/n/10.53937 (b)
+ []
+
+
+Overfull \hbox (15.86916pt too wide) in paragraph at lines 778--778
+|\TU/times(0)/m/n/10.53937 Porto| 
+ []
+
+
+
+[43]
+
+LaTeX Warning: Text page 44 contains only floats.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[44]
+File: fig/section6/geo-num-access.png Graphic file (type bmp)
+<fig/section6/geo-num-access.png>
+
+Overfull \hbox (3.87436pt too wide) in paragraph at lines 791--791
+[]\TU/times(0)/m/n/10.53937 (a)
+ []
+
+
+Overfull \hbox (7.97607pt too wide) in paragraph at lines 791--791
+|\TU/times(0)/m/n/10.53937 Ge-
+ []
+
+
+Overfull \hbox (0.95668pt too wide) in paragraph at lines 791--791
+\TU/times(0)/m/n/10.53937 o-
+ []
+
+
+Overfull \hbox (6.22122pt too wide) in paragraph at lines 791--791
+\TU/times(0)/m/n/10.53937 life| 
+ []
+
+File: fig/section6/pt-num-access.png Graphic file (type bmp)
+<fig/section6/pt-num-access.png>
+
+Overfull \hbox (8.73175pt too wide) in paragraph at lines 795--795
+[]\TU/times(0)/m/n/10.53937 (b)
+ []
+
+
+Overfull \hbox (19.28162pt too wide) in paragraph at lines 795--795
+|\TU/times(0)/m/n/10.53937 Porto| 
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 800.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 800.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 802.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 802.
+
+File: fig/section6/geo-k-ftime.png Graphic file (type bmp)
+<fig/section6/geo-k-ftime.png>
+
+Overfull \hbox (8.13994pt too wide) in paragraph at lines 809--809
+[]\TU/times(0)/m/n/10.53937 (a)
+ []
+
+
+Overfull \hbox (12.24165pt too wide) in paragraph at lines 809--809
+|\TU/times(0)/m/n/10.53937 Ge-
+ []
+
+
+Overfull \hbox (5.22226pt too wide) in paragraph at lines 809--809
+\TU/times(0)/m/n/10.53937 o-
+ []
+
+
+Overfull \hbox (10.4868pt too wide) in paragraph at lines 809--809
+\TU/times(0)/m/n/10.53937 life| 
+ []
+
+File: fig/section6/pt-k-ftime.png Graphic file (type bmp)
+<fig/section6/pt-k-ftime.png>
+
+Overfull \hbox (8.73175pt too wide) in paragraph at lines 812--812
+[]\TU/times(0)/m/n/10.53937 (b)
+ []
+
+
+Overfull \hbox (19.28162pt too wide) in paragraph at lines 812--812
+|\TU/times(0)/m/n/10.53937 Porto| 
+ []
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 821.
+
+
+Package natbib Warning: Citation `DBLP:journals/comvis/HughesC12' on page 45 undefined on input line 824.
+
+
+Package natbib Warning: Citation `stark1979sampling' on page 45 undefined on input line 824.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[45]
+File: fig/section6/sample.pdf Graphic file (type pdf)
+<use fig/section6/sample.pdf>
+
+
+[46]) (./latex/7_conclusion
+
+[47]
+
+[48]
+Chapter 第八章.
+)
+
+[49
+
+]
+Chapter 第九章.
+
+
+[50
 
 ]
 
+[51
 
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
+] (./main.bbl
 
-[28]
+[52
+
+
+]
+
+[53]
+
+[54]
+
+[55]) (./latex/achivement.tex
+
+[56]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[57
+
+]
+
+[58]
 Underfull \hbox (badness 2245) in paragraph at lines 58--59
 []\TU/SimSun(0)/b/n/12.045 作 者 \TU/times(0)/b/n/12.045 1\TU/times(0)/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 作 者 \TU/times(0)/m/n/12.045 2*, \TU/SimSun(0)/m/n/12.045 作 者 \TU/times(0)/m/n/12.045 3, \TU/SimSun(0)/m/n/12.045 作 者 \TU/times(0)/m/n/12.045 4\TU/SimSun(0)/m/n/12.045 。|  一 种 基 于 \TU/times(0)/m/n/12.045 xxxxx \TU/SimSun(0)/m/n/12.045 的 真 气 运 转 方 法\TU/times(0)/m/n/12.045 :
  []
@@ -2046,28 +2180,25 @@ Package natbib Warning: There were undefined citations.
 
 
 
-
-Package fancyhdr Warning: \headheight is too small (9.03374pt): 
-(fancyhdr)                Make it at least 12.64723pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.64723pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.6135pt}.
-
-[29] (./main.aux)
+[59] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 649249B7D3542255697CED69D45645AC;11287.
+(rerunfilecheck)             Checksum: AEB7DB7BA775183AF2C309F539D62339;18248.
  ) 
 Here is how much of TeX's memory you used:
- 50119 strings out of 473832
- 1040693 string characters out of 5729481
- 1549522 words of memory out of 5000000
- 72338 multiletter control sequences out of 15000+600000
- 569655 words of font info for 139 fonts, out of 8000000 for 9000
+ 51239 strings out of 473832
+ 1077780 string characters out of 5729481
+ 1575708 words of memory out of 5000000
+ 73393 multiletter control sequences out of 15000+600000
+ 574375 words of font info for 166 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 125i,23n,134p,1035b,1166s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,24n,134p,1052b,1413s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (34 pages).
+Output written on main.pdf (65 pages).

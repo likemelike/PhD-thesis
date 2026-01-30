@@ -3,122 +3,409 @@
 \providecommand{\urlprefix}{URL }
 \providecommand{\eprint}[2][]{\url{#2}}
 
-\bibitem{教育部国家语言文字工作委员2018}
-教育部国家语言文字工作委员.
-\newblock 通用规范汉字[M].
-\newblock 北京: 语文出版社, 2018.
+\bibitem{DBLP:journals/networks/DumitrescuB03}
+Dumitrescu I, Boland N.
+\newblock Improved preprocessing, labeling and scaling algorithms for the weight-constrained shortest path problem[J].
+\newblock Networks, 2003, 42(3): 135--153.
 
-\bibitem{学位论文编写规范555}
-全国信息与文献标准化技术委员.
-\newblock 学位论文编写规范: GB/T 7713.1-2006[S].
-\newblock 北京: 中国标准出版社, 2007: 17-20.
+\bibitem{DBLP:journals/vldb/SharifzadehKS08}
+Sharifzadeh M, Kolahdouzan M~R, Shahabi C.
+\newblock The optimal sequenced route query[J].
+\newblock {VLDB} J., 2008, 17(4): 765--787.
 
-\bibitem{王晓琰2019关于连续出版会议论文著录格式的探讨}
-王晓琰, 殷建芳, 王晓峰, 等.
-\newblock 关于连续出版会议论文著录格式的探讨[J].
-\newblock 学报编辑丛论, 2019, (0): 162-165.
+\bibitem{DBLP:journals/pvldb/LevinKSS10}
+Levin R, Kanza Y, Safra E, et~al.
+\newblock Interactive route search in the presence of order constraints[J].
+\newblock {PVLDB}, 2010, 3(1): 117--128.
 
-\bibitem{hu2014domain}
-Hu J, Zhao R, Tian M, et~al.
-\newblock Domain decomposition method based on integral equation for solution of scattering from very thin, conducting cavity[J].
-\newblock IEEE Transactions on Antennas and Propagation, 2014, 62(10): 5344-5348.
+\bibitem{DBLP:conf/mdm/ShangLPX13}
+Shang S, Lu H, Pedersen T~B, et~al.
+\newblock Modeling of traffic-aware travel time in spatial networks[C].
+\newblock {MDM} {(1)}, {IEEE} Computer Society, 2013: 247--250.
 
-\bibitem{bergamasco2015adopting}
-Bergamasco F, Albarelli A, Cosmo L, et~al.
-\newblock Adopting an unconstrained ray model in light-field cameras for 3d shape reconstruction[C].
-\newblock IEEE Conference on Computer Vision and Pattern Recognition, Boston, USA, 2015: 3003-3012.
+\bibitem{DBLP:journals/tkde/LiYM13}
+Li J, Yang Y~D, Mamoulis N.
+\newblock Optimal route queries with arbitrary order constraints[J].
+\newblock {IEEE} Trans. Knowl. Data Eng., 2013, 25(5): 1097--1110.
 
-\bibitem{xue2024survey}
-Xue Q, Ji C, Ma S, et~al.
-\newblock A survey of beam management for mmwave and thz communications towards 6g[J].
-\newblock IEEE Communications Surveys \& Tutorials, 2024: 1-41.
+\bibitem{DBLP:conf/ijcai/ZengCCQCX15}
+Zeng Y, Chen X, Cao X, et~al.
+\newblock Optimal route search with the coverage of users' preferences[C].
+\newblock {IJCAI}, {AAAI} Press, 2015: 2118--2124.
 
-\bibitem{罗杰斯2011}
-罗杰斯.
-\newblock 西方文明史：问题与源头[M].
-\newblock 潘惠霞, 魏婧, 杨艳, 等译.
-\newblock 2版.
-\newblock 大连: 东北财经大学出版社, 2011: 1-353.
+\bibitem{DBLP:conf/wise/XuCYSZZL17}
+Xu Y, Chen L, Yao B, et~al.
+\newblock Location-based top-k term querying over sliding window[C].
+\newblock {WISE} {(1)}, Springer, vol. 10569 of Lecture Notes in Computer Science, 2017: 299--314.
 
-\bibitem{harrington1993field}
-Harrington R~F.
-\newblock Field computation by moment methods[M].
-\newblock 3rd ed.
-\newblock New York: Wiley-IEEE Press, 1993: 76-112.
+\bibitem{DBLP:conf/icde/MalviyaMB11}
+Malviya N, Madden S, Bhattacharya A.
+\newblock A continuous query system for dynamic route planning[C].
+\newblock {ICDE}, {IEEE} Computer Society, 2011: 792--803.
 
-\bibitem{电子文献1}
-Deverell W, gler D.
-\newblock A companion to california history[M/OL].
-\newblock New York: John Wiley \& Sons, 2013: 21-22 (2013-11-15) [2014-06-24].
-\newblock \url{http://dx.doi.org/10.1002/9781444305036}.
+\bibitem{DBLP:conf/dasfaa/XuGDSL12}
+Xu J, Guo L, Ding Z, et~al.
+\newblock Traffic aware route planning in dynamic road networks[C].
+\newblock {DASFAA} {(1)}, Springer, vol. 7238 of Lecture Notes in Computer Science, 2012: 576--591.
 
-\bibitem{电子文献2}
-Clerc M.
-\newblock Discrete particle swarm optimization: a fuzzy combinatorial box[EB/OL].
-\newblock 2010-07-16, \url{http://clere.maurice.free.fr/pso/Fuzzy_Discrere_PSO/Fuzzy_DPSO.html}.
+\bibitem{Lim2012Stochastic}
+Lim S, Rus D.
+\newblock Stochastic distributed multi-agent planning and applications to traffic[J].
+\newblock ICRA, 2012: 2873-2879.
 
-\bibitem{长链接电子文献1}
-Audio B~I~D.
-\newblock In the spotlight: Norman rockwell museum furnishes touchscreen with directional speaker from brown innovations[EB/OL].
-\newblock 2016-11-23, \url{https://www.browninnovations.com/news/2016/11/23/norman-rockwell-museum-furnishes-touchscreen-with-directional-speaker-from-brown-innovations}.
+\bibitem{JavaniPath}
+Babak J, Abbas B, (Avi) C~A.
+\newblock Path-based capacity-restrained dynamic traffic assignment algorithm[J].
+\newblock Transportmetrica B: Transport Dynamics, 2018: 1-24.
 
-\bibitem{长链接电子文献2}
-Cox D~A.
-\newblock Admiralty gulf[EB/OL].
-\newblock 2015-07-24, \url{https://www.flickr.com/photos/navalsurfaceforces/20039065626/in/photostream}.
+\bibitem{DBLP:conf/ijcai/LiCS20}
+Li K, Chen L, Shang S.
+\newblock Towards alleviating traffic congestion: Optimal route planning for massive-scale trips[C].
+\newblock {IJCAI}, ijcai.org, 2020: 3400--3406.
 
-\bibitem{陈念永2001毫米波细胞生物效应及抗肿瘤研究}
-陈念永.
-\newblock 毫米波细胞生物效应及抗肿瘤研究[D].
-\newblock 成都: 电子科技大学, 2001: 50-60.
+\bibitem{Edsger1959A}
+Dijkstra E~W.
+\newblock A note on two problems in connexion with graphs[J].
+\newblock Numerische Mathematik, 1959, 1: 269-271.
 
-\bibitem{顾春20122}
-顾春.
-\newblock 牢牢把握稳中求进的总基调[N].
-\newblock 人民日报, 2012-03-31 (3).
+\bibitem{DBLP:journals/pvldb/Xu0B20}
+Xu J, Lu H, Bao Z.
+\newblock {IMO:} {A} toolbox for simulating and querying "infected" moving objects[J].
+\newblock Proc. {VLDB} Endow., 2020, 13(12): 2825--2828.
 
-\bibitem{冯西桥1997}
-冯西桥.
-\newblock 核反应堆压力容器的{LBB}分析[R].
-\newblock 北京: 清华大学核能技术设计研究院, 1997.
+\bibitem{DBLP:journals/information/AlarabiBHA21}
+Alarabi L, Basalamah S~M, Hendawi A~M, et~al.
+\newblock Traceall: {A} real-time processing for contact tracing using indoor trajectories[J].
+\newblock Inf., 2021, 12(5): 202.
 
-\bibitem{肖珍新2012}
-肖珍新.
-\newblock 一种新型排渣阀调节降温装置: ZL201120085830.0[P]. 2012-04-25.
+\bibitem{DBLP:journals/tkde/ShangCZJWK19}
+Shang S, Chen L, Zheng K, et~al.
+\newblock Parallel trajectory-to-location join[J].
+\newblock TKDE, 2019, 31(6): 1194--1207.
 
-\bibitem{陈念永2001毫米波细胞生物效应及抗肿瘤研究无页码}
-陈念永.
-\newblock 毫米波细胞生物效应及抗肿瘤研究（无页码测试）[D].
-\newblock 成都: 电子科技大学, 2001.
+\bibitem{DBLP:journals/vldb/ShangCWJZK18}
+Shang S, Chen L, Wei Z, et~al.
+\newblock Parallel trajectory similarity joins in spatial networks[J].
+\newblock {VLDB} J., 2018, 27(3): 395--420.
 
-\bibitem{dai2022joint}
-Dai C, Zhu K, Li Z, et~al.
-\newblock Joint decoupled multiple-association and resource allocation in full-duplex heterogeneous cellular networks: A four-sided matching game[J].
-\newblock IEEE Transactions on Wireless Communications, 2022, 21(8): 6464-6477.
+\bibitem{ding2025parallel}
+Ding Z, Li K, Chen L, et~al.
+\newblock Parallel online similarity join over trajectory streams[C].
+\newblock Proceedings of the ACM on Web Conference 2025, 2025: 3426--3437.
 
-\bibitem{khawam2020coordinated}
-Khawam K, Lahoud S, El~Helou M, et~al.
-\newblock Coordinated framework for spectrum allocation and user association in 5g hetnets with mmwave[J].
-\newblock IEEE Transactions on Mobile Computing, 2020, 21(4): 1226-1243.
+\bibitem{DBLP:journals/air/KongCHWX23}
+Kong X, Chen Q, Hou M, et~al.
+\newblock Mobility trajectory generation: a survey[J].
+\newblock Artif. Intell. Rev., 2023, 56(Supplement 3): 3057--3098.
 
-\bibitem{deng2023gnn}
-Deng W, Liu Y, Li M, et~al.
-\newblock Gnn-aided user association and beam selection for mmwave integrated heterogeneous networks[J].
-\newblock IEEE Wireless Communications Letters, 2023, 12(11): 1836-1840.
+\bibitem{DBLP:conf/icde/SistlaWCD97}
+Sistla A~P, Wolfson O, Chamberlain S, et~al.
+\newblock Modeling and querying moving objects[C].
+\newblock ICDE, 1997: 422--432.
 
-\bibitem{qiao2023joint}
-Qiao Y, Niu Y, Han Z, et~al.
-\newblock Joint optimization of resource allocation and user association in multi-frequency cellular networks assisted by ris[J].
-\newblock IEEE Transactions on Vehicular Technology, 2024, 73(1): 826-842.
+\bibitem{DBLP:conf/sigmod/PatelCC04}
+Patel J~M, Chen Y, Chakka V~P.
+\newblock {STRIPES:} an efficient index for predicted trajectories[C].
+\newblock SIGMOD, 2004: 637--646.
 
-\bibitem{agarwal2021reduced}
-Agarwal B, Ruffini M, Muntean G~M.
-\newblock Reduced complexity optimal resource allocation for enhanced video quality in a heterogeneous network environment[J].
-\newblock IEEE Transactions on Wireless Communications, 2021, 21(5): 2892-2908.
+\bibitem{DBLP:conf/sigmod/SaltenisJLL00}
+Saltenis S, Jensen C~S, Leutenegger S~T, et~al.
+\newblock Indexing the positions of continuously moving objects[C].
+\newblock SIGMOD, 2000: 331--342.
 
-\bibitem{nwelih2022method}
-Nwelih E.
-\newblock A method for real-time adaptive propagation loss modeling and estimation over los and nlos microcellular radio communication links[J].
-\newblock Journal of Science and Technology Research, 2022, 4(3): 133-140.
+\bibitem{DBLP:conf/icde/ZhangLRB08}
+Zhang R, Lin D, Ramamohanarao K, et~al.
+\newblock Continuous intersection joins over moving objects[C].
+\newblock ICDE, 2008: 863--872.
+
+\bibitem{DBLP:journals/vldb/ZhangQLWW12}
+Zhang R, Qi J, Lin D, et~al.
+\newblock A highly optimized algorithm for continuous intersection join queries over moving objects[J].
+\newblock {VLDB} J., 2012, 21(4): 561--586.
+
+\bibitem{DBLP:conf/mdm/BakalovHKT05}
+Bakalov P, Hadjieleftheriou M, Keogh E~J, et~al.
+\newblock Efficient trajectory joins using symbolic representations[C].
+\newblock Chrysanthis P~K, Samaras G, (Eds.) MDM, {ACM}, 2005: 86--93.
+
+\bibitem{DBLP:conf/vldb/YiF00}
+Yi B, Faloutsos C.
+\newblock Fast time sequence indexing for arbitrary lp norms[C].
+\newblock VLDB, Morgan Kaufmann, 2000: 385--394.
+
+\bibitem{DBLP:journals/ral/VishnuARMB23}
+Vishnu C, Abhinav V, Roy D, et~al.
+\newblock Improving multi-agent trajectory prediction using traffic states on interactive driving scenarios[J].
+\newblock {IEEE} Robotics Autom. Lett., 2023, 8(5): 2708--2715.
+
+\bibitem{forrest2022moving}
+Forrest S, Recio M, Seddon P.
+\newblock Moving wildlife tracking forward under forested conditions with the swift gps algorithm[J].
+\newblock Animal Biotelemetry, 2022, 10(1): 19.
+
+\bibitem{DBLP:conf/ijcai/LiCSWLK022}
+Li K, Chen L, Shang S, et~al.
+\newblock Towards controlling the transmission of diseases: Continuous exposure discovery over massive-scale moving objects[C].
+\newblock IJCAI, 2022: 3891--3897.
+
+\bibitem{DBLP:conf/www/ZhengZXM09}
+Zheng Y, Zhang L, Xie X, et~al.
+\newblock Mining interesting locations and travel sequences from {GPS} trajectories[C].
+\newblock WWW, 2009: 791--800.
+
+\bibitem{DBLP:journals/vldb/LiNHLXZ23}
+Li J, Ni C, He D, et~al.
+\newblock Efficient knn query for moving objects on time-dependent road networks[J].
+\newblock {VLDB} J., 2023, 32(3): 575--594.
+
+\bibitem{DBLP:journals/debu/ZhengXM10}
+Zheng Y, Xie X, Ma W.
+\newblock Geolife: {A} collaborative social networking service among user, location and trajectory[J].
+\newblock {IEEE} Data Eng. Bull., 2010, 33(2): 32--39.
+
+\bibitem{DBLP:conf/sigmod/Guttman84}
+Guttman A.
+\newblock R-trees: {A} dynamic index structure for spatial searching[C].
+\newblock SIGMOD, 1984: 47--57.
+
+\bibitem{DBLP:conf/sigmod/BrinkhoffKS93}
+Brinkhoff T, Kriegel H, Seeger B.
+\newblock Efficient processing of spatial joins using r-trees[C].
+\newblock SIGMOD, 1993: 237--246.
+
+\bibitem{DBLP:journals/cacm/Bentley75}
+Bentley J~L.
+\newblock Multidimensional binary search trees used for associative searching[J].
+\newblock Commun. {ACM}, 1975, (9): 509--517.
+
+\bibitem{DBLP:journals/pvldb/ZhangCJOZ09}
+Zhang M, Chen S, Jensen C~S, et~al.
+\newblock Effectively indexing uncertain moving objects for predictive queries[J].
+\newblock Proc. {VLDB} Endow., 2009, 2(1): 1198--1209.
+
+\bibitem{DBLP:conf/sebd/CiacciaPRZ97}
+Ciaccia P, Patella M, Rabitti F, et~al.
+\newblock Indexing metric spaces with m-tree[C].
+\newblock SEBD, 1997: 67--86.
+
+\bibitem{DBLP:conf/vldb/CiacciaPZ97}
+Ciaccia P, Patella M, Zezula P.
+\newblock M-tree: An efficient access method for similarity search in metric spaces[C].
+\newblock VLDB, 1997: 426--435.
+
+\bibitem{DBLP:journals/jmlr/LiuMG06}
+Liu T, Moore A~W, Gray A~G.
+\newblock New algorithms for efficient high-dimensional nonparametric classification[J].
+\newblock J. Mach. Learn. Res., 2006, 7: 1135--1158.
+
+\bibitem{omohundro1989five}
+Omohundro S~M.
+\newblock Five balltree construction algorithms[M].
+\newblock International Computer Science Institute Berkeley, 1989.
+
+\bibitem{DBLP:journals/corr/DolatshahHM15}
+Dolatshah M, Hadian A, Minaei{-}Bidgoli B.
+\newblock Ball*-tree: Efficient spatial indexing for constrained nearest-neighbor search in metric spaces[J].
+\newblock CoRR, 2015.
+
+\bibitem{DBLP:conf/dasfaa/ChaoHLZ021}
+Chao P, He D, Li L, et~al.
+\newblock Efficient trajectory contact query processing[C].
+\newblock DASFAA, 2021: 658--666.
+
+\bibitem{DBLP:conf/edbt/ZhangRSL21}
+Zhang X, Ray S, Shoeleh F, et~al.
+\newblock Efficient contact similarity query over uncertain trajectories[C].
+\newblock EDBT, 2021: 403--408.
+
+\bibitem{DBLP:journals/vldb/LiangYWLCXL24}
+Liang A, Yao B, Wang B, et~al.
+\newblock Sub-trajectory clustering with deep reinforcement learning[J].
+\newblock {VLDB} J., 2024, 33(3): 685--702.
+
+\bibitem{li2023relaxed}
+Li K, Wang H, Chen Z, et~al.
+\newblock Relaxed group pattern detection over massive-scale trajectories[J].
+\newblock Future Generation Computer Systems, 2023, 144: 131--139.
+
+\bibitem{DBLP:journals/vldb/NutanongZTK10}
+Nutanong S, Zhang R, Tanin E, et~al.
+\newblock Analysis and evaluation of v*-\emph{k}nn: an efficient algorithm for moving \emph{k}nn queries[J].
+\newblock {VLDB} J., 2010, 19(3): 307--332.
+
+\bibitem{DBLP:journals/vldb/WardH0Q14}
+Ward P~G~D, He Z, Zhang R, et~al.
+\newblock Real-time continuous intersection joins over large sets of moving objects using graphic processing units[J].
+\newblock {VLDB} J., 2014, 23(6): 965--985.
+
+\bibitem{chang2024trajectory}
+Chang Y, Tanin E, Cong G, et~al.
+\newblock Trajectory similarity measurement: An efficiency perspective[J].
+\newblock Proceedings of the VLDB Endowment, 2024, 17(9): 2293--2306.
+
+\bibitem{DBLP:conf/kdd/HanWYS021}
+Han P, Wang J, Yao D, et~al.
+\newblock A graph-based approach for trajectory similarity computation in spatial networks[C].
+\newblock KDD, {ACM}, 2021: 556--564.
+
+\bibitem{DBLP:journals/tkde/DingZWLBZL21}
+Ding Y, Zhou X, Wu G, et~al.
+\newblock Mining spatio-temporal reachable regions with multiple sources over massive trajectory data[J].
+\newblock {IEEE} Trans. Knowl. Data Eng., 2021, 33(7): 2930--2942.
+
+\bibitem{DBLP:conf/gis/ChenP09}
+Chen Y, Patel J~M.
+\newblock Design and evaluation of trajectory join algorithms[C].
+\newblock 17th {ACM} {SIGSPATIAL} International Symposium on Advances in Geographic Information Systems, Washington, USA: {ACM}, 2009: 266--275.
+
+\bibitem{DBLP:journals/tsas/TampakisDPT20}
+Tampakis P, Doulkeridis C, Pelekis N, et~al.
+\newblock Distributed subtrajectory join on massive datasets[J].
+\newblock {ACM} Trans. Spatial Algorithms Syst., 2020, 6(2): 8:1--8:29.
+
+\bibitem{DBLP:conf/ssd/PfoserJ99}
+Pfoser D, Jensen C~S.
+\newblock Capturing the uncertainty of moving-object representations[C].
+\newblock SSD, 1999: 111--132.
+
+\bibitem{trajcevski2010uncertain}
+Trajcevski G, Choudhary A, Wolfson O, et~al.
+\newblock Uncertain range queries for necklaces[C].
+\newblock MDM, 2010: 199--208.
+
+\bibitem{DBLP:conf/uai/Moore00}
+Moore A~W.
+\newblock The anchors hierarchy: Using the triangle inequality to survive high dimensional data[C].
+\newblock UAI, 2000: 397--405.
+
+\bibitem{DBLP:journals/csur/Samet84}
+Samet H.
+\newblock The quadtree and related hierarchical data structures[J].
+\newblock {ACM} Comput. Surv., 1984, 16(2): 187--260.
+
+\bibitem{DBLP:conf/huc/ZhengLCXM08}
+Zheng Y, Li Q, Chen Y, et~al.
+\newblock Understanding mobility based on {GPS} data[C].
+\newblock UbiComp, 2008: 312--321.
+
+\bibitem{DBLP:journals/tits/Moreira-MatiasGFMD13}
+Moreira{-}Matias L, Gama J, Ferreira M, et~al.
+\newblock Predicting taxi-passenger demand using streaming data[J].
+\newblock {IEEE} Trans. Intell. Transp. Syst., 2013, 14(3): 1393--1402.
+
+\bibitem{DBLP:journals/ijrr/LimBGMR11}
+Lim S, Balakrishnan H, Gifford D, et~al.
+\newblock Stochastic motion planning and applications to traffic[J].
+\newblock I. J. Robotics Res., 2011, 30(6): 699--712.
+
+\bibitem{DBLP:conf/cdc/DotoliHJRZ13}
+Dotoli M, Hammadi S, Jeribi K, et~al.
+\newblock A multi-agent decision support system for optimization of co-modal transportation route planning services[C].
+\newblock {CDC}, {IEEE}, 2013: 911--916.
+
+\bibitem{DBLP:conf/edbt/DingYQ08}
+Ding B, Yu J~X, Qin L.
+\newblock Finding time-dependent shortest paths over large graphs[C].
+\newblock {EDBT}, {ACM}, vol. 261 of {ACM} International Conference Proceeding Series, 2008: 205--216.
+
+\bibitem{DBLP:journals/nn/HuangYWW17}
+Huang W, Yan C, Wang J, et~al.
+\newblock A time-delay neural network for solving time-dependent shortest path problem[J].
+\newblock Neural Networks, 2017, 90: 21--28.
+
+\bibitem{HuaProbabilistic}
+Hua M, Pei J.
+\newblock Probabilistic path queries on road networks[J].
+\newblock 2011.
+
+\bibitem{DBLP:conf/ssd/ShangLPX13}
+Shang S, Lu H, Pedersen T~B, et~al.
+\newblock Finding traffic-aware fastest paths in spatial networks[C].
+\newblock {SSTD}, Springer, vol. 8098 of Lecture Notes in Computer Science, 2013: 128--145.
+
+\bibitem{DafermosThe}
+Dafermos, C S.
+\newblock The traffic assignment problem for multiclass-user transportation networks[J].
+\newblock Transportation Science, 1972, 6(1): 73-87.
+
+\bibitem{StellaThe}
+Dafermos S~C, Sparrow F~T.
+\newblock The traffic assignment problem for a general network[J].
+\newblock National Bureau of Standardsb–, 1969.
+
+\bibitem{DBLP:journals/anor/PeetaM95}
+Peeta S, Mahmassani H~S.
+\newblock System optimal and user equilibrium time-dependent traffic assignment in congested networks[J].
+\newblock Ann. Oper. Res., 1995, 60(1): 81--113.
+
+\bibitem{DBLP:journals/is/LiebigPBM17}
+Liebig T, Piatkowski N, Bockermann C, et~al.
+\newblock Dynamic route planning with real-time traffic predictions[J].
+\newblock Inf. Syst., 2017, 64: 258--265.
+
+\bibitem{DBLP:journals/geoinformatica/ShangLZLPW15}
+Shang S, Liu J, Zheng K, et~al.
+\newblock Planning unobstructed paths in traffic-aware spatial networks[J].
+\newblock GeoInformatica, 2015, 19(4): 723--746.
+
+\bibitem{DBLP:journals/pvldb/CaoCCX12}
+Cao X, Chen L, Cong G, et~al.
+\newblock Keyword-aware optimal route search[J].
+\newblock Proc. {VLDB} Endow., 2012, 5(11): 1136--1147.
+
+\bibitem{DBLP:journals/ijon/ShangGLW16}
+Shang S, Guo D, Liu J, et~al.
+\newblock Prediction-based unobstructed route planning[J].
+\newblock Neurocomputing, 2016, 213: 147--154.
+
+\bibitem{DBLP:journals/networks/CaiKW97}
+Cai X, Kloks T, Wong C~K.
+\newblock Time-varying shortest path problems with constraints[J].
+\newblock Networks, 1997, 29(3): 141--150.
+
+\bibitem{DBLP:conf/aips/NikolovaBK06}
+Nikolova E, Brand M, Karger D~R.
+\newblock Optimal route planning under uncertainty[C].
+\newblock {ICAPS}, {AAAI}, 2006: 131--141.
+
+\bibitem{DBLP:conf/aaai/ChenSG20}
+Chen L, Shang S, Guo T.
+\newblock Real-time route search by locations[C].
+\newblock {AAAI}, {AAAI} Press, 2020: 574--581.
+
+\bibitem{DBLP:conf/kdd/ChenSJ0Z019}
+Chen L, Shang S, Jensen C~S, et~al.
+\newblock Effective and efficient reuse of past travel behavior for route recommendation[C].
+\newblock {KDD}, {ACM}, 2019: 488--498.
+
+\bibitem{flowObservation}
+Greenshields B.
+\newblock A study of traffic capacity[J].
+\newblock A Study of Traffic Capacity, 1934, 14.
+
+\bibitem{DBLP:conf/aaai/WilkieBLM11}
+Wilkie D, van~den Berg J~P, Lin M~C, et~al.
+\newblock Self-aware traffic route planning[C].
+\newblock Burgard W, Roth D, (Eds.) Proceedings of the Twenty-Fifth {AAAI} Conference on Artificial Intelligence, {AAAI} 2011, San Francisco, California, USA, August 7-11, 2011, {AAAI} Press, 2011: 1521--1527.
+
+\bibitem{DBLP:journals/vldb/ShangDZJKZ14}
+Shang S, Ding R, Zheng K, et~al.
+\newblock Personalized trajectory matching in spatial networks[J].
+\newblock {VLDB} J., 2014, 23(3): 449--468.
+
+\bibitem{DBLP:conf/aaai/ChenSYL20}
+Chen L, Shang S, Yao B, et~al.
+\newblock Pay your trip for traffic congestion: Dynamic pricing in traffic-aware road networks[C].
+\newblock {AAAI}, {AAAI} Press, 2020: 582--589.
+
+\bibitem{DBLP:conf/edbt/HuaP10}
+Hua M, Pei J.
+\newblock Probabilistic path queries in road networks: traffic uncertainty aware path selection[C].
+\newblock {EDBT}, {ACM}, vol. 426 of {ACM} International Conference Proceeding Series, 2010: 347--358.
+
+\bibitem{DBLP:conf/gis/OzalRT11}
+{\"{O}}zal A, Ranganathan A, Tatbul N.
+\newblock Real-time route planning with stream processing systems: a case study for the city of lucerne[C].
+\newblock {GIS-IWGS}, {ACM}, 2011: 21--28.
 
 \end{thebibliography}

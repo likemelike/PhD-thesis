@@ -58,7 +58,7 @@
 \contentsline {subsection}{\numberline {5.2.4}问题定义}{21}{subsection.5.2.4}%
 \contentsline {section}{\numberline {5.3}实验研究}{21}{section.5.3}%
 \contentsline {section}{\numberline {5.4}本章小结}{21}{section.5.4}%
-\contentsline {chapter}{\numberline {第六章}时空接触搜索}{22}{chapter.6}%
+\contentsline {chapter}{\numberline {第六章}时空接触搜索查询}{22}{chapter.6}%
 \contentsline {section}{\numberline {6.1}引言}{22}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}研究背景与意义}{22}{subsection.6.1.1}%
 \contentsline {subsection}{\numberline {6.1.2}研究内容与挑战}{22}{subsection.6.1.2}%
@@ -70,8 +70,52 @@
 \contentsline {subsection}{\numberline {6.2.4}问题定义}{22}{subsection.6.2.4}%
 \contentsline {section}{\numberline {6.3}实验研究}{22}{section.6.3}%
 \contentsline {section}{\numberline {6.4}本章小结}{22}{section.6.4}%
-\contentsline {chapter}{\numberline {第七章}后截断章节}{23}{chapter.7}%
-\contentsline {chapter}{致\hspace {1em}谢}{24}{chapter*.15}%
-\contentsline {chapter}{参考文献}{25}{section*.16}%
-\contentsline {chapter}{攻读博士学位期间取得的成果}{27}{chapter*.18}%
+\contentsline {chapter}{\numberline {第七章}一种面向时空运动范围的轨迹相似性连接方法}{23}{chapter.7}%
+\contentsline {section}{\numberline {7.1}引言}{23}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}研究背景与意义}{23}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}相关工作}{26}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}移动对象索引}{26}{subsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.1.4}轨迹相似性连接}{26}{subsection.7.1.4}%
+\contentsline {subsection}{\numberline {7.1.5}研究内容与挑战}{27}{subsection.7.1.5}%
+\contentsline {subsection}{\numberline {7.1.6}研究成果与贡献}{27}{subsection.7.1.6}%
+\contentsline {section}{\numberline {7.2}问题描述}{27}{section.7.2}%
+\contentsline {section}{\numberline {7.3}运动范围引导的匹配方法}{29}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}时间区间预检查}{30}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}基于 HBall-tree 的交集预检查}{31}{subsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.2.1}HBall-tree}{32}{subsubsection.7.3.2.1}%
+\contentsline {subsubsection}{\numberline {7.3.2.2}HBall-tree 的重新划分策略}{32}{subsubsection.7.3.2.2}%
+\contentsline {subsection}{\numberline {7.3.3}基于 HBall-tree 的 Join}{33}{subsection.7.3.3}%
+\contentsline {subsubsection}{\numberline {7.3.3.1}剪枝增强策略}{33}{subsubsection.7.3.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.3.2}算法细节}{34}{subsubsection.7.3.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.3.3}时间复杂度}{35}{subsubsection.7.3.3.3}%
+\contentsline {section}{\numberline {7.4}实验研究}{35}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}实验设置}{35}{subsection.7.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.1.1}数据准备}{35}{subsubsection.7.4.1.1}%
+\contentsline {subsubsection}{\numberline {7.4.1.2}对比算法}{36}{subsubsection.7.4.1.2}%
+\contentsline {subsubsection}{\numberline {7.4.1.3}参数设置}{36}{subsubsection.7.4.1.3}%
+\contentsline {subsection}{\numberline {7.4.2}Performance Evaluation}{36}{subsection.7.4.2}%
+\contentsline {subsubsection}{\numberline {7.4.2.1}剪枝有效性评估}{36}{subsubsection.7.4.2.1}%
+\contentsline {subsubsection}{\numberline {7.4.2.2}移动对象基数的影响}{37}{subsubsection.7.4.2.2}%
+\contentsline {subsubsection}{\numberline {7.4.2.3}特征数量的影响}{38}{subsubsection.7.4.2.3}%
+\contentsline {subsubsection}{\numberline {7.4.2.4}时间区间的影响}{39}{subsubsection.7.4.2.4}%
+\contentsline {subsubsection}{\numberline {7.4.2.5}$\epsilon $ 的影响}{39}{subsubsection.7.4.2.5}%
+\contentsline {section}{\numberline {7.5}基于 M*-树的连接算法}{40}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}M*-树}{41}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}交集检查}{41}{subsection.7.5.2}%
+\contentsline {subsection}{\numberline {7.5.3}算法细节}{41}{subsection.7.5.3}%
+\contentsline {subsubsection}{\numberline {7.5.3.1}时间复杂度分析}{43}{subsubsection.7.5.3.1}%
+\contentsline {section}{\numberline {7.6}Top-$k$ 交集相似度连接}{43}{section.7.6}%
+\contentsline {section}{\numberline {7.7}IS-Join 的附加实验}{43}{section.7.7}%
+\contentsline {subsubsection}{\numberline {7.7.0.1}相似度阈值的影响}{43}{subsubsection.7.7.0.1}%
+\contentsline {subsubsection}{\numberline {7.7.0.2}重新分区策略的评估}{43}{subsubsection.7.7.0.2}%
+\contentsline {subsection}{\numberline {7.7.1}Top-$k$ IS-Join 的实验研究}{45}{subsection.7.7.1}%
+\contentsline {subsubsection}{\numberline {7.7.1.1}$k$ 的影响}{45}{subsubsection.7.7.1.1}%
+\contentsline {section}{\numberline {7.8}特征精炼}{45}{section.7.8}%
+\contentsline {subsubsection}{\numberline {7.8.0.1}候选对象精炼}{46}{subsubsection.7.8.0.1}%
+\contentsline {section}{\numberline {7.9}本章小结}{47}{section.7.9}%
+\contentsline {chapter}{\numberline {第八章}总结与展望}{49}{chapter.8}%
+\contentsline {chapter}{\numberline {第九章}后截断章节}{50}{chapter.9}%
+\contentsline {chapter}{致\hspace {1em}谢}{51}{chapter*.38}%
+\contentsline {chapter}{参考文献}{52}{section*.39}%
+\contentsline {chapter}{攻读博士学位期间取得的成果}{57}{chapter*.41}%
 \contentsfinish 

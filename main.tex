@@ -1,6 +1,12 @@
 % !TEX Program = xelatex
 \documentclass[doctor, vlined]{DissertUESTC}
 
+
+% join
+\setlength{\headheight}{13pt} % 自己设定，可能影响格式
+\usepackage{changepage}
+\usepackage{diagbox}
+
 \begin{document}
 	% 以下两条命令为高亮示例文档中的关键内容而设，正式撰写时切不可使用
 	\newcommand{\shad}[1]{\textcolor{DodgerBlue}{\ttfamily #1}}
@@ -36,6 +42,8 @@
 	\input{latex/3_routesearch.tex}
 	\input{latex/4_comovement.tex}
 	\input{latex/5_contact.tex}
+	\input{latex/6_join.tex}
+	\input{latex/7_conclusion}
 
 	\chapter{后截断章节} %删除前检查是否存在后截断章节
 

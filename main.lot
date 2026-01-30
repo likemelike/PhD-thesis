@@ -7,4 +7,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\cftsetpnumwidth {\widthof {48}-1bp}
+\contentsline {table}{\numberline {7-1}{\ignorespaces 符号说明汇总}}{48}{table.caption.16}%
+\cftsetpnumwidth {\widthof {48}-1bp}
+\contentsline {table}{\numberline {7-2}{\ignorespaces 评估参数设置}}{48}{table.caption.22}%
+\cftsetpnumwidth {\widthof {48}-1bp}
+\contentsline {table}{\numberline {7-3}{\ignorespaces 剪枝性能}}{48}{table.caption.23}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
 \contentsfinish 
