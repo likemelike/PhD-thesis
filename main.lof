@@ -27,52 +27,68 @@
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{19}{subfigure.6.3}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\cftsetpnumwidth {\widthof {25}-1bp}
-\contentsline {figure}{\numberline {7-1}{\ignorespaces IS-Join问题示例}}{25}{figure.caption.15}%
+\cftsetpnumwidth {\widthof {23}-1bp}
+\contentsline {figure}{\numberline {6-1}{\ignorespaces Example of cases of exposure}}{23}{figure.caption.15}%
 \cftsetpnumwidth {\widthof {27}-1bp}
-\contentsline {figure}{\numberline {7-2}{\ignorespaces Illustration of time-point motion range}}{27}{figure.caption.17}%
-\cftsetpnumwidth {\widthof {29}-1bp}
-\contentsline {figure}{\numberline {7-3}{\ignorespaces 时间区间交集相似性的示意图}}{29}{figure.caption.18}%
-\cftsetpnumwidth {\widthof {31}-1bp}
-\contentsline {figure}{\numberline {7-4}{\ignorespaces 时间区间运动范围示例}}{31}{figure.caption.19}%
-\contentsline {figure}{\numberline {7-5}{\ignorespaces 混合 Ball-tree 的示意图}}{31}{figure.caption.20}%
+\contentsline {figure}{\numberline {6-2}{\ignorespaces Potential cases of exposure}}{27}{figure.caption.16}%
+\cftsetpnumwidth {\widthof {33}-1bp}
+\contentsline {figure}{\numberline {6-3}{\ignorespaces 查询对象数量的影响}}{33}{figure.caption.20}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {北京}}}{33}{subfigure.3.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {北京}}}{33}{subfigure.3.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {波尔图}}}{33}{subfigure.3.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {波尔图}}}{33}{subfigure.3.4}%
+\cftsetpnumwidth {\widthof {34}-1bp}
+\contentsline {figure}{\numberline {6-4}{\ignorespaces 距离阈值 $\epsilon $ 的影响}}{34}{figure.caption.21}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {北京}}}{34}{subfigure.4.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {北京}}}{34}{subfigure.4.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {波尔图}}}{34}{subfigure.4.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {波尔图}}}{34}{subfigure.4.4}%
+\addvspace {10\p@ }
 \cftsetpnumwidth {\widthof {37}-1bp}
-\contentsline {figure}{\numberline {7-6}{\ignorespaces 不同 $|O|$ 下的构建时间影响 \subref {geo-num-ctime}:Geolife数据集下的实验; \subref {pt-num-ctime}:Porto数据集下的实验}}{37}{figure.caption.24}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{37}{subfigure.6.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{37}{subfigure.6.2}%
-\cftsetpnumwidth {\widthof {38}-1bp}
-\contentsline {figure}{\numberline {7-7}{\ignorespaces 不同 $|O|$ 下的查询时间影响 \subref {geo-num-ftime}:Geolife数据集下的实验; \subref {pt-num-ftime}:Porto数据集下的实验}}{38}{figure.caption.25}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{38}{subfigure.7.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{38}{subfigure.7.2}%
-\cftsetpnumwidth {\widthof {38}-1bp}
-\contentsline {figure}{\numberline {7-8}{\ignorespaces POI 数量对运行时间的影响 \subref {geo-poi-ftime}:Geolife数据集下的实验; \subref {pt-poi-ftime}:Porto数据集下的实验}}{38}{figure.caption.26}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{38}{subfigure.8.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{38}{subfigure.8.2}%
-\cftsetpnumwidth {\widthof {39}-1bp}
-\contentsline {figure}{\numberline {7-9}{\ignorespaces $|I|$ 对运行时间的影响 \subref {geo-I-ftime}:Geolife数据集下的实验; \subref {pt-I-ftime}:Porto数据集下的实验}}{39}{figure.caption.27}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{39}{subfigure.9.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{39}{subfigure.9.2}%
+\contentsline {figure}{\numberline {7-1}{\ignorespaces IS-Join问题示例}}{37}{figure.caption.22}%
 \cftsetpnumwidth {\widthof {40}-1bp}
-\contentsline {figure}{\numberline {7-10}{\ignorespaces 参数 $\epsilon $ 的影响 \subref {geo-ep-ftime}:Geolife数据集下的实验; \subref {pt-ep-ftime}:Porto数据集下的实验}}{40}{figure.caption.28}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{40}{subfigure.10.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{40}{subfigure.10.2}%
+\contentsline {figure}{\numberline {7-2}{\ignorespaces Illustration of time-point motion range}}{40}{figure.caption.24}%
 \cftsetpnumwidth {\widthof {41}-1bp}
-\contentsline {figure}{\numberline {7-11}{\ignorespaces M*-树的结构}}{41}{figure.caption.30}%
-\cftsetpnumwidth {\widthof {45}-1bp}
-\contentsline {figure}{\numberline {7-12}{\ignorespaces 相似度阈值的影响}}{45}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Geolife}}}{45}{subfigure.12.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Porto}}}{45}{subfigure.12.2}%
-\cftsetpnumwidth {\widthof {45}-1bp}
-\contentsline {figure}{\numberline {7-13}{\ignorespaces 移动对象数量对节点访问次数的影响}}{45}{figure.caption.35}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Geolife}}}{45}{subfigure.13.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Porto}}}{45}{subfigure.13.2}%
-\cftsetpnumwidth {\widthof {46}-1bp}
-\contentsline {figure}{\numberline {7-14}{\ignorespaces $k$ 的影响}}{46}{figure.caption.36}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Geolife}}}{46}{subfigure.14.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Porto}}}{46}{subfigure.14.2}%
-\cftsetpnumwidth {\widthof {46}-1bp}
-\contentsline {figure}{\numberline {7-15}{\ignorespaces 时间点运动范围内的采样示意}}{46}{figure.caption.37}%
+\contentsline {figure}{\numberline {7-3}{\ignorespaces 时间区间交集相似性的示意图}}{41}{figure.caption.25}%
+\cftsetpnumwidth {\widthof {43}-1bp}
+\contentsline {figure}{\numberline {7-4}{\ignorespaces 时间区间运动范围示例}}{43}{figure.caption.26}%
+\contentsline {figure}{\numberline {7-5}{\ignorespaces 混合 Ball-tree 的示意图}}{44}{figure.caption.27}%
+\cftsetpnumwidth {\widthof {50}-1bp}
+\contentsline {figure}{\numberline {7-6}{\ignorespaces 不同 $|O|$ 下的构建时间影响 \subref {geo-num-ctime}:Geolife数据集下的实验; \subref {pt-num-ctime}:Porto数据集下的实验}}{50}{figure.caption.31}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{50}{subfigure.6.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{50}{subfigure.6.2}%
+\cftsetpnumwidth {\widthof {50}-1bp}
+\contentsline {figure}{\numberline {7-7}{\ignorespaces 不同 $|O|$ 下的查询时间影响 \subref {geo-num-ftime}:Geolife数据集下的实验; \subref {pt-num-ftime}:Porto数据集下的实验}}{50}{figure.caption.32}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{50}{subfigure.7.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{50}{subfigure.7.2}%
+\cftsetpnumwidth {\widthof {51}-1bp}
+\contentsline {figure}{\numberline {7-8}{\ignorespaces POI 数量对运行时间的影响 \subref {geo-poi-ftime}:Geolife数据集下的实验; \subref {pt-poi-ftime}:Porto数据集下的实验}}{51}{figure.caption.33}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{51}{subfigure.8.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{51}{subfigure.8.2}%
+\cftsetpnumwidth {\widthof {52}-1bp}
+\contentsline {figure}{\numberline {7-9}{\ignorespaces $|I|$ 对运行时间的影响 \subref {geo-I-ftime}:Geolife数据集下的实验; \subref {pt-I-ftime}:Porto数据集下的实验}}{52}{figure.caption.34}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{52}{subfigure.9.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{52}{subfigure.9.2}%
+\cftsetpnumwidth {\widthof {52}-1bp}
+\contentsline {figure}{\numberline {7-10}{\ignorespaces 参数 $\epsilon $ 的影响 \subref {geo-ep-ftime}:Geolife数据集下的实验; \subref {pt-ep-ftime}:Porto数据集下的实验}}{52}{figure.caption.35}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{52}{subfigure.10.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{52}{subfigure.10.2}%
+\cftsetpnumwidth {\widthof {53}-1bp}
+\contentsline {figure}{\numberline {7-11}{\ignorespaces M*-树的结构}}{53}{figure.caption.37}%
+\cftsetpnumwidth {\widthof {57}-1bp}
+\contentsline {figure}{\numberline {7-12}{\ignorespaces 相似度阈值的影响 \subref {geo-sim-totaltime}:Geolife数据集下的实验; \subref {pt-sim-totaltime}:Porto数据集下的实验}}{57}{figure.caption.41}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{57}{subfigure.12.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{57}{subfigure.12.2}%
+\cftsetpnumwidth {\widthof {58}-1bp}
+\contentsline {figure}{\numberline {7-13}{\ignorespaces 移动对象数量对节点访问次数的影响 \subref {geo-num-access}:Geolife数据集下的实验; \subref {pt-num-access}:Porto数据集下的实验}}{58}{figure.caption.42}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{58}{subfigure.13.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{58}{subfigure.13.2}%
+\cftsetpnumwidth {\widthof {58}-1bp}
+\contentsline {figure}{\numberline {7-14}{\ignorespaces $k$ 的影响 \subref {geo-k-ftime}:Geolife数据集下的实验; \subref {pt-k-ftime}:Porto数据集下的实验}}{58}{figure.caption.43}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{58}{subfigure.14.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{58}{subfigure.14.2}%
+\cftsetpnumwidth {\widthof {59}-1bp}
+\contentsline {figure}{\numberline {7-15}{\ignorespaces 时间点运动范围内的采样示意}}{59}{figure.caption.44}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 

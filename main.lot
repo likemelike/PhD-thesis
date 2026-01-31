@@ -6,13 +6,15 @@
 \contentsline {table}{\numberline {4-1}{\ignorespaces 参数设定}}{15}{table.caption.9}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\cftsetpnumwidth {\widthof {32}-1bp}
+\contentsline {table}{\numberline {6-1}{\ignorespaces 参数设置}}{32}{table.caption.19}%
 \addvspace {10\p@ }
-\cftsetpnumwidth {\widthof {48}-1bp}
-\contentsline {table}{\numberline {7-1}{\ignorespaces 符号说明汇总}}{48}{table.caption.16}%
-\cftsetpnumwidth {\widthof {48}-1bp}
-\contentsline {table}{\numberline {7-2}{\ignorespaces 评估参数设置}}{48}{table.caption.22}%
-\cftsetpnumwidth {\widthof {48}-1bp}
-\contentsline {table}{\numberline {7-3}{\ignorespaces 剪枝性能}}{48}{table.caption.23}%
+\cftsetpnumwidth {\widthof {61}-1bp}
+\contentsline {table}{\numberline {7-1}{\ignorespaces 符号说明汇总}}{61}{table.caption.23}%
+\cftsetpnumwidth {\widthof {61}-1bp}
+\contentsline {table}{\numberline {7-2}{\ignorespaces 评估参数设置}}{61}{table.caption.29}%
+\cftsetpnumwidth {\widthof {61}-1bp}
+\contentsline {table}{\numberline {7-3}{\ignorespaces 剪枝性能}}{61}{table.caption.30}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 

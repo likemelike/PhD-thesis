@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  30 JAN 2026 22:18
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  31 JAN 2026 23:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1475,7 +1475,17 @@ File: p2e-xetex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 LaTeX Font Info:    Overwriting symbol font `CJKmath' in version `bold'
 (Font)                  TU/SimSun(0)/m/n --> TU/SimSun(0)/b/n on input line 10.
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 10.
- (./main.aux)
+ (./main.aux
+
+LaTeX Warning: Label `eq:pre-check' multiply defined.
+
+
+LaTeX Warning: Label `tb:para' multiply defined.
+
+
+LaTeX Warning: Label `fig:intro' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -1573,11 +1583,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [2]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 107.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 126.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 107.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 126.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
@@ -1586,25 +1596,30 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-[3] (./main.lof)
-\tf@lof=\write7
-\openout7 = `main.lof'.
+[3] (./main.lof
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [4
 
-] (./main.lot)
+])
+\tf@lof=\write7
+\openout7 = `main.lof'.
+
+
+
+[5] (./main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
 
 
-[5
+[6
 
 ]
 
-[6
+[7
 
 ]
 Chapter 第一章.
@@ -1766,15 +1781,179 @@ Chapter 第五章.
 
 ]
 Chapter 第六章.
-) (./latex/6_join.tex
+
+Package natbib Warning: Citation `DBLP:conf/icde/ChenSJ0K20' on page 22 undefined on input line 10.
+
+
+Package natbib Warning: Citation `DBLP:conf/ijcai/ChenSFK21' on page 22 undefined on input line 10.
+
+
+Package natbib Warning: Citation `react' on page 22 undefined on input line 10.
+
+
+Package natbib Warning: Citation `DBLP:conf/sigmod/FaloutsosRM94' on page 22 undefined on input line 12.
+
+
+Package natbib Warning: Citation `DBLP:journals/pvldb/AssentWKKS09' on page 22 undefined on input line 12.
+
+
+Package natbib Warning: Citation `DBLP:conf/icde/RongLSWLD17' on page 22 undefined on input line 12.
+
+
+Package natbib Warning: Citation `DBLP:journals/pvldb/XieLP17' on page 22 undefined on input line 12.
+
+
+Package natbib Warning: Citation `DBLP:journals/corr/abs-2004-06653' on page 22 undefined on input line 14.
+
+
+Package natbib Warning: Citation `DBLP:ptop' on page 22 undefined on input line 14.
+
+File: fig/section5/intro.pdf Graphic file (type pdf)
+<use fig/section5/intro.pdf>
+
+Package natbib Warning: Citation `DBLP:journals/pvldb/JeungYZJS08' on page 22 undefined on input line 24.
+
+
+Package natbib Warning: Citation `DBLP:journals/pvldb/LiDHK10' on page 22 undefined on input line 24.
+
+
+Package natbib Warning: Citation `flock' on page 22 undefined on input line 24.
+
+
+Package natbib Warning: Citation `tang' on page 22 undefined on input line 24.
+
+
+Package natbib Warning: Citation `DBLP:conf/icde/ZhengZYS13' on page 22 undefined on input line 24.
+
+
+Package natbib Warning: Citation `flock' on page 22 undefined on input line 25.
+
+
+Package natbib Warning: Citation `DBLP:conf/icde/ZhengZYS13' on page 22 undefined on input line 26.
+
+
+Package natbib Warning: Citation `tang' on page 22 undefined on input line 27.
+
+
+Underfull \vbox (badness 4341) has occurred while \output is active []
+
+
 
 [22
 
 ]
+
+Package natbib Warning: Citation `web' on page 23 undefined on input line 33.
+
+
+Package natbib Warning: Citation `DBLP:journals/corr/abs-2004-06653' on page 23 undefined on input line 33.
+
+
+Package natbib Warning: Citation `web' on page 23 undefined on input line 36.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[23]
+
+[24]
+
+[25]
+
+Package natbib Warning: Citation `DBLP:journals/pami/TahaH15' on page 26 undefined on input line 91.
+
+File: fig/section5/cells.pdf Graphic file (type pdf)
+<use fig/section5/cells.pdf>
+
+
+[26]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[27]
+
+[28]
+Underfull \hbox (badness 6559) in paragraph at lines 186--187
+[]\TU/SimSun(0)/m/n/12.045 为 进 一 步 提 升 暴 露 案 例 发 现 的 效 率，|  我 们 提 出 了 一 种 $[]$
+ []
+
+
+Underfull \hbox (badness 1735) in paragraph at lines 186--187
+|\TU/SimSun(0)/m/n/12.045 （$[]$\TU/times(0)/m/n/12.045 pproximate $[]$roup $[]$rocessing\TU/SimSun(0)/m/n/12.045 ，| \TU/times(0)/m/n/12.045 AGP\TU/SimSun(0)/m/n/12.045 ）|  算 法。|  本 节 将 介 绍 所 采 用 的 近 似 策 略
+ []
+
+
+LaTeX Warning: Reference `alg:app' on page 29 undefined on input line 246.
+
+
+
+[29]
+
+[30]
+
+Package natbib Warning: Citation `DBLP:conf/kdd/YuanZXS11' on page 31 undefined on input line 270.
+
+File: fig/section5/BJ-Q-CE.png Graphic file (type bmp)
+<fig/section5/BJ-Q-CE.png>
+File: fig/section5/BJ-Q-time.png Graphic file (type bmp)
+<fig/section5/BJ-Q-time.png>
+File: fig/section5/PT-Q-CE.png Graphic file (type bmp)
+<fig/section5/PT-Q-CE.png>
+File: fig/section5/PT-Q-time.png Graphic file (type bmp)
+<fig/section5/PT-Q-time.png>
+File: fig/section5/BJ-ep-CE.png Graphic file (type bmp)
+<fig/section5/BJ-ep-CE.png>
+File: fig/section5/BJ-ep-time.png Graphic file (type bmp)
+<fig/section5/BJ-ep-time.png>
+File: fig/section5/PT-ep-CE.png Graphic file (type bmp)
+<fig/section5/PT-ep-CE.png>
+File: fig/section5/PT-ep-time.png Graphic file (type bmp)
+<fig/section5/PT-ep-time.png>
+
+
+[31]
+
+LaTeX Warning: Reference `Beijing-k-CE' on page 32 undefined on input line 382.
+
+
+LaTeX Warning: Reference `Porto-k-CE' on page 32 undefined on input line 382.
+
+
+LaTeX Warning: Reference `Beijing-k-CPU' on page 32 undefined on input line 382.
+
+
+LaTeX Warning: Reference `Porto-k-CPU' on page 32 undefined on input line 382.
+
+
+LaTeX Warning: Reference `img:app' on page 32 undefined on input line 385.
+
+
+Underfull \vbox (badness 8075) has occurred while \output is active []
+
+
+
+[32]
+
+LaTeX Warning: Reference `img:precheck' on page 33 undefined on input line 388.
+
+
+Underfull \hbox (badness 3138) in paragraph at lines 388--389
+[] [] |\TU/times(0)/b/n/12.045 6.6.2.0.5 \TU/SimSun(0)/b/n/12.045 预 检 查 策 略 的 评 估[] \TU/SimSun(0)/m/n/12.045 我 们 将 不 采 用 预 检 查 策 略 的 \TU/times(0)/m/n/12.045 EGP \TU/SimSun(0)/m/n/12.045 方 法 记 为
+ []
+
+) (./latex/6_join.tex
+
+[33]
+
+[34]
 Chapter 第七章.
 
 
-[23
+[35
 
 ]
 
@@ -1814,43 +1993,42 @@ File: fig/section6/intro.png Graphic file (type bmp)
 <fig/section6/intro.png>
 
 
-[24]
+[36]
 
-LaTeX Warning: Reference `sec:statement' on page 25 undefined on input line 48.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Reference `sec:statement' on page 37 undefined on input line 48.
 
 
+Underfull \vbox (badness 1960) has occurred while \output is active []
 
-[25]
+
+
+[37]
 Underfull \vbox (badness 1448) has occurred while \output is active []
 
 
 
-[26]
+[38]
 File: fig/section6/lens.png Graphic file (type bmp)
 <fig/section6/lens.png>
 
 
-[27]
+[39]
 
-[28]
+[40]
 File: fig/section6/overall example.png Graphic file (type bmp)
 <fig/section6/overall example.png>
 
 
-[29]
+[41]
+
+[42]
 File: fig/section6/ellipse.pdf Graphic file (type pdf)
 <use fig/section6/ellipse.pdf>
-
-
-[30]
 File: fig/section6/ball-tree.pdf Graphic file (type pdf)
 <use fig/section6/ball-tree.pdf>
 
 
-[31]
+[43]
 Underfull \hbox (badness 1184) in paragraph at lines 291--296
 \TU/SimSun(0)/m/n/12.045 非 叶 节 点 仅 包 含 两 个 子 节 点 不 同，| \TU/times(0)/m/n/12.045 HBall-tree \TU/SimSun(0)/m/n/12.045 通 过 一 种 重 新 划 分  |（\TU/times(0)/m/n/12.045 repartition\TU/SimSun(0)/m/n/12.045 ）|
  []
@@ -1861,16 +2039,37 @@ Underfull \hbox (badness 2020) in paragraph at lines 291--296
  []
 
 
+Underfull \vbox (badness 2790) has occurred while \output is active []
 
-[32]
 
-[33]
 
-[34]
+[44]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[35]
 
-[36]
+
+[45]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[46]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[47]
+
+[48]
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+
+
+[49]
 File: fig/section6/geo-num-ctime.png Graphic file (type bmp)
 <fig/section6/geo-num-ctime.png>
 File: fig/section6/pt-num-ctime.png Graphic file (type bmp)
@@ -1889,12 +2088,6 @@ Overfull \hbox (12.04498pt too wide) in paragraph at lines 482--487
  [][][][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[37]
 File: fig/section6/geo-poi-ftime.png Graphic file (type bmp)
 <fig/section6/geo-poi-ftime.png>
 File: fig/section6/pt-poi-ftime.png Graphic file (type bmp)
@@ -1909,7 +2102,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[38]
+[50]
 File: fig/section6/geo-I-ftime.png Graphic file (type bmp)
 <fig/section6/geo-I-ftime.png>
 File: fig/section6/pt-I-ftime.png Graphic file (type bmp)
@@ -1932,14 +2125,14 @@ File: fig/section6/geo-ep-ftime.png Graphic file (type bmp)
 File: fig/section6/pt-ep-ftime.png Graphic file (type bmp)
 <fig/section6/pt-ep-ftime.png>
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[39]
+[51]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 File: fig/section6/mtree.pdf Graphic file (type pdf)
 <use fig/section6/mtree.pdf>
 
@@ -1947,18 +2140,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[40]
+[52]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-
-[41]
+[53]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[42]
+[54]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 671.
@@ -1977,94 +2166,30 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 766.
 
-File: fig/section6/geo-sim-ftime.png Graphic file (type bmp)
-<fig/section6/geo-sim-ftime.png>
 
-Overfull \hbox (8.13994pt too wide) in paragraph at lines 774--774
-[]\TU/times(0)/m/n/10.53937 (a)
- []
-
-
-Overfull \hbox (12.24165pt too wide) in paragraph at lines 774--774
-|\TU/times(0)/m/n/10.53937 Ge-
- []
-
-
-Overfull \hbox (5.22226pt too wide) in paragraph at lines 774--774
-\TU/times(0)/m/n/10.53937 o-
- []
-
-
-Overfull \hbox (10.4868pt too wide) in paragraph at lines 774--774
-\TU/times(0)/m/n/10.53937 life| 
- []
-
-File: fig/section6/pt-sim-ftime.png Graphic file (type bmp)
-<fig/section6/pt-sim-ftime.png>
-
-Overfull \hbox (5.31929pt too wide) in paragraph at lines 778--778
-[]\TU/times(0)/m/n/10.53937 (b)
- []
-
-
-Overfull \hbox (15.86916pt too wide) in paragraph at lines 778--778
-|\TU/times(0)/m/n/10.53937 Porto| 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[43]
+[55]
 
-LaTeX Warning: Text page 44 contains only floats.
+LaTeX Warning: Text page 56 contains only floats.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[44]
+[56]
+File: fig/section6/geo-sim-ftime.png Graphic file (type bmp)
+<fig/section6/geo-sim-ftime.png>
+File: fig/section6/pt-sim-ftime.png Graphic file (type bmp)
+<fig/section6/pt-sim-ftime.png>
 File: fig/section6/geo-num-access.png Graphic file (type bmp)
 <fig/section6/geo-num-access.png>
-
-Overfull \hbox (3.87436pt too wide) in paragraph at lines 791--791
-[]\TU/times(0)/m/n/10.53937 (a)
- []
-
-
-Overfull \hbox (7.97607pt too wide) in paragraph at lines 791--791
-|\TU/times(0)/m/n/10.53937 Ge-
- []
-
-
-Overfull \hbox (0.95668pt too wide) in paragraph at lines 791--791
-\TU/times(0)/m/n/10.53937 o-
- []
-
-
-Overfull \hbox (6.22122pt too wide) in paragraph at lines 791--791
-\TU/times(0)/m/n/10.53937 life| 
- []
-
 File: fig/section6/pt-num-access.png Graphic file (type bmp)
 <fig/section6/pt-num-access.png>
 
-Overfull \hbox (8.73175pt too wide) in paragraph at lines 795--795
-[]\TU/times(0)/m/n/10.53937 (b)
- []
-
-
-Overfull \hbox (19.28162pt too wide) in paragraph at lines 795--795
-|\TU/times(0)/m/n/10.53937 Porto| 
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 800.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 800.
-
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 802.
@@ -2072,104 +2197,91 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 802.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 804.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 804.
 
 File: fig/section6/geo-k-ftime.png Graphic file (type bmp)
 <fig/section6/geo-k-ftime.png>
-
-Overfull \hbox (8.13994pt too wide) in paragraph at lines 809--809
-[]\TU/times(0)/m/n/10.53937 (a)
- []
-
-
-Overfull \hbox (12.24165pt too wide) in paragraph at lines 809--809
-|\TU/times(0)/m/n/10.53937 Ge-
- []
-
-
-Overfull \hbox (5.22226pt too wide) in paragraph at lines 809--809
-\TU/times(0)/m/n/10.53937 o-
- []
-
-
-Overfull \hbox (10.4868pt too wide) in paragraph at lines 809--809
-\TU/times(0)/m/n/10.53937 life| 
- []
-
 File: fig/section6/pt-k-ftime.png Graphic file (type bmp)
 <fig/section6/pt-k-ftime.png>
 
-Overfull \hbox (8.73175pt too wide) in paragraph at lines 812--812
-[]\TU/times(0)/m/n/10.53937 (b)
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (19.28162pt too wide) in paragraph at lines 812--812
-|\TU/times(0)/m/n/10.53937 Porto| 
- []
 
+[57]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 821.
+(hyperref)                than one, level fixed on input line 826.
 
 
-Package natbib Warning: Citation `DBLP:journals/comvis/HughesC12' on page 45 undefined on input line 824.
+Package natbib Warning: Citation `DBLP:journals/comvis/HughesC12' on page 58 undefined on input line 829.
 
 
-Package natbib Warning: Citation `stark1979sampling' on page 45 undefined on input line 824.
+Package natbib Warning: Citation `stark1979sampling' on page 58 undefined on input line 829.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[45]
+[58]
 File: fig/section6/sample.pdf Graphic file (type pdf)
 <use fig/section6/sample.pdf>
+) (./latex/7_conclusion
+Underfull \vbox (badness 1281) has occurred while \output is active []
 
 
-[46]) (./latex/7_conclusion
 
-[47]
+[59]
 
-[48]
+[60]
+
+[61]
 Chapter 第八章.
 )
 
-[49
+[62
 
 ]
 Chapter 第九章.
 
 
-[50
+[63
 
 ]
 
-[51
+[64
 
 ] (./main.bbl
 
-[52
+[65
 
 
 ]
 
-[53]
+[66]
 
-[54]
+[67]
 
-[55]) (./latex/achivement.tex
+[68]) (./latex/achivement.tex
 
-[56]
+[69]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[57
+[70
 
 ]
 
-[58]
+[71]
 Underfull \hbox (badness 2245) in paragraph at lines 58--59
 []\TU/SimSun(0)/b/n/12.045 作 者 \TU/times(0)/b/n/12.045 1\TU/times(0)/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 作 者 \TU/times(0)/m/n/12.045 2*, \TU/SimSun(0)/m/n/12.045 作 者 \TU/times(0)/m/n/12.045 3, \TU/SimSun(0)/m/n/12.045 作 者 \TU/times(0)/m/n/12.045 4\TU/SimSun(0)/m/n/12.045 。|  一 种 基 于 \TU/times(0)/m/n/12.045 xxxxx \TU/SimSun(0)/m/n/12.045 的 真 气 运 转 方 法\TU/times(0)/m/n/12.045 :
  []
@@ -2180,7 +2292,7 @@ Package natbib Warning: There were undefined citations.
 
 
 
-[59] (./main.aux)
+[72] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/08/05>
@@ -2189,16 +2301,19 @@ L3 programming layer <2022/08/05>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AEB7DB7BA775183AF2C309F539D62339;18248.
+(rerunfilecheck)             Checksum: 3550D6FEB7FDABCE180194F61478FDDF;18421.
  ) 
 Here is how much of TeX's memory you used:
- 51239 strings out of 473832
- 1077780 string characters out of 5729481
- 1575708 words of memory out of 5000000
- 73393 multiletter control sequences out of 15000+600000
- 574375 words of font info for 166 fonts, out of 8000000 for 9000
+ 51453 strings out of 473832
+ 1086066 string characters out of 5729481
+ 1576448 words of memory out of 5000000
+ 73592 multiletter control sequences out of 15000+600000
+ 577508 words of font info for 175 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 125i,24n,134p,1052b,1413s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,24n,134p,1046b,1409s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (65 pages).
+Output written on main.pdf (79 pages).

@@ -38,7 +38,7 @@ IS-Join 问题面向多种应用场景，例如疾病防控、轨迹数据清洗
 
 \begin{figure}[htb]
     \centering
-\includegraphics[width=0.8\columnwidth]{fig/section6/intro.png}
+\includegraphics[width=1\columnwidth]{fig/section6/intro.png}
     \caption{IS-Join问题示例}
     \label{fig:intro}
 \end{figure}
@@ -132,7 +132,7 @@ dist((x,y),(x_j,y_j)) \leq v_{max}\cdot(t_j-t)\}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.3\columnwidth]{fig/section6/lens.png}
+    \includegraphics[width=0.5\columnwidth]{fig/section6/lens.png}
     \caption{Illustration of time-point motion range}
     \label{fig:lens}
 \end{figure}
@@ -190,7 +190,7 @@ dist((x,y),(x_j,y_j)) \leq v_{max}\cdot(t_j-t)\}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.4\columnwidth]{fig/section6/overall example.png}
+    \includegraphics[width=0.6\columnwidth]{fig/section6/overall example.png}
     \caption{时间区间交集相似性的示意图}
     \label{fig:relaxed similarity example}
 \end{figure}
@@ -250,7 +250,7 @@ $(IS(o_i,o_j,I,\epsilon)<\theta)$。
 
 \begin{figure}[tbp]
     \centering
-    \includegraphics[width=0.4\columnwidth]{fig/section6/ellipse.pdf}
+    \includegraphics[width=0.6\columnwidth]{fig/section6/ellipse.pdf}
     \caption{时间区间运动范围示例}
     \label{fig:ellipse}
 \end{figure}
@@ -273,7 +273,7 @@ $dist(MR(o,I),MR(o',I))$ 表示 $MR(o,I)$ 与 $MR(o',I)$ 中心点之间的距�
 \label{sec:ball-tree}
 \begin{figure*}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{fig/section6/ball-tree.pdf}
+    \includegraphics[width=1\textwidth]{fig/section6/ball-tree.pdf}
     \caption{混合 Ball-tree 的示意图}
     \label{fig:ball-tree}
 \end{figure*}
@@ -585,7 +585,7 @@ HBJ-Alg 得益于增强的剪枝策略，显著减少了需要进行精化计算
 
 \begin{figure}[htbp]
     \centering
-\includegraphics[width=0.8\textwidth]{fig/section6/mtree.pdf}
+\includegraphics[width=1\textwidth]{fig/section6/mtree.pdf}
 \caption{M*-树的结构}
 \label{fig:m*-tree}
 \end{figure}
@@ -768,15 +768,16 @@ $(IS(o_i,o_j,I,\epsilon)>IS(o_i^{'},o_j^{'},I,\epsilon)))$。
 
 \begin{figure}[tb]
     \centering
-    \subfloat[Geolife]{
-        \includegraphics[width=0.22\textwidth]{fig/section6/geo-sim-ftime.png}
+    \subfloat[]{
+        \includegraphics[width=0.4\textwidth]{fig/section6/geo-sim-ftime.png}
         \label{geo-sim-totaltime}
     }%
-    \subfloat[Porto]{
-        \includegraphics[width=0.228\textwidth]{fig/section6/pt-sim-ftime.png}
+    \hfill
+    \subfloat[]{
+        \includegraphics[width=0.4\textwidth]{fig/section6/pt-sim-ftime.png}
         \label{pt-sim-totaltime}
     }%
-    \caption{相似度阈值的影响}
+    \caption{相似度阈值的影响 \subref{geo-sim-totaltime}:Geolife数据集下的实验; \subref{pt-sim-totaltime}:Porto数据集下的实验}
     \label{img:vary_sim_ftime}
 \end{figure}
 
@@ -785,15 +786,16 @@ $(IS(o_i,o_j,I,\epsilon)>IS(o_i^{'},o_j^{'},I,\epsilon)))$。
 
 \begin{figure}[tb]
     \centering
-    \subfloat[Geolife]{
-        \includegraphics[width=0.23\textwidth]{fig/section6/geo-num-access.png}
+    \subfloat[]{
+        \includegraphics[width=0.4\textwidth]{fig/section6/geo-num-access.png}
         \label{geo-num-access}
     }%
-    \subfloat[Porto]{
-        \includegraphics[width=0.22\textwidth]{fig/section6/pt-num-access.png}
+    \hfill
+    \subfloat[]{
+        \includegraphics[width=0.4\textwidth]{fig/section6/pt-num-access.png}
         \label{pt-num-access}
     }%
-    \caption{移动对象数量对节点访问次数的影响}
+    \caption{移动对象数量对节点访问次数的影响 \subref{geo-num-access}:Geolife数据集下的实验; \subref{pt-num-access}:Porto数据集下的实验}
     \label{img:vary_num_access}
 \end{figure}
 
@@ -804,13 +806,16 @@ $(IS(o_i,o_j,I,\epsilon)>IS(o_i^{'},o_j^{'},I,\epsilon)))$。
 
 \begin{figure}[tb]
     \centering
-    \subfloat[Geolife]{
-        \includegraphics[width=0.22\textwidth]{fig/section6/geo-k-ftime.png}
+    \subfloat[]{
+        \includegraphics[width=0.4\textwidth]{fig/section6/geo-k-ftime.png}
+        \label{geo-k-ftime}
     }%
-    \subfloat[Porto]{
-        \includegraphics[width=0.22\textwidth]{fig/section6/pt-k-ftime.png}
+    \hfill
+    \subfloat[]{
+        \includegraphics[width=0.4\textwidth]{fig/section6/pt-k-ftime.png}
+        \label{pt-k-ftime}
     }%
-    \caption{$k$ 的影响}
+    \caption{$k$ 的影响 \subref{geo-k-ftime}:Geolife数据集下的实验; \subref{pt-k-ftime}:Porto数据集下的实验}
     \label{img:vary_k_ftime}
 \end{figure}
 
@@ -834,7 +839,7 @@ $(IS(o_i,o_j,I,\epsilon)>IS(o_i^{'},o_j^{'},I,\epsilon)))$。
 
 \begin{figure}[tb]
     \centering
-    \includegraphics[width=0.25\textwidth]{fig/section6/sample.pdf}
+    \includegraphics[width=0.6\textwidth]{fig/section6/sample.pdf}
     \caption{时间点运动范围内的采样示意}
     \label{fig:sample}
 \end{figure}
