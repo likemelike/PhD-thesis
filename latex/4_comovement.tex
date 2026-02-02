@@ -1,18 +1,503 @@
 \chapter{联合移动模式挖掘}
 
 \section{引言}
+从轨迹中检测共同行为（co-movement）模式的问题已经被数据科学领域广泛研究。现有方法主要基于“过滤-精炼”（filter-and-refine）框架、索引技术、位置点聚类以及搜索算法。尽管这些技术已被广泛应用，但在处理具有复杂群体定义的模式时，往往需要巨大的计算开销，使其难以在大规模轨迹数据上产生及时的结果。在现实应用场景中，尤其是在疫情预警与防控中，实时且高质量的结果尤为重要。
+
+基于此，我们对共同行为模式的定义进行了简化与放宽，在不失一般性的前提下支持快速检测。具体而言，我们通过\emph{伴随群体}（companion group）来定义共同行为模式，该群体由至少 $m$ 个在连续 $k$ 个时间段内共同移动的对象组成。如果某个对象能够与其他对象形成多个伴随群体，则该对象归属于成员数量最大的伴随群体。给定一组移动对象轨迹，精确算法通过组合满足条件的共同行为对来发现伴随群体，但该过程计算开销较大。为实现高效发现，我们提出了一种快速的、具备社区感知能力的近似算法。基于两个真实世界数据集的大量实验验证了所提出方法的有效性与高效性。
 
 \subsection{研究背景与意义}
+
+随着位置追踪设备（如车载导航系统和智能手机）以及 GPS 使能服务（如 Google Maps、Uber 和 Grab）的持续普及，轨迹数据的规模正呈现爆炸式增长。作为轨迹数据分析中的一项基础功能，共同行为模式（co-movement pattern）挖掘问题已经受到数据科学领域的广泛关注。一般而言，共同行为模式表示一组在一段时间内共同移动的对象。该类模式的典型表示形式包括 flock~\cite{DBLP:conf/gis/VieiraBT09,DBLP:journals/jidm/TanakaVK16}、convoy~\cite{DBLP:journals/pvldb/JeungYZJS08}、swarm~\cite{DBLP:journals/pvldb/LiDHK10}、group~\cite{DBLP:journals/dke/WangLH06}、platoon~\cite{DBLP:journals/dke/LiBK15} 以及 gathering~\cite{DBLP:conf/icde/ZhengZYS13,DBLP:journals/tkde/ZhengZYSZ14} 等。
+
+高效且准确地从移动对象轨迹中发现共同行为模式在诸多实际应用中具有重要意义，包括拼车推荐、交通拥堵缓解（即通过及早发现道路上的高密度群体来规避潜在拥堵）、COVID-19 等传染病的暴露与风险分析~\cite{imo,DBLP:journals/information/AlarabiBHA21}、移动行为分析以及异常轨迹检测~\cite{DBLP:conf/icde/Liu0CB20} 等。
+
+现有研究大多基于移动对象随时间演化的轨迹设计搜索算法。然而，这类算法通常具有较高的计算代价，尤其是在共同行为模式（如 flock、swarm、group）不稳定的情况下（即对象可能在时间上暂时离开群体）。为了挖掘目标共同行为模式，现有方法往往需要在每一个时间快照上计算对象聚类，这在实时应用场景中具有极高的计算开销。此外，其基于“过滤–精炼”的处理框架往往会产生大量候选结果，从而进一步加重计算负担。随着轨迹数量的增加，这些方法的性能会显著下降。
+
+在现实应用中，尤其是在疫情预警与防控场景下，及时获得最新的共同行为结果至关重要。因此，共同行为挖掘任务需要以\emph{连续}的方式执行。这对算法在效率和效果两方面都提出了更高要求。然而，现有的群体模式定义及其相关方法在同时兼顾有效性与高效性方面仍然存在明显不足。
+
+为了解决上述问题，本文提出了一种新的共同行为模式概念——\emph{伴随群体}（companion group），其定义相对更加宽松。具体而言，一个伴随群体由至少 $m$ 个移动对象组成，这些对象在至少 $k$ 个时间段内共同移动（例如，其两两距离不超过预定义的距离阈值 $\epsilon$），且允许对象在时间上暂时离开其伴随群体。基于伴随群体，我们进一步定义了\emph{伴随群体发现}（Companion Group Discovery，CGD）问题。给定一组移动对象及其轨迹，CGD 问题旨在在用户可交互时间内发现所有伴随群体。在我们的设定中，若某一对象能够与其他对象形成多个伴随群体，则该对象归属于成员规模最大的伴随群体。CGD 问题可广泛应用于交通监测与管理、疫情防控以及暴力事件预防等实际场景。
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=5in]{fig/section4/group companion.pdf}
+    \caption{伴随群体示例}
+    \label{fig:intro}
+\end{figure*}
+
+下面通过图~\ref{fig:intro} 给出一个示例说明。设 $o_1, o_2, o_3, o_4$ 为四个移动对象，且所有对象每分钟上报一次位置信息。图~\ref{fig:intro} 展示了它们在时间区间 $[t_1, t_7]$ 内的轨迹。设距离阈值 $\epsilon = 10$ 米，共同行为持续时间阈值 $k = 3$ 分钟，群体规模阈值 $m = 3$。可以观察到，对象 $o_2$ 与 $o_3$ 在时间集合 $T = \{t_1, t_2, t_4, t_5, t_6, t_7\}$ 内始终共同移动，且 $|T| = 6$ 超过持续时间阈值 $k$，因此二者可构成一个共同行为对。同样，$o_3$ 与 $o_4$ 也可以构成一个共同行为对。此外，对象 $o_2, o_3, o_4$ 在时间点 $t_2, t_4, t_5, t_6$ 内的两两距离均不超过 $\epsilon$，因此我们将 $g=\{o_2, o_3, o_4\}$ 视为一个伴随群体。需要注意的是，对象 $o_1$ 仅在 $t_1$ 和 $t_6$ 与 $o_2$ 短暂接近，无法与其他对象形成共同行为对或伴随群体。
+
+针对 CGD 问题，我们首先设计了一种\underline{精确搜索算法}，即 \underline{E}xact \underline{S}earch with \underline{E}xact \underline{C}o-\underline{M}ovement \underline{C}omputation（ES-ECMC），该算法能够获得精确结果，但计算代价较高。为进一步提升效率，我们提出了一种\underline{社区感知的近似搜索算法}，即 \underline{C}ommunity-aware \underline{S}earch with \underline{A}pproximate \underline{C}o-\underline{M}ovement \underline{C}omputation（CS-ACMC），在兼顾结果质量与严格效率需求的前提下解决 CGD 问题。
+
+CS-ACMC 算法主要包括两个阶段：近似共同行为对搜索与社区感知群体发现。在近似共同行为对搜索阶段，首先采用网格划分方法（如~\cite{DBLP:conf/ijcai/LiCSWLK022,chen2022towards,zheng2006grid}）将每个轨迹位置映射为对应的网格单元编号（即 token），从而将每条轨迹表示为一个 token 序列；随后，通过计算轨迹之间的公共 token 来生成近似共同行为对。在群体发现阶段，我们利用 SCAN 算法~\cite{DBLP:conf/kdd/XuYFS07} 对共同行为对进行高效聚类。本文算法的实现已开源发布\footnote{https://github.com/Like-China/gathering\_mining.git}。
+
+本文的主要贡献总结如下：
+\begin{itemize}
+    \item 提出了伴随群体这一新的共同行为模式定义，该定义更加宽松，适用于需要实时结果更新的多种应用场景，如传染病（SARS、埃博拉、COVID-19 等）传播监测与防控。
+    \item 设计了一种精确算法以及一种新颖的社区感知聚类模型，用于解决 CGD 问题。
+    \item 基于两个真实世界数据集进行了大量实验评估，实验结果表明，所提出的社区感知算法能够在用户可交互时间内从大规模轨迹数据中发现伴随群体，体现了其在实际应用中的重要价值。
+\end{itemize}
+
+本文其余部分组织如下：第~\ref{sec:problem} 节介绍问题定义与相关预备知识；第~\ref{sec:exact} 节给出精确算法；第~\ref{sec:approximate} 节介绍社区感知的高效近似算法；第~\ref{sec:exp} 节展示实验结果与分析；第~\ref{sec:related work} 节回顾相关研究工作；第~\ref{sec:conclusion} 节给出总结。
 \subsection{研究内容与挑战}
 \subsection{研究成果与贡献}
 
-\section{问题描述}
-\subsection{路网及其构成}
-\subsection{Dijkstra 算法}
-\subsection{位置点间的距离计算}
-\subsection{问题定义}
+\section{相关工作}
+\label{sec:related work}
+
+大规模轨迹数据的管理、挖掘与分析问题已受到数据科学领域的广泛关注。该方向的代表性研究主要包括轨迹搜索与推荐~\cite{DBLP:conf/kdd/HanWYS021,DBLP:conf/aaai/YangCWS21,DBLP:conf/ijcai/ChenSFK21,DBLP:journals/vldb/ShangDZJKZ14,DBLP:journals/tkde/ShangZJYKLW15,DBLP:journals/tkde/ShangCJWK17,DBLP:journals/pvldb/ShangCWJ0K17,DBLP:journals/vldb/ShangCWJZK18,DBLP:conf/icde/ChenSJ0K20,DBLP:conf/kdd/ZhaoSWZN018,DBLP:journals/tkde/LiuZSSKLJ16,DBLP:conf/icde/LiuZSSKJ15,DBLP:journals/geoinformatica/ShangYDXZZ12}、位置搜索与推荐~\cite{DBLP:conf/icde/0002CGSMG18,DBLP:conf/ijcai/HanLLZLWS20,DBLP:conf/icde/HanSSZ0K19,DBLP:journals/tkde/ShangCZJWK19,DBLP:conf/sigir/FengTCCLL20,DBLP:conf/kdd/RaoCLSYH22,DBLP:journals/ijon/GuoZXSD16}、路径规划与推荐~\cite{DBLP:conf/ijcai/LiCSK021,DBLP:conf/ijcai/LiCS20,DBLP:conf/kdd/ChenSJ0Z019,DBLP:conf/aaai/ChenSG20,DBLP:conf/aaai/ChenSYL20,DBLP:conf/edbt/ShangDYXZK12,DBLP:conf/icccn/LiuLDSZ14,DBLP:journals/ijon/ShangGLW16}，以及区域查询与交通模式挖掘等其他轨迹分析任务~\cite{DBLP:journals/tkde/ShangCWJWK16,DBLP:conf/ssd/ShangLPX13,DBLP:conf/mdm/ShangLPX13,DBLP:conf/ijcai/RaoWZLS022,DBLP:journals/geoinformatica/LiuWSLZ18}。在上述研究中，共同行为模式搜索与轨迹聚类问题与本文所研究的群体模式发现问题关系最为密切。
+
+\paragraph{共同行为模式搜索}
+现有研究已经提出并讨论了多种有意义的共同行为模式~\cite{DBLP:journals/pvldb/JeungYZJS08,DBLP:journals/pvldb/LiDHK10,DBLP:journals/dke/WangLH06,DBLP:journals/dke/LiBK15}，并在不同应用场景下得到了广泛应用。具体而言，flock~\cite{DBLP:conf/gis/VieiraBT09,DBLP:journals/jidm/TanakaVK16} 是最早提出的共同行为模式，用于刻画在 $k$ 个连续时间间隔内共同移动的 $m$ 个对象组成的群体。后续研究~\cite{DBLP:journals/pvldb/JeungYZJS08} 指出，flock 所采用的圆形约束难以准确刻画真实移动对象群体的形态，并提出了支持任意形状聚类的 convoy 模式。然而，flock 与 convoy 均对时间连续性提出了较为严格的约束。为支持对模式持续时间要求更加宽松的应用场景，研究者进一步提出了多种共同行为模式~\cite{DBLP:journals/dke/WangLH06,DBLP:journals/pvldb/LiDHK10,DBLP:journals/dke/LiBK15}。
+
+在这些研究中，Zheng 等人~\cite{DBLP:conf/icde/ZhengZYS13} 提出了 gathering 模式，用于交通拥堵的早期发现，该模式允许成员在任意时间离开群体。Fan 等人~\cite{DBLP:journals/pvldb/FanZWT16} 提出了更加通用的共同行为定义，并设计了并行框架用于模式发现。类似地，Naserian 等人~\cite{DBLP:conf/hpcc/NaserianWXD16} 在轨迹数据流环境下提出了一种宽松的伴随群体发现方法。需要指出的是，Shein 等人~\cite{DBLP:journals/access/SheinPI20} 揭示了上述方法所需的高计算代价，并提出了一种增量式算法，但该方法在效率上仍然不足，难以支持实时发现需求。
+
+值得注意的是，一些方法（如~\cite{DBLP:conf/icde/ZhengZYS13,DBLP:journals/tkde/ZhengZYSZ14,DBLP:conf/sigmod/FangGPCMJ20}）能够处理轨迹数据流，而另一些方法则仅适用于静态轨迹数据（如~\cite{DBLP:conf/gis/VieiraBT09,DBLP:journals/pvldb/JeungYZJS08,DBLP:journals/pvldb/LiDHK10}）。与本文最为相关的研究之一是 Chen 等人~\cite{DBLP:journals/pvldb/ChenGFMJG19}，其提出了一种实时共同行为模式挖掘方法，定义了一种更加通用的共同行为模式，并通过 $L$-连续性和 $G$-连通性来刻画轨迹之间的连续性与连通性。然而，由于问题定义的不同，该方法无法直接应用于本文的问题设置：本文不要求时间上的连续性与连通性，也不要求轨迹在每个时间点均属于同一聚类；此外，当一个对象能够形成多个群体时，本文始终选择成员规模最大的群体。
+
+为处理轨迹数据流，Fang 等人~\cite{DBLP:conf/sigmod/FangGPCMJ20} 提出了一个实时共同行为模式挖掘系统，用于在特定时空约束下实时发现共同行为对象；Chen 等人~\cite{DBLP:journals/pvldb/ChenGFMJG19} 进一步研究了分布式环境下的实时共同行为模式检测，并通过基于双层索引的范围连接操作来加速聚类过程、减少不必要的验证。
+
+尽管近年来已有大量研究尝试利用深度学习技术加速轨迹挖掘任务，包括轨迹聚类、异常轨迹检测~\cite{DBLP:conf/icde/Liu0CB20}、轨迹相似性计算~\cite{DBLP:conf/icde/LiZCJW18} 以及风险检测~\cite{DBLP:journals/access/ZhaoCCYXG19} 等，但据我们所知，尚无基于深度学习的方法能够直接用于解决本文所研究的问题。
+
+\paragraph{轨迹聚类}
+该方向的大多数研究~\cite{DBLP:conf/icde/LiZCJW18,DBLP:conf/icws/Zhang0LL019,DBLP:conf/icde/YaoCZB19} 采用深度表示学习方法来加速轨迹相似性计算，其核心思想是将变长轨迹转换为固定长度的表示向量。Yao 等人~\cite{DBLP:conf/ijcnn/YaoZZHB17} 通过滑动窗口提取轨迹特征序列，并利用自编码器学习固定长度的深度表示；Boyle 等人~\cite{DBLP:conf/avss/BoyleNF17} 使用训练后自编码器最小隐藏层的输出作为轨迹表示；Fang 等人~\cite{DBLP:conf/icde/FangDCHGC21} 提出了一种基于自训练的端到端聚类框架，无需人工特征提取。
+
+除轨迹聚类外，通用的基于位置的群体搜索问题也得到了广泛研究~\cite{DBLP:journals/geoinformatica/ChenSYL20}，例如基于位置的群体查询处理~\cite{DBLP:conf/cikm/LiCC0Y16,DBLP:journals/ijon/ShangGLZW16}、基于位置的连续查询处理~\cite{DBLP:journals/www/ChenS19}、局部高频模式发现~\cite{DBLP:conf/wise/XuCYSZZL17,DBLP:journals/vldb/ChenSJXKYS20}、局部事件探索~\cite{DBLP:conf/sigmod/ZhaoCC16,DBLP:conf/aaai/ChenS19,DBLP:conf/icde/ChenS0K19}、位置感知传播模式挖掘~\cite{DBLP:conf/kdd/LiCCC17} 以及邻域模式挖掘~\cite{DBLP:conf/icde/HanZSSW16} 等。
+
+然而，上述针对轨迹聚类提出的解决方案均无法直接应用于本文的问题，因为处于同一聚类中的移动对象并不一定在时空上真实地共同移动。
+
+\section{问题定义}
+\label{sec:problem}
+
+本节介绍本文所需的基础概念，并给出问题的形式化定义。
+给定一组移动对象，我们依次定义轨迹、协同行为对、伴随群体以及伴随群体发现问题。
+
+\paragraph{移动对象及其轨迹}
+一个移动对象 $o$ 由其轨迹 $\tau=\{s_1,\ldots,s_n\}$ 表示，其中轨迹是一个有限的、按时间顺序排列的离散时空点序列。该序列由位置追踪设备（如 GPS）从对象 $o$ 的真实运动轨迹中采样获得。
+
+为简化描述，我们使用 $s_i=([x,y],t)$ 表示二维空间中的一个离散时空点，其中 $[x,y]$ 表示空间坐标，$t$ 表示该位置被记录时对应的时间戳。对于一组移动对象 $O$，我们用 $\mathcal{T}=\{\tau_1,\ldots,\tau_{|O|}\}$ 表示其轨迹集合，其中 $\tau_i$ 为对象 $o_i$ 的轨迹。
+需要说明的是，本文对移动对象及轨迹的建模方式与已有研究保持一致 \cite{DBLP:conf/ijcai/LiCSWLK022,DBLP:conf/icde/RanuPTDR15,DBLP:conf/sigmod/SuZWHZ13}。
+
+\paragraph{协同行为持续时间}
+设 $o_i$ 与 $o_j$ 为两个移动对象。当 $o_i$ 与 $o_j$ 之间的空间距离小于给定的空间距离阈值 $\epsilon_s$，且时间距离小于给定的时间阈值 $\epsilon_t$ 时，它们被认为处于协同行为状态。$o_i$ 与 $o_j$ 的协同行为持续时间定义为满足上述条件的总行程时间长度。
+
+\paragraph{协同行为对}
+设 $\tau_i$ 与 $\tau_j$ 分别为对象 $o_i$ 与 $o_j$ 的轨迹。若 $\tau_i$ 与 $\tau_j$ 之间的协同行为持续时间不少于阈值 $k$（其中 $k$ 为协同行为持续时间阈值），则称对象 $o_i$ 与 $o_j$ 构成一个协同行为对。
+
+\begin{definition}[伴随群体]
+给定一组移动对象 $\mathcal{O}=\{o_1,o_2,\ldots,o_{|\mathcal{O}|}\}$ 以及最小群体规模阈值 $m$，若对象子集 $g\subseteq \mathcal{O}$ 满足以下两个条件，则称 $g$ 为一个伴随群体：
+(1) $|g|\geq m$；
+(2) 对任意两个对象 $o_i,o_j\in g$，$o_i$ 与 $o_j$ 均能够构成协同行为对。
+\end{definition}
+
+\paragraph{伴随群体发现（CGD）问题}
+给定一组移动对象 $\mathcal{O}$，伴随群体发现（Companion Group Discovery，CGD）问题旨在从 $\mathcal{O}$ 中发现一组伴随群体 $\mathcal{G}$，并满足对任意两个群体 $g_i, g_j\in\mathcal{G}$，均有 $g_i\cap g_j=\emptyset$。
+
+\section{精确共同行为计算的精确搜索算法（ES-ECMC）}
+\label{sec:exact}
+
+本节提出一种用于发现伴随群体的精确解法：\underline{精确搜索并进行精确共同行为计算的算法}
+（\underline{E}xact \underline{S}earch with \underline{E}xact \underline{C}o-\underline{M}ovement \underline{C}omputation，简称 ES-ECMC）。
+
+ES-ECMC 算法主要包含三个步骤。首先，从输入数据（即一组对象轨迹）中枚举并发现所有共同行为对；其次，基于这些共同行为对，以增量方式生成伴随群体候选；最后，从候选集合中选取成员规模最大的伴随群体作为最终结果。在介绍 ES-ECMC 算法之前，我们首先给出伴随群体候选的定义。
+
+\paragraph{伴随群体候选}
+一个伴随群体候选 $g'$ 是一个对象集合，满足其中任意两个对象都可以形成一个共同行为对。若存在至少一个对象 $o \notin g'$，使得 $g''=\{g',o\}$ 仍然是一个伴随群体候选，则称 $g'$ 可以通过加入对象 $o$ 进行扩展；否则，称 $g'$ 不可扩展。
+
+下面将详细介绍 ES-ECMC 算法。算法~\ref{exact algorithm} 给出了 ES-ECMC 的伪代码。算法输入包括一组轨迹 $\mathcal{T}$、空间距离阈值 $\epsilon_s$、时间距离阈值 $\epsilon_t$、群体规模阈值 $m$ 以及共同行为持续时间阈值 $k$；输出为一组伴随群体
+$G=\{g_1,g_2,\ldots,g_{|G|}\}$（其中 $g_i\subseteq \mathcal{T}$）。我们使用 $P$ 和 $G_c$ 分别存储所有共同行为对和伴随群体候选。
+
+\underline{步骤 1：}（枚举共同行为对）
+对于任意一对移动对象 $o_i, o_j \in \mathcal{O}$，我们计算其轨迹中任意两个采样位置
+$s \in \tau_i$ 与 $s' \in \tau_j$ 之间的精确距离。若空间距离与时间距离分别不超过阈值 $\epsilon_s$ 与 $\epsilon_t$，则将其共同行为持续时间 $|\tau_i \And \tau_j|$ 加 1。具体而言，对于每一对对象 $\langle o_i,o_j\rangle$，当其累计的共同行为持续时间不少于 $k$ 时，我们将其视为一个共同行为对\footnote{在上下文清晰的情况下，我们使用 $(o_i,o_j)$ 或 $(\tau_i,\tau_j)$ 表示一个共同行为对。}。当所有对象对均被评估后，该步骤结束（第 2--8 行）。
+
+\smallskip
+\underline{步骤 2：}（生成伴随群体候选）
+在获得所有共同行为对之后，我们基于这些共同行为对以增量方式生成伴随群体候选。具体而言，首先选择一个以轨迹 $\tau_i$ 为起点的共同行为对，例如 $\langle \tau_i,\tau_j\rangle$，然后考察所有与其共享对象 $o_i$ 的共同行为对 $\langle \tau_i,\tau_k\rangle$。初始群体记为 $g_i=(\tau_i,\tau_j)$。若 $\tau_k$ 与 $g_i$ 中的所有成员均构成共同行为对，则将 $\tau_k$ 加入 $g_i$。当 $g_i$ 仍可扩展时，重复上述扩展过程。若 $g_i$ 的成员规模不少于 $m$，则将其加入候选集合 $G_c$。随后选择新的共同行为对作为初始群体并继续扩展。当所有共同行为对均被访问作为初始群体后，该步骤结束（第 9--19 行）。
+
+\smallskip
+\underline{步骤 3：}（选择伴随群体）
+在获得所有候选之后，从中选取成员规模最大的伴随群体作为最终结果。具体而言，若某个对象属于多个候选群体，则选择其中成员规模最大的一个。该步骤在遍历完所有候选后结束（第 20 行）。
+
+我们再次考虑图~\ref{fig:intro} 中的示例。假设首先选择共同行为对 $\langle o_2,o_3\rangle$ 进行扩展。显然，对 $\langle o_2,o_4\rangle$ 与 $\langle o_2,o_3\rangle$ 共享对象 $o_2$，且对象 $o_2,o_3,o_4$ 两两之间均可形成共同行为对。因此，我们将 $g'=\{o_2,o_3,o_4\}$ 视为一个伴随群体候选。由于对象 $o_1$ 无法与 $g'$ 中的任一对象形成共同行为对，$g'$ 不可进一步扩展。接着，由于 $|g'|$ 不小于预设的群体规模阈值 3，我们将 $g'$ 加入候选集合 $G_c$。最终，由于 $g'$ 具有最大的成员规模，我们从 $G_c$ 中选取 $g'$ 并将其加入结果集合 $G$。
 
 
-\section{实验研究}
+
+\begin{theorem}
+ES-ECMC 算法的时间复杂度为 $O(|\mathcal{T}|^2 \times |\tau|^2)$，其中 $|\mathcal{T}|$ 表示移动对象（轨迹）的数量，$|\tau|$ 表示单条轨迹的长度（即采样位置数）。
+\end{theorem}
+
+\begin{proof}
+ES-ECMC 在枚举所有共同行为对时，需要对每一对轨迹计算其位置之间的距离，其时间复杂度为
+$O(|\mathcal{T}|^2 \times |\tau|^2)$。对于共享同一对象的共同行为对（例如 $\langle o_i,o_j\rangle$ 与 $\langle o_i,o_k\rangle$），需要进一步判断其是否能够构成伴随群体候选，并在满足条件时持续扩展该候选。生成所有伴随群体候选在最少情况下需要 $O(|\mathcal{T}|)$ 时间（例如不存在任何共享对象的共同行为对）；在最坏情况下，所有对象均可形成共享同一对象的共同行为对，此时生成候选的时间复杂度为 $O(|\mathcal{T}|^2)$。最后，从候选集合中生成最终的伴随群体需要 $O(|G_c|)$ 时间，其中 $|G_c|<|\mathcal{T}|$。综上所述，ES-ECMC 算法的总体时间复杂度为
+$O(|\mathcal{T}|^2 \times |\tau|^2)$。
+\end{proof}
+
+
+\section{基于近似协同行为计算的社区感知搜索（CS-ACMC）}
+\label{sec:approximate}
+
+尽管 ES-ECMC 算法直观且结果精确，但其高昂的计算开销使其难以应用于实际场景中，尤其是在移动对象数量极大的情况下。其主要计算瓶颈来源于通过精确计算协同行为持续时间来枚举所有协同行为对。为了解决效率问题，我们提出了一种\underline{基于社区感知的搜索算法}，结合\underline{近似协同行为计算}，即 \underline{C}ommunity-aware \underline{S}earch with \underline{A}pproximate \underline{C}o-\underline{M}ovement \underline{C}omputation（CS-ACMC）。
+
+CS-ACMC 算法由两个阶段组成：近似协同行为对搜索，以及基于社区感知的聚类以获取伴随群体。下面我们将依次介绍轨迹标记序列、近似协同行为对搜索方法以及社区感知聚类算法。
+
+\subsection{近似协同行为对搜索}
+
+在该阶段中，我们提出了一种高效的方法，用于计算两个对象轨迹之间协同行为持续时间的近似值。生成的近似协同行为对将作为后续社区感知聚类的输入，以高效地发现伴随群体。
+
+\smallskip
+\underline{步骤 1：}（生成轨迹标记序列）
+
+该方法受到群体（flock）圆形结构的启发 \cite{DBLP:journals/pvldb/JeungYZJS08}。我们将底层空间划分为大小相等的网格单元。具体而言，将二维欧氏空间划分为空间等距的网格单元，同时将时间维度划分为等长的时间片。
+
+因此，对象轨迹中的每一个数据点（位置）$s=([x,y],t)$ 都可以表示为一个标记（token），记为 $o(s)=f(x,y,t)$，其中 $f(\cdot)$ 为一个单射函数。由此可以得到轨迹的标记序列：
+\[
+O(\tau)=\{o(s_1),\ldots,o(s_{|\tau|})\}.
+\]
+
+\begin{algorithm}[htb]
+    \caption{ES-ECMC Algorithm}
+    
+    \Input{
+    Trajectory set $\mathcal{T}=\{\tau_1,\tau_2,\ldots,\tau_{|\mathcal{O}|}\}$;\newline
+    Spatial distance threshold $\epsilon_s$;\newline
+    Temporal distance threshold $\epsilon_t$;\newline
+    Minimum group size threshold $m$;\newline
+    Co-movement duration threshold $k$.
+    }
+    
+    \Output{A set of approximate companion groups $G$.}
+    
+    \BlankLine
+    $P \leftarrow \emptyset$;\tcp*[f]{Set of valid trajectory pairs}
+    $G_c \leftarrow \emptyset$;\tcp*[f]{Candidate groups}
+    $G \leftarrow \emptyset$;\tcp*[f]{Final result}
+    
+    \BlankLine
+    \For(\tcc*[f]{Generate valid trajectory pairs}){$i = 1$ \KwTo $|\mathcal{T}|$}{
+        \For{$j = i+1$ \KwTo $|\mathcal{T}|$}{
+            \If{$|\tau_i \cap \tau_j| \ge k$}{
+                $P \leftarrow P \cup \{(\tau_i,\tau_j)\}$;
+            }
+        }
+    }
+    
+    \BlankLine
+    \ForEach(\tcc*[f]{Expand candidate companion groups}){$(\tau_i,\tau_j) \in P$}{
+        $g_i \leftarrow \{\tau_i,\tau_j\}$;
+    
+        \ForEach{$(\tau_i,\tau_k) \in P$}{
+            \If(\tcc*[f]{Pairwise-valid with all members in $g_i$})
+            {$\forall \tau_p \in g_i,\; (\tau_k,\tau_p) \in P$}{
+                $g_i \leftarrow g_i \cup \{\tau_k\}$;
+            }
+        }
+    
+        \If(\tcc*[f]{Group size constraint}){$|g_i| \ge m$}{
+            $G_c \leftarrow G_c \cup \{g_i\}$;
+        }
+    }
+    
+    \BlankLine
+    $G \leftarrow select\_max(G_c)$;\tcp*[f]{Select maximal or optimal groups}
+    
+    \Return $G$;
+    \end{algorithm}
+
+图 \ref{fig1: cell_partition} 展示了空间与时间维度的划分方式以及轨迹标记序列的生成过程。假设空间被划分为 $5\times 4$ 个网格单元，每个单元边长为 10 米，时间维度被划分为 3 个时间片，每个时间片长度为 10 秒。给定两条轨迹 $\tau_1$ 和 $\tau_2$，其位置均落入单元
+$\{([0,0],0), ([3,1],1), ([2,1],2)\}$。
+
+基于该划分方式，我们定义单射函数
+\[
+o(s)=f(x,y,t)=t\times(5\times4)+y\times5+x,
+\]
+其中 $x\in\{0,1,2,3,4\}$，$y\in\{0,1,2,3\}$，$t\in\{0,1,2\}$。例如，对于位置 $([3,1],1)$，其标记值为
+\[
+1\times(5\times4)+1\times5+3=28.
+\]
+如图 \ref{fig1: cell_partition} 所示，尽管 $\tau_1$ 与 $\tau_2$ 在每个时间点的具体位置不同，但由于它们落入相同的空间与时间单元，因此可被表示为相同的标记序列 $\{0, 28, 47\}$。
+
+\begin{theorem}
+若将空间划分为边长为 $\epsilon$ 的等大小网格单元，其中 $\epsilon$ 等于协同行为距离阈值，则若两个对象 $o_i$ 与 $o_j$ 的轨迹标记序列共享 $p$ 个相同标记，说明它们的协同行为持续时间至少为 $p$ 个时间段。
+\end{theorem}
+
+\begin{proof}
+位置 $s$ 的标记值由单射函数 $o(s)=f(x,y,t)$ 计算得到。两个位置具有相同标记值意味着它们位于同一个空间网格单元中，因此二者之间的空间距离不超过 $\epsilon$，同时记录于同一时间片内。若两条轨迹标记序列共享一个标记，则表示对应对象在该时间段内保持不超过 $\epsilon$ 的空间距离共同移动。故共享 $p$ 个标记意味着至少存在 $p$ 个协同行为时间段。
+\end{proof}
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.48\textwidth]{fig/section4/picture.pdf}
+	\caption{轨迹标记及标记序列示例}
+	\label{fig1: cell_partition}
+\end{figure}
+
+\smallskip
+\underline{步骤 2：}（搜索近似协同行为对）
+
+基于轨迹标记序列，我们通过统计两个轨迹之间的公共标记数量来近似计算其协同行为持续时间。对于两个轨迹标记序列 $O(\tau_i)$ 和 $O(\tau_j)$，若其公共标记数 $|O(\tau_i)\And O(\tau_j)|$ 不小于阈值 $k$，则将其记录为一个近似协同行为对。该过程在所有轨迹标记序列均被评估后终止。
+
+\subsection{社区感知聚类}
+
+对于轨迹集合 $\mathcal{T}=\{\tau_1,\tau_2,\ldots,\tau_{|\mathcal{O}|}\}$，通过第一阶段可获得轨迹标记序列集合
+\[
+O(\mathcal{T})=\{O(\tau_1),O(\tau_2),\ldots,O(\tau_{|\mathcal{T}|})\},
+\]
+以及一组近似协同行为对。在第二阶段中，我们的目标是发现所有满足以下条件的子集 $\mathcal{T}'\subseteq \mathcal{T}$：
+(1) $|\mathcal{T}'|\geq m$；
+(2) 对任意 $\tau_i,\tau_j\in\mathcal{T}'$，均有 $|O(\tau_i)\And O(\tau_j)|\geq k$，
+即伴随群体。为此，我们采用聚类技术以实现高效检测。
+
+现有轨迹聚类方法主要包括基于划分的聚类 \cite{DBLP:conf/icdm/PelekisKKFT09,DBLP:conf/sigmod/LeeHW07}、基于密度的聚类 \cite{DBLP:conf/dasfaa/LiLLH10,DBLP:journals/access/LiLWYLX18} 以及基于深度学习的聚类 \cite{DBLP:conf/icde/LiZCJW18, DBLP:conf/icws/Zhang0LL019, DBLP:conf/icde/YaoCZB19}。然而，这些方法难以刻画对象之间的内在连接关系，且基于密度的方法通常具有较高的计算复杂度。
+
+我们的核心思想是将协同行为关系建模为网络或图结构，其中节点表示移动对象，边表示协同行为对。一个伴随群体由至少 $m$ 个相互协同行为的对象组成。受同质性假设启发——即共享大量协同行为邻居的对象更可能属于同一群体——我们采用基于共享邻居的社区感知聚类方法。
+
+SCAN 算法 \cite{DBLP:conf/kdd/XuYFS07} 是一种典型的社区感知聚类方法，其基于顶点结构与连通性进行聚类，时间复杂度为 $O(|P|)$，其中 $|P|$ 为协同行为对的数量（即图中的边数）。因此，SCAN 能够高效地用于伴随群体检测。
+
+\begin{theorem}
+CS-ACMC 算法的时间复杂度为 $O(|\mathcal{T}|^2 \times |\tau|)$，其中 $|\mathcal{T}|$ 表示轨迹数量，$|\tau|$ 表示单条轨迹的长度。
+\end{theorem}
+
+\begin{proof}
+CS-ACMC 算法需要对每一对轨迹计算其公共标记，时间复杂度为 $O(|\mathcal{T}|^2\times|\tau|)$。在社区感知聚类阶段，SCAN 算法的时间复杂度为 $O(|P|)$，其中 $|P|\leq |\mathcal{T}|^2$。因此，总体时间复杂度为
+\[
+O(|\mathcal{T}|^2\times|\tau|+|P|)=O(|\mathcal{T}|^2\times|\tau|).
+\]
+\end{proof}
+
+\section{实验评估}
+\label{sec:exp}
+
+\subsection{实验设置}
+
+\paragraph{数据准备}
+本文实验基于两个真实世界的出租车轨迹数据集。第一个数据集来自北京出租车轨迹数据
+\cite{DBLP:conf/kdd/YuanZXS11,DBLP:conf/gis/YuanZZXXSH10}\footnote{https://www.microsoft.com/en-us/research/publication/t-drive-trajectory-data-sample/}，
+该数据集包含 10,357 辆出租车在中国北京一周内的轨迹记录。该数据集共包含约 1,500 万个位置点，轨迹总行程约为 900 万公里。
+第二个数据集\footnote{https://www.kaggle.com/c/pkdd-15-predict-taxi-service-trajectory-i/data}
+采集自葡萄牙波尔图市，时间跨度为 19 个月，包含超过 170 万条轨迹。
+
+在北京数据集中，轨迹的平均采样时间间隔为 177 秒，对应的平均采样距离约为 623 米；而在波尔图数据集中，每辆出租车以 15 秒为间隔上报其位置信息。
+时间戳的取值范围被统一映射到 24 小时内。对于波尔图数据集，每条轨迹的出发时间被随机设置在 24 小时范围内。
+所有轨迹均被预先转换为轨迹标记序列（trajectory token sequence）。
+
+生成标记序列及伴随群体的默认参数设置如表 \ref{tb: group settings} 所示。
+同时，我们对轨迹的经纬度范围以及轨迹长度进行了限制，具体设置亦列于表 \ref{tb: group settings} 中。
+
+\begin{table}[tb]
+	\centering
+	\caption{Parameter Settings}
+	\label{tb: group settings}
+	\begin{tabular}{|l|l|l|}%{|p{3cm}|p{2cm}|p{2cm}|}
+		\hline
+		\bfseries & \bfseries Beijing  & \bfseries Porto \\
+		\hline
+		\hline
+		Longitude  & \tabincell{l}{[116.250, 116.550]} &  \tabincell{l}{[-8.735, -8.156]} \\
+		\hline
+		Latitude  & \tabincell{l}{[39.830,  40.030]}& \tabincell{l}{[40.953, 41.307]} \\
+		\hline
+		Length  & \tabincell{l}{[20, 100]}& \tabincell{l}{[20, 100]} \\
+		\hline
+		\tabincell{l}{$\epsilon_s$} & \tabincell{l}{200 meters} &  \tabincell{l}{200 meters} \\
+  \hline
+		\tabincell{l}{$\epsilon_t$} & \tabincell{l}{200 seconds} &  \tabincell{l}{200 seconds} \\
+  \hline
+		$|\mathcal{T}|$ & \tabincell{l}{2K--10K \\/default 6K}& \tabincell{l}{20K--100K \\/default 20K} \\
+		\hline
+  $k$ & \tabincell{l}{2--6 (periods)\\/default 4}& \tabincell{l}{2--6 (periods)\\/default 4} \\
+		\hline
+		 $m$ & \tabincell{l}{2--6 (members)\\/default 4}& \tabincell{l}{2--6 (members)\\/default 4} \\
+   \hline
+   $\mu$ & \tabincell{l}{0.42--0.50 \\/default 0.50}& \tabincell{l}{0.42--0.50 \\/default 0.50} \\
+		\hline
+	\end{tabular}
+\end{table}
+    
+
+\paragraph{对比算法}
+本文对以下两种算法进行性能比较：
+\emph{Exact Search with Exact Co-Movement Computation}（ES-ECMC）算法，以及
+\emph{Community-aware Search with Approximate Co-Movement Computation}（CS-ACMC）算法。
+此外，采用 R-tree 索引结构 \cite{DBLP:conf/sigmod/Guttman84} 以在早期阶段剪枝不满足条件的对象，从而提升整体计算效率。
+
+\paragraph{评估指标}
+为了评估 CS-ACMC 算法的有效性，我们采用 ES-ECMC 算法中发现的协同行为对（参见问题定义）作为基准，
+并使用\emph{协同行为对的平均命中率}作为评估指标。
+
+具体而言，对于 ES-ECMC 算法发现的每一个精确伴随群体 $g$，
+若其中任意一个协同行为对 $\langle o_i,o_j\rangle$（其中 $o_i\in g, o_j\in g$）
+存在于 CS-ACMC 算法发现的任意一个伴随群体中，
+则认为该协同行为对被命中，命中计数加一；否则认为其未被命中。
+为简化描述，本文使用“命中率（hit ratio）”表示该指标。
+该指标能够有效反映近似算法所得伴随群体的结果质量。
+
+在效率评估方面，我们采用平均 CPU 运行时间作为主要性能指标。
+需要注意的是，在默认参数设置下，ES-ECMC 算法在北京数据集上使用单线程至少需要 1 天的运行时间，
+因此在实验中我们为 ES-ECMC 启用了 40 个线程，而 CS-ACMC 仅使用单线程。
+所有算法均使用 Python 实现，并在 Ubuntu 平台上运行，
+实验环境配置为：2 颗 Intel(R) Xeon(R) Silver 4214R CPU（2.40GHz）以及 128GB 内存。
+除非特别说明，所有实验结果均为 20 次不同测试轨迹输入下的平均值。
+
+\subsection{性能评估}
+
+\paragraph{轨迹数量的影响}
+首先，我们在默认参数设置下，研究轨迹数量变化对算法性能的影响。
+具体而言，在波尔图数据集中，轨迹数量从 20,000 增加至 100,000；
+在北京数据集中，轨迹数量从 2,000 增加至 10,000。
+之所以采用该设置，是因为北京数据集的轨迹密度高于波尔图，
+因此北京数据集中任意两条轨迹更容易形成协同行为对。
+
+随着轨迹数量的增加，可以观察到波尔图数据集上的命中率呈现上升趋势（见图 \ref{Porto-ratios-num}），
+而北京数据集上的命中率变化趋势并不明显（见图 \ref{Beijing-ratios-num}）。
+值得注意的是，波尔图数据集中捕获的协同行为对数量明显多于北京数据集，从而带来更高的计算开销。
+从图 \ref{Beijing-time-num} 和 \ref{Porto-time-num} 可以看出，
+我们的模型在运行时间上至少比 ES-ECMC 快一个数量级。
+即便 ES-ECMC 采用了多线程计算，当轨迹数量分别达到 10,000（北京）和 100,000（波尔图）时，
+其运行时间仍超过 8,000 秒和 20,000 秒。
+这些结果表明，我们的方法在保证较高有效性的同时，也具备显著的效率优势。
+
+\begin{figure}
+    \centering
+    \begin{minipage}{0.4\linewidth}
+        \centerline{\includegraphics[width=1.65in]{fig/section4/BJ-hitratio-num.pdf}}
+        \centerline{(a) Beijing}
+        \label{Beijing-ratios-num}
+    \end{minipage}
+    \hspace{0.21in}
+    \begin{minipage}{0.4\linewidth}
+        \centerline{\includegraphics[width=1.65in]{fig/section4/BJ-time-num.pdf}}
+        \centerline{(b) Beijing}
+        \label{Beijing-time-num}
+    \end{minipage}
+    \begin{minipage}{0.4\linewidth}
+        \centerline{\includegraphics[width=1.65in]{fig/section4/PT-hitratio-num.pdf}}
+        \centerline{(c) Porto}
+       \label{Porto-time-num}
+    \end{minipage}
+    \hspace{0.21in}
+    \begin{minipage}{0.4\linewidth}
+        \centerline{\includegraphics[width=1.65in]{fig/section4/PT-time-num.pdf}}
+        \centerline{(d) Porto}
+         \label{Porto-ratios-num}
+    \end{minipage}
+    \caption{Effect of the number of trajectories}
+	\label{trjNum}
+\end{figure}
+
+\paragraph{协同行为持续时间阈值的影响}
+\begin{figure}
+    \centering
+    \begin{minipage}{0.4\linewidth}
+        \centerline{\includegraphics[width=1.65in]{fig/section4/BJ-hitratio-k.pdf}}
+        \centerline{(a) Beijing}
+        \label{Beijing-ratios-k}
+    \end{minipage}
+    \hspace{0.21in}
+    \begin{minipage}{0.4\linewidth}
+        \centerline{\includegraphics[width=1.65in]{fig/section4/BJ-time-k.pdf}}
+        \centerline{(b) Beijing}
+        \label{Beijing-time-k}
+    \end{minipage}
+    \begin{minipage}{0.4\linewidth}
+        \centerline{\includegraphics[width=1.65in]{fig/section4/PT-hitratio-k.pdf}}
+        \centerline{(c) Porto}
+       \label{Porto-ratios-k}
+    \end{minipage}
+    \hspace{0.21in}
+    \begin{minipage}{0.4\linewidth}
+        \centerline{\includegraphics[width=1.65in]{fig/section4/PT-time-k.pdf}}
+        \centerline{(d) Porto}
+         \label{Porto-time-k}
+    \end{minipage}
+    \caption{Effect of parameter $k$}
+\label{k}
+\end{figure}
+
+图 \ref{k} 展示了当协同行为持续时间阈值 $k$ 从 2 增加到 6 时算法的性能表现。
+直观上，较大的 $k$ 会减少协同行为对和伴随群体的数量，从而可能降低计算成本。
+然而，如图 \ref{Beijing-ratios-k} 和 \ref{Porto-ratios-k} 所示，
+运行时间并未随着 $k$ 的增大而呈现明显下降趋势。
+其原因在于，主要计算开销来自于协同行为对的枚举过程，
+而从协同行为对中发现伴随群体的成本相对较低。
+此外，当 $k$ 增大时，北京数据集上的命中率有所提升，
+而波尔图数据集上的命中率则有所下降，这可能与两者不同的数据分布特性有关。
+在所有参数设置下，我们的方法在 CPU 运行时间方面均显著优于 ES-ECMC。
+
+\paragraph{群体规模阈值的影响}
+图 \ref{m} 展示了当群体规模阈值 $m$ 从 2 变化到 6 时的算法性能。
+更大的群体规模阈值或协同行为持续时间阈值通常会导致伴随群体数量减少。
+随着 $m$ 的增加，北京数据集上的命中率呈现上升趋势，
+而波尔图数据集上的命中率则有所下降，这同样可归因于数据分布差异。
+实验结果表明，在所有设置下，我们的方法在运行时间方面始终优于 ES-ECMC。
+
+
+\begin{figure}
+    \centering
+    \begin{minipage}{0.4\linewidth}
+        \centerline{\includegraphics[width=1.65in]{fig/section4/BJ-hitratio-m.pdf}}
+        \centerline{(a) Beijing}
+        \label{Beijing-ratios-m}
+    \end{minipage}
+    \hspace{0.21in}
+    \begin{minipage}{0.4\linewidth}
+        \centerline{\includegraphics[width=1.65in]{fig/section4/BJ-time-m.pdf}}
+        \centerline{(b) Beijing}
+        \label{Beijing-time-m}
+    \end{minipage}
+    \begin{minipage}{0.4\linewidth}
+        \centerline{\includegraphics[width=1.65in]{fig/section4/PT-hitratio-m.pdf}}
+        \centerline{(c) Porto}
+        \label{Porto-ratios-m}
+    \end{minipage}
+    \hspace{0.21in}
+    \begin{minipage}{0.4\linewidth}
+        \centerline{\includegraphics[width=1.65in]{fig/section4/PT-time-m.pdf}}
+        \centerline{(d) Porto}
+        \label{Porto-time-m}
+    \end{minipage}
+    \caption{Effect of parameter $m$}
+    \label{m}
+\end{figure}
+
+
+\paragraph{聚类参数的影响}
+\begin{figure}
+    \centering
+    \begin{minipage}{0.4\linewidth}
+        \centerline{\includegraphics[width=1.65in]{fig/section4/BJ-hitratio-ep.pdf}}
+        \centerline{(a) Beijing}
+        \label{Beijing-ratios-ep}
+    \end{minipage}
+    \hspace{0.21in}
+    \begin{minipage}{0.4\linewidth}
+        \centerline{\includegraphics[width=1.65in]{fig/section4/BJ-time-ep.pdf}}
+        \centerline{(b) Beijing}
+        \label{Beijing-time-ep}
+    \end{minipage}
+    \begin{minipage}{0.4\linewidth}
+        \centerline{\includegraphics[width=1.65in]{fig/section4/PT-hitratio-ep.pdf}}
+        \centerline{(c) Porto}
+        \label{Porto-ratios-ep}
+    \end{minipage}
+    \hspace{0.21in}
+    \begin{minipage}{0.4\linewidth}
+        \centerline{\includegraphics[width=1.65in]{fig/section4/PT-time-ep.pdf}}
+        \centerline{(d) Porto}
+        \label{Porto-time-ep}
+    \end{minipage}
+    \caption{Effect of the structural similarity}
+    \label{ep}
+\end{figure}
+
+
+图 \ref{ep} 展示了当结构相似度阈值 $\mu$ 从 0.42 增加到 0.50 时的命中率和运行时间变化情况。
+直观而言，较小的 $\mu$ 值意味着两个对象更容易被连接，
+从而更多对象可能被划分到同一群体中，最终生成的群体数量减少。
+如图 \ref{Porto-ratios-ep} 所示，在波尔图数据集中，
+随着 $\mu$ 的增大，命中率呈现下降趋势，其中 $\mu=0.42$ 时取得最佳效果。
+相比之下，北京数据集上的命中率始终高于 0.9，且随 $\mu$ 变化不明显，
+这可能是由于北京数据集具有更高的采样密度。
+即便 ES-ECMC 采用多线程实现，其运行时间仍显著高于 CS-ACMC，
+至少相差一个数量级。
+实验结果进一步验证了本文方法在效率和效果上的优越性。
 
 \section{本章小结}
