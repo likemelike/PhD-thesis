@@ -1,5 +1,234 @@
 \chapter{相关技术及相关研究综述}
 
 \section{路线搜索和推荐}
+路径搜索与路径规划在空间数据管理和基于位置的社会服务中一直发挥着重要作用。在此背景下，我们对现有关于路径搜索与路径规划的相关研究文献进行了系统综述，并对每一项具有代表性的路径搜索与路径规划研究工作进行了详细介绍。本文总结了现有研究的主要成果，从而揭示了一些新的研究启示，可为空间数据管理与地理信息系统领域的研究人员和软件工程师提供参考与指导。
+
+随着智能交通系统和基于位置的社交媒体的持续普及，基于位置的服务提供商和用户能够生成海量的基于位置的数据以及位置感知查询 \cite{DBLP:journals/geoinformatica/ChenSYL20}。
+一般而言，基于位置的数据被建模为由位置信息以及其他信息（包括时间、文本和属性—值对）组成的对象。一些典型示例包括来自配备 GPS 设备的采样点、基于位置的社交媒体签到数据（如 Google Maps 和 Foursquare），以及带有位置信息的短文本数据（如地理标注的推文）。
+针对这类独立的基于位置对象的有效管理，已有大量研究工作进行了深入探讨。
+
+近年来，关联型基于位置数据逐渐受到越来越多的关注（例如 \cite{DBLP:journals/vldb/ShangCWJZK18, DBLP:conf/ijcai/ZengCCQCX15, DBLP:journals/pvldb/CaoCCX12}）。
+不同于对象之间相互独立的基于位置数据，关联型基于位置数据刻画了对象之间的相互连接关系。由于这类数据在路径服务中较为常见，我们也将其称为关联型路径数据。根据已有研究，每一条关联型路径数据通常被定义为道路网络上一系列对象构成的序列。
+基于对象所包含的信息，关联型路径数据可以分为两类：路径数据和轨迹数据。具体而言，路径数据被定义为道路网络上一系列位置的序列，每个位置可包含诸如文本描述等附加信息；类似地，轨迹数据被定义为按时间顺序排列的一系列基于位置的对象，其中每个对象由空间信息、时间信息以及其他可选信息（如文本描述）组成。
+
+在过去的几十年中，已有大量研究致力于开发高效且有效的路径搜索与路径规划方法。本文对现有关于路径搜索与路径规划的研究工作进行了系统综述。具体而言，路径搜索问题通常被定义为：基于查询信息，在给定的路径或轨迹集合中查找满足目标的路径或轨迹；而路径规划问题则被定义为：根据用户给定的出行需求，在道路网络中发现一条或多条新的路径。
+现有的一些相关综述主要关注轨迹数据管理 \cite{DBLP:journals/csur/WangBCC21}、轨迹数据挖掘 \cite{DBLP:journals/josis/MazimpakaT16}、轨迹数据分析 \cite{DBLP:journals/vldb/SuLZZZ20} 以及时空查询处理 \cite{DBLP:journals/geoinformatica/MahmoodPA19, DBLP:series/synthesis/2019Mahmood, DBLP:conf/er/CaoCCJQSWY12, DBLP:journals/pvldb/ChenCJW13, chen2021location}。这些综述主要面向通用的轨迹数据与时空数据管理研究。
+
+在本文中，我们首先介绍路径数据的建模方式；随后总结并归纳现有路径搜索与路径规划问题的形式化定义；接着介绍已有研究针对路径搜索与路径规划问题提出的高层解决思路，并给出我们对相关问题与方法的分类；最后，我们指出路径搜索与路径规划领域中若干值得进一步研究的未来方向。
+
+\section{路径数据管理}
+本节基于现有研究工作（例如 \cite{DBLP:conf/sigir/LiangW18,DBLP:journals/vldb/ShangCWJZK18, DBLP:journals/geoinformatica/ChenSYL20,DBLP:journals/vldb/PedersenYJ20,DBLP:conf/ijcai/ZengCCQCX15,DBLP:journals/pvldb/CaoCCX12,DBLP:journals/pvldb/PedersenYJ20,DBLP:journals/vldb/GuoYHJC20,DBLP:conf/aaai/YangCWS21}）对路径数据进行分类。大量相关研究围绕在已有路径（或轨迹）数据之上处理路径查询（或轨迹查询）的问题展开。在本节中，我们将分别介绍数据建模、路径搜索以及轨迹搜索。
+
+\subsection{\textbf{数据与问题建模}}
+根据数据之间的依赖关系，路径数据通常可以划分为两类：独立路径数据（例如单个位置、地理文本对象）和关联路径数据（例如路径、轨迹）。二者的主要区别在于，后者由一组相互依赖的对象组成（例如相邻的位置点）。在本小节中，我们定义若干基础术语，包括路径数据空间（即路径数据所处和应用的空间）以及路径数据的具体分类方式。
+
+\subsubsection{\textbf{数据空间}}\label{sec:data space}
+本文主要考察两类具有代表性的数据空间：欧几里得空间和路网空间。在欧几里得空间中，两个对象之间的空间距离通常可以视为地球表面的大圆距离 \cite{DBLP:journals/geoinformatica/ChenSYL20}。而在路网空间中，边的权重一般不满足三角不等式。在路径规划相关研究中，现有工作主要聚焦于路网空间。
+
+\paragraph{\textbf{道路网络}}
+通常情况下，道路网络可建模为一个连通的有向图 $G(V, E, t_m)$，其中顶点集合 $V$ 表示道路交叉口或道路端点，边集合 $E \subset V \times V$ 表示道路路段。每一条边 $e(v_i, v_j) \in E$ 连接两个端点 $v_i$ 和 $v_j$，其中 $v_i, v_j \in V$。每条道路路段 $e$ 都关联一个权重（或代价）函数，记为 $t_m$。函数 $t_m: E \mapsto \mathbb{R}$ 为每条边 $e$ 赋予一个实值权重 $t_m(e)$（例如通行时间、距离等）。在大多数情况下，若 $i \neq j$，则 $t_m(e_i) \neq t_m(e_j)$。
+
+根据权重函数的不同形式，道路网络可以进一步划分为多种类型，包括但不限于静态道路网络、动态道路网络（例如 \cite{DBLP:conf/dasfaa/XuGDSL12,DBLP:conf/aaai/WilkieBLM11,DBLP:conf/ijcai/LiCS20,DBLP:conf/gis/WilkieBL14}）以及时间依赖道路网络（例如 \cite{DBLP:conf/edbt/DingYQ08,DBLP:journals/networks/CaiKW97,DBLP:conf/icde/KanoulasDXZ06,DBLP:journals/ton/NarvaezST01,DBLP:journals/pvldb/WangLT19}）。在静态道路网络中，每条边的权重保持不变，即为常数；而在动态道路网络中，边的权重会根据特定设置动态更新，例如交通状况 \cite{DBLP:conf/dasfaa/XuGDSL12,DBLP:journals/geoinformatica/ShangLZLPW15,DBLP:journals/ijon/ShangGLW16} 或自感知规划 \cite{DBLP:conf/aaai/WilkieBLM11,DBLP:conf/ijcai/LiCS20,DBLP:conf/gis/WilkieBL14}。在时间依赖道路网络中，边的权重（例如通行时间）随时间变化，通常基于大规模历史轨迹数据进行建模。
+
+\subsubsection{\textbf{独立路径数据}}\label{sec:single data}
+
+\paragraph{\textbf{位置}}
+位置被定义为地理空间中的一个二元组 $\langle x, y \rangle$（例如，$39^{\circ}54^{'}27^{''}\mathrm{N}$，$116^{\circ}23^{'}17^{''}\mathrm{E}$）。每一个二元组对应于由具备 GPS 功能的设备记录的一个唯一空间点。
+
+\paragraph{\textbf{地理文本点}}
+地理文本点是在空间位置的基础上，进一步考虑文本属性（例如“带花园的公园”）或类别属性（即从文本中抽取的属性，如“公园”“花园”）。最常见的示例是带有地理标注的签到推文。
+
+\paragraph{\textbf{时空点}}
+时空点由时间戳 $t$ 与一个离散的空间坐标点 $[x, y]$ 组成，表示为 $s=\langle [x, y], t \rangle$。其中，$[x, y]$ 表示记录的空间位置，$t$ 表示到达该位置时对应的时间戳。一种具有代表性的时空点数据来源于配备 GPS 的设备。
+
+\subsubsection{\textbf{关联路径数据}}
+
+\paragraph{\textbf{精确轨迹}}
+移动对象的精确轨迹是连接该对象所经过的每一个时空点 $s=\langle [x, y], t \rangle$（参见第 \ref{sec:single data} 节）的一条连续曲线。移动对象可以是人、动物，或移动的位置追踪设备。每一个位置 $s_i$ 可表示为一个 $m$ 维向量 $[p_1,\ldots,p_m]$，用于描述空间特征（例如经度和纬度），并附带一个时间戳 $t$，表示到达该位置的时间。
+需要注意的是，由于位置追踪设备无法连续记录位置，精确轨迹在现实中是无法直接获取的。
+
+\paragraph{\textbf{轨迹}}
+移动对象的精确轨迹是一条记录其连续移动位置的曲线。然而在实际应用中，由于位置追踪设备无法连续记录位置，精确轨迹无法被直接捕获。
+移动对象的一条轨迹 $\tau=\{s_1,\ldots,s_n\}$ 是从精确轨迹中按照一定采样率，由位置追踪设备采样得到的、按时间顺序排列的有限个离散时空点序列。轨迹中的每一个元素 $s_i \in \tau$ 均按照其时间戳 $s_i.t$ 排序。为简化描述，在二维空间中，我们用时空点 $s_i=([x_i,y_i],t_i)$（$i \in [1,n]$）来表示轨迹中的每一个关联数据项。
+需要指出的是，我们对轨迹的建模方式与已有研究保持一致 \cite{DBLP:conf/icde/RanuPTDR15,DBLP:conf/sigmod/SuZWHZ13}。此外，我们假设所有轨迹采样点已通过地图匹配算法（例如 \cite{DBLP:conf/vldb/BrakatsoulasPSW05}）映射到相应的空间顶点上。
+
+\paragraph{\textbf{路径}}
+路径（亦称为路段序列，path）$\mathbf{R}$ 被定义为一个有限的顶点序列 $v_1,v_2,\ldots,v_k$，该序列可以表示为道路网络 $G(V,E)$ 中的一系列边（即 $e(v_i,v_{i+1})\in E$）。与路径不同，轨迹并非直接存在于道路网络之上，而是通过对连续精确轨迹进行采样生成的。轨迹本身依赖于精确轨迹及其采样率：即使移动对象行走的是同一路径，不同的采样率也可能生成不同的轨迹。
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=4in]{fig/section2/road_network.pdf}
+    \caption{轨迹与路径示例}
+    \label{fig:road_ex}
+\end{figure}
+
+图 \ref{fig:road_ex} 给出了一个示例，用以说明独立路径数据（位置与时空点）以及关联路径数据（精确移动轨迹、轨迹和路径）。道路网络记为 $G(V,E)$，其中顶点集 $V=\{v_1,v_2,v_3,v_4\}$，边集 $E=\{v_1v_2,v_2v_3,v_3v_4\}$。假设一个移动对象（例如行人）从起点 $v_1$ 移动到终点 $v_4$，并经过一系列时空点，其可能的移动轨迹由一条曲线表示。采集到的轨迹中的每一个时空点均已匹配到道路网络中的某一具体路段。基于这些采样得到的时空点即可生成相应的轨迹。在该示例中，经过地图匹配后，移动对象所经过的路径为 $\langle v_1,v_2,v_3,v_4 \rangle$。需要注意的是，由于位置追踪设备无法连续采集位置，该示例中的精确移动轨迹在现实中是不存在的。
+
+\subsection{\textbf{路径搜索}}
+随着位置服务的日益普及，大量路径规划应用（如 Google Maps）以及网约车服务（如滴滴、Uber 和 Grab）在我们的日常生活中发挥着不可或缺的作用。与仅返回一组实体（例如兴趣点）不同，路径搜索是一项计算任务，其目标是生成一条从给定起始位置（例如用户的当前位置）出发、到达指定终点位置，并且途经若干由用户指定类型的地理实体的路径。
+具体而言，这些地理实体可以被视为用户偏好，并通过路径查询进行指定。路径搜索的目标是在满足约束条件的前提下，找到一条能够至少访问每一种指定类型中一个满足条件实体的路径。根据用户定义实体的数据类型，该领域的现有研究可进一步划分为两类：基于位置的路径搜索（如 \cite{DBLP:conf/kdd/GeXTXGP10,DBLP:conf/icde/ShangCWJWK17}）以及基于关键词的路径搜索（如 \cite{DBLP:conf/ssd/LiCHKT05,DBLP:journals/vldb/SharifzadehKS08,DBLP:journals/pvldb/CaoCCX12}）。下面我们简要给出这两类问题的形式化定义以便对比，其详细内容分别在第 \ref{sec:location-based} 节和第 \ref{sec:keyword} 节中讨论。
+
+通常，基于位置的路径搜索的输入包括：起始位置 $s$、终点位置 $t$、一组指定的空间位置 $\mathbf{L}$（例如地理坐标）、一个可选的预算约束 $\Delta$（例如行程时间、关键词访问顺序或偏好），以及一个用于计算路径目标得分的函数 $f$。其目标是在预算约束 $\Delta$ 下，从 $s$ 到 $t$ 找到一条经过 $\mathbf{L}$ 的最优路径（即目标函数 $f$ 取最大值的路径）。相比之下，基于关键词的路径规划问题的输入并非具体的位置集合，而是一组查询关键词 $\Psi$。该类查询通常返回一条从 $s$ 到 $t$ 的路径，使得在预算约束 $\Delta$ 以及关键词相关约束（例如必须覆盖 $\Psi$ 中的所有关键词或兴趣点）的条件下，目标函数 $f$ 达到最大值。
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=4in]{fig/section2/location-keyword1.pdf}
+    \caption{基于位置的路径搜索与基于关键词的路径搜索对比}
+    \label{fig:location_keyword}
+\end{figure}
+
+图 \ref{fig:location_keyword} 给出了一个示例，用以说明基于位置的路径查询与基于关键词的路径查询之间的差异。给定一组空间位置 $\{S,A,B,C,D,E,T\}$，每个位置都关联有类别信息（例如酒店、公园等）。如图 \ref{fig:location_keyword} 所示，位置 $A,B,C,D,E$ 分别关联类别 <机场，体育场>、<公园，学校>、<厕所>、<酒店，公园> 和 <学校，公园>。考虑一个基于位置的路径查询：“从 $S$ 到 $T$，途经 $A$ 和 $C$，寻找一条最优路径”，则两条候选路径 $\{SA,AC,CD,DT\}$ 和 $\{SA,AC,CE,ET\}$ 均满足条件，最终可根据具体优化目标（如最小行程时间）向用户推荐其中一条路径。与提供具体位置不同，基于关键词的路径规划考虑的是一组用户定义的关键词（例如兴趣点类别），其目标是找到一条从查询起点（如家或酒店）出发、并覆盖一组用户指定类别（如 \{酒吧，餐馆，博物馆\}）的最优路径。给定一个基于关键词的路径查询：“从 $S$ 到 $T$，途经一个体育场、一个厕所和一个公园”，同样可以得到两条满足条件的候选路径 $\{SA,AC,CD,DT\}$ 和 $\{SA,AC,CE,ET\}$。此外，用户还可以指定不同类别之间的部分顺序约束（例如必须先访问公园再访问体育场），这也是路径规划中一种常见的查询形式。
+
+文献 \cite{DBLP:conf/kdd/MamoulisCKHTC04,DBLP:conf/kdd/GiannottiNPP07,DBLP:conf/vldb/GonzalezHLMS07,DBLP:conf/www/ZhengZXM09} 主要关注通过挖掘轨迹模式来帮助发现从起点到终点的热门路径。其中，\cite{DBLP:conf/kdd/GiannottiNPP07} 提出了挖掘一种称为 T-pattern 的时间标注点序列，以发现具有足够支持度的所有 T-pattern。类似地，在 \cite{DBLP:conf/kdd/MamoulisCKHTC04,DBLP:conf/vldb/GonzalezHLMS07,DBLP:conf/www/ZhengZXM09} 中，研究者利用序列模式挖掘算法来发现频繁路径或序列。
+
+\subsection{\textbf{轨迹搜索}}
+
+在时空数据库中检索相似轨迹是轨迹分析与路径规划中的一个基础性问题。基于此，本节对轨迹搜索相关研究进行系统性综述。从路径规划的角度来看，轨迹搜索问题通常可以分为两大类：\textbf{轨迹到轨迹搜索（trajectory-to-trajectory search）}和\textbf{轨迹到路径搜索（trajectory-to-route search）}。
+
+具体而言，轨迹搜索要么根据给定的相似性度量，从轨迹数据库中检索与查询轨迹相似的已有轨迹或轨迹片段 \cite{DBLP:conf/icde/ZhengYZXSZ15}；要么基于检索得到的轨迹或子轨迹，进一步构造一条新的路径 \cite{DBLP:conf/icde/DaiYGD15}。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% trajectory similarity measure
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{\textbf{轨迹相似性度量}}
+\label{sec:trj_measure}
+
+在介绍具体的轨迹搜索问题之前，我们首先回顾已有关于轨迹相似性度量的研究工作。
+
+\paragraph{\textbf{传统相似性度量方法}}
+
+与简单数据类型（如点或向量）的距离计算不同，由于轨迹具有复杂的时空属性，其相似性度量的设计具有较高难度。此外，轨迹数据往往由不同的采样策略或非均匀采样率生成，这进一步增加了相似性计算的复杂性。
+
+为此，研究者提出了大量经典的轨迹相似性度量方法，其中最具代表性的包括基于欧氏距离的方法（EDB）\cite{DBLP:conf/fodo/AgrawalFS93}、动态时间规整（DTW）\cite{DBLP:conf/icde/YiJF98}、最长公共子序列（LCSS）\cite{DBLP:conf/icde/VlachosGK02}、带实值惩罚的编辑距离（ERP）\cite{DBLP:conf/vldb/ChenN04}、实值序列编辑距离（EDR）\cite{DBLP:conf/sigmod/ChenOO05} 以及带投影的编辑距离（EDwP）\cite{DBLP:conf/icde/RanuPTDR15}。
+
+早期方法的基本思想是通过 $L_p$-范数对两条轨迹中的采样点进行一一对齐。例如，文献 \cite{DBLP:conf/fodo/AgrawalFS93} 尝试将欧氏距离直接用于轨迹相似性度量。然而，该方法对局部时间偏移非常敏感。DTW 方法通过允许多对一的点映射，利用动态规划寻找最优对齐方式，从而有效解决了局部时间偏移问题 \cite{DBLP:conf/icde/YiJF98}。尽管 DTW 具有较好的匹配效果，但其计算复杂度较高，不适用于大规模轨迹数据库，因此后续研究主要集中在其效率优化上。
+
+为了提升对噪声轨迹的鲁棒性，LCSS \cite{DBLP:conf/icde/VlachosGK02} 通过引入阈值机制，允许一定程度的空间偏移和未匹配点。相比 DTW，LCSS 对噪声更加鲁棒，但由于忽略了未匹配的子序列，可能会导致相似性计算精度下降。ERP \cite{DBLP:conf/vldb/ChenN04} 基于编辑距离并引入实值惩罚，同时满足度量性质，使其能够支持高效剪枝。然而，由于直接使用实值差异作为距离度量，ERP 对噪声仍较为敏感。EDR \cite{DBLP:conf/sigmod/ChenOO05} 通过根据间隙长度分配惩罚，在一定程度上弥补了 LCSS 的不足。
+
+上述方法大多依赖于点级对齐，因此对非均匀采样率较为敏感。为解决该问题，研究者提出了 APM \cite{DBLP:conf/sigmod/SuZWHZ13} 和 EDwP \cite{DBLP:conf/icde/RanuPTDR15}。其中，EDwP 通过线性插值和投影操作，有效处理了不一致的采样率问题。此外，文献 \cite{DBLP:conf/icde/PerngWZP00} 提出了基于地标的轨迹相似性模型，其结果更符合人类直觉和情景记忆；后续研究 \cite{DBLP:conf/icde/ChenNOT07} 进一步分析了传统时间规整距离的不足，并提出了新的改进方法以应对轨迹的平移和尺度变化。
+
+\paragraph{\textbf{基于深度学习的方法}}
+
+近年来，研究者开始探索基于深度学习的轨迹相似性计算方法，以克服传统基于对齐方法的局限性。Li 等人 \cite{DBLP:conf/icde/LiZCJW18} 提出了首个用于轨迹表示学习的深度学习模型 \textit{t2vec}，通过学习轨迹的向量表示，将轨迹相似性计算转化为向量空间中的距离计算。
+
+与传统基于动态规划的方法通常具有 $O(n^2)$ 的计算复杂度不同，t2vec 的相似性计算复杂度为 $O(n + |v|)$，其中 $n$ 为轨迹长度，$|v|$ 为嵌入向量维度。因此，t2vec 不仅能够有效处理低质量轨迹（如噪声轨迹或非均匀采样轨迹），还具备良好的可扩展性，能够支持大规模轨迹数据分析。随后，Yao 等人 \cite{DBLP:conf/icde/YaoCZB19} 在此基础上进一步提出了一种通用的种子引导神经学习方法，以提升深度学习轨迹相似性计算的效率。
+
+\section{基于位置的路径规划}
+\label{sec:location-based}
+
+路径规划在我们的日常生活中发挥着不可或缺的作用。本节主要讨论基于位置的路径规划问题。该领域的相关研究主要可以划分为三类：基于起点—终点的路径规划、基于多位置的路径规划以及基于多用户的路径规划。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1. Route Planning based on Source and Destination
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\textbf{基于起点和终点的路径规划}}
+
+该类研究主要在给定特定约束条件的情况下执行基本的路径查询。给定一个 \textless 起点，终点 \textgreater 元组，并可能附带一些时间相关约束，基于起点—终点的路径规划旨在在用户特定约束（如出发时间）下，求解从起点位置到终点位置的最优路径（例如最短距离或最小拥堵概率）。
+
+在该方向上，大量研究致力于在静态图上解决基于距离的最短路径搜索问题。Dijkstra 算法 \cite{DBLP:journals/nm/Dijkstra59} 是经典的最短路径算法，可用于在静态图中寻找从节点 $s$ 到节点 $t$ 的最短路径。随后，A* 算法 \cite{DBLP:conf/aips/LikhachevFGST05} 通过引入启发式策略进一步提升了搜索效率。
+
+\subsubsection{\textbf{动态路网上的路径规划}}
+
+在实际应用中，由于交通网络具有动态特性，道路图往往会频繁更新，这些变化会显著影响路径规划的性能 \cite{DBLP:conf/edbt/DingYQ08,DBLP:journals/networks/CaiKW97,DBLP:conf/icde/KanoulasDXZ06,DBLP:journals/ton/NarvaezST01,DBLP:journals/pvldb/WangLT19,DBLP:conf/dasfaa/XuGDSL12,DBLP:journals/geoinformatica/ShangLZLPW15}。下面分别介绍时间依赖最短路径问题、交通感知路径规划、自感知路径规划以及基于用户偏好的路径规划。
+
+\paragraph{\textbf{时间依赖最短路径问题（TDSP）}}
+
+给定一个时间依赖路网（参见第 \ref{sec:data space} 节）以及用户给定的出发时间区间，TDSP 查询旨在寻找一个最优出发时间，使得从一个位置到另一个位置的总行程时间最小，其中交通状况会随时间动态变化 \cite{DBLP:conf/edbt/DingYQ08,DBLP:journals/networks/CaiKW97,DBLP:conf/icde/KanoulasDXZ06,DBLP:journals/ton/NarvaezST01,DBLP:journals/pvldb/WangLT19}。相关研究既包括基于离散时间方法的近似解 \cite{DBLP:journals/networks/CaiKW97}，也包括基于连续时间方法的最优解 \cite{DBLP:conf/icde/KanoulasDXZ06,DBLP:journals/ton/NarvaezST01}。Ding 等人 \cite{DBLP:conf/edbt/DingYQ08} 提出了基于 Dijkstra 的新算法以求解最优出发时间；后续研究 \cite{DBLP:journals/pvldb/WangLT19} 构建了一种新的高度平衡树索引结构 TD-G-tree，并基于该结构提出了支持 TDSP 查询的高效算法。
+
+\paragraph{\textbf{交通感知路径规划}}
+
+交通感知路径规划主要关注在考虑实时交通状况的前提下，寻找行程时间最短的路径。Xu 等人 \cite{DBLP:conf/dasfaa/XuGDSL12} 通过分析路网中的交通状态并挖掘时空知识来指导路径规划，以避免在大规模图上的冗余计算和频繁重计算。Shang 等人 \cite{DBLP:journals/geoinformatica/ShangLZLPW15} 提出了交通感知空间网络中的无阻塞路径规划问题（TAUP），通过分析移动对象的不确定轨迹构建交通感知路网，并设计了高效算法。另一项研究 \cite{DBLP:journals/ijon/ShangGLW16} 利用人群轨迹数据预测人类移动行为，识别拥挤站点，并规划避开拥挤区域的路径。此外，Malviya 等人 \cite{DBLP:conf/icde/MalviyaMB11} 提出了连续查询系统，在交通状态变化时动态更新用户的最短路径。
+
+\paragraph{\textbf{自感知路径规划}}
+
+随着路径规划系统的广泛应用，规划出的路径会反过来影响未来的交通状况，即已有路径规划会对后续规划产生影响 \cite{DBLP:conf/aaai/WilkieBLM11,DBLP:conf/ijcai/LiCS20,DBLP:conf/gis/WilkieBL14}。为此，自感知路径规划被提出，用以避免由先前规划路径引发的潜在交通拥堵。早期工作 \cite{DBLP:conf/aaai/WilkieBLM11} 提出了自感知路径规划算法，利用当前规划路径预测未来交通状态；后续研究 \cite{DBLP:conf/gis/WilkieBL14} 进一步表明，当为较大比例的车辆生成路径时，可以有效估计整体交通模式，并提出了适用于城市级规模的解决方案。
+
+\paragraph{\textbf{基于用户偏好的路径规划}}
+
+传统路径规划算法通常围绕单一优化目标（如最短路径）展开，但研究表明，现实中的驾驶员往往选择既非最短也非最快的路径 \cite{DBLP:journals/vldb/0002GMJ15}。Guo 等人 \cite{DBLP:journals/vldb/GuoYHJC20} 发现，不同驾驶情境对应不同的路径偏好，并据此提出了情境感知的偏好路径规划问题。现有研究多通过挖掘历史轨迹数据来学习用户偏好，并据此指导路径规划算法 \cite{DBLP:journals/vldb/0002GMJ15,DBLP:conf/aaai/LetchnerKH06,DBLP:conf/ssd/BalteanuJS13}。此外，基于多准则的天际线路径查询问题也得到了研究 \cite{DBLP:conf/icde/DengZS07,DBLP:conf/icde/KriegelRS10}。
+
+\subsubsection{\textbf{不确定路网上的路径规划}}
+
+\paragraph{\textbf{随机路网上的路径规划}}
+
+在随机路网中，边的行程时间被建模为随机变量。给定源点 $s$ 和终点 $d$，随机路径规划旨在寻找期望代价最小的路径。Lim 等人 \cite{DBLP:journals/ijrr/LimBGMR11} 提出了随机运动规划算法，以最大化在给定时间预算内到达目的地的概率。Yang 等人 \cite{DBLP:conf/icde/YangGJKS14} 提出了随机天际线路径模型；Pedersen 等人 \cite{DBLP:journals/pvldb/PedersenYJ20} 利用轨迹数据构建高分辨率不确定路网，并提出了高效的随机路径规划算法。
+
+\paragraph{\textbf{概率路网上的路径规划}}
+
+时间依赖路网 \cite{DBLP:conf/edbt/DingYQ08} 与概率路网 \cite{DBLP:conf/edbt/HuaP10} 是两类典型的动态空间网络。Hua 等人 \cite{DBLP:conf/edbt/HuaP10} 提出了三种概率路径查询模型，通过将边权建模为随机变量并使用样本近似，设计了高效的概率计算方法。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2. Route Planning based on Multiple Locations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\textbf{基于多位置的路径规划}}
+
+该类问题的输入通常为一组位置、位置序列或位置—时间对序列。研究目标是在覆盖用户指定位置的前提下，使某种代价最小化（如行程时间、距离）或收益最大化。
+
+\subsubsection{\textbf{移动序列推荐（MSR）}}
+\label{sec:msr}
+
+MSR 问题 \cite{DBLP:conf/kdd/GeXTXGP10} 旨在为出租车司机推荐最优行驶路径，以最小化成功载客前的潜在行驶距离。后续研究 \cite{DBLP:journals/tkde/HuangHSLZCS15,DBLP:conf/icdm/YeXD18,DBLP:journals/tkde/YeXGD19,DBLP:conf/kdd/YeZXZGD18} 从不同目标函数和多车辆场景对该问题进行了扩展。
+
+\subsubsection{\textbf{基于位置的轨迹搜索（TSL）}}
+
+TSL 问题以查询位置集、轨迹数据库和参数 $k$ 为输入，返回在地理上最优连接这些位置的 $k$ 条轨迹 \cite{DBLP:conf/sigmod/ChenSZZX10,DBLP:conf/icde/ZhengSYY13}。相关扩展还包括基于位置的路径搜索（RSL）查询 \cite{DBLP:conf/ssd/ShangLPX13,DBLP:conf/kdd/ChenSJ0Z019,DBLP:conf/aaai/ChenSG20}。
+
+\subsubsection{\textbf{群体出行规划（CTP）}}
+
+CTP 查询 \cite{DBLP:conf/icde/ShangCWJWK17} 旨在为多个出发点和一个目的地规划低成本路径，并允许通过有限数量的集合点。相关研究还包括最优多集合点路径查询（OMMPR）\cite{DBLP:journals/tkde/LiQYM16} 以及群体出行路径推荐问题 \cite{DBLP:conf/gis/RezaAC17}。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 3. Route Planning beyond Individual Trip Query
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\textbf{超越单用户出行查询的路径规划}}
+
+该方向关注在多用户场景下生成多条不同路径或共享路径，以满足整体最优目标。现有研究主要包括基于群体的最优路径规划和全局最优路径规划。
+
+\subsubsection{\textbf{基于群体的最优路径规划}}
+
+Hashem 等人 \cite{DBLP:conf/ssd/HashemHAK13,DBLP:conf/cikm/HashemBAKT15} 提出了群体出行规划（GTP）查询，旨在最小化群体总出行距离。
+
+\subsubsection{\textbf{全局路径规划}}
+
+全局路径规划为每个查询生成一条独立路径，使所有用户的总代价最小或总收益最大 \cite{DBLP:conf/icra/LimR12}。相关研究还包括多出租车推荐 \cite{DBLP:conf/kdd/YeZXZGD18}、拼车服务路径规划 \cite{DBLP:journals/pvldb/ZengTSC20,DBLP:journals/pvldb/Zheng0Y18} 以及全局最优路径（GOR）问题 \cite{DBLP:conf/ijcai/LiCS20}。
+
+
+\section{关键词感知路径规划}
+\label{sec:keyword}
+近年来，关键词感知路径规划问题得到了广泛研究。
+
+现有研究大体可以分为两类：基于精确匹配的关键词感知路径规划（例如 \cite{DBLP:conf/ssd/LiCHKT05, DBLP:journals/vldb/SharifzadehKS08,DBLP:journals/pvldb/CaoCCX12}），以及基于近似匹配的关键词感知路径规划（例如 \cite{DBLP:conf/gis/0002TL11,DBLP:journals/tkde/ZhengSHZZL17,DBLP:journals/tkde/WenYPH17,DBLP:conf/icde/LiCGYZ18,DBLP:conf/edbt/JosseSS15}）。总体而言，近似匹配是对精确匹配的一种更为现实的扩展，用以处理拼写错误或用户定义条件模糊的情形。
+
+\subsection{\textbf{基于精确匹配的关键词感知路径规划}}
+
+\paragraph{\textbf{行程规划查询（TPQ）}}
+在路径规划领域，Li 等人 \cite{DBLP:conf/ssd/LiCHKT05} 是最早在空间数据库中提出行程规划查询（Trip Planning Query, TPQ）的研究之一。该模型中，每个空间对象同时具有位置信息和关键词，并使用 R-tree 进行索引。一个 TPQ 查询由起始位置 $s$、目标位置 $d$ 以及关键词集合 $\Psi$ 构成，其目标是在满足距离、交通状况等优化目标的前提下，寻找一条从 $s$ 到 $d$ 的最优路径，并且该路径至少经过 $\Psi$ 中每个关键词对应的一个对象。研究表明，TPQ 可由旅行商问题（TSP）\cite{1976Worst} 归约而来，因此是 NP-hard 的。文献 \cite{DBLP:conf/ssd/LiCHKT05} 基于度量空间中的三角不等式性质，提出了贪心算法和整数规划算法，并设计了近似算法以应对搜索空间的指数级增长。随后的一些工作 \cite{DBLP:conf/cikm/ZhangLWS15,DBLP:conf/icde/YawalkarR19} 对 TPQ 进行了扩展。例如，\cite{DBLP:conf/cikm/ZhangLWS15} 在约束条件下最大化用户满意度，其约束包括所有关键词必须被访问，且路径在给定时间预算内以不低于用户设定阈值的概率完成。该方法通过离线与在线相结合的方式剪枝无效候选路径。Yawalkar 等人 \cite{DBLP:conf/icde/YawalkarR19} 进一步引入多种偏好函数，以平衡关键词覆盖与路径长度，并通过目标导向搜索显著缩小搜索空间。
+
+\paragraph{\textbf{最优序列路径查询（OSR）}}
+Sharifzadeh 等人 \cite{DBLP:journals/vldb/SharifzadehKS08} 提出了 TPQ 的一种变体，称为最优序列路径查询（Optimal Sequenced Route, OSR）。在 OSR 中，对关键词集合 $\Psi$ 施加一个全序约束，仅给定起始位置 $s$，目标是寻找一条从 $s$ 出发、按照给定顺序访问不同类型位置的最短路径。为此，该研究提出了两个精确算法：L-LORD 和 R-LORD，其中 L-LORD 是基于阈值的向量空间算法，而 R-LORD 是其结合 R-tree 的高效扩展。相关工作 \cite{DBLP:conf/gis/MaSXZ06} 将一般最优路径查询分解为多个全序查询并分别处理。
+
+与 OSR 相比，TPQ 不要求关键词的访问顺序，因此从理论上讲，OSR 算法也可以处理 TPQ 查询。然而，在实际应用中，用户更倾向于指定部分顺序或任意顺序 \cite{DBLP:conf/gis/ChenKSZ08, DBLP:journals/geoinformatica/ChenKSZ11, DBLP:journals/tkde/LiYM13}。Chen 等人 \cite{DBLP:conf/gis/ChenKSZ08, DBLP:journals/geoinformatica/ChenKSZ11} 提出了多规则部分序列路径查询（MRPSR），并设计了三种启发式算法。Li 等人 \cite{DBLP:journals/tkde/LiYM13} 进一步提出前向搜索与后向搜索方法。后续研究 \cite{DBLP:journals/geoinformatica/SharifzadehS08,DBLP:conf/ijcai/ZengCCQCX15,DBLP:conf/dasfaa/LiYDX15} 引入了时间约束和用户偏好等附加条件。
+
+\paragraph{\textbf{关键词感知最优路径搜索（KOR）}}
+Cao 等人 \cite{DBLP:journals/pvldb/CaoCCX12} 提出了关键词感知最优路径（Keyword-aware Optimal Route, KOR）查询，其目标是在满足预算约束的前提下，寻找覆盖用户指定关键词集合且目标函数最优的路径。与 TPQ 和 OSR 不同，KOR 同时考虑用户偏好和预算约束，并不限制关键词访问顺序。该研究提出了两种近似算法和一种贪心算法来高效求解 KOR。
+
+\paragraph{\textbf{交互式路径搜索（IRS）}}
+交互式路径搜索 \cite{DBLP:conf/gis/KanzaSSD08, DBLP:conf/mdm/LuLT11, DBLP:conf/gis/KanzaLSS09, DBLP:journals/pvldb/LevinKSS10, DBLP:conf/icde/RoyDAY11} 并非一次性返回完整路径，而是逐步向用户推荐下一个访问位置，并根据用户反馈动态调整路径。相关研究提出了贪心算法、数据挖掘方法以及近似算法，以在路径长度、关键词相关性和用户偏好之间取得平衡。
+
+\paragraph{\textbf{群体行程规划（GTP）}}
+群体行程规划关注多个用户共同出行的路径规划问题。每个用户提供起始位置、目标位置、关键词集合及约束条件，目标是在满足所有用户需求的同时，最小化总距离或最大化群体偏好。Hashem 等人 \cite{DBLP:conf/ssd/HashemHAK13} 首次提出 GTP 查询，并设计剪枝技术以提高效率；后续工作 \cite{DBLP:conf/cikm/HashemBAKT15} 进一步提出精确与近似算法。Fan 等人 \cite{DBLP:conf/ssd/FanBS017,DBLP:journals/geoinformatica/FanBSX18} 则在考虑个体偏好和约束的基础上，提出了最大化群体满意度的算法。
+
+\paragraph{\textbf{其他相关问题}}
+交通感知路径搜索（TARS）\cite{DBLP:journals/geoinformatica/LevinK14} 考虑交通状态变化对行程速度的影响；室内路径规划研究 \cite{DBLP:conf/gis/SalgadoCT18,DBLP:conf/icde/FengL0LSX20} 将关键词感知路径规划扩展到室内空间场景。
+
+\subsection{\textbf{基于近似匹配的关键词感知路径规划}}
+
+该类问题的输入通常包括起始位置、目标位置以及若干（关键词，相似度阈值）对。研究重点在于利用字符串相似度度量判断对象关键词是否与查询关键词匹配。代表性工作包括多近似关键词路径查询（MAKR）\cite{DBLP:conf/gis/0002TL11}，其目标是在满足编辑距离阈值的条件下，寻找覆盖每个关键词的最短路径。Zheng 等人 \cite{DBLP:journals/tkde/ZhengSHZZL17} 提出了基于线索的路径搜索（CRS），允许用户指定关键词及空间关系线索，并设计了多种高效算法。
+
+表 \ref{tb:compare_queries} 总结了部分典型关键词感知路径规划查询的输入、输出及对应算法。其中，$s$ 和 $d$ 分别表示起始位置和目标位置，$\Psi$ 表示关键词集合；对于 MARK 查询，$\Psi=\{(\sigma_1,\tau_1),\ldots,(\sigma_k,\tau_k)\}$，其中 $\sigma_i$ 为第 $i$ 个查询关键词，$\tau_i$ 为其对应的编辑距离阈值。
 
 \section{本章小结}
+
+在本文综述中，我们系统地调研并总结了现有关于路径搜索与路径规划的研究工作。我们从三个方面介绍相关研究：路径数据管理、基于位置的路径规划以及基于关键词的路径规划。对于第一类研究，我们分别简要介绍了数据建模、路径搜索以及轨迹搜索，并在该部分中定义了一些基本术语。此外，我们还对若干主流的轨迹相似性度量方法进行了全面比较，重点分析了它们在处理低质量轨迹时的鲁棒性表现。对于基于位置的路径规划，我们重点考察了三类相关研究，分别是基于起点—终点的路径规划、基于多位置的路径规划以及基于多用户的路径规划。针对基于关键词的路径规划，根据关键词匹配方式的不同，我们将现有研究划分为两类：基于精确匹配的路径规划和基于近似匹配的路径规划，并根据查询的输入、输出以及所采用的算法，总结了若干具有代表性的查询类型。
+
+尽管路径搜索与路径规划已经得到了广泛研究，我们认为该领域仍然存在大量亟待解决的问题以及有待改进的方法。对于轨迹相似性度量而言，基于深度学习的方法在处理低质量轨迹时具有较强的鲁棒性，并且能够在轨迹匹配中实现较高的效率。然而，现有相关研究大多未将时间因素纳入考虑，从而难以支持时空数据库中的相似性查询，因为空间信息和时间信息在此类应用中同等重要。因此，在现有基于深度学习模型的基础上进一步引入时间维度，将是一个具有重要研究价值的方向。对于基于位置的路径规划，目前针对大规模出行查询的全局路径规划研究仍然较为有限，该类问题旨在为所有用户寻找一组最优路径组合，以最小化整体交通拥堵和总出行成本。因此，如何支持面向海量出行查询或出行查询流的高效路径规划，是一个亟需深入研究的重要问题。

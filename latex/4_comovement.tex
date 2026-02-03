@@ -1,9 +1,7 @@
 \chapter{联合移动模式挖掘}
 
 \section{引言}
-从轨迹中检测共同行为（co-movement）模式的问题已经被数据科学领域广泛研究。现有方法主要基于“过滤-精炼”（filter-and-refine）框架、索引技术、位置点聚类以及搜索算法。尽管这些技术已被广泛应用，但在处理具有复杂群体定义的模式时，往往需要巨大的计算开销，使其难以在大规模轨迹数据上产生及时的结果。在现实应用场景中，尤其是在疫情预警与防控中，实时且高质量的结果尤为重要。
 
-基于此，我们对共同行为模式的定义进行了简化与放宽，在不失一般性的前提下支持快速检测。具体而言，我们通过\emph{伴随群体}（companion group）来定义共同行为模式，该群体由至少 $m$ 个在连续 $k$ 个时间段内共同移动的对象组成。如果某个对象能够与其他对象形成多个伴随群体，则该对象归属于成员数量最大的伴随群体。给定一组移动对象轨迹，精确算法通过组合满足条件的共同行为对来发现伴随群体，但该过程计算开销较大。为实现高效发现，我们提出了一种快速的、具备社区感知能力的近似算法。基于两个真实世界数据集的大量实验验证了所提出方法的有效性与高效性。
 
 \subsection{研究背景与意义}
 
@@ -158,21 +156,21 @@ O(\tau)=\{o(s_1),\ldots,o(s_{|\tau|})\}.
     
     \Input{
     Trajectory set $\mathcal{T}=\{\tau_1,\tau_2,\ldots,\tau_{|\mathcal{O}|}\}$;\newline
-    Spatial distance threshold $\epsilon_s$;\newline
-    Temporal distance threshold $\epsilon_t$;\newline
-    Minimum group size threshold $m$;\newline
-    Co-movement duration threshold $k$.
+    空间距离阈值 $\epsilon_s$;\newline
+    时间距离阈值 $\epsilon_t$;\newline
+    群体规模阈值 $m$;\newline
+    共同行为持续时间阈值 $k$.
     }
     
     \Output{A set of approximate companion groups $G$.}
     
     \BlankLine
-    $P \leftarrow \emptyset$;\tcp*[f]{Set of valid trajectory pairs}
-    $G_c \leftarrow \emptyset$;\tcp*[f]{Candidate groups}
-    $G \leftarrow \emptyset$;\tcp*[f]{Final result}
+    $P \leftarrow \emptyset$;\tcp*[f]{有效轨迹对集合}
+    $G_c \leftarrow \emptyset$;\tcp*[f]{候选群体集合}
+    $G \leftarrow \emptyset$;\tcp*[f]{最终结果集合}
     
     \BlankLine
-    \For(\tcc*[f]{Generate valid trajectory pairs}){$i = 1$ \KwTo $|\mathcal{T}|$}{
+    \For(\tcc*[f]{生成有效轨迹对}){$i = 1$ \KwTo $|\mathcal{T}|$}{
         \For{$j = i+1$ \KwTo $|\mathcal{T}|$}{
             \If{$|\tau_i \cap \tau_j| \ge k$}{
                 $P \leftarrow P \cup \{(\tau_i,\tau_j)\}$;
@@ -181,23 +179,23 @@ O(\tau)=\{o(s_1),\ldots,o(s_{|\tau|})\}.
     }
     
     \BlankLine
-    \ForEach(\tcc*[f]{Expand candidate companion groups}){$(\tau_i,\tau_j) \in P$}{
+    \ForEach(\tcc*[f]{扩展候选群体}){$(\tau_i,\tau_j) \in P$}{
         $g_i \leftarrow \{\tau_i,\tau_j\}$;
     
         \ForEach{$(\tau_i,\tau_k) \in P$}{
-            \If(\tcc*[f]{Pairwise-valid with all members in $g_i$})
+            \If(\tcc*[f]{两两有效且所有成员均在 $g_i$ 中})
             {$\forall \tau_p \in g_i,\; (\tau_k,\tau_p) \in P$}{
                 $g_i \leftarrow g_i \cup \{\tau_k\}$;
             }
         }
     
-        \If(\tcc*[f]{Group size constraint}){$|g_i| \ge m$}{
+        \If(\tcc*[f]{群体规模约束}){$|g_i| \ge m$}{
             $G_c \leftarrow G_c \cup \{g_i\}$;
         }
     }
     
     \BlankLine
-    $G \leftarrow select\_max(G_c)$;\tcp*[f]{Select maximal or optimal groups}
+    $G \leftarrow select\_max(G_c)$;\tcp*[f]{选择最大或最优群体}
     
     \Return $G$;
     \end{algorithm}
@@ -225,7 +223,7 @@ o(s)=f(x,y,t)=t\times(5\times4)+y\times5+x,
 
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=0.48\textwidth]{fig/section4/picture.pdf}
+	\includegraphics[width=0.8\textwidth]{fig/section4/picture.pdf}
 	\caption{轨迹标记及标记序列示例}
 	\label{fig1: cell_partition}
 \end{figure}
@@ -357,58 +355,53 @@ O(|\mathcal{T}|^2\times|\tau|+|P|)=O(|\mathcal{T}|^2\times|\tau|).
 
 \begin{figure}
     \centering
-    \begin{minipage}{0.4\linewidth}
-        \centerline{\includegraphics[width=1.65in]{fig/section4/BJ-hitratio-num.pdf}}
-        \centerline{(a) Beijing}
+    \subfloat[Beijing]{
+        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-hitratio-num.pdf}
         \label{Beijing-ratios-num}
-    \end{minipage}
-    \hspace{0.21in}
-    \begin{minipage}{0.4\linewidth}
-        \centerline{\includegraphics[width=1.65in]{fig/section4/BJ-time-num.pdf}}
-        \centerline{(b) Beijing}
+    }
+    \hfill
+    \subfloat[Beijing]{
+        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-time-num.pdf}
         \label{Beijing-time-num}
-    \end{minipage}
-    \begin{minipage}{0.4\linewidth}
-        \centerline{\includegraphics[width=1.65in]{fig/section4/PT-hitratio-num.pdf}}
-        \centerline{(c) Porto}
-       \label{Porto-time-num}
-    \end{minipage}
-    \hspace{0.21in}
-    \begin{minipage}{0.4\linewidth}
-        \centerline{\includegraphics[width=1.65in]{fig/section4/PT-time-num.pdf}}
-        \centerline{(d) Porto}
-         \label{Porto-ratios-num}
-    \end{minipage}
-    \caption{Effect of the number of trajectories}
+    }
+    \\
+    \subfloat[Porto]{
+        \includegraphics[width=0.4\textwidth]{fig/section4/PT-hitratio-num.pdf}
+        \label{Porto-ratios-num}
+    }
+    \hfill
+    \subfloat[Porto]{
+        \includegraphics[width=0.4\textwidth]{fig/section4/PT-time-num.pdf}
+        \label{Porto-time-num}
+    }
+    \caption{轨迹数量的影响}
 	\label{trjNum}
 \end{figure}
 
 \paragraph{协同行为持续时间阈值的影响}
 \begin{figure}
     \centering
-    \begin{minipage}{0.4\linewidth}
-        \centerline{\includegraphics[width=1.65in]{fig/section4/BJ-hitratio-k.pdf}}
-        \centerline{(a) Beijing}
+    \subfloat[Beijing]{ 
+        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-hitratio-k.pdf}
         \label{Beijing-ratios-k}
-    \end{minipage}
-    \hspace{0.21in}
-    \begin{minipage}{0.4\linewidth}
-        \centerline{\includegraphics[width=1.65in]{fig/section4/BJ-time-k.pdf}}
-        \centerline{(b) Beijing}
+    }
+    \hfill
+    \subfloat[Beijing]{
+        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-time-k.pdf}
         \label{Beijing-time-k}
-    \end{minipage}
-    \begin{minipage}{0.4\linewidth}
-        \centerline{\includegraphics[width=1.65in]{fig/section4/PT-hitratio-k.pdf}}
-        \centerline{(c) Porto}
-       \label{Porto-ratios-k}
-    \end{minipage}
-    \hspace{0.21in}
-    \begin{minipage}{0.4\linewidth}
-        \centerline{\includegraphics[width=1.65in]{fig/section4/PT-time-k.pdf}}
-        \centerline{(d) Porto}
-         \label{Porto-time-k}
-    \end{minipage}
-    \caption{Effect of parameter $k$}
+    }
+    \\
+    \subfloat[Porto]{
+        \includegraphics[width=0.4\textwidth]{fig/section4/PT-hitratio-k.pdf}
+        \label{Porto-ratios-k}
+    }
+    \hfill
+    \subfloat[Porto]{
+        \includegraphics[width=0.4\textwidth]{fig/section4/PT-time-k.pdf}
+        \label{Porto-time-k}
+    }
+    \caption{协同行为持续时间阈值的影响}
+    \label{k}
 \label{k}
 \end{figure}
 
@@ -432,28 +425,25 @@ O(|\mathcal{T}|^2\times|\tau|+|P|)=O(|\mathcal{T}|^2\times|\tau|).
 
 \begin{figure}
     \centering
-    \begin{minipage}{0.4\linewidth}
-        \centerline{\includegraphics[width=1.65in]{fig/section4/BJ-hitratio-m.pdf}}
-        \centerline{(a) Beijing}
+    \subfloat[Beijing]{
+        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-hitratio-m.pdf}
         \label{Beijing-ratios-m}
-    \end{minipage}
-    \hspace{0.21in}
-    \begin{minipage}{0.4\linewidth}
-        \centerline{\includegraphics[width=1.65in]{fig/section4/BJ-time-m.pdf}}
-        \centerline{(b) Beijing}
+    }
+    \hfill
+    \subfloat[Beijing]{
+        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-time-m.pdf}
         \label{Beijing-time-m}
-    \end{minipage}
-    \begin{minipage}{0.4\linewidth}
-        \centerline{\includegraphics[width=1.65in]{fig/section4/PT-hitratio-m.pdf}}
-        \centerline{(c) Porto}
+    }
+    \\
+    \subfloat[Porto]{
+        \includegraphics[width=0.4\textwidth]{fig/section4/PT-hitratio-m.pdf}
         \label{Porto-ratios-m}
-    \end{minipage}
-    \hspace{0.21in}
-    \begin{minipage}{0.4\linewidth}
-        \centerline{\includegraphics[width=1.65in]{fig/section4/PT-time-m.pdf}}
-        \centerline{(d) Porto}
+    }
+    \hfill
+    \subfloat[Porto]{
+        \includegraphics[width=0.4\textwidth]{fig/section4/PT-time-m.pdf}
         \label{Porto-time-m}
-    \end{minipage}
+    }
     \caption{Effect of parameter $m$}
     \label{m}
 \end{figure}
@@ -462,29 +452,26 @@ O(|\mathcal{T}|^2\times|\tau|+|P|)=O(|\mathcal{T}|^2\times|\tau|).
 \paragraph{聚类参数的影响}
 \begin{figure}
     \centering
-    \begin{minipage}{0.4\linewidth}
-        \centerline{\includegraphics[width=1.65in]{fig/section4/BJ-hitratio-ep.pdf}}
-        \centerline{(a) Beijing}
+    \subfloat[Beijing]{
+        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-hitratio-ep.pdf}
         \label{Beijing-ratios-ep}
-    \end{minipage}
-    \hspace{0.21in}
-    \begin{minipage}{0.4\linewidth}
-        \centerline{\includegraphics[width=1.65in]{fig/section4/BJ-time-ep.pdf}}
-        \centerline{(b) Beijing}
+    }
+    \hfill
+    \subfloat[Beijing]{
+        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-time-ep.pdf}
         \label{Beijing-time-ep}
-    \end{minipage}
-    \begin{minipage}{0.4\linewidth}
-        \centerline{\includegraphics[width=1.65in]{fig/section4/PT-hitratio-ep.pdf}}
-        \centerline{(c) Porto}
+    }
+
+    \subfloat[Porto]{
+        \includegraphics[width=0.4\textwidth]{fig/section4/PT-hitratio-ep.pdf}
         \label{Porto-ratios-ep}
-    \end{minipage}
-    \hspace{0.21in}
-    \begin{minipage}{0.4\linewidth}
-        \centerline{\includegraphics[width=1.65in]{fig/section4/PT-time-ep.pdf}}
-        \centerline{(d) Porto}
+    }
+    \hfill
+    \subfloat[Porto]{
+        \includegraphics[width=0.4\textwidth]{fig/section4/PT-time-ep.pdf}
         \label{Porto-time-ep}
-    \end{minipage}
-    \caption{Effect of the structural similarity}
+    }
+    \caption{结构相似度的影响}
     \label{ep}
 \end{figure}
 
@@ -501,3 +488,4 @@ O(|\mathcal{T}|^2\times|\tau|+|P|)=O(|\mathcal{T}|^2\times|\tau|).
 实验结果进一步验证了本文方法在效率和效果上的优越性。
 
 \section{本章小结}
+最后，我们提出了一种放宽的协同行为模式（co-movement pattern）定义，并研究了伴随群组发现（companion group discovery）问题，分别设计了精确算法和近似算法。在交通管理领域，本研究有助于理解特定的移动行为，并通过提前检测潜在的协同行为，从而帮助避免交通拥堵。最后，我们在两个真实世界数据集上进行了大量实验，验证了所提出方法的有效性和优越性。
