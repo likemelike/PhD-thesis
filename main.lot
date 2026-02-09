@@ -1,22 +1,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\cftsetpnumwidth {\widthof {27}-1bp}
-\contentsline {table}{\numberline {4-1}{\ignorespaces 参数设定}}{27}{table.caption.13}%
-\addvspace {10\p@ }
-\cftsetpnumwidth {\widthof {43}-1bp}
-\contentsline {table}{\numberline {5-1}{\ignorespaces Parameter Settings}}{43}{table.caption.22}%
-\addvspace {10\p@ }
-\cftsetpnumwidth {\widthof {58}-1bp}
-\contentsline {table}{\numberline {6-1}{\ignorespaces 参数设置}}{58}{table.caption.31}%
-\addvspace {10\p@ }
-\cftsetpnumwidth {\widthof {87}-1bp}
-\contentsline {table}{\numberline {7-1}{\ignorespaces 符号说明汇总}}{87}{table.caption.35}%
-\cftsetpnumwidth {\widthof {87}-1bp}
-\contentsline {table}{\numberline {7-2}{\ignorespaces 评估参数设置}}{87}{table.caption.41}%
-\cftsetpnumwidth {\widthof {87}-1bp}
-\contentsline {table}{\numberline {7-3}{\ignorespaces 剪枝性能}}{87}{table.caption.42}%
-\addvspace {10\p@ }
+\cftsetpnumwidth {\widthof {8}-1bp}
+\contentsline {table}{\numberline {2-1}{\ignorespaces 主要符号解释}}{8}{table.caption.6}%
+\cftsetpnumwidth {\widthof {17}-1bp}
+\contentsline {table}{\numberline {2-2}{\ignorespaces 参数设定}}{17}{table.caption.10}%
 \addvspace {10\p@ }
 \contentsfinish 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  3 FEB 2026 21:39
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  9 FEB 2026 22:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1475,23 +1475,7 @@ File: p2e-xetex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 LaTeX Font Info:    Overwriting symbol font `CJKmath' in version `bold'
 (Font)                  TU/SimSun(0)/m/n --> TU/SimSun(0)/b/n on input line 10.
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 10.
- (./main.aux
-
-LaTeX Warning: Label `k' multiply defined.
-
-
-LaTeX Warning: Label `fig:intro' multiply defined.
-
-
-LaTeX Warning: Label `eq:pre-check' multiply defined.
-
-
-LaTeX Warning: Label `tb:para' multiply defined.
-
-
-LaTeX Warning: Label `fig:intro' multiply defined.
-
-)
+ (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -1556,7 +1540,7 @@ Package chemgreek Info: Activating mapping `fontspec' on line 10.
 
  (/usr/local/texlive/2025/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
-) (./latex/01_abstract.tex
+)
 
 Package fontspec Info: 
 (fontspec)             Font family 'SimHei(0)' created for font 'SimHei' with
@@ -1575,120 +1559,34 @@ Package fontspec Info:
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
 (fontspec)             <->"[./font/SimHei]/OT:script=hani;language=dflt;embolden=2;slant=0.3;"
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[1
-
-
-]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-
-[2]
-
-[3])
-Underfull \hbox (badness 10000) in paragraph at lines 79--23
-
- []
-
-
-
-[4
-
-] (./main.toc
-Underfull \vbox (badness 7869) has occurred while \output is active []
-
-
-
-[5
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[7])
+ (./main.toc)
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
 
 
-[8] (./main.lof
+[1
 
-[9
 
-])
+] (./main.lof
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
 
 
-[10] (./main.lot)
-\tf@lot=\write8
-\openout8 = `main.lot'.
-
-
-
-[11
-
-]
-
-[12
-
-]
-Chapter 第一章.
-(./latex/1_background.tex
-
-[1
-
-]
-Chapter 第二章.
-) (./latex/2_relatedwork.tex
-
 [2
 
-]
-Chapter 第三章.
-
-Package natbib Warning: Citation `DBLP:journals/geoinformatica/ChenSYL20' on page 3 undefined on input line 6.
-
-
-Package natbib Warning: Citation `DBLP:journals/csur/WangBCC21' on page 3 undefined on input line 15.
-
-
-Package natbib Warning: Citation `DBLP:journals/josis/MazimpakaT16' on page 3 undefined on input line 15.
-
-
-Package natbib Warning: Citation `DBLP:journals/vldb/SuLZZZ20' on page 3 undefined on input line 15.
-
-
-Package natbib Warning: Citation `DBLP:journals/geoinformatica/MahmoodPA19' on page 3 undefined on input line 15.
-
-
-Package natbib Warning: Citation `DBLP:series/synthesis/2019Mahmood' on page 3 undefined on input line 15.
-
-
-Package natbib Warning: Citation `DBLP:conf/er/CaoCCJQSWY12' on page 3 undefined on input line 15.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/ChenCJW13' on page 3 undefined on input line 15.
-
-
-Package natbib Warning: Citation `chen2021location' on page 3 undefined on input line 15.
+] (./main.lot)
+\tf@lot=\write8
+\openout8 = `main.lot'.
 
 
 
@@ -1696,420 +1594,92 @@ Package natbib Warning: Citation `chen2021location' on page 3 undefined on input
 
 ]
 
-Package natbib Warning: Citation `DBLP:conf/sigir/LiangW18' on page 4 undefined on input line 20.
+[4
 
+]
+Chapter 第一章.
+(./latex/3_routesearch.tex
 
-Package natbib Warning: Citation `DBLP:journals/geoinformatica/ChenSYL20' on page 4 undefined on input line 20.
+[1
 
-
-Package natbib Warning: Citation `DBLP:journals/vldb/PedersenYJ20' on page 4 undefined on input line 20.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/PedersenYJ20' on page 4 undefined on input line 20.
-
-
-Package natbib Warning: Citation `DBLP:journals/vldb/GuoYHJC20' on page 4 undefined on input line 20.
-
-
-Package natbib Warning: Citation `DBLP:conf/aaai/YangCWS21' on page 4 undefined on input line 20.
-
-
-Package natbib Warning: Citation `DBLP:journals/geoinformatica/ChenSYL20' on page 4 undefined on input line 26.
-
-
-Underfull \hbox (badness 6691) in paragraph at lines 29--30
-[] [] |\TU/times(0)/b/n/12.045 3.2.1.1.1 \TU/SimSun(0)/b/n/12.045 道 路 网 络[] \TU/SimSun(0)/m/n/12.045 通 常 情 况 下，|  道 路 网 络 可 建 模 为 一 个 连 通 的 有 向 图
- []
-
-
-Package natbib Warning: Citation `DBLP:conf/gis/WilkieBL14' on page 4 undefined on input line 31.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/KanoulasDXZ06' on page 4 undefined on input line 31.
-
-
-Package natbib Warning: Citation `DBLP:journals/ton/NarvaezST01' on page 4 undefined on input line 31.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/WangLT19' on page 4 undefined on input line 31.
-
-
-Package natbib Warning: Citation `DBLP:conf/gis/WilkieBL14' on page 4 undefined on input line 31.
-
-
-
-[4]
-
-Package natbib Warning: Citation `DBLP:conf/icde/RanuPTDR15' on page 5 undefined on input line 53.
-
-
-Package natbib Warning: Citation `DBLP:conf/sigmod/SuZWHZ13' on page 5 undefined on input line 53.
-
-
-Package natbib Warning: Citation `DBLP:conf/vldb/BrakatsoulasPSW05' on page 5 undefined on input line 53.
-
-File: fig/section2/road_network.pdf Graphic file (type pdf)
-<use fig/section2/road_network.pdf>
-
-
-[5]
-
-Package natbib Warning: Citation `DBLP:conf/kdd/GeXTXGP10' on page 6 undefined on input line 69.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/ShangCWJWK17' on page 6 undefined on input line 69.
-
-
-Package natbib Warning: Citation `DBLP:conf/ssd/LiCHKT05' on page 6 undefined on input line 69.
-
-
-Underfull \vbox (badness 5316) has occurred while \output is active []
-
-
-
-[6]
-File: fig/section2/location-keyword1.pdf Graphic file (type pdf)
-<use fig/section2/location-keyword1.pdf>
-
-
-Package natbib Warning: Citation `DBLP:conf/kdd/MamoulisCKHTC04' on page 7 undefined on input line 82.
-
-
-Package natbib Warning: Citation `DBLP:conf/kdd/GiannottiNPP07' on page 7 undefined on input line 82.
-
-
-Package natbib Warning: Citation `DBLP:conf/vldb/GonzalezHLMS07' on page 7 undefined on input line 82.
-
-
-Package natbib Warning: Citation `DBLP:conf/kdd/GiannottiNPP07' on page 7 undefined on input line 82.
-
-
-Package natbib Warning: Citation `DBLP:conf/kdd/MamoulisCKHTC04' on page 7 undefined on input line 82.
-
-
-Package natbib Warning: Citation `DBLP:conf/vldb/GonzalezHLMS07' on page 7 undefined on input line 82.
-
+]
+Chapter 第二章.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
+[2
+
+]
+
+[3]
+File: fig/section3/ex1.png Graphic file (type bmp)
+<fig/section3/ex1.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[4]
+
+[5]
+
+[6]
+
 [7]
-
-Package natbib Warning: Citation `DBLP:conf/icde/ZhengYZXSZ15' on page 8 undefined on input line 88.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/DaiYGD15' on page 8 undefined on input line 88.
-
-
-Package natbib Warning: Citation `DBLP:conf/fodo/AgrawalFS93' on page 8 undefined on input line 102.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/YiJF98' on page 8 undefined on input line 102.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/VlachosGK02' on page 8 undefined on input line 102.
-
-
-Package natbib Warning: Citation `DBLP:conf/vldb/ChenN04' on page 8 undefined on input line 102.
-
-
-Package natbib Warning: Citation `DBLP:conf/sigmod/ChenOO05' on page 8 undefined on input line 102.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/RanuPTDR15' on page 8 undefined on input line 102.
-
-
-Package natbib Warning: Citation `DBLP:conf/fodo/AgrawalFS93' on page 8 undefined on input line 104.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/YiJF98' on page 8 undefined on input line 104.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/VlachosGK02' on page 8 undefined on input line 106.
-
-
-Package natbib Warning: Citation `DBLP:conf/vldb/ChenN04' on page 8 undefined on input line 106.
-
-
-Package natbib Warning: Citation `DBLP:conf/sigmod/ChenOO05' on page 8 undefined on input line 106.
+Underfull \vbox (badness 4168) has occurred while \output is active []
 
 
 
 [8]
-
-Package natbib Warning: Citation `DBLP:conf/sigmod/SuZWHZ13' on page 9 undefined on input line 108.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/RanuPTDR15' on page 9 undefined on input line 108.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/PerngWZP00' on page 9 undefined on input line 108.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/ChenNOT07' on page 9 undefined on input line 108.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/LiZCJW18' on page 9 undefined on input line 112.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/YaoCZB19' on page 9 undefined on input line 114.
-
-
-Package natbib Warning: Citation `DBLP:journals/nm/Dijkstra59' on page 9 undefined on input line 128.
-
-
-Package natbib Warning: Citation `DBLP:conf/aips/LikhachevFGST05' on page 9 undefined on input line 128.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/KanoulasDXZ06' on page 9 undefined on input line 132.
-
-
-Package natbib Warning: Citation `DBLP:journals/ton/NarvaezST01' on page 9 undefined on input line 132.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/WangLT19' on page 9 undefined on input line 132.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [9]
-
-Package natbib Warning: Citation `DBLP:conf/icde/KanoulasDXZ06' on page 10 undefined on input line 136.
-
-
-Package natbib Warning: Citation `DBLP:journals/ton/NarvaezST01' on page 10 undefined on input line 136.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/WangLT19' on page 10 undefined on input line 136.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/KanoulasDXZ06' on page 10 undefined on input line 136.
-
-
-Package natbib Warning: Citation `DBLP:journals/ton/NarvaezST01' on page 10 undefined on input line 136.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/WangLT19' on page 10 undefined on input line 136.
-
-
-Underfull \hbox (badness 1009) in paragraph at lines 136--137
-[] [] |\TU/times(0)/b/n/12.045 3.3.1.1.1 \TU/SimSun(0)/b/n/12.045 时 间 依 赖 最 短 路 径 问 题  |（\TU/times(0)/b/n/12.045 TDSP\TU/SimSun(0)/b/n/12.045 ）|[] \TU/SimSun(0)/m/n/12.045 给 定 一 个 时 间 依 赖 路 网  |（参 见 第
- []
-
-
-Package natbib Warning: Citation `DBLP:conf/gis/WilkieBL14' on page 10 undefined on input line 144.
-
-
-Package natbib Warning: Citation `DBLP:conf/gis/WilkieBL14' on page 10 undefined on input line 144.
-
-
-Package natbib Warning: Citation `DBLP:journals/vldb/0002GMJ15' on page 10 undefined on input line 148.
-
-
-Package natbib Warning: Citation `DBLP:journals/vldb/GuoYHJC20' on page 10 undefined on input line 148.
-
-
-Package natbib Warning: Citation `DBLP:journals/vldb/0002GMJ15' on page 10 undefined on input line 148.
-
-
-Package natbib Warning: Citation `DBLP:conf/aaai/LetchnerKH06' on page 10 undefined on input line 148.
-
-
-Package natbib Warning: Citation `DBLP:conf/ssd/BalteanuJS13' on page 10 undefined on input line 148.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/DengZS07' on page 10 undefined on input line 148.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/KriegelRS10' on page 10 undefined on input line 148.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [10]
-
-Package natbib Warning: Citation `DBLP:conf/icde/YangGJKS14' on page 11 undefined on input line 154.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/PedersenYJ20' on page 11 undefined on input line 154.
-
-
-Package natbib Warning: Citation `DBLP:conf/kdd/GeXTXGP10' on page 11 undefined on input line 170.
-
-
-Package natbib Warning: Citation `DBLP:journals/tkde/HuangHSLZCS15' on page 11 undefined on input line 170.
-
-
-Package natbib Warning: Citation `DBLP:conf/icdm/YeXD18' on page 11 undefined on input line 170.
-
-
-Package natbib Warning: Citation `DBLP:journals/tkde/YeXGD19' on page 11 undefined on input line 170.
-
-
-Package natbib Warning: Citation `DBLP:conf/kdd/YeZXZGD18' on page 11 undefined on input line 170.
-
-
-Package natbib Warning: Citation `DBLP:conf/sigmod/ChenSZZX10' on page 11 undefined on input line 174.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/ZhengSYY13' on page 11 undefined on input line 174.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/ShangCWJWK17' on page 11 undefined on input line 178.
-
-
-Package natbib Warning: Citation `DBLP:journals/tkde/LiQYM16' on page 11 undefined on input line 178.
-
-
-Package natbib Warning: Citation `DBLP:conf/gis/RezaAC17' on page 11 undefined on input line 178.
-
-
-Underfull \vbox (badness 5008) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [11]
 
-Package natbib Warning: Citation `DBLP:conf/ssd/HashemHAK13' on page 12 undefined on input line 189.
-
-
-Package natbib Warning: Citation `DBLP:conf/cikm/HashemBAKT15' on page 12 undefined on input line 189.
-
-
-Package natbib Warning: Citation `DBLP:conf/icra/LimR12' on page 12 undefined on input line 193.
-
-
-Package natbib Warning: Citation `DBLP:conf/kdd/YeZXZGD18' on page 12 undefined on input line 193.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/ZengTSC20' on page 12 undefined on input line 193.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/Zheng0Y18' on page 12 undefined on input line 193.
-
-
-Package natbib Warning: Citation `DBLP:conf/ssd/LiCHKT05' on page 12 undefined on input line 200.
-
-
-Package natbib Warning: Citation `DBLP:conf/gis/0002TL11' on page 12 undefined on input line 200.
-
-
-Package natbib Warning: Citation `DBLP:journals/tkde/ZhengSHZZL17' on page 12 undefined on input line 200.
-
-
-Package natbib Warning: Citation `DBLP:journals/tkde/WenYPH17' on page 12 undefined on input line 200.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/LiCGYZ18' on page 12 undefined on input line 200.
-
-
-Package natbib Warning: Citation `DBLP:conf/edbt/JosseSS15' on page 12 undefined on input line 200.
-
-
-Package natbib Warning: Citation `DBLP:conf/ssd/LiCHKT05' on page 12 undefined on input line 205.
-
-
-Package natbib Warning: Citation `1976Worst' on page 12 undefined on input line 205.
-
-
-Package natbib Warning: Citation `DBLP:conf/ssd/LiCHKT05' on page 12 undefined on input line 205.
-
-
-Package natbib Warning: Citation `DBLP:conf/cikm/ZhangLWS15' on page 12 undefined on input line 205.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/YawalkarR19' on page 12 undefined on input line 205.
-
-
-Package natbib Warning: Citation `DBLP:conf/cikm/ZhangLWS15' on page 12 undefined on input line 205.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/YawalkarR19' on page 12 undefined on input line 205.
-
-
-
 [12]
-
-Package natbib Warning: Citation `DBLP:conf/gis/MaSXZ06' on page 13 undefined on input line 208.
-
-
-Package natbib Warning: Citation `DBLP:conf/gis/ChenKSZ08' on page 13 undefined on input line 210.
-
-
-Package natbib Warning: Citation `DBLP:journals/geoinformatica/ChenKSZ11' on page 13 undefined on input line 210.
-
-
-Package natbib Warning: Citation `DBLP:conf/gis/ChenKSZ08' on page 13 undefined on input line 210.
-
-
-Package natbib Warning: Citation `DBLP:journals/geoinformatica/ChenKSZ11' on page 13 undefined on input line 210.
-
-
-Package natbib Warning: Citation `DBLP:journals/geoinformatica/SharifzadehS08' on page 13 undefined on input line 210.
-
-
-Package natbib Warning: Citation `DBLP:conf/dasfaa/LiYDX15' on page 13 undefined on input line 210.
-
-
-Package natbib Warning: Citation `DBLP:conf/gis/KanzaSSD08' on page 13 undefined on input line 216.
-
-
-Package natbib Warning: Citation `DBLP:conf/mdm/LuLT11' on page 13 undefined on input line 216.
-
-
-Package natbib Warning: Citation `DBLP:conf/gis/KanzaLSS09' on page 13 undefined on input line 216.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/RoyDAY11' on page 13 undefined on input line 216.
-
-
-Package natbib Warning: Citation `DBLP:conf/ssd/HashemHAK13' on page 13 undefined on input line 219.
-
-
-Package natbib Warning: Citation `DBLP:conf/cikm/HashemBAKT15' on page 13 undefined on input line 219.
-
-
-Package natbib Warning: Citation `DBLP:conf/ssd/FanBS017' on page 13 undefined on input line 219.
-
-
-Package natbib Warning: Citation `DBLP:journals/geoinformatica/FanBSX18' on page 13 undefined on input line 219.
-
-
-Package natbib Warning: Citation `DBLP:journals/geoinformatica/LevinK14' on page 13 undefined on input line 222.
-
-
-Package natbib Warning: Citation `DBLP:conf/gis/SalgadoCT18' on page 13 undefined on input line 222.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/FengL0LSX20' on page 13 undefined on input line 222.
-
-
 
 [13]
 
-Package natbib Warning: Citation `DBLP:conf/gis/0002TL11' on page 14 undefined on input line 226.
-
-
-Package natbib Warning: Citation `DBLP:journals/tkde/ZhengSHZZL17' on page 14 undefined on input line 226.
-
-
-LaTeX Warning: Reference `tb:compare_queries' on page 14 undefined on input line 228.
-
-) (./latex/3_routesearch.tex
-Underfull \vbox (badness 3657) has occurred while \output is active []
-
-
-
 [14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [15]
-Chapter 第四章.
-File: fig/section3/ex1.png Graphic file (type bmp)
-<fig/section3/ex1.png>
+Overfull \hbox (2.47198pt too wide) in paragraph at lines 362--362
+[]|[]| 
+ []
 
 
-[16
+Overfull \hbox (2.47198pt too wide) in paragraph at lines 362--363
+[]|[]| 
+ []
 
-]
+
+
+[16]
+File: fig/section3/fig1_NYC_time.png Graphic file (type bmp)
+<fig/section3/fig1_NYC_time.png>
+File: fig/section3/fig1_NYC_cost.png Graphic file (type bmp)
+<fig/section3/fig1_NYC_cost.png>
+File: fig/section3/fig1_TGC_time.png Graphic file (type bmp)
+<fig/section3/fig1_TGC_time.png>
+File: fig/section3/fig1_TGC_cost.png Graphic file (type bmp)
+<fig/section3/fig1_TGC_cost.png>
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2122,73 +1692,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [18]
 
 [19]
-Underfull \vbox (badness 5245) has occurred while \output is active []
-
-
-
-[20]
-Underfull \vbox (badness 7667) has occurred while \output is active []
-
-
-
-[21]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-
-[22]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[23]
-
-[24]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[25]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[26]
-Overfull \hbox (5.38472pt too wide) in paragraph at lines 305--305
-[]|[]| 
- []
-
-
-Overfull \hbox (5.38472pt too wide) in paragraph at lines 305--306
-[]|[]| 
- []
-
-
-Overfull \hbox (10.6544pt too wide) in paragraph at lines 308--308
-[]|[]| 
- []
-
-
-Overfull \hbox (10.6544pt too wide) in paragraph at lines 308--309
-[]|[]| 
- []
-
-
-
-[27]
-File: fig/section3/fig1_NYC_time.png Graphic file (type bmp)
-<fig/section3/fig1_NYC_time.png>
-File: fig/section3/fig1_NYC_cost.png Graphic file (type bmp)
-<fig/section3/fig1_NYC_cost.png>
-File: fig/section3/fig1_TGC_time.png Graphic file (type bmp)
-<fig/section3/fig1_TGC_time.png>
-File: fig/section3/fig1_TGC_cost.png Graphic file (type bmp)
-<fig/section3/fig1_TGC_cost.png>
 File: fig/section3/fig2_time.png Graphic file (type bmp)
 <fig/section3/fig2_time.png>
 File: fig/section3/fig2_cost.png Graphic file (type bmp)
 <fig/section3/fig2_cost.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[20]
 File: fig/section3/fig3_alpha_time.png Graphic file (type bmp)
 <fig/section3/fig3_alpha_time.png>
 File: fig/section3/fig3_alpha_cost.png Graphic file (type bmp)
@@ -2197,17 +1710,35 @@ File: fig/section3/fig3_beta_time.png Graphic file (type bmp)
 <fig/section3/fig3_beta_time.png>
 File: fig/section3/fig3_beta_cost.png Graphic file (type bmp)
 <fig/section3/fig3_beta_cost.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[21]
 File: fig/section3/fig4_time.png Graphic file (type bmp)
 <fig/section3/fig4_time.png>
 File: fig/section3/fig4_cost.png Graphic file (type bmp)
 <fig/section3/fig4_cost.png>
 
 
-[28]
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 504.
 
-[29]
 
-[30]
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\epsilon' on input line 504.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 504.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[22]
 File: fig/section3/fig5_time.png Graphic file (type bmp)
 <fig/section3/fig5_time.png>
 File: fig/section3/fig5_cost.png Graphic file (type bmp)
@@ -2215,933 +1746,96 @@ File: fig/section3/fig5_cost.png Graphic file (type bmp)
 File: fig/section3/fig6_NY.png Graphic file (type bmp)
 <fig/section3/fig6_NY.png>
 
-Overfull \hbox (13.80188pt too wide) in paragraph at lines 446--455
+Overfull \hbox (13.80188pt too wide) in paragraph at lines 517--526
  [][][][][][] 
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 459.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\epsilon' on input line 459.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 459.
-
-
-
-[31]) (./latex/4_comovement.tex
-
-[32]
-Chapter 第五章.
-
-Package natbib Warning: Citation `DBLP:conf/gis/VieiraBT09' on page 33 undefined on input line 8.
-
-
-Package natbib Warning: Citation `DBLP:journals/jidm/TanakaVK16' on page 33 undefined on input line 8.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/JeungYZJS08' on page 33 undefined on input line 8.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/LiDHK10' on page 33 undefined on input line 8.
-
-
-Package natbib Warning: Citation `DBLP:journals/dke/WangLH06' on page 33 undefined on input line 8.
-
-
-Package natbib Warning: Citation `DBLP:journals/dke/LiBK15' on page 33 undefined on input line 8.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/ZhengZYS13' on page 33 undefined on input line 8.
-
-
-Package natbib Warning: Citation `DBLP:journals/tkde/ZhengZYSZ14' on page 33 undefined on input line 8.
-
-
-Package natbib Warning: Citation `imo' on page 33 undefined on input line 10.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/Liu0CB20' on page 33 undefined on input line 10.
-
-
-
-[33
-
-]
-File: fig/section4/group companion.pdf Graphic file (type pdf)
-<use fig/section4/group companion.pdf>
-
-
-Package natbib Warning: Citation `chen2022towards' on page 34 undefined on input line 29.
-
-
-Package natbib Warning: Citation `zheng2006grid' on page 34 undefined on input line 29.
-
-
-Package natbib Warning: Citation `DBLP:conf/kdd/XuYFS07' on page 34 undefined on input line 29.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
+[23])
+
+[24]
+
+[25]
+Chapter 第三章.
+
+
+[26
+
+]
+Underfull \vbox (badness 5403) has occurred while \output is active []
+
+
+
+[27
+
+]
+
+[28] (./main.bbl
+
+[29
+
+
+]
+
+[30]
+
+[31]
+
+[32]
+
+[33]
+
 [34]
-
-LaTeX Warning: Reference `sec:conclusion' on page 35 undefined on input line 38.
-
-
-Package natbib Warning: Citation `DBLP:conf/aaai/YangCWS21' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:conf/ijcai/ChenSFK21' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:journals/tkde/ShangZJYKLW15' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:journals/tkde/ShangCJWK17' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/ShangCWJ0K17' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/ChenSJ0K20' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:conf/kdd/ZhaoSWZN018' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:journals/tkde/LiuZSSKLJ16' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/LiuZSSKJ15' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:journals/geoinformatica/ShangYDXZZ12' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/0002CGSMG18' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:conf/ijcai/HanLLZLWS20' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/HanSSZ0K19' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:conf/sigir/FengTCCLL20' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:conf/kdd/RaoCLSYH22' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:journals/ijon/GuoZXSD16' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:conf/ijcai/LiCSK021' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:conf/edbt/ShangDYXZK12' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:conf/icccn/LiuLDSZ14' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:journals/tkde/ShangCWJWK16' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:conf/ijcai/RaoWZLS022' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:journals/geoinformatica/LiuWSLZ18' on page 35 undefined on input line 45.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/JeungYZJS08' on page 35 undefined on input line 48.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/LiDHK10' on page 35 undefined on input line 48.
-
-
-Package natbib Warning: Citation `DBLP:journals/dke/WangLH06' on page 35 undefined on input line 48.
-
-
-Package natbib Warning: Citation `DBLP:journals/dke/LiBK15' on page 35 undefined on input line 48.
-
-
-Package natbib Warning: Citation `DBLP:conf/gis/VieiraBT09' on page 35 undefined on input line 48.
-
-
-Package natbib Warning: Citation `DBLP:journals/jidm/TanakaVK16' on page 35 undefined on input line 48.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/JeungYZJS08' on page 35 undefined on input line 48.
-
-
-Package natbib Warning: Citation `DBLP:journals/dke/WangLH06' on page 35 undefined on input line 48.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/LiDHK10' on page 35 undefined on input line 48.
-
-
-Package natbib Warning: Citation `DBLP:journals/dke/LiBK15' on page 35 undefined on input line 48.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/ZhengZYS13' on page 35 undefined on input line 50.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/FanZWT16' on page 35 undefined on input line 50.
-
-
-Package natbib Warning: Citation `DBLP:conf/hpcc/NaserianWXD16' on page 35 undefined on input line 50.
-
-
-Package natbib Warning: Citation `DBLP:journals/access/SheinPI20' on page 35 undefined on input line 50.
-
-
 
 [35]
 
-Package natbib Warning: Citation `DBLP:conf/icde/ZhengZYS13' on page 36 undefined on input line 52.
-
-
-Package natbib Warning: Citation `DBLP:journals/tkde/ZhengZYSZ14' on page 36 undefined on input line 52.
-
-
-Package natbib Warning: Citation `DBLP:conf/sigmod/FangGPCMJ20' on page 36 undefined on input line 52.
-
-
-Package natbib Warning: Citation `DBLP:conf/gis/VieiraBT09' on page 36 undefined on input line 52.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/JeungYZJS08' on page 36 undefined on input line 52.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/LiDHK10' on page 36 undefined on input line 52.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/ChenGFMJG19' on page 36 undefined on input line 52.
-
-
-Package natbib Warning: Citation `DBLP:conf/sigmod/FangGPCMJ20' on page 36 undefined on input line 54.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/ChenGFMJG19' on page 36 undefined on input line 54.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/Liu0CB20' on page 36 undefined on input line 56.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/LiZCJW18' on page 36 undefined on input line 56.
-
-
-Package natbib Warning: Citation `DBLP:journals/access/ZhaoCCYXG19' on page 36 undefined on input line 56.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/LiZCJW18' on page 36 undefined on input line 59.
-
-
-Package natbib Warning: Citation `DBLP:conf/icws/Zhang0LL019' on page 36 undefined on input line 59.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/YaoCZB19' on page 36 undefined on input line 59.
-
-
-Package natbib Warning: Citation `DBLP:conf/ijcnn/YaoZZHB17' on page 36 undefined on input line 59.
-
-
-Package natbib Warning: Citation `DBLP:conf/avss/BoyleNF17' on page 36 undefined on input line 59.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/FangDCHGC21' on page 36 undefined on input line 59.
-
-
-Package natbib Warning: Citation `DBLP:journals/geoinformatica/ChenSYL20' on page 36 undefined on input line 61.
-
-
-Package natbib Warning: Citation `DBLP:conf/cikm/LiCC0Y16' on page 36 undefined on input line 61.
-
-
-Package natbib Warning: Citation `DBLP:journals/ijon/ShangGLZW16' on page 36 undefined on input line 61.
-
-
-Package natbib Warning: Citation `DBLP:journals/www/ChenS19' on page 36 undefined on input line 61.
-
-
-Package natbib Warning: Citation `DBLP:journals/vldb/ChenSJXKYS20' on page 36 undefined on input line 61.
-
-
-Package natbib Warning: Citation `DBLP:conf/sigmod/ZhaoCC16' on page 36 undefined on input line 61.
-
-
-Package natbib Warning: Citation `DBLP:conf/aaai/ChenS19' on page 36 undefined on input line 61.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/ChenS0K19' on page 36 undefined on input line 61.
-
-
-Package natbib Warning: Citation `DBLP:conf/kdd/LiCCC17' on page 36 undefined on input line 61.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/HanZSSW16' on page 36 undefined on input line 61.
-
-
-
 [36]
-
-Package natbib Warning: Citation `DBLP:conf/icde/RanuPTDR15' on page 37 undefined on input line 75.
-
-
-Package natbib Warning: Citation `DBLP:conf/sigmod/SuZWHZ13' on page 37 undefined on input line 75.
-
-
-Overfull \hbox (47.71571pt too wide) in paragraph at lines 95--97
-[]\TU/SimSun(0)/m/n/12.045 本 节 提 出 一 种 用 于 发 现 伴 随 群 体 的 精 确 解 法：| $[]$
- []
-
-
 
 [37]
 
-LaTeX Warning: Reference `exact algorithm' on page 38 undefined on input line 103.
-
-
-
 [38]
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/JeungYZJS08' on page 39 undefined on input line 147.
-
-
 
 [39]
 
 [40]
-File: fig/section4/picture.pdf Graphic file (type pdf)
-<use fig/section4/picture.pdf>
-
-
-Package natbib Warning: Citation `DBLP:conf/icdm/PelekisKKFT09' on page 41 undefined on input line 247.
-
-
-Package natbib Warning: Citation `DBLP:conf/sigmod/LeeHW07' on page 41 undefined on input line 247.
-
-
-Package natbib Warning: Citation `DBLP:conf/dasfaa/LiLLH10' on page 41 undefined on input line 247.
-
-
-Package natbib Warning: Citation `DBLP:journals/access/LiLWYLX18' on page 41 undefined on input line 247.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/LiZCJW18' on page 41 undefined on input line 247.
-
-
-Package natbib Warning: Citation `DBLP:conf/icws/Zhang0LL019' on page 41 undefined on input line 247.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/YaoCZB19' on page 41 undefined on input line 247.
-
-
 
 [41]
-
-Package natbib Warning: Citation `DBLP:conf/kdd/XuYFS07' on page 42 undefined on input line 251.
-
-
-Package natbib Warning: Citation `DBLP:conf/kdd/YuanZXS11' on page 42 undefined on input line 271.
-
-
-Package natbib Warning: Citation `DBLP:conf/gis/YuanZZXXSH10' on page 42 undefined on input line 271.
-
-
 
 [42]
 
 [43]
-File: fig/section4/BJ-hitratio-num.pdf Graphic file (type pdf)
-<use fig/section4/BJ-hitratio-num.pdf>
-File: fig/section4/BJ-time-num.pdf Graphic file (type pdf)
-<use fig/section4/BJ-time-num.pdf>
-File: fig/section4/PT-hitratio-num.pdf Graphic file (type pdf)
-<use fig/section4/PT-hitratio-num.pdf>
-File: fig/section4/PT-time-num.pdf Graphic file (type pdf)
-<use fig/section4/PT-time-num.pdf>
-File: fig/section4/BJ-hitratio-k.pdf Graphic file (type pdf)
-<use fig/section4/BJ-hitratio-k.pdf>
-File: fig/section4/BJ-time-k.pdf Graphic file (type pdf)
-<use fig/section4/BJ-time-k.pdf>
-File: fig/section4/PT-hitratio-k.pdf Graphic file (type pdf)
-<use fig/section4/PT-hitratio-k.pdf>
-File: fig/section4/PT-time-k.pdf Graphic file (type pdf)
-<use fig/section4/PT-time-k.pdf>
-
 
 [44]
-File: fig/section4/BJ-hitratio-m.pdf Graphic file (type pdf)
-<use fig/section4/BJ-hitratio-m.pdf>
-File: fig/section4/BJ-time-m.pdf Graphic file (type pdf)
-<use fig/section4/BJ-time-m.pdf>
-File: fig/section4/PT-hitratio-m.pdf Graphic file (type pdf)
-<use fig/section4/PT-hitratio-m.pdf>
-File: fig/section4/PT-time-m.pdf Graphic file (type pdf)
-<use fig/section4/PT-time-m.pdf>
-File: fig/section4/BJ-hitratio-ep.pdf Graphic file (type pdf)
-<use fig/section4/BJ-hitratio-ep.pdf>
-File: fig/section4/BJ-time-ep.pdf Graphic file (type pdf)
-<use fig/section4/BJ-time-ep.pdf>
-File: fig/section4/PT-hitratio-ep.pdf Graphic file (type pdf)
-<use fig/section4/PT-hitratio-ep.pdf>
-File: fig/section4/PT-time-ep.pdf Graphic file (type pdf)
-<use fig/section4/PT-time-ep.pdf>
-
 
 [45]
 
-[46]) (./latex/5_contact.tex
+[46]
 
-[47]
-Chapter 第六章.
+[47])
 
-Package natbib Warning: Citation `DBLP:conf/icde/ChenSJ0K20' on page 48 undefined on input line 10.
-
-
-Package natbib Warning: Citation `DBLP:conf/ijcai/ChenSFK21' on page 48 undefined on input line 10.
-
-
-Package natbib Warning: Citation `react' on page 48 undefined on input line 10.
-
-
-Package natbib Warning: Citation `DBLP:conf/sigmod/FaloutsosRM94' on page 48 undefined on input line 12.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/AssentWKKS09' on page 48 undefined on input line 12.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/RongLSWLD17' on page 48 undefined on input line 12.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/XieLP17' on page 48 undefined on input line 12.
-
-
-Package natbib Warning: Citation `DBLP:journals/corr/abs-2004-06653' on page 48 undefined on input line 14.
-
-
-Package natbib Warning: Citation `DBLP:ptop' on page 48 undefined on input line 14.
-
-File: fig/section5/intro.pdf Graphic file (type pdf)
-<use fig/section5/intro.pdf>
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/JeungYZJS08' on page 48 undefined on input line 24.
-
-
-Package natbib Warning: Citation `DBLP:journals/pvldb/LiDHK10' on page 48 undefined on input line 24.
-
-
-Package natbib Warning: Citation `flock' on page 48 undefined on input line 24.
-
-
-Package natbib Warning: Citation `tang' on page 48 undefined on input line 24.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/ZhengZYS13' on page 48 undefined on input line 24.
-
-
-Package natbib Warning: Citation `flock' on page 48 undefined on input line 25.
-
-
-Package natbib Warning: Citation `DBLP:conf/icde/ZhengZYS13' on page 48 undefined on input line 26.
-
-
-Package natbib Warning: Citation `tang' on page 48 undefined on input line 27.
-
-
-Underfull \vbox (badness 4341) has occurred while \output is active []
-
-
-
-[48
-
-]
-
-Package natbib Warning: Citation `web' on page 49 undefined on input line 33.
-
-
-Package natbib Warning: Citation `DBLP:journals/corr/abs-2004-06653' on page 49 undefined on input line 33.
-
-
-Package natbib Warning: Citation `web' on page 49 undefined on input line 36.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[49]
-
-[50]
-
-[51]
-
-Package natbib Warning: Citation `DBLP:journals/pami/TahaH15' on page 52 undefined on input line 91.
-
-File: fig/section5/cells.pdf Graphic file (type pdf)
-<use fig/section5/cells.pdf>
-
-
-[52]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-
-[53]
-
-[54]
-Underfull \hbox (badness 6559) in paragraph at lines 186--187
-[]\TU/SimSun(0)/m/n/12.045 为 进 一 步 提 升 暴 露 案 例 发 现 的 效 率，|  我 们 提 出 了 一 种 $[]$
- []
-
-
-Underfull \hbox (badness 1735) in paragraph at lines 186--187
-|\TU/SimSun(0)/m/n/12.045 （$[]$\TU/times(0)/m/n/12.045 pproximate $[]$roup $[]$rocessing\TU/SimSun(0)/m/n/12.045 ，| \TU/times(0)/m/n/12.045 AGP\TU/SimSun(0)/m/n/12.045 ）|  算 法。|  本 节 将 介 绍 所 采 用 的 近 似 策 略
- []
-
-
-LaTeX Warning: Reference `alg:app' on page 55 undefined on input line 246.
-
-
-
-[55]
-
-[56]
-
-Package natbib Warning: Citation `DBLP:conf/kdd/YuanZXS11' on page 57 undefined on input line 270.
-
-File: fig/section5/BJ-Q-CE.png Graphic file (type bmp)
-<fig/section5/BJ-Q-CE.png>
-File: fig/section5/BJ-Q-time.png Graphic file (type bmp)
-<fig/section5/BJ-Q-time.png>
-File: fig/section5/PT-Q-CE.png Graphic file (type bmp)
-<fig/section5/PT-Q-CE.png>
-File: fig/section5/PT-Q-time.png Graphic file (type bmp)
-<fig/section5/PT-Q-time.png>
-File: fig/section5/BJ-ep-CE.png Graphic file (type bmp)
-<fig/section5/BJ-ep-CE.png>
-File: fig/section5/BJ-ep-time.png Graphic file (type bmp)
-<fig/section5/BJ-ep-time.png>
-File: fig/section5/PT-ep-CE.png Graphic file (type bmp)
-<fig/section5/PT-ep-CE.png>
-File: fig/section5/PT-ep-time.png Graphic file (type bmp)
-<fig/section5/PT-ep-time.png>
-
-
-[57]
-
-LaTeX Warning: Reference `Beijing-k-CE' on page 58 undefined on input line 382.
-
-
-LaTeX Warning: Reference `Porto-k-CE' on page 58 undefined on input line 382.
-
-
-LaTeX Warning: Reference `Beijing-k-CPU' on page 58 undefined on input line 382.
-
-
-LaTeX Warning: Reference `Porto-k-CPU' on page 58 undefined on input line 382.
-
-
-LaTeX Warning: Reference `img:app' on page 58 undefined on input line 385.
-
-
-Underfull \vbox (badness 8075) has occurred while \output is active []
-
-
-
-[58]
-
-LaTeX Warning: Reference `img:precheck' on page 59 undefined on input line 388.
-
-
-Underfull \hbox (badness 3138) in paragraph at lines 388--389
-[] [] |\TU/times(0)/b/n/12.045 6.6.2.0.5 \TU/SimSun(0)/b/n/12.045 预 检 查 策 略 的 评 估[] \TU/SimSun(0)/m/n/12.045 我 们 将 不 采 用 预 检 查 策 略 的 \TU/times(0)/m/n/12.045 EGP \TU/SimSun(0)/m/n/12.045 方 法 记 为
- []
-
-) (./latex/6_join.tex
-
-[59]
-
-[60]
-Chapter 第七章.
-
-
-[61
-
-]
-
-Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font
-(fontspec)             'STFangsong'. Check the typeset output, and if it is
-(fontspec)             okay then ignore this warning. Otherwise a different
-(fontspec)             font should be chosen.
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "STFangsong/BI" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "STFangsong/B" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "STFangsong/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'STFangsong(0)' created for font
-(fontspec)             'STFangsong' with options [Script={CJK}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"STFangsong/OT:script=hani;language=dflt;"
-
-File: fig/section6/intro.png Graphic file (type bmp)
-<fig/section6/intro.png>
-
-
-[62]
-
-LaTeX Warning: Reference `sec:statement' on page 63 undefined on input line 48.
-
-
-Underfull \vbox (badness 1960) has occurred while \output is active []
-
-
-
-[63]
-Underfull \vbox (badness 1448) has occurred while \output is active []
-
-
-
-[64]
-File: fig/section6/lens.png Graphic file (type bmp)
-<fig/section6/lens.png>
-
-
-[65]
-
-[66]
-File: fig/section6/overall example.png Graphic file (type bmp)
-<fig/section6/overall example.png>
-
-
-[67]
-
-[68]
-File: fig/section6/ellipse.pdf Graphic file (type pdf)
-<use fig/section6/ellipse.pdf>
-File: fig/section6/ball-tree.pdf Graphic file (type pdf)
-<use fig/section6/ball-tree.pdf>
-
-
-[69]
-Underfull \hbox (badness 1184) in paragraph at lines 291--296
-\TU/SimSun(0)/m/n/12.045 非 叶 节 点 仅 包 含 两 个 子 节 点 不 同，| \TU/times(0)/m/n/12.045 HBall-tree \TU/SimSun(0)/m/n/12.045 通 过 一 种 重 新 划 分  |（\TU/times(0)/m/n/12.045 repartition\TU/SimSun(0)/m/n/12.045 ）|
- []
-
-
-Underfull \hbox (badness 2020) in paragraph at lines 291--296
-\TU/SimSun(0)/m/n/12.045 技 术，|  使 得 每 个 父 节 点 最 多 可 以 拥 有 三 个 子 节 点。|  每 个 节 点 的 结 构 表 示 为
- []
-
-
-Underfull \vbox (badness 2790) has occurred while \output is active []
-
-
-
-[70]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[71]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[72]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[73]
-
-[74]
-Underfull \vbox (badness 2302) has occurred while \output is active []
-
-
-
-[75]
-File: fig/section6/geo-num-ctime.png Graphic file (type bmp)
-<fig/section6/geo-num-ctime.png>
-File: fig/section6/pt-num-ctime.png Graphic file (type bmp)
-<fig/section6/pt-num-ctime.png>
-
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 468--473
- [][][][] 
- []
-
-File: fig/section6/geo-num-ftime.png Graphic file (type bmp)
-<fig/section6/geo-num-ftime.png>
-File: fig/section6/pt-num-ftime.png Graphic file (type bmp)
-<fig/section6/pt-num-ftime.png>
-
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 482--487
- [][][][] 
- []
-
-File: fig/section6/geo-poi-ftime.png Graphic file (type bmp)
-<fig/section6/geo-poi-ftime.png>
-File: fig/section6/pt-poi-ftime.png Graphic file (type bmp)
-<fig/section6/pt-poi-ftime.png>
-
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 499--504
- [][][][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[76]
-File: fig/section6/geo-I-ftime.png Graphic file (type bmp)
-<fig/section6/geo-I-ftime.png>
-File: fig/section6/pt-I-ftime.png Graphic file (type bmp)
-<fig/section6/pt-I-ftime.png>
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 526.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\epsilon' on input line 526.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 526.
-
-File: fig/section6/geo-ep-ftime.png Graphic file (type bmp)
-<fig/section6/geo-ep-ftime.png>
-File: fig/section6/pt-ep-ftime.png Graphic file (type bmp)
-<fig/section6/pt-ep-ftime.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[77]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-File: fig/section6/mtree.pdf Graphic file (type pdf)
-<use fig/section6/mtree.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[78]
-
-[79]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[80]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 671.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 671.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 766.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[81]
-
-LaTeX Warning: Text page 82 contains only floats.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[82]
-File: fig/section6/geo-sim-ftime.png Graphic file (type bmp)
-<fig/section6/geo-sim-ftime.png>
-File: fig/section6/pt-sim-ftime.png Graphic file (type bmp)
-<fig/section6/pt-sim-ftime.png>
-File: fig/section6/geo-num-access.png Graphic file (type bmp)
-<fig/section6/geo-num-access.png>
-File: fig/section6/pt-num-access.png Graphic file (type bmp)
-<fig/section6/pt-num-access.png>
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 802.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 802.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 804.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 804.
-
-File: fig/section6/geo-k-ftime.png Graphic file (type bmp)
-<fig/section6/geo-k-ftime.png>
-File: fig/section6/pt-k-ftime.png Graphic file (type bmp)
-<fig/section6/pt-k-ftime.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[83]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 826.
-
-
-Package natbib Warning: Citation `DBLP:journals/comvis/HughesC12' on page 84 undefined on input line 829.
-
-
-Package natbib Warning: Citation `stark1979sampling' on page 84 undefined on input line 829.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[84]
-File: fig/section6/sample.pdf Graphic file (type pdf)
-<use fig/section6/sample.pdf>
-) (./latex/7_conclusion
-Underfull \vbox (badness 1281) has occurred while \output is active []
-
-
-
-[85]
-
-[86]
-
-[87]
-Chapter 第八章.
-)
-
-[88
-
-]
-Chapter 第九章.
-
-
-[89
-
-]
-
-[90
-
-] (./main.bbl
-
-[91
-
-
-]
-
-[92]
-
-[93]
-
-[94]) (./latex/achivement.tex
-
-[95]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[96
-
-]
-
-[97]
-Underfull \hbox (badness 2245) in paragraph at lines 58--59
-[]\TU/SimSun(0)/b/n/12.045 作 者 \TU/times(0)/b/n/12.045 1\TU/times(0)/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 作 者 \TU/times(0)/m/n/12.045 2*, \TU/SimSun(0)/m/n/12.045 作 者 \TU/times(0)/m/n/12.045 3, \TU/SimSun(0)/m/n/12.045 作 者 \TU/times(0)/m/n/12.045 4\TU/SimSun(0)/m/n/12.045 。|  一 种 基 于 \TU/times(0)/m/n/12.045 xxxxx \TU/SimSun(0)/m/n/12.045 的 真 气 运 转 方 法\TU/times(0)/m/n/12.045 :
- []
-
-)
-
-Package natbib Warning: There were undefined citations.
-
-
-
-[98] (./main.aux)
+[48] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 49B9D08549E4737CB89917AB36D5CCED;23084
-(rerunfilecheck)             After:  F3881D70B750A89329D297BB7F4897C2;23083.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 03AB5A4FAD1AD2E5F7C93D6EE6FF4110;6322.
  ) 
 Here is how much of TeX's memory you used:
- 51868 strings out of 473832
- 1102769 string characters out of 5729481
- 1591049 words of memory out of 5000000
- 73970 multiletter control sequences out of 15000+600000
- 580328 words of font info for 189 fonts, out of 8000000 for 9000
+ 51285 strings out of 473832
+ 1077142 string characters out of 5729481
+ 1553831 words of memory out of 5000000
+ 73500 multiletter control sequences out of 15000+600000
+ 569671 words of font info for 141 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 125i,24n,134p,1515b,1407s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,23n,134p,1172b,2304s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (110 pages).
+Output written on main.pdf (52 pages).
