@@ -1,19 +1,22 @@
 \chapter{联合移动模式挖掘}
 
 \section{引言}
+本章通过分析个体和群体的移动轨迹，揭示城市运动模式，为城市规划和交通管理提供数据支持。开发高效的算法来发现大规模轨迹数据中的特定群体模式，即识别在特定时间内频繁共同出现在相同地点的移动对象集合。提高轨迹数据分析的准确性和效率，为城市规划、交通管理和社会行为研究提供更深入的洞察。为了实现该目标，需要采用数据挖掘技术，设计高效地数据索引结构，从大规模轨迹数据中挖掘出有用的城市移动规律和模式。需要形式化地定义特定群体模式检测问题，并考虑到在大规模轨迹数据中实现的挑战。在研究背景上，调研了现有工作在联合移动模式搜索以及轨迹聚类问题取得的研究进展。随后，通过分析现有工作的不足进而引出本章研究工作的研究内容和面临的研究挑战。在问题描述上，一一定义了移动对象及其轨迹、协同行为持续时间以及协同行为。本章提出了一个全新的简化的伴随群体发现问题。
 
+大规模性、灵活性、效率与动态性共同构成了该问题的技术难点，也为算法框架与系统设计提出了更高要求。
+针对 CGD 问题，我们首先设计了精确算法以及一种新颖的社区感知聚类模型。基于两个真实世界数据集进行了大量实验评估，实验结果表明，所提出的社区感知算法能够在用户可交互时间内从大规模轨迹数据中发现伴随群体，体现了其在实际应用中的重要价值。
 
 \subsection{研究背景与意义}
 
-随着位置追踪设备（如车载导航系统和智能手机）以及 GPS 使能服务（如 Google Maps、Uber 和 Grab）的持续普及，轨迹数据的规模正呈现爆炸式增长。作为轨迹数据分析中的一项基础功能，共同行为模式（co-movement pattern）挖掘问题已经受到数据科学领域的广泛关注。一般而言，共同行为模式表示一组在一段时间内共同移动的对象。该类模式的典型表示形式包括 flock~\cite{DBLP:conf/gis/VieiraBT09,DBLP:journals/jidm/TanakaVK16}、convoy~\cite{DBLP:journals/pvldb/JeungYZJS08}、swarm~\cite{DBLP:journals/pvldb/LiDHK10}、group~\cite{DBLP:journals/dke/WangLH06}、platoon~\cite{DBLP:journals/dke/LiBK15} 以及 gathering~\cite{DBLP:conf/icde/ZhengZYS13,DBLP:journals/tkde/ZhengZYSZ14} 等。
+随着位置追踪设备（如车载导航系统和智能手机）以及 GPS 智能服务的持续普及，轨迹数据的规模正呈现爆炸式增长。作为轨迹数据分析中的一项基础功能，联合移动模式（co-movement pattern）挖掘问题已经受到数据科学领域的广泛关注。一般而言，联合移动模式表示一组在一段时间内共同移动的对象。该类模式的典型表示形式包括 flock~\cite{DBLP:conf/gis/VieiraBT09,DBLP:journals/jidm/TanakaVK16}、convoy~\cite{DBLP:journals/pvldb/JeungYZJS08}、swarm~\cite{DBLP:journals/pvldb/LiDHK10}、group~\cite{DBLP:journals/dke/WangLH06}、platoon~\cite{DBLP:journals/dke/LiBK15} 以及 gathering~\cite{DBLP:conf/icde/ZhengZYS13,DBLP:journals/tkde/ZhengZYSZ14} 等。
 
-高效且准确地从移动对象轨迹中发现共同行为模式在诸多实际应用中具有重要意义，包括拼车推荐、交通拥堵缓解（即通过及早发现道路上的高密度群体来规避潜在拥堵）、COVID-19 等传染病的暴露与风险分析~\cite{imo,DBLP:journals/information/AlarabiBHA21}、移动行为分析以及异常轨迹检测~\cite{DBLP:conf/icde/Liu0CB20} 等。
+高效且准确地从移动对象轨迹中发现联合移动模式在诸多实际应用中具有重要意义，包括拼车推荐、交通拥堵缓解（即通过及早发现道路上的高密度群体来规避潜在拥堵）、COVID-19 等传染病的暴露与风险分析~\cite{imo,DBLP:journals/information/AlarabiBHA21}、移动行为分析以及异常轨迹检测~\cite{DBLP:conf/icde/Liu0CB20} 等。
 
-现有研究大多基于移动对象随时间演化的轨迹设计搜索算法。然而，这类算法通常具有较高的计算代价，尤其是在共同行为模式（如 flock、swarm、group）不稳定的情况下（即对象可能在时间上暂时离开群体）。为了挖掘目标共同行为模式，现有方法往往需要在每一个时间快照上计算对象聚类，这在实时应用场景中具有极高的计算开销。此外，其基于“过滤–精炼”的处理框架往往会产生大量候选结果，从而进一步加重计算负担。随着轨迹数量的增加，这些方法的性能会显著下降。
+现有研究大多基于移动对象随时间演化的轨迹设计搜索算法。然而，这类算法通常具有较高的计算代价，尤其是在联合移动模式（如 flock、swarm、group）不稳定的情况下（即对象可能在时间上暂时离开群体）。为了挖掘目标联合移动模式，现有方法往往需要在每一个时间快照上计算对象聚类，这在实时应用场景中具有极高的计算开销。此外，其基于“过滤–精炼”的处理框架往往会产生大量候选结果，从而进一步加重计算负担。随着轨迹数量的增加，这些方法的性能会显著下降。
 
-在现实应用中，尤其是在疫情预警与防控场景下，及时获得最新的共同行为结果至关重要。因此，共同行为挖掘任务需要以\emph{连续}的方式执行。这对算法在效率和效果两方面都提出了更高要求。然而，现有的群体模式定义及其相关方法在同时兼顾有效性与高效性方面仍然存在明显不足。
+在现实应用中，尤其是在疫情预警与防控场景下，及时获得最新的联合移动结果至关重要。因此，联合移动挖掘任务需要以\emph{连续}的方式执行。这对算法在效率和效果两方面都提出了更高要求。然而，现有的群体模式定义及其相关方法在同时兼顾有效性与高效性方面仍然存在明显不足。
 
-为了解决上述问题，本文提出了一种新的共同行为模式概念——\emph{伴随群体}（companion group），其定义相对更加宽松。具体而言，一个伴随群体由至少 $m$ 个移动对象组成，这些对象在至少 $k$ 个时间段内共同移动（例如，其两两距离不超过预定义的距离阈值 $\epsilon$），且允许对象在时间上暂时离开其伴随群体。基于伴随群体，我们进一步定义了\emph{伴随群体发现}（Companion Group Discovery，CGD）问题。给定一组移动对象及其轨迹，CGD 问题旨在在用户可交互时间内发现所有伴随群体。在我们的设定中，若某一对象能够与其他对象形成多个伴随群体，则该对象归属于成员规模最大的伴随群体。CGD 问题可广泛应用于交通监测与管理、疫情防控以及暴力事件预防等实际场景。
+为了解决上述问题，本文提出了一种新的联合移动模式概念——伴随群体，其定义相对更加宽松。具体而言，一个伴随群体由至少 $m$ 个移动对象组成，这些对象在至少 $k$ 个时间段内共同移动（例如，其两两距离不超过预定义的距离阈值 $\epsilon$），且允许对象在时间上暂时离开其伴随群体。基于伴随群体，我们进一步定义了\emph{伴随群体发现}问题。给定一组移动对象及其轨迹，CGD 问题旨在在用户可交互时间内发现所有伴随群体。在我们的设定中，若某一对象能够与其他对象形成多个伴随群体，则该对象归属于成员规模最大的伴随群体。CGD 问题可广泛应用于交通监测与管理、疫情防控以及暴力事件预防等实际场景。
 
 \begin{figure*}[t]
     \centering
@@ -22,36 +25,49 @@
     \label{fig:intro}
 \end{figure*}
 
-下面通过图~\ref{fig:intro} 给出一个示例说明。设 $o_1, o_2, o_3, o_4$ 为四个移动对象，且所有对象每分钟上报一次位置信息。图~\ref{fig:intro} 展示了它们在时间区间 $[t_1, t_7]$ 内的轨迹。设距离阈值 $\epsilon = 10$ 米，共同行为持续时间阈值 $k = 3$ 分钟，群体规模阈值 $m = 3$。可以观察到，对象 $o_2$ 与 $o_3$ 在时间集合 $T = \{t_1, t_2, t_4, t_5, t_6, t_7\}$ 内始终共同移动，且 $|T| = 6$ 超过持续时间阈值 $k$，因此二者可构成一个共同行为对。同样，$o_3$ 与 $o_4$ 也可以构成一个共同行为对。此外，对象 $o_2, o_3, o_4$ 在时间点 $t_2, t_4, t_5, t_6$ 内的两两距离均不超过 $\epsilon$，因此我们将 $g=\{o_2, o_3, o_4\}$ 视为一个伴随群体。需要注意的是，对象 $o_1$ 仅在 $t_1$ 和 $t_6$ 与 $o_2$ 短暂接近，无法与其他对象形成共同行为对或伴随群体。
+下面通过图~\ref{fig:intro} 给出一个示例说明。设 $o_1, o_2, o_3, o_4$ 为四个移动对象，且所有对象每分钟上报一次位置信息。图~\ref{fig:intro} 展示了它们在时间区间 $[t_1, t_7]$ 内的轨迹。设距离阈值 $\epsilon = 10$ 米，联合移动持续时间阈值 $k = 3$ 分钟，群体规模阈值 $m = 3$。可以观察到，对象 $o_2$ 与 $o_3$ 在时间集合 $T = \{t_1, t_2, t_4, t_5, t_6, t_7\}$ 内始终共同移动，且 $|T| = 6$ 超过持续时间阈值 $k$，因此二者可构成一个联合移动对。同样，$o_3$ 与 $o_4$ 也可以构成一个联合移动对。此外，对象 $o_2, o_3, o_4$ 在时间点 $t_2, t_4, t_5, t_6$ 内的两两距离均不超过 $\epsilon$，因此我们将 $g=\{o_2, o_3, o_4\}$ 视为一个伴随群体。需要注意的是，对象 $o_1$ 仅在 $t_1$ 和 $t_6$ 与 $o_2$ 短暂接近，无法与其他对象形成联合移动对或伴随群体。
 
+为了高效回答该问题，系统在算法设计与实现层面面临以下关键技术挑战：
+
+\begin{itemize}
+    \item \textbf{大规模数据处理：}在真实应用场景中，轨迹数据通常来源于海量移动对象，例如车辆、移动终端或传感设备，其数据规模可能达到千万级甚至更高。如何在如此庞大的数据规模下进行高效存储、索引与计算，尤其是在需要实时或近实时发现群体模式的场景中，成为首要挑战。这不仅要求算法具备良好的时间复杂度，还需要设计高效的空间组织结构以降低内存开销。
+
+    \item \textbf{模式定义的灵活性：}不同应用场景对群体模式的定义存在差异。例如，有的应用关注空间邻近性，有的强调时间持续性，还有的强调成员数量或运动一致性。因此，如何构建一个既支持多种模式定义，又能够灵活调整约束参数的统一算法框架，是实现广泛适用性的关键。同时，该框架在保证表达能力的前提下，还需避免因过度泛化而导致计算复杂度急剧上升。
+
+    \item \textbf{准确性与效率的平衡：}群体模式发现通常涉及复杂的空间-时间约束匹配与频繁子结构检测，若采用精确算法往往计算代价高昂。如何在保证模式发现准确性的同时，通过剪枝策略、近似计算或分层索引机制降低计算开销，是提升整体性能的核心问题。尤其在数据规模极大时，算法需要在结果质量与运行效率之间取得合理权衡。
+
+    \item \textbf{动态性的处理：}轨迹数据具有天然的动态特征，移动对象的位置和行为随时间不断变化。在流式数据环境下，新数据持续到达，旧数据逐渐失效，群体结构也随之演化。因此，如何设计支持增量更新的算法机制，在无需重复计算全部数据的前提下及时更新群体模式检测结果，是保证系统实时性与稳定性的关键技术挑战。
+\end{itemize}
+
+综上所述，大规模性、灵活性、效率与动态性共同构成了该问题的技术难点，也为算法框架与系统设计提出了更高要求。
 针对 CGD 问题，我们首先设计了一种\underline{精确搜索算法}，即 \underline{E}xact \underline{S}earch with \underline{E}xact \underline{C}o-\underline{M}ovement \underline{C}omputation（ES-ECMC），该算法能够获得精确结果，但计算代价较高。为进一步提升效率，我们提出了一种\underline{社区感知的近似搜索算法}，即 \underline{C}ommunity-aware \underline{S}earch with \underline{A}pproximate \underline{C}o-\underline{M}ovement \underline{C}omputation（CS-ACMC），在兼顾结果质量与严格效率需求的前提下解决 CGD 问题。
 
-CS-ACMC 算法主要包括两个阶段：近似共同行为对搜索与社区感知群体发现。在近似共同行为对搜索阶段，首先采用网格划分方法（如~\cite{DBLP:conf/ijcai/LiCSWLK022,chen2022towards,zheng2006grid}）将每个轨迹位置映射为对应的网格单元编号（即 token），从而将每条轨迹表示为一个 token 序列；随后，通过计算轨迹之间的公共 token 来生成近似共同行为对。在群体发现阶段，我们利用 SCAN 算法~\cite{DBLP:conf/kdd/XuYFS07} 对共同行为对进行高效聚类。本文算法的实现已开源发布\footnote{https://github.com/Like-China/gathering\_mining.git}。
+CS-ACMC 算法主要包括两个阶段：近似联合移动对搜索与社区感知群体发现。在近似联合移动对搜索阶段，首先采用网格划分方法（如~\cite{DBLP:conf/ijcai/LiCSWLK022,chen2022towards,zheng2006grid}）将每个轨迹位置映射为对应的网格单元编号（即 token），从而将每条轨迹表示为一个 token 序列；随后，通过计算轨迹之间的公共 token 来生成近似联合移动对。在群体发现阶段，我们利用 SCAN 算法~\cite{DBLP:conf/kdd/XuYFS07} 对联合移动对进行高效聚类。本文算法的实现已开源发布\footnote{https://github.com/Like-China/gathering\_mining.git}。
 
 本文的主要贡献总结如下：
 \begin{itemize}
-    \item 提出了伴随群体这一新的共同行为模式定义，该定义更加宽松，适用于需要实时结果更新的多种应用场景，如传染病（SARS、埃博拉、COVID-19 等）传播监测与防控。
+    \item 提出了伴随群体这一新的联合移动模式定义，该定义更加宽松，适用于需要实时结果更新的多种应用场景，如传染病（SARS、埃博拉、COVID-19 等）传播监测与防控。
     \item 设计了一种精确算法以及一种新颖的社区感知聚类模型，用于解决 CGD 问题。
     \item 基于两个真实世界数据集进行了大量实验评估，实验结果表明，所提出的社区感知算法能够在用户可交互时间内从大规模轨迹数据中发现伴随群体，体现了其在实际应用中的重要价值。
 \end{itemize}
 
-本文其余部分组织如下：第~\ref{sec:problem} 节介绍问题定义与相关预备知识；第~\ref{sec:exact} 节给出精确算法；第~\ref{sec:approximate} 节介绍社区感知的高效近似算法；第~\ref{sec:exp} 节展示实验结果与分析；第~\ref{sec:related work} 节回顾相关研究工作；第~\ref{sec:conclusion} 节给出总结。
+本文其余部分组织如下：第~\ref{cm_sec:problem} 节介绍问题定义与相关预备知识；第~\ref{cm_sec:exact} 节给出精确算法；第~\ref{cm_sec:approximate} 节介绍社区感知的高效近似算法；第~\ref{cm_sec:exp} 节展示实验结果与分析；第~\ref{cm_sec:related work} 节回顾相关研究工作；第~\ref{cm_sec:conclusion} 节给出总结。
 \subsection{研究内容与挑战}
 \subsection{研究成果与贡献}
 
 \section{相关工作}
-\label{sec:related work}
+\label{cm_sec:related work}
 
-大规模轨迹数据的管理、挖掘与分析问题已受到数据科学领域的广泛关注。该方向的代表性研究主要包括轨迹搜索与推荐~\cite{DBLP:conf/kdd/HanWYS021,DBLP:conf/aaai/YangCWS21,DBLP:conf/ijcai/ChenSFK21,DBLP:journals/vldb/ShangDZJKZ14,DBLP:journals/tkde/ShangZJYKLW15,DBLP:journals/tkde/ShangCJWK17,DBLP:journals/pvldb/ShangCWJ0K17,DBLP:journals/vldb/ShangCWJZK18,DBLP:conf/icde/ChenSJ0K20,DBLP:conf/kdd/ZhaoSWZN018,DBLP:journals/tkde/LiuZSSKLJ16,DBLP:conf/icde/LiuZSSKJ15,DBLP:journals/geoinformatica/ShangYDXZZ12}、位置搜索与推荐~\cite{DBLP:conf/icde/0002CGSMG18,DBLP:conf/ijcai/HanLLZLWS20,DBLP:conf/icde/HanSSZ0K19,DBLP:journals/tkde/ShangCZJWK19,DBLP:conf/sigir/FengTCCLL20,DBLP:conf/kdd/RaoCLSYH22,DBLP:journals/ijon/GuoZXSD16}、路径规划与推荐~\cite{DBLP:conf/ijcai/LiCSK021,DBLP:conf/ijcai/LiCS20,DBLP:conf/kdd/ChenSJ0Z019,DBLP:conf/aaai/ChenSG20,DBLP:conf/aaai/ChenSYL20,DBLP:conf/edbt/ShangDYXZK12,DBLP:conf/icccn/LiuLDSZ14,DBLP:journals/ijon/ShangGLW16}，以及区域查询与交通模式挖掘等其他轨迹分析任务~\cite{DBLP:journals/tkde/ShangCWJWK16,DBLP:conf/ssd/ShangLPX13,DBLP:conf/mdm/ShangLPX13,DBLP:conf/ijcai/RaoWZLS022,DBLP:journals/geoinformatica/LiuWSLZ18}。在上述研究中，共同行为模式搜索与轨迹聚类问题与本文所研究的群体模式发现问题关系最为密切。
+大规模轨迹数据的管理、挖掘与分析问题已受到数据科学领域的广泛关注。该方向的代表性研究主要包括轨迹搜索与推荐~\cite{DBLP:conf/kdd/HanWYS021,DBLP:conf/aaai/YangCWS21,DBLP:conf/ijcai/ChenSFK21,DBLP:journals/vldb/ShangDZJKZ14,DBLP:journals/tkde/ShangZJYKLW15,DBLP:journals/tkde/ShangCJWK17,DBLP:journals/pvldb/ShangCWJ0K17,DBLP:journals/vldb/ShangCWJZK18,DBLP:conf/icde/ChenSJ0K20,DBLP:conf/kdd/ZhaoSWZN018,DBLP:journals/tkde/LiuZSSKLJ16,DBLP:conf/icde/LiuZSSKJ15,DBLP:journals/geoinformatica/ShangYDXZZ12}、位置搜索与推荐~\cite{DBLP:conf/icde/0002CGSMG18,DBLP:conf/ijcai/HanLLZLWS20,DBLP:conf/icde/HanSSZ0K19,DBLP:journals/tkde/ShangCZJWK19,DBLP:conf/sigir/FengTCCLL20,DBLP:conf/kdd/RaoCLSYH22,DBLP:journals/ijon/GuoZXSD16}、路径规划与推荐~\cite{DBLP:conf/ijcai/LiCSK021,DBLP:conf/ijcai/LiCS20,DBLP:conf/kdd/ChenSJ0Z019,DBLP:conf/aaai/ChenSG20,DBLP:conf/aaai/ChenSYL20,DBLP:conf/edbt/ShangDYXZK12,DBLP:conf/icccn/LiuLDSZ14,DBLP:journals/ijon/ShangGLW16}，以及区域查询与交通模式挖掘等其他轨迹分析任务~\cite{DBLP:journals/tkde/ShangCWJWK16,DBLP:conf/ssd/ShangLPX13,DBLP:conf/mdm/ShangLPX13,DBLP:conf/ijcai/RaoWZLS022,DBLP:journals/geoinformatica/LiuWSLZ18}。在上述研究中，联合移动模式搜索与轨迹聚类问题与本文所研究的群体模式发现问题关系最为密切。
 
-\paragraph{共同行为模式搜索}
-现有研究已经提出并讨论了多种有意义的共同行为模式~\cite{DBLP:journals/pvldb/JeungYZJS08,DBLP:journals/pvldb/LiDHK10,DBLP:journals/dke/WangLH06,DBLP:journals/dke/LiBK15}，并在不同应用场景下得到了广泛应用。具体而言，flock~\cite{DBLP:conf/gis/VieiraBT09,DBLP:journals/jidm/TanakaVK16} 是最早提出的共同行为模式，用于刻画在 $k$ 个连续时间间隔内共同移动的 $m$ 个对象组成的群体。后续研究~\cite{DBLP:journals/pvldb/JeungYZJS08} 指出，flock 所采用的圆形约束难以准确刻画真实移动对象群体的形态，并提出了支持任意形状聚类的 convoy 模式。然而，flock 与 convoy 均对时间连续性提出了较为严格的约束。为支持对模式持续时间要求更加宽松的应用场景，研究者进一步提出了多种共同行为模式~\cite{DBLP:journals/dke/WangLH06,DBLP:journals/pvldb/LiDHK10,DBLP:journals/dke/LiBK15}。
+\paragraph{联合移动模式搜索}
+现有研究已经提出并讨论了多种有意义的联合移动模式~\cite{DBLP:journals/pvldb/JeungYZJS08,DBLP:journals/pvldb/LiDHK10,DBLP:journals/dke/WangLH06,DBLP:journals/dke/LiBK15}，并在不同应用场景下得到了广泛应用。具体而言，flock~\cite{DBLP:conf/gis/VieiraBT09,DBLP:journals/jidm/TanakaVK16} 是最早提出的联合移动模式，用于刻画在 $k$ 个连续时间间隔内共同移动的 $m$ 个对象组成的群体。后续研究~\cite{DBLP:journals/pvldb/JeungYZJS08} 指出，flock 所采用的圆形约束难以准确刻画真实移动对象群体的形态，并提出了支持任意形状聚类的 convoy 模式。然而，flock 与 convoy 均对时间连续性提出了较为严格的约束。为支持对模式持续时间要求更加宽松的应用场景，研究者进一步提出了多种联合移动模式~\cite{DBLP:journals/dke/WangLH06,DBLP:journals/pvldb/LiDHK10,DBLP:journals/dke/LiBK15}。
 
-在这些研究中，Zheng 等人~\cite{DBLP:conf/icde/ZhengZYS13} 提出了 gathering 模式，用于交通拥堵的早期发现，该模式允许成员在任意时间离开群体。Fan 等人~\cite{DBLP:journals/pvldb/FanZWT16} 提出了更加通用的共同行为定义，并设计了并行框架用于模式发现。类似地，Naserian 等人~\cite{DBLP:conf/hpcc/NaserianWXD16} 在轨迹数据流环境下提出了一种宽松的伴随群体发现方法。需要指出的是，Shein 等人~\cite{DBLP:journals/access/SheinPI20} 揭示了上述方法所需的高计算代价，并提出了一种增量式算法，但该方法在效率上仍然不足，难以支持实时发现需求。
+在这些研究中，Zheng 等人~\cite{DBLP:conf/icde/ZhengZYS13} 提出了 gathering 模式，用于交通拥堵的早期发现，该模式允许成员在任意时间离开群体。Fan 等人~\cite{DBLP:journals/pvldb/FanZWT16} 提出了更加通用的联合移动定义，并设计了并行框架用于模式发现。类似地，Naserian 等人~\cite{DBLP:conf/hpcc/NaserianWXD16} 在轨迹数据流环境下提出了一种宽松的伴随群体发现方法。需要指出的是，Shein 等人~\cite{DBLP:journals/access/SheinPI20} 揭示了上述方法所需的高计算代价，并提出了一种增量式算法，但该方法在效率上仍然不足，难以支持实时发现需求。
 
-值得注意的是，一些方法（如~\cite{DBLP:conf/icde/ZhengZYS13,DBLP:journals/tkde/ZhengZYSZ14,DBLP:conf/sigmod/FangGPCMJ20}）能够处理轨迹数据流，而另一些方法则仅适用于静态轨迹数据（如~\cite{DBLP:conf/gis/VieiraBT09,DBLP:journals/pvldb/JeungYZJS08,DBLP:journals/pvldb/LiDHK10}）。与本文最为相关的研究之一是 Chen 等人~\cite{DBLP:journals/pvldb/ChenGFMJG19}，其提出了一种实时共同行为模式挖掘方法，定义了一种更加通用的共同行为模式，并通过 $L$-连续性和 $G$-连通性来刻画轨迹之间的连续性与连通性。然而，由于问题定义的不同，该方法无法直接应用于本文的问题设置：本文不要求时间上的连续性与连通性，也不要求轨迹在每个时间点均属于同一聚类；此外，当一个对象能够形成多个群体时，本文始终选择成员规模最大的群体。
+值得注意的是，一些方法（如~\cite{DBLP:conf/icde/ZhengZYS13,DBLP:journals/tkde/ZhengZYSZ14,DBLP:conf/sigmod/FangGPCMJ20}）能够处理轨迹数据流，而另一些方法则仅适用于静态轨迹数据（如~\cite{DBLP:conf/gis/VieiraBT09,DBLP:journals/pvldb/JeungYZJS08,DBLP:journals/pvldb/LiDHK10}）。与本文最为相关的研究之一是 Chen 等人~\cite{DBLP:journals/pvldb/ChenGFMJG19}，其提出了一种实时联合移动模式挖掘方法，定义了一种更加通用的联合移动模式，并通过 $L$-连续性和 $G$-连通性来刻画轨迹之间的连续性与连通性。然而，由于问题定义的不同，该方法无法直接应用于本文的问题设置：本文不要求时间上的连续性与连通性，也不要求轨迹在每个时间点均属于同一聚类；此外，当一个对象能够形成多个群体时，本文始终选择成员规模最大的群体。
 
-为处理轨迹数据流，Fang 等人~\cite{DBLP:conf/sigmod/FangGPCMJ20} 提出了一个实时共同行为模式挖掘系统，用于在特定时空约束下实时发现共同行为对象；Chen 等人~\cite{DBLP:journals/pvldb/ChenGFMJG19} 进一步研究了分布式环境下的实时共同行为模式检测，并通过基于双层索引的范围连接操作来加速聚类过程、减少不必要的验证。
+为处理轨迹数据流，Fang 等人~\cite{DBLP:conf/sigmod/FangGPCMJ20} 提出了一个实时联合移动模式挖掘系统，用于在特定时空约束下实时发现联合移动对象；Chen 等人~\cite{DBLP:journals/pvldb/ChenGFMJG19} 进一步研究了分布式环境下的实时联合移动模式检测，并通过基于双层索引的范围连接操作来加速聚类过程、减少不必要的验证。
 
 尽管近年来已有大量研究尝试利用深度学习技术加速轨迹挖掘任务，包括轨迹聚类、异常轨迹检测~\cite{DBLP:conf/icde/Liu0CB20}、轨迹相似性计算~\cite{DBLP:conf/icde/LiZCJW18} 以及风险检测~\cite{DBLP:journals/access/ZhaoCCYXG19} 等，但据我们所知，尚无基于深度学习的方法能够直接用于解决本文所研究的问题。
 
@@ -63,7 +79,7 @@ CS-ACMC 算法主要包括两个阶段：近似共同行为对搜索与社区感
 然而，上述针对轨迹聚类提出的解决方案均无法直接应用于本文的问题，因为处于同一聚类中的移动对象并不一定在时空上真实地共同移动。
 
 \section{问题定义}
-\label{sec:problem}
+\label{cm_sec:problem}
 
 本节介绍本文所需的基础概念，并给出问题的形式化定义。
 给定一组移动对象，我们依次定义轨迹、协同行为对、伴随群体以及伴随群体发现问题。
@@ -89,77 +105,29 @@ CS-ACMC 算法主要包括两个阶段：近似共同行为对搜索与社区感
 \paragraph{伴随群体发现（CGD）问题}
 给定一组移动对象 $\mathcal{O}$，伴随群体发现（Companion Group Discovery，CGD）问题旨在从 $\mathcal{O}$ 中发现一组伴随群体 $\mathcal{G}$，并满足对任意两个群体 $g_i, g_j\in\mathcal{G}$，均有 $g_i\cap g_j=\emptyset$。
 
-\section{精确共同行为计算的精确搜索算法（ES-ECMC）}
-\label{sec:exact}
+\section{精确联合移动计算的精确搜索算法（ES-ECMC）}
+\label{cm_sec:exact}
 
-本节提出一种用于发现伴随群体的精确解法：\underline{精确搜索并进行精确共同行为计算的算法}
+本节提出一种用于发现伴随群体的精确解法：\underline{精确搜索并进行精确联合移动计算的算法}
 （\underline{E}xact \underline{S}earch with \underline{E}xact \underline{C}o-\underline{M}ovement \underline{C}omputation，简称 ES-ECMC）。
 
-ES-ECMC 算法主要包含三个步骤。首先，从输入数据（即一组对象轨迹）中枚举并发现所有共同行为对；其次，基于这些共同行为对，以增量方式生成伴随群体候选；最后，从候选集合中选取成员规模最大的伴随群体作为最终结果。在介绍 ES-ECMC 算法之前，我们首先给出伴随群体候选的定义。
+ES-ECMC 算法主要包含三个步骤。首先，从输入数据（即一组对象轨迹）中枚举并发现所有联合移动对；其次，基于这些联合移动对，以增量方式生成伴随群体候选；最后，从候选集合中选取成员规模最大的伴随群体作为最终结果。在介绍 ES-ECMC 算法之前，我们首先给出伴随群体候选的定义。
 
 \paragraph{伴随群体候选}
-一个伴随群体候选 $g'$ 是一个对象集合，满足其中任意两个对象都可以形成一个共同行为对。若存在至少一个对象 $o \notin g'$，使得 $g''=\{g',o\}$ 仍然是一个伴随群体候选，则称 $g'$ 可以通过加入对象 $o$ 进行扩展；否则，称 $g'$ 不可扩展。
+一个伴随群体候选 $g'$ 是一个对象集合，满足其中任意两个对象都可以形成一个联合移动对。若存在至少一个对象 $o \notin g'$，使得 $g''=\{g',o\}$ 仍然是一个伴随群体候选，则称 $g'$ 可以通过加入对象 $o$ 进行扩展；否则，称 $g'$ 不可扩展。
 
-下面将详细介绍 ES-ECMC 算法。算法~\ref{exact algorithm} 给出了 ES-ECMC 的伪代码。算法输入包括一组轨迹 $\mathcal{T}$、空间距离阈值 $\epsilon_s$、时间距离阈值 $\epsilon_t$、群体规模阈值 $m$ 以及共同行为持续时间阈值 $k$；输出为一组伴随群体
-$G=\{g_1,g_2,\ldots,g_{|G|}\}$（其中 $g_i\subseteq \mathcal{T}$）。我们使用 $P$ 和 $G_c$ 分别存储所有共同行为对和伴随群体候选。
+下面将详细介绍 ES-ECMC 算法。算法~\ref{cm_alg:S-ECMC} 给出了 ES-ECMC 的伪代码。算法输入包括一组轨迹 $\mathcal{T}$、空间距离阈值 $\epsilon_s$、时间距离阈值 $\epsilon_t$、群体规模阈值 $m$ 以及联合移动持续时间阈值 $k$；输出为一组伴随群体
+$G=\{g_1,g_2,\ldots,g_{|G|}\}$（其中 $g_i\subseteq \mathcal{T}$）。我们使用 $P$ 和 $G_c$ 分别存储所有联合移动对和伴随群体候选。
 
-\underline{步骤 1：}（枚举共同行为对）
-对于任意一对移动对象 $o_i, o_j \in \mathcal{O}$，我们计算其轨迹中任意两个采样位置
-$s \in \tau_i$ 与 $s' \in \tau_j$ 之间的精确距离。若空间距离与时间距离分别不超过阈值 $\epsilon_s$ 与 $\epsilon_t$，则将其共同行为持续时间 $|\tau_i \And \tau_j|$ 加 1。具体而言，对于每一对对象 $\langle o_i,o_j\rangle$，当其累计的共同行为持续时间不少于 $k$ 时，我们将其视为一个共同行为对\footnote{在上下文清晰的情况下，我们使用 $(o_i,o_j)$ 或 $(\tau_i,\tau_j)$ 表示一个共同行为对。}。当所有对象对均被评估后，该步骤结束（第 2--8 行）。
-
-\smallskip
-\underline{步骤 2：}（生成伴随群体候选）
-在获得所有共同行为对之后，我们基于这些共同行为对以增量方式生成伴随群体候选。具体而言，首先选择一个以轨迹 $\tau_i$ 为起点的共同行为对，例如 $\langle \tau_i,\tau_j\rangle$，然后考察所有与其共享对象 $o_i$ 的共同行为对 $\langle \tau_i,\tau_k\rangle$。初始群体记为 $g_i=(\tau_i,\tau_j)$。若 $\tau_k$ 与 $g_i$ 中的所有成员均构成共同行为对，则将 $\tau_k$ 加入 $g_i$。当 $g_i$ 仍可扩展时，重复上述扩展过程。若 $g_i$ 的成员规模不少于 $m$，则将其加入候选集合 $G_c$。随后选择新的共同行为对作为初始群体并继续扩展。当所有共同行为对均被访问作为初始群体后，该步骤结束（第 9--19 行）。
-
-\smallskip
-\underline{步骤 3：}（选择伴随群体）
-在获得所有候选之后，从中选取成员规模最大的伴随群体作为最终结果。具体而言，若某个对象属于多个候选群体，则选择其中成员规模最大的一个。该步骤在遍历完所有候选后结束（第 20 行）。
-
-我们再次考虑图~\ref{fig:intro} 中的示例。假设首先选择共同行为对 $\langle o_2,o_3\rangle$ 进行扩展。显然，对 $\langle o_2,o_4\rangle$ 与 $\langle o_2,o_3\rangle$ 共享对象 $o_2$，且对象 $o_2,o_3,o_4$ 两两之间均可形成共同行为对。因此，我们将 $g'=\{o_2,o_3,o_4\}$ 视为一个伴随群体候选。由于对象 $o_1$ 无法与 $g'$ 中的任一对象形成共同行为对，$g'$ 不可进一步扩展。接着，由于 $|g'|$ 不小于预设的群体规模阈值 3，我们将 $g'$ 加入候选集合 $G_c$。最终，由于 $g'$ 具有最大的成员规模，我们从 $G_c$ 中选取 $g'$ 并将其加入结果集合 $G$。
-
-
-
-\begin{theorem}
-ES-ECMC 算法的时间复杂度为 $O(|\mathcal{T}|^2 \times |\tau|^2)$，其中 $|\mathcal{T}|$ 表示移动对象（轨迹）的数量，$|\tau|$ 表示单条轨迹的长度（即采样位置数）。
-\end{theorem}
-
-\begin{proof}
-ES-ECMC 在枚举所有共同行为对时，需要对每一对轨迹计算其位置之间的距离，其时间复杂度为
-$O(|\mathcal{T}|^2 \times |\tau|^2)$。对于共享同一对象的共同行为对（例如 $\langle o_i,o_j\rangle$ 与 $\langle o_i,o_k\rangle$），需要进一步判断其是否能够构成伴随群体候选，并在满足条件时持续扩展该候选。生成所有伴随群体候选在最少情况下需要 $O(|\mathcal{T}|)$ 时间（例如不存在任何共享对象的共同行为对）；在最坏情况下，所有对象均可形成共享同一对象的共同行为对，此时生成候选的时间复杂度为 $O(|\mathcal{T}|^2)$。最后，从候选集合中生成最终的伴随群体需要 $O(|G_c|)$ 时间，其中 $|G_c|<|\mathcal{T}|$。综上所述，ES-ECMC 算法的总体时间复杂度为
-$O(|\mathcal{T}|^2 \times |\tau|^2)$。
-\end{proof}
-
-
-\section{基于近似协同行为计算的社区感知搜索（CS-ACMC）}
-\label{sec:approximate}
-
-尽管 ES-ECMC 算法直观且结果精确，但其高昂的计算开销使其难以应用于实际场景中，尤其是在移动对象数量极大的情况下。其主要计算瓶颈来源于通过精确计算协同行为持续时间来枚举所有协同行为对。为了解决效率问题，我们提出了一种\underline{基于社区感知的搜索算法}，结合\underline{近似协同行为计算}，即 \underline{C}ommunity-aware \underline{S}earch with \underline{A}pproximate \underline{C}o-\underline{M}ovement \underline{C}omputation（CS-ACMC）。
-
-CS-ACMC 算法由两个阶段组成：近似协同行为对搜索，以及基于社区感知的聚类以获取伴随群体。下面我们将依次介绍轨迹标记序列、近似协同行为对搜索方法以及社区感知聚类算法。
-
-\subsection{近似协同行为对搜索}
-
-在该阶段中，我们提出了一种高效的方法，用于计算两个对象轨迹之间协同行为持续时间的近似值。生成的近似协同行为对将作为后续社区感知聚类的输入，以高效地发现伴随群体。
-
-\smallskip
-\underline{步骤 1：}（生成轨迹标记序列）
-
-该方法受到群体（flock）圆形结构的启发 \cite{DBLP:journals/pvldb/JeungYZJS08}。我们将底层空间划分为大小相等的网格单元。具体而言，将二维欧氏空间划分为空间等距的网格单元，同时将时间维度划分为等长的时间片。
-
-因此，对象轨迹中的每一个数据点（位置）$s=([x,y],t)$ 都可以表示为一个标记（token），记为 $o(s)=f(x,y,t)$，其中 $f(\cdot)$ 为一个单射函数。由此可以得到轨迹的标记序列：
-\[
-O(\tau)=\{o(s_1),\ldots,o(s_{|\tau|})\}.
-\]
-
-\begin{algorithm}[htb]
+\begin{algorithm}[htbp]
     \caption{ES-ECMC Algorithm}
-    
+    \label{cm_alg:S-ECMC}
     \Input{
     Trajectory set $\mathcal{T}=\{\tau_1,\tau_2,\ldots,\tau_{|\mathcal{O}|}\}$;\newline
     空间距离阈值 $\epsilon_s$;\newline
     时间距离阈值 $\epsilon_t$;\newline
     群体规模阈值 $m$;\newline
-    共同行为持续时间阈值 $k$.
+    联合移动持续时间阈值 $k$.
     }
     
     \Output{A set of approximate companion groups $G$.}
@@ -199,6 +167,56 @@ O(\tau)=\{o(s_1),\ldots,o(s_{|\tau|})\}.
     
     \Return $G$;
     \end{algorithm}
+
+
+\underline{步骤 1：}（枚举联合移动对）
+对于任意一对移动对象 $o_i, o_j \in \mathcal{O}$，我们计算其轨迹中任意两个采样位置
+$s \in \tau_i$ 与 $s' \in \tau_j$ 之间的精确距离。若空间距离与时间距离分别不超过阈值 $\epsilon_s$ 与 $\epsilon_t$，则将其联合移动持续时间 $|\tau_i \And \tau_j|$ 加 1。具体而言，对于每一对对象 $\langle o_i,o_j\rangle$，当其累计的联合移动持续时间不少于 $k$ 时，我们将其视为一个联合移动对\footnote{在上下文清晰的情况下，我们使用 $(o_i,o_j)$ 或 $(\tau_i,\tau_j)$ 表示一个联合移动对。}。当所有对象对均被评估后，该步骤结束（第 2--8 行）。
+
+\smallskip
+\underline{步骤 2：}（生成伴随群体候选）
+在获得所有联合移动对之后，我们基于这些联合移动对以增量方式生成伴随群体候选。具体而言，首先选择一个以轨迹 $\tau_i$ 为起点的联合移动对，例如 $\langle \tau_i,\tau_j\rangle$，然后考察所有与其共享对象 $o_i$ 的联合移动对 $\langle \tau_i,\tau_k\rangle$。初始群体记为 $g_i=(\tau_i,\tau_j)$。若 $\tau_k$ 与 $g_i$ 中的所有成员均构成联合移动对，则将 $\tau_k$ 加入 $g_i$。当 $g_i$ 仍可扩展时，重复上述扩展过程。若 $g_i$ 的成员规模不少于 $m$，则将其加入候选集合 $G_c$。随后选择新的联合移动对作为初始群体并继续扩展。当所有联合移动对均被访问作为初始群体后，该步骤结束（第 9--19 行）。
+
+\smallskip
+\underline{步骤 3：}（选择伴随群体）
+在获得所有候选之后，从中选取成员规模最大的伴随群体作为最终结果。具体而言，若某个对象属于多个候选群体，则选择其中成员规模最大的一个。该步骤在遍历完所有候选后结束（第 20 行）。
+
+我们再次考虑图~\ref{fig:intro} 中的示例。假设首先选择联合移动对 $\langle o_2,o_3\rangle$ 进行扩展。显然，对 $\langle o_2,o_4\rangle$ 与 $\langle o_2,o_3\rangle$ 共享对象 $o_2$，且对象 $o_2,o_3,o_4$ 两两之间均可形成联合移动对。因此，我们将 $g'=\{o_2,o_3,o_4\}$ 视为一个伴随群体候选。由于对象 $o_1$ 无法与 $g'$ 中的任一对象形成联合移动对，$g'$ 不可进一步扩展。接着，由于 $|g'|$ 不小于预设的群体规模阈值 3，我们将 $g'$ 加入候选集合 $G_c$。最终，由于 $g'$ 具有最大的成员规模，我们从 $G_c$ 中选取 $g'$ 并将其加入结果集合 $G$。
+
+
+
+\begin{theorem}
+ES-ECMC 算法的时间复杂度为 $O(|\mathcal{T}|^2 \times |\tau|^2)$，其中 $|\mathcal{T}|$ 表示移动对象（轨迹）的数量，$|\tau|$ 表示单条轨迹的长度（即采样位置数）。
+\end{theorem}
+
+\begin{proof}
+ES-ECMC 在枚举所有联合移动对时，需要对每一对轨迹计算其位置之间的距离，其时间复杂度为
+$O(|\mathcal{T}|^2 \times |\tau|^2)$。对于共享同一对象的联合移动对（例如 $\langle o_i,o_j\rangle$ 与 $\langle o_i,o_k\rangle$），需要进一步判断其是否能够构成伴随群体候选，并在满足条件时持续扩展该候选。生成所有伴随群体候选在最少情况下需要 $O(|\mathcal{T}|)$ 时间（例如不存在任何共享对象的联合移动对）；在最坏情况下，所有对象均可形成共享同一对象的联合移动对，此时生成候选的时间复杂度为 $O(|\mathcal{T}|^2)$。最后，从候选集合中生成最终的伴随群体需要 $O(|G_c|)$ 时间，其中 $|G_c|<|\mathcal{T}|$。综上所述，ES-ECMC 算法的总体时间复杂度为
+$O(|\mathcal{T}|^2 \times |\tau|^2)$。
+\end{proof}
+
+
+\section{基于近似协同行为计算的社区感知搜索（CS-ACMC）}
+\label{cm_sec:approximate}
+
+尽管 ES-ECMC 算法直观且结果精确，但其高昂的计算开销使其难以应用于实际场景中，尤其是在移动对象数量极大的情况下。其主要计算瓶颈来源于通过精确计算协同行为持续时间来枚举所有协同行为对。为了解决效率问题，我们提出了一种\underline{基于社区感知的搜索算法}，结合\underline{近似协同行为计算}，即 \underline{C}ommunity-aware \underline{S}earch with \underline{A}pproximate \underline{C}o-\underline{M}ovement \underline{C}omputation（CS-ACMC）。
+
+CS-ACMC 算法由两个阶段组成：近似协同行为对搜索，以及基于社区感知的聚类以获取伴随群体。下面我们将依次介绍轨迹标记序列、近似协同行为对搜索方法以及社区感知聚类算法。
+
+\subsection{近似协同行为对搜索}
+
+在该阶段中，我们提出了一种高效的方法，用于计算两个对象轨迹之间协同行为持续时间的近似值。生成的近似协同行为对将作为后续社区感知聚类的输入，以高效地发现伴随群体。
+
+\smallskip
+\underline{步骤 1：}（生成轨迹标记序列）
+
+该方法受到群体（flock）圆形结构的启发 \cite{DBLP:journals/pvldb/JeungYZJS08}。我们将底层空间划分为大小相等的网格单元。具体而言，将二维欧氏空间划分为空间等距的网格单元，同时将时间维度划分为等长的时间片。
+
+因此，对象轨迹中的每一个数据点（位置）$s=([x,y],t)$ 都可以表示为一个标记（token），记为 $o(s)=f(x,y,t)$，其中 $f(\cdot)$ 为一个单射函数。由此可以得到轨迹的标记序列：
+\[
+O(\tau)=\{o(s_1),\ldots,o(s_{|\tau|})\}.
+\]
+
 
 图 \ref{fig1: cell_partition} 展示了空间与时间维度的划分方式以及轨迹标记序列的生成过程。假设空间被划分为 $5\times 4$ 个网格单元，每个单元边长为 10 米，时间维度被划分为 3 个时间片，每个时间片长度为 10 秒。给定两条轨迹 $\tau_1$ 和 $\tau_2$，其位置均落入单元
 $\{([0,0],0), ([3,1],1), ([2,1],2)\}$。
@@ -262,6 +280,7 @@ O(|\mathcal{T}|^2\times|\tau|+|P|)=O(|\mathcal{T}|^2\times|\tau|).
 \end{proof}
 
 \section{实验评估}
+\label{cm_sec:exp}
 在本节中，首先介绍实验设定，包括实验所使用的数据集，运行环境等，然后给出实验结果与分析。实验结果主要关注所提出的搜索算法的运行时间，即高效性方面的表现。实验的目的在于，通过设置不同的参数(路线长度，位置点密度，空间-文本相似度阈值等)，对比不同的算法的运行时间并进行分析。
 
 \subsection{实验设置}
@@ -401,7 +420,6 @@ O(|\mathcal{T}|^2\times|\tau|+|P|)=O(|\mathcal{T}|^2\times|\tau|).
         \label{Porto-time-k}
     }
     \caption{协同行为持续时间阈值的影响}
-    \label{k}
 \label{k}
 \end{figure}
 
@@ -488,4 +506,5 @@ O(|\mathcal{T}|^2\times|\tau|+|P|)=O(|\mathcal{T}|^2\times|\tau|).
 实验结果进一步验证了本文方法在效率和效果上的优越性。
 
 \section{本章小结}
+\label{cm_sec:conclusion}
 最后，我们提出了一种放宽的协同行为模式（co-movement pattern）定义，并研究了伴随群组发现（companion group discovery）问题，分别设计了精确算法和近似算法。在交通管理领域，本研究有助于理解特定的移动行为，并通过提前检测潜在的协同行为，从而帮助避免交通拥堵。最后，我们在两个真实世界数据集上进行了大量实验，验证了所提出方法的有效性和优越性。

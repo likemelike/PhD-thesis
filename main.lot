@@ -1,8 +1,5 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\cftsetpnumwidth {\widthof {8}-1bp}
-\contentsline {table}{\numberline {2-1}{\ignorespaces 主要符号解释}}{8}{table.caption.6}%
-\cftsetpnumwidth {\widthof {17}-1bp}
-\contentsline {table}{\numberline {2-2}{\ignorespaces 参数设定}}{17}{table.caption.10}%
-\addvspace {10\p@ }
+\cftsetpnumwidth {\widthof {13}-1bp}
+\contentsline {table}{\numberline {2-1}{\ignorespaces Parameter Settings}}{13}{table.caption.8}%
 \contentsfinish 

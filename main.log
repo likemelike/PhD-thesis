@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  9 FEB 2026 22:47
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  11 FEB 2026 16:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1473,42 +1473,42 @@ File: p2e-xetex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 )
 \symCJKmath=\mathgroup255
 LaTeX Font Info:    Overwriting symbol font `CJKmath' in version `bold'
-(Font)                  TU/SimSun(0)/m/n --> TU/SimSun(0)/b/n on input line 10.
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 10.
+(Font)                  TU/SimSun(0)/m/n --> TU/SimSun(0)/b/n on input line 11.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 11.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 10.
-LaTeX Font Info:    Trying to load font information for T3+cmr on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 11.
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 11.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    ... okay on input line 11.
 
 
-Package layouts Warning: Layout scale set to 0.5 on input line 10.
+Package layouts Warning: Layout scale set to 0.5 on input line 11.
 
-Package hyperref Info: Link coloring ON on input line 10.
+Package hyperref Info: Link coloring ON on input line 11.
 (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -1531,12 +1531,12 @@ Package caption Info: End \AtBeginDocument code.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 10.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 11.
 \c@lstlisting=\count536
 Package tocbasic Info: omitting babel extension for `lol'
-(tocbasic)             because of missing \bbl@set@language on input line 10.
+(tocbasic)             because of missing \bbl@set@language on input line 11.
 
-Package chemgreek Info: Activating mapping `fontspec' on line 10.
+Package chemgreek Info: Activating mapping `fontspec' on line 11.
 
  (/usr/local/texlive/2025/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
@@ -1569,11 +1569,11 @@ Package fontspec Info:
 
 
 ] (./main.lof
-LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
@@ -1598,244 +1598,132 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 Chapter 第一章.
-(./latex/3_routesearch.tex
+(./latex/4_comovement.tex
 
 [1
 
 ]
 Chapter 第二章.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [2
 
 ]
-
-[3]
-File: fig/section3/ex1.png Graphic file (type bmp)
-<fig/section3/ex1.png>
+File: fig/section4/group companion.pdf Graphic file (type pdf)
+<use fig/section4/group companion.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
+
+[3]
 
 [4]
 
 [5]
 
 [6]
+Overfull \hbox (47.71571pt too wide) in paragraph at lines 111--113
+[]\TU/SimSun(0)/m/n/12.045 本 节 提 出 一 种 用 于 发 现 伴 随 群 体 的 精 确 解 法：| $[]$
+ []
+
+
 
 [7]
-Underfull \vbox (badness 4168) has occurred while \output is active []
-
-
 
 [8]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [10]
+File: fig/section4/picture.pdf Graphic file (type pdf)
+<use fig/section4/picture.pdf>
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [11]
+Underfull \vbox (badness 6641) has occurred while \output is active []
+
+
 
 [12]
 
 [13]
+File: fig/section4/BJ-hitratio-num.pdf Graphic file (type pdf)
+<use fig/section4/BJ-hitratio-num.pdf>
+File: fig/section4/BJ-time-num.pdf Graphic file (type pdf)
+<use fig/section4/BJ-time-num.pdf>
+File: fig/section4/PT-hitratio-num.pdf Graphic file (type pdf)
+<use fig/section4/PT-hitratio-num.pdf>
+File: fig/section4/PT-time-num.pdf Graphic file (type pdf)
+<use fig/section4/PT-time-num.pdf>
+File: fig/section4/BJ-hitratio-k.pdf Graphic file (type pdf)
+<use fig/section4/BJ-hitratio-k.pdf>
+File: fig/section4/BJ-time-k.pdf Graphic file (type pdf)
+<use fig/section4/BJ-time-k.pdf>
+File: fig/section4/PT-hitratio-k.pdf Graphic file (type pdf)
+<use fig/section4/PT-hitratio-k.pdf>
+File: fig/section4/PT-time-k.pdf Graphic file (type pdf)
+<use fig/section4/PT-time-k.pdf>
+
 
 [14]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [15]
-Overfull \hbox (2.47198pt too wide) in paragraph at lines 362--362
-[]|[]| 
- []
+File: fig/section4/BJ-hitratio-m.pdf Graphic file (type pdf)
+<use fig/section4/BJ-hitratio-m.pdf>
+File: fig/section4/BJ-time-m.pdf Graphic file (type pdf)
+<use fig/section4/BJ-time-m.pdf>
+File: fig/section4/PT-hitratio-m.pdf Graphic file (type pdf)
+<use fig/section4/PT-hitratio-m.pdf>
+File: fig/section4/PT-time-m.pdf Graphic file (type pdf)
+<use fig/section4/PT-time-m.pdf>
+File: fig/section4/BJ-hitratio-ep.pdf Graphic file (type pdf)
+<use fig/section4/BJ-hitratio-ep.pdf>
+File: fig/section4/BJ-time-ep.pdf Graphic file (type pdf)
+<use fig/section4/BJ-time-ep.pdf>
+File: fig/section4/PT-hitratio-ep.pdf Graphic file (type pdf)
+<use fig/section4/PT-hitratio-ep.pdf>
+File: fig/section4/PT-time-ep.pdf Graphic file (type pdf)
+<use fig/section4/PT-time-ep.pdf>
 
 
-Overfull \hbox (2.47198pt too wide) in paragraph at lines 362--363
-[]|[]| 
- []
-
-
-
-[16]
-File: fig/section3/fig1_NYC_time.png Graphic file (type bmp)
-<fig/section3/fig1_NYC_time.png>
-File: fig/section3/fig1_NYC_cost.png Graphic file (type bmp)
-<fig/section3/fig1_NYC_cost.png>
-File: fig/section3/fig1_TGC_time.png Graphic file (type bmp)
-<fig/section3/fig1_TGC_time.png>
-File: fig/section3/fig1_TGC_cost.png Graphic file (type bmp)
-<fig/section3/fig1_TGC_cost.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+[16])
 
 [17]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[18
+
+] (./main.bbl
+
+[19
 
 
-
-[18]
-
-[19]
-File: fig/section3/fig2_time.png Graphic file (type bmp)
-<fig/section3/fig2_time.png>
-File: fig/section3/fig2_cost.png Graphic file (type bmp)
-<fig/section3/fig2_cost.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+]
 
 [20]
-File: fig/section3/fig3_alpha_time.png Graphic file (type bmp)
-<fig/section3/fig3_alpha_time.png>
-File: fig/section3/fig3_alpha_cost.png Graphic file (type bmp)
-<fig/section3/fig3_alpha_cost.png>
-File: fig/section3/fig3_beta_time.png Graphic file (type bmp)
-<fig/section3/fig3_beta_time.png>
-File: fig/section3/fig3_beta_cost.png Graphic file (type bmp)
-<fig/section3/fig3_beta_cost.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [21]
-File: fig/section3/fig4_time.png Graphic file (type bmp)
-<fig/section3/fig4_time.png>
-File: fig/section3/fig4_cost.png Graphic file (type bmp)
-<fig/section3/fig4_cost.png>
 
+[22])
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 504.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\epsilon' on input line 504.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 504.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[22]
-File: fig/section3/fig5_time.png Graphic file (type bmp)
-<fig/section3/fig5_time.png>
-File: fig/section3/fig5_cost.png Graphic file (type bmp)
-<fig/section3/fig5_cost.png>
-File: fig/section3/fig6_NY.png Graphic file (type bmp)
-<fig/section3/fig6_NY.png>
-
-Overfull \hbox (13.80188pt too wide) in paragraph at lines 517--526
- [][][][][][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[23])
-
-[24]
-
-[25]
-Chapter 第三章.
-
-
-[26
-
-]
-Underfull \vbox (badness 5403) has occurred while \output is active []
-
-
-
-[27
-
-]
-
-[28] (./main.bbl
-
-[29
-
-
-]
-
-[30]
-
-[31]
-
-[32]
-
-[33]
-
-[34]
-
-[35]
-
-[36]
-
-[37]
-
-[38]
-
-[39]
-
-[40]
-
-[41]
-
-[42]
-
-[43]
-
-[44]
-
-[45]
-
-[46]
-
-[47])
-
-[48] (./main.aux)
+[23] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 03AB5A4FAD1AD2E5F7C93D6EE6FF4110;6322.
+(rerunfilecheck)             Checksum: 91DFE8C369D1D8348088DFF40925AB72;2918.
  ) 
 Here is how much of TeX's memory you used:
- 51285 strings out of 473832
- 1077142 string characters out of 5729481
- 1553831 words of memory out of 5000000
- 73500 multiletter control sequences out of 15000+600000
- 569671 words of font info for 141 fonts, out of 8000000 for 9000
+ 50696 strings out of 473832
+ 1059129 string characters out of 5729481
+ 1543593 words of memory out of 5000000
+ 72907 multiletter control sequences out of 15000+600000
+ 571216 words of font info for 147 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 125i,23n,134p,1172b,2304s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,18n,134p,1207b,1351s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (52 pages).
+Output written on main.pdf (27 pages).
