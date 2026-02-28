@@ -15,7 +15,7 @@
 \contentsline {paragraph}{\numberline {2.3.0.0.4}伴随群体发现（CGD）问题}{7}{paragraph.2.3.0.0.4}%
 \contentsline {section}{\numberline {2.4}精确联合移动计算的精确搜索算法（ES-ECMC）}{7}{section.2.4}%
 \contentsline {paragraph}{\numberline {2.4.0.0.1}伴随群体候选}{8}{paragraph.2.4.0.0.1}%
-\contentsline {section}{\numberline {2.5}基于近似协同行为计算的社区感知搜索（CS-ACMC）}{9}{section.2.5}%
+\contentsline {section}{\numberline {2.5}基于近似协同行为计算的社区感知搜索（CS-ACMC）}{10}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}近似协同行为对搜索}{10}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}社区感知聚类}{12}{subsection.2.5.2}%
 \contentsline {section}{\numberline {2.6}实验评估}{12}{section.2.6}%

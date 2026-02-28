@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  11 FEB 2026 16:53
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  28 FEB 2026 18:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1632,15 +1632,15 @@ Overfull \hbox (47.71571pt too wide) in paragraph at lines 111--113
 [7]
 
 [8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [9]
 
 [10]
 File: fig/section4/picture.pdf Graphic file (type pdf)
 <use fig/section4/picture.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 
 [11]
@@ -1714,6 +1714,10 @@ File: fig/section4/PT-time-ep.pdf Graphic file (type pdf)
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 91DFE8C369D1D8348088DFF40925AB72;2918.
  ) 
