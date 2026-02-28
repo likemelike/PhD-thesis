@@ -1,30 +1,31 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2-1}{\ignorespaces 伴随群体示例}}{3}{figure.caption.5}%
-\cftsetpnumwidth {\widthof {11}-1bp}
-\contentsline {figure}{\numberline {2-2}{\ignorespaces 轨迹标记及标记序列示例}}{11}{figure.caption.7}%
-\cftsetpnumwidth {\widthof {15}-1bp}
-\contentsline {figure}{\numberline {2-3}{\ignorespaces 轨迹数量的影响}}{15}{figure.caption.9}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Beijing}}}{15}{subfigure.3.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Beijing}}}{15}{subfigure.3.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Porto}}}{15}{subfigure.3.3}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Porto}}}{15}{subfigure.3.4}%
-\cftsetpnumwidth {\widthof {15}-1bp}
-\contentsline {figure}{\numberline {2-4}{\ignorespaces 协同行为持续时间阈值的影响}}{15}{figure.caption.10}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Beijing}}}{15}{subfigure.4.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Beijing}}}{15}{subfigure.4.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Porto}}}{15}{subfigure.4.3}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Porto}}}{15}{subfigure.4.4}%
+\cftsetpnumwidth {\widthof {4}-1bp}
+\contentsline {figure}{\numberline {2-1}{\ignorespaces 伴随群体发现问题示例}}{4}{figure.caption.5}%
 \cftsetpnumwidth {\widthof {16}-1bp}
-\contentsline {figure}{\numberline {2-5}{\ignorespaces Effect of parameter $m$}}{16}{figure.caption.11}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Beijing}}}{16}{subfigure.5.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Beijing}}}{16}{subfigure.5.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Porto}}}{16}{subfigure.5.3}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Porto}}}{16}{subfigure.5.4}%
-\cftsetpnumwidth {\widthof {17}-1bp}
-\contentsline {figure}{\numberline {2-6}{\ignorespaces 结构相似度的影响}}{17}{figure.caption.12}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Beijing}}}{17}{subfigure.6.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Beijing}}}{17}{subfigure.6.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Porto}}}{17}{subfigure.6.3}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Porto}}}{17}{subfigure.6.4}%
+\contentsline {figure}{\numberline {2-2}{\ignorespaces 轨迹标记及标记序列示例}}{16}{figure.caption.8}%
+\cftsetpnumwidth {\widthof {20}-1bp}
+\contentsline {figure}{\numberline {2-3}{\ignorespaces 轨迹数量的影响}}{20}{figure.caption.10}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {北京数据集}}}{20}{subfigure.3.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {北京数据集}}}{20}{subfigure.3.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {波尔图数据集}}}{20}{subfigure.3.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {波尔图数据集}}}{20}{subfigure.3.4}%
+\cftsetpnumwidth {\widthof {20}-1bp}
+\contentsline {figure}{\numberline {2-4}{\ignorespaces 协同行为持续时间阈值的影响}}{20}{figure.caption.11}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {北京数据集}}}{20}{subfigure.4.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {北京数据集}}}{20}{subfigure.4.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {波尔图数据集}}}{20}{subfigure.4.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {波尔图数据集}}}{20}{subfigure.4.4}%
+\cftsetpnumwidth {\widthof {22}-1bp}
+\contentsline {figure}{\numberline {2-5}{\ignorespaces Effect of parameter $m$}}{22}{figure.caption.12}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {北京数据集}}}{22}{subfigure.5.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {北京数据集}}}{22}{subfigure.5.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {波尔图数据集}}}{22}{subfigure.5.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {波尔图数据集}}}{22}{subfigure.5.4}%
+\cftsetpnumwidth {\widthof {23}-1bp}
+\contentsline {figure}{\numberline {2-6}{\ignorespaces SCAN聚类结构相似度参数的影响}}{23}{figure.caption.13}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {北京数据集}}}{23}{subfigure.6.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {北京数据集}}}{23}{subfigure.6.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {波尔图数据集}}}{23}{subfigure.6.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {波尔图数据集}}}{23}{subfigure.6.4}%
 \contentsfinish 

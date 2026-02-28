@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  28 FEB 2026 18:58
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  28 FEB 2026 22:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1569,11 +1569,11 @@ Package fontspec Info:
 
 
 ] (./main.lof
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
@@ -1609,6 +1609,8 @@ Chapter 第二章.
 [2
 
 ]
+
+[3]
 File: fig/section4/group companion.pdf Graphic file (type pdf)
 <use fig/section4/group companion.pdf>
 
@@ -1616,41 +1618,99 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[3]
-
 [4]
 
 [5]
+Underfull \hbox (badness 1810) in paragraph at lines 52--53
+\TU/SimSun(0)/m/n/12.045 一 种 社 区 感 知 的 近 似 搜 索 算 法  |— —| $[]$\TU/times(0)/m/n/12.045 ommunity-aware $[]$earch with $[]$pproximate
+ []
+
+
 
 [6]
-Overfull \hbox (47.71571pt too wide) in paragraph at lines 111--113
-[]\TU/SimSun(0)/m/n/12.045 本 节 提 出 一 种 用 于 发 现 伴 随 群 体 的 精 确 解 法：| $[]$
- []
+Underfull \vbox (badness 3657) has occurred while \output is active []
 
 
 
 [7]
 
 [8]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4595) has occurred while \output is active []
 
 
 
 [9]
 
+Package fontspec Info: 
+(fontspec)             Script 'CJK' not explicitly supported within font
+(fontspec)             'STFangsong'. Check the typeset output, and if it is
+(fontspec)             okay then ignore this warning. Otherwise a different
+(fontspec)             font should be chosen.
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "STFangsong/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "STFangsong/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "STFangsong/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'STFangsong(0)' created for font
+(fontspec)             'STFangsong' with options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"STFangsong/OT:script=hani;language=dflt;"
+
+
+
 [10]
+
+[11]
+
+[12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[13]
+
+[14]
 File: fig/section4/picture.pdf Graphic file (type pdf)
 <use fig/section4/picture.pdf>
 
 
-[11]
-Underfull \vbox (badness 6641) has occurred while \output is active []
+[15]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[12]
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
+[]\TU/SimSun(0)/m/n/12.045 第 一 个 数 据 集 来 自 \TU/times(0)/m/n/12.045 [T-Drive Trajectory Data Sample](chatgpt://generic-
+ []
 
-[13]
+
+Underfull \hbox (badness 1412) in paragraph at lines 358--359
+\TU/times(0)/m/n/12.045 entity?number=0) [[], []][][][][][][]\TU/SimSun(0)/m/n/12.045 ，|  该 数 据 集 记 录 了 \TU/times(0)/m/n/12.045 10,357 \TU/SimSun(0)/m/n/12.045 辆 出 租 车 在 中 国 北 京 一
+ []
+
+
+
+[17]
+
+[18]
 File: fig/section4/BJ-hitratio-num.pdf Graphic file (type pdf)
 <use fig/section4/BJ-hitratio-num.pdf>
 File: fig/section4/BJ-time-num.pdf Graphic file (type pdf)
@@ -1669,9 +1729,11 @@ File: fig/section4/PT-time-k.pdf Graphic file (type pdf)
 <use fig/section4/PT-time-k.pdf>
 
 
-[14]
+[19]
 
-[15]
+[20]
+
+[21]
 File: fig/section4/BJ-hitratio-m.pdf Graphic file (type pdf)
 <use fig/section4/BJ-hitratio-m.pdf>
 File: fig/section4/BJ-time-m.pdf Graphic file (type pdf)
@@ -1689,45 +1751,49 @@ File: fig/section4/PT-hitratio-ep.pdf Graphic file (type pdf)
 File: fig/section4/PT-time-ep.pdf Graphic file (type pdf)
 <use fig/section4/PT-time-ep.pdf>
 
+Underfull \vbox (badness 1584) has occurred while \output is active []
 
-[16])
 
-[17]
 
-[18
+[22]
+Underfull \vbox (badness 1394) has occurred while \output is active []
+
+
+
+[23])
+
+[24]
+
+[25
 
 ] (./main.bbl
 
-[19
+[26
 
 
 ]
 
-[20]
+[27]
 
-[21]
+[28]
 
-[22])
+[29])
 
-[23] (./main.aux)
+[30] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 91DFE8C369D1D8348088DFF40925AB72;2918.
+(rerunfilecheck)             Checksum: D1740260B522922591934F4C2E4409F6;3276.
  ) 
 Here is how much of TeX's memory you used:
- 50696 strings out of 473832
- 1059129 string characters out of 5729481
- 1543593 words of memory out of 5000000
- 72907 multiletter control sequences out of 15000+600000
- 571216 words of font info for 147 fonts, out of 8000000 for 9000
+ 50776 strings out of 473832
+ 1063830 string characters out of 5729481
+ 1548031 words of memory out of 5000000
+ 72976 multiletter control sequences out of 15000+600000
+ 571264 words of font info for 153 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 125i,18n,134p,1207b,1351s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,18n,134p,1240b,1351s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (27 pages).
+Output written on main.pdf (34 pages).
