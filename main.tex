@@ -25,26 +25,18 @@
 	\tableofcontents  % 主目录，必要
 	\listoffigures  % 图多则放，反之不放
 	\listoftables  % 表多则放，反之不放
-	\listofsymbs  % 生成主要符号表标题，需要额外维护符号表内容
+	% \listofsymbs  % 生成主要符号表标题，需要额外维护符号表内容
 	
 	% \input{latex/02_symbols.tex}
 
-	\chapter{前截断章节} %删除前检查是否存在前截断章节
-	\section{当前版本编译时间}
-	\noindent%
-	\begin{center}%
-		\zihao{-2}\bfseries\color{DarkRed}%
-		\zhdigits*{\the\year} 年\zhnumber{\the\month} 月\zhnumber{\the\day} 日\;\xxivtime
-	\end{center}
-
 	% \input{latex/instruction.tex}
-	% \input{latex/1_background.tex}
-	% \input{latex/2_relatedwork.tex}
-	% \input{latex/3_routesearch.tex}
+	\input{latex/1_background.tex}
+	\input{latex/2_relatedwork.tex}
+	\input{latex/3_routesearch.tex}
 	\input{latex/4_comovement.tex}
-	% \input{latex/5_contact.tex}
-	% \input{latex/6_join.tex}
-	% \input{latex/7_conclusion}
+	\input{latex/5_contact.tex}
+	\input{latex/6_join.tex}
+	\input{latex/7_conclusion.tex}
 
 
 	\acknowledgement

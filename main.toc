@@ -1,29 +1,210 @@
-\contentsline {chapter}{\numberline {第一章}前截断章节}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}当前版本编译时间}{1}{section.1.1}%
-\contentsline {chapter}{\numberline {第二章}基于轨迹数据的群体联合移动模式挖掘}{2}{chapter.2}%
-\contentsline {section}{\numberline {2.1}引言}{2}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}研究背景与意义}{2}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}研究内容与挑战}{3}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}研究成果与贡献}{6}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}相关工作}{7}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}联合移动模式搜索}{7}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}轨迹聚类}{8}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}问题定义}{9}{section.2.3}%
-\contentsline {section}{\numberline {2.4}精确联合移动计算的精确搜索算法（ES-ECMC）}{10}{section.2.4}%
-\contentsline {section}{\numberline {2.5}基于近似协同行为计算的社区感知搜索（CS-ACMC）}{14}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}近似协同行为对搜索}{14}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}社区感知聚类}{15}{subsection.2.5.2}%
-\contentsline {section}{\numberline {2.6}实验评估}{17}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}实验设置}{17}{subsection.2.6.1}%
-\contentsline {paragraph}{\numberline {2.6.1.0.1}数据准备}{17}{paragraph.2.6.1.0.1}%
-\contentsline {paragraph}{\numberline {2.6.1.0.2}对比算法}{18}{paragraph.2.6.1.0.2}%
-\contentsline {paragraph}{\numberline {2.6.1.0.3}评估指标}{18}{paragraph.2.6.1.0.3}%
-\contentsline {subsection}{\numberline {2.6.2}性能评估}{19}{subsection.2.6.2}%
-\contentsline {paragraph}{\numberline {2.6.2.0.1}轨迹数量的影响}{19}{paragraph.2.6.2.0.1}%
-\contentsline {paragraph}{\numberline {2.6.2.0.2}协同行为持续时间阈值的影响}{19}{paragraph.2.6.2.0.2}%
-\contentsline {paragraph}{\numberline {2.6.2.0.3}群体规模阈值的影响}{21}{paragraph.2.6.2.0.3}%
-\contentsline {paragraph}{\numberline {2.6.2.0.4}聚类参数的影响}{22}{paragraph.2.6.2.0.4}%
-\contentsline {section}{\numberline {2.7}本章小结}{23}{section.2.7}%
-\contentsline {chapter}{致\hspace {1em}谢}{25}{chapter*.14}%
-\contentsline {chapter}{参考文献}{26}{section*.15}%
+\contentsline {chapter}{\numberline {第一章}绪论}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}研究背景与意义}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}研究目标}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}研究所面临的挑战}{1}{section.1.3}%
+\contentsline {section}{\numberline {1.4}研究内容}{1}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}面向大规模行程请求流的持续最优路线组合规划}{2}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}基于轨迹数据的群体联合移动模式挖掘}{2}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}大规模移动对象上的持续密切接触发现}{2}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}面向时空运动范围的轨迹相似性连接方法}{2}{subsection.1.4.4}%
+\contentsline {section}{\numberline {1.5}论文的主要贡献}{2}{section.1.5}%
+\contentsline {section}{\numberline {1.6}论文的组织结构}{2}{section.1.6}%
+\contentsline {chapter}{\numberline {第二章}相关技术及相关研究综述}{3}{chapter.2}%
+\contentsline {subsection}{\numberline {2.0.1}相关工作}{3}{subsection.2.0.1}%
+\contentsline {section}{\numberline {2.1}相关工作}{4}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}联合移动模式搜索}{4}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}轨迹聚类}{5}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}相关工作}{6}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}移动对象索引}{6}{subsection.2.2.1}%
+\contentsline {paragraph}{\numberline {2.2.1.0.1}基于空间划分的索引结构。}{6}{paragraph.2.2.1.0.1}%
+\contentsline {paragraph}{\numberline {2.2.1.0.2}基于度量空间的索引结构。}{6}{paragraph.2.2.1.0.2}%
+\contentsline {paragraph}{\numberline {2.2.1.0.3}面向移动对象的接触与相似性查询索引。}{6}{paragraph.2.2.1.0.3}%
+\contentsline {subsection}{\numberline {2.2.2}轨迹相似性连接}{7}{subsection.2.2.2}%
+\contentsline {paragraph}{\numberline {2.2.2.0.1}融合式相似性建模。}{7}{paragraph.2.2.2.0.1}%
+\contentsline {paragraph}{\numberline {2.2.2.0.2}基于运动约束的表示方法。}{7}{paragraph.2.2.2.0.2}%
+\contentsline {paragraph}{\numberline {2.2.2.0.3}符号化与近似匹配方法。}{7}{paragraph.2.2.2.0.3}%
+\contentsline {paragraph}{\numberline {2.2.2.0.4}通用连接与子轨迹匹配。}{7}{paragraph.2.2.2.0.4}%
+\contentsline {section}{\numberline {2.3}路线搜索和推荐}{8}{section.2.3}%
+\contentsline {section}{\numberline {2.4}路径数据管理}{9}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}\textbf {数据与问题建模}}{9}{subsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.1.1}\textbf {数据空间}}{9}{subsubsection.2.4.1.1}%
+\contentsline {paragraph}{\numberline {2.4.1.1.1}\textbf {道路网络}}{9}{paragraph.2.4.1.1.1}%
+\contentsline {subsubsection}{\numberline {2.4.1.2}\textbf {独立路径数据}}{10}{subsubsection.2.4.1.2}%
+\contentsline {paragraph}{\numberline {2.4.1.2.1}\textbf {位置}}{10}{paragraph.2.4.1.2.1}%
+\contentsline {paragraph}{\numberline {2.4.1.2.2}\textbf {地理文本点}}{10}{paragraph.2.4.1.2.2}%
+\contentsline {paragraph}{\numberline {2.4.1.2.3}\textbf {时空点}}{10}{paragraph.2.4.1.2.3}%
+\contentsline {subsubsection}{\numberline {2.4.1.3}\textbf {关联路径数据}}{10}{subsubsection.2.4.1.3}%
+\contentsline {paragraph}{\numberline {2.4.1.3.1}\textbf {精确轨迹}}{10}{paragraph.2.4.1.3.1}%
+\contentsline {paragraph}{\numberline {2.4.1.3.2}\textbf {轨迹}}{10}{paragraph.2.4.1.3.2}%
+\contentsline {paragraph}{\numberline {2.4.1.3.3}\textbf {路径}}{11}{paragraph.2.4.1.3.3}%
+\contentsline {subsection}{\numberline {2.4.2}\textbf {路径搜索}}{11}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}\textbf {轨迹搜索}}{13}{subsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.3.1}\textbf {轨迹相似性度量}}{13}{subsubsection.2.4.3.1}%
+\contentsline {paragraph}{\numberline {2.4.3.1.1}\textbf {传统相似性度量方法}}{13}{paragraph.2.4.3.1.1}%
+\contentsline {paragraph}{\numberline {2.4.3.1.2}\textbf {基于深度学习的方法}}{14}{paragraph.2.4.3.1.2}%
+\contentsline {section}{\numberline {2.5}基于位置的路径规划}{14}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}\textbf {基于起点和终点的路径规划}}{14}{subsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.1.1}\textbf {动态路网上的路径规划}}{15}{subsubsection.2.5.1.1}%
+\contentsline {paragraph}{\numberline {2.5.1.1.1}\textbf {时间依赖最短路径问题（TDSP）}}{15}{paragraph.2.5.1.1.1}%
+\contentsline {paragraph}{\numberline {2.5.1.1.2}\textbf {交通感知路径规划}}{15}{paragraph.2.5.1.1.2}%
+\contentsline {paragraph}{\numberline {2.5.1.1.3}\textbf {自感知路径规划}}{15}{paragraph.2.5.1.1.3}%
+\contentsline {paragraph}{\numberline {2.5.1.1.4}\textbf {基于用户偏好的路径规划}}{15}{paragraph.2.5.1.1.4}%
+\contentsline {subsubsection}{\numberline {2.5.1.2}\textbf {不确定路网上的路径规划}}{16}{subsubsection.2.5.1.2}%
+\contentsline {paragraph}{\numberline {2.5.1.2.1}\textbf {随机路网上的路径规划}}{16}{paragraph.2.5.1.2.1}%
+\contentsline {paragraph}{\numberline {2.5.1.2.2}\textbf {概率路网上的路径规划}}{16}{paragraph.2.5.1.2.2}%
+\contentsline {subsection}{\numberline {2.5.2}\textbf {基于多位置的路径规划}}{16}{subsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.2.1}\textbf {移动序列推荐（MSR）}}{16}{subsubsection.2.5.2.1}%
+\contentsline {subsubsection}{\numberline {2.5.2.2}\textbf {基于位置的轨迹搜索（TSL）}}{16}{subsubsection.2.5.2.2}%
+\contentsline {subsubsection}{\numberline {2.5.2.3}\textbf {群体出行规划（CTP）}}{16}{subsubsection.2.5.2.3}%
+\contentsline {subsection}{\numberline {2.5.3}\textbf {超越单用户出行查询的路径规划}}{17}{subsection.2.5.3}%
+\contentsline {subsubsection}{\numberline {2.5.3.1}\textbf {基于群体的最优路径规划}}{17}{subsubsection.2.5.3.1}%
+\contentsline {subsubsection}{\numberline {2.5.3.2}\textbf {全局路径规划}}{17}{subsubsection.2.5.3.2}%
+\contentsline {section}{\numberline {2.6}关键词感知路径规划}{17}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}\textbf {基于精确匹配的关键词感知路径规划}}{17}{subsection.2.6.1}%
+\contentsline {paragraph}{\numberline {2.6.1.0.1}\textbf {行程规划查询（TPQ）}}{17}{paragraph.2.6.1.0.1}%
+\contentsline {paragraph}{\numberline {2.6.1.0.2}\textbf {最优序列路径查询（OSR）}}{18}{paragraph.2.6.1.0.2}%
+\contentsline {paragraph}{\numberline {2.6.1.0.3}\textbf {关键词感知最优路径搜索（KOR）}}{18}{paragraph.2.6.1.0.3}%
+\contentsline {paragraph}{\numberline {2.6.1.0.4}\textbf {交互式路径搜索（IRS）}}{18}{paragraph.2.6.1.0.4}%
+\contentsline {paragraph}{\numberline {2.6.1.0.5}\textbf {群体行程规划（GTP）}}{18}{paragraph.2.6.1.0.5}%
+\contentsline {paragraph}{\numberline {2.6.1.0.6}\textbf {其他相关问题}}{19}{paragraph.2.6.1.0.6}%
+\contentsline {subsection}{\numberline {2.6.2}\textbf {基于近似匹配的关键词感知路径规划}}{19}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}本章小结}{19}{section.2.7}%
+\contentsline {chapter}{\numberline {第三章}面向大规模行程请求流的持续最优路线组合规划}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}引言}{21}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}研究背景与意义}{22}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}研究内容与挑战}{24}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}研究成果与贡献}{26}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}问题描述}{26}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}路网及其构成}{26}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}车流量与通行时间}{27}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}行程请求与问题定义}{28}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}精确遍历算法}{28}{section.3.3}%
+\contentsline {section}{\numberline {3.4}自感知的批处理算法}{29}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}初始路线搜索}{29}{subsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.1.1}路段标签}{29}{subsubsection.3.4.1.1}%
+\contentsline {subsubsection}{\numberline {3.4.1.2}系统内的车流量计算}{29}{subsubsection.3.4.1.2}%
+\contentsline {subsubsection}{\numberline {3.4.1.3}通行时间下界}{30}{subsubsection.3.4.1.3}%
+\contentsline {subsubsection}{\numberline {3.4.1.4}算法描述}{30}{subsubsection.3.4.1.4}%
+\contentsline {subsection}{\numberline {3.4.2}批优化处理}{31}{subsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.2.1}交换操作}{32}{subsubsection.3.4.2.1}%
+\contentsline {subsubsection}{\numberline {3.4.2.2}预检查策略}{32}{subsubsection.3.4.2.2}%
+\contentsline {subsubsection}{\numberline {3.4.2.3}算法描述}{32}{subsubsection.3.4.2.3}%
+\contentsline {subsection}{\numberline {3.4.3}持续最优路线组合问题的总体解决方案}{33}{subsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.3.1}优化间隔}{34}{subsubsection.3.4.3.1}%
+\contentsline {subsubsection}{\numberline {3.4.3.2}算法描述}{34}{subsubsection.3.4.3.2}%
+\contentsline {section}{\numberline {3.5}实验研究}{35}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}实验设定}{35}{subsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.1.1}数据集}{35}{subsubsection.3.5.1.1}%
+\contentsline {subsubsection}{\numberline {3.5.1.2}车流量的计算}{35}{subsubsection.3.5.1.2}%
+\contentsline {subsubsection}{\numberline {3.5.1.3}算法评估}{36}{subsubsection.3.5.1.3}%
+\contentsline {subsubsection}{\numberline {3.5.1.4}运行环境}{36}{subsubsection.3.5.1.4}%
+\contentsline {subsection}{\numberline {3.5.2}实验结果与分析}{37}{subsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.1}行程请求数目对算法效果的影响}{37}{subsubsection.3.5.2.1}%
+\contentsline {subsubsection}{\numberline {3.5.2.2}行程请求到达速率对算法效果的影响}{38}{subsubsection.3.5.2.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.3}通行时间函数各参数对算法效果的影响}{39}{subsubsection.3.5.2.3}%
+\contentsline {subsubsection}{\numberline {3.5.2.4}优化时间间隔对算法表现的影响}{40}{subsubsection.3.5.2.4}%
+\contentsline {subsubsection}{\numberline {3.5.2.5}参数$\epsilon $和预检查策略对算法表现的影响}{41}{subsubsection.3.5.2.5}%
+\contentsline {section}{\numberline {3.6}本章小结}{42}{section.3.6}%
+\contentsline {chapter}{\numberline {第四章}基于轨迹数据的群体联合移动模式挖掘}{45}{chapter.4}%
+\contentsline {section}{\numberline {4.1}引言}{45}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}研究背景与意义}{45}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}研究内容与挑战}{46}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}研究成果与贡献}{49}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}问题定义}{50}{section.4.2}%
+\contentsline {section}{\numberline {4.3}精确联合移动计算的精确搜索算法（ES-ECMC）}{51}{section.4.3}%
+\contentsline {section}{\numberline {4.4}基于近似协同行为计算的社区感知搜索（CS-ACMC）}{54}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}近似协同行为对搜索}{55}{subsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.1}轨迹网格编号序列生成}{55}{subsubsection.4.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.2}近似协同行为对搜索}{56}{subsubsection.4.4.1.2}%
+\contentsline {subsection}{\numberline {4.4.2}社区感知聚类}{57}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}实验评估}{58}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}实验设置}{58}{subsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.1.1}数据准备}{58}{subsubsection.4.5.1.1}%
+\contentsline {paragraph}{\numberline {4.5.1.1.1}北京出租车轨迹数据集}{58}{paragraph.4.5.1.1.1}%
+\contentsline {paragraph}{\numberline {4.5.1.1.2}波尔图出租车轨迹数据集}{58}{paragraph.4.5.1.1.2}%
+\contentsline {paragraph}{\numberline {4.5.1.1.3}数据预处理}{59}{paragraph.4.5.1.1.3}%
+\contentsline {subsubsection}{\numberline {4.5.1.2}比较算法}{59}{subsubsection.4.5.1.2}%
+\contentsline {subsubsection}{\numberline {4.5.1.3}评估指标}{60}{subsubsection.4.5.1.3}%
+\contentsline {subsubsection}{\numberline {4.5.1.4}实验环境}{60}{subsubsection.4.5.1.4}%
+\contentsline {subsection}{\numberline {4.5.2}实验结果与分析}{60}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}轨迹数量的影响}{60}{subsubsection.4.5.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}协同行为持续时间阈值的影响}{61}{subsubsection.4.5.2.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.3}群体规模阈值的影响}{63}{subsubsection.4.5.2.3}%
+\contentsline {subsubsection}{\numberline {4.5.2.4}聚类参数的影响}{63}{subsubsection.4.5.2.4}%
+\contentsline {section}{\numberline {4.6}本章小结}{65}{section.4.6}%
+\contentsline {chapter}{\numberline {第五章}大规模移动对象上的持续暴露接触发现}{67}{chapter.5}%
+\contentsline {section}{\numberline {5.1}引言}{67}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}研究背景与意义}{68}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}研究成果与贡献}{69}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}问题描述}{70}{section.5.2}%
+\contentsline {section}{\numberline {5.3}精确遍历算法}{71}{section.5.3}%
+\contentsline {section}{\numberline {5.4}精确分组处理算法}{72}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}组距离}{72}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}分组划分}{73}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}预检查策略}{74}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}算法细节}{75}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5}时间复杂度分析}{76}{subsection.5.4.5}%
+\contentsline {section}{\numberline {5.5}近似分组处理算法}{77}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}首尾优先检查策略}{77}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}跳跃检查}{77}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}算法细节。}{79}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.4}时间复杂度分析}{79}{subsection.5.5.4}%
+\contentsline {section}{\numberline {5.6}实验研究}{80}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}实验设置}{80}{subsection.5.6.1}%
+\contentsline {subsubsection}{\numberline {5.6.1.1}数据准备。}{80}{subsubsection.5.6.1.1}%
+\contentsline {subsubsection}{\numberline {5.6.1.2}对比算法。}{80}{subsubsection.5.6.1.2}%
+\contentsline {subsubsection}{\numberline {5.6.1.3}参数设置。}{80}{subsubsection.5.6.1.3}%
+\contentsline {subsection}{\numberline {5.6.2}实验结果与分析}{81}{subsection.5.6.2}%
+\contentsline {subsubsection}{\numberline {5.6.2.1}查询对象数量的影响}{81}{subsubsection.5.6.2.1}%
+\contentsline {subsubsection}{\numberline {5.6.2.2}距离阈值的影响}{82}{subsubsection.5.6.2.2}%
+\contentsline {subsubsection}{\numberline {5.6.2.3}接触持续时长阈值的影响}{83}{subsubsection.5.6.2.3}%
+\contentsline {subsubsection}{\numberline {5.6.2.4}近似算法的评估}{84}{subsubsection.5.6.2.4}%
+\contentsline {subsubsection}{\numberline {5.6.2.5}预检查策略的评估}{85}{subsubsection.5.6.2.5}%
+\contentsline {section}{\numberline {5.7}本章小结}{86}{section.5.7}%
+\contentsline {chapter}{\numberline {第六章}面向时空运动范围的轨迹相似性连接方法}{88}{chapter.6}%
+\contentsline {section}{\numberline {6.1}引言}{89}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}研究背景与意义}{89}{subsection.6.1.1}%
+\contentsline {paragraph}{\numberline {6.1.1.0.1}场景一：城市交通监测与拥堵分析}{90}{paragraph.6.1.1.0.1}%
+\contentsline {paragraph}{\numberline {6.1.1.0.2}场景二：野生动物迁徙分析}{91}{paragraph.6.1.1.0.2}%
+\contentsline {paragraph}{\numberline {6.1.1.0.3}场景三：接触追踪与疾病传播控制}{91}{paragraph.6.1.1.0.3}%
+\contentsline {subsection}{\numberline {6.1.2}研究内容与挑战}{92}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}研究成果与贡献}{93}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.2}问题描述}{94}{section.6.2}%
+\contentsline {section}{\numberline {6.3}基于 M*-树的连接算法}{97}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}M*-树}{97}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}交集检查}{98}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}算法细节}{98}{subsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.1}时间复杂度分析}{100}{subsubsection.6.3.3.1}%
+\contentsline {section}{\numberline {6.4}运动范围引导的匹配方法}{100}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}时间区间预检查}{101}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}基于 HBall-tree 的交集预检查}{102}{subsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.1}HBall-tree}{103}{subsubsection.6.4.2.1}%
+\contentsline {subsubsection}{\numberline {6.4.2.2}HBall-tree 的重新划分策略}{103}{subsubsection.6.4.2.2}%
+\contentsline {subsection}{\numberline {6.4.3}基于 HBall-tree 的 Join}{104}{subsection.6.4.3}%
+\contentsline {subsubsection}{\numberline {6.4.3.1}剪枝增强策略}{104}{subsubsection.6.4.3.1}%
+\contentsline {subsubsection}{\numberline {6.4.3.2}算法细节}{105}{subsubsection.6.4.3.2}%
+\contentsline {subsubsection}{\numberline {6.4.3.3}时间复杂度}{106}{subsubsection.6.4.3.3}%
+\contentsline {section}{\numberline {6.5}实验研究}{106}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}实验设置}{106}{subsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.1.1}数据准备}{106}{subsubsection.6.5.1.1}%
+\contentsline {subsubsection}{\numberline {6.5.1.2}对比算法}{107}{subsubsection.6.5.1.2}%
+\contentsline {subsubsection}{\numberline {6.5.1.3}参数设置}{107}{subsubsection.6.5.1.3}%
+\contentsline {subsection}{\numberline {6.5.2}实验结果与分析}{107}{subsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.1}剪枝有效性评估}{107}{subsubsection.6.5.2.1}%
+\contentsline {subsubsection}{\numberline {6.5.2.2}移动对象基数的影响}{108}{subsubsection.6.5.2.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.3}特征数量的影响}{109}{subsubsection.6.5.2.3}%
+\contentsline {subsubsection}{\numberline {6.5.2.4}时间区间的影响}{110}{subsubsection.6.5.2.4}%
+\contentsline {subsubsection}{\numberline {6.5.2.5}$\epsilon $ 的影响}{110}{subsubsection.6.5.2.5}%
+\contentsline {section}{\numberline {6.6}IS-Join 的附加实验}{111}{section.6.6}%
+\contentsline {subsubsection}{\numberline {6.6.0.1}相似度阈值的影响}{111}{subsubsection.6.6.0.1}%
+\contentsline {subsubsection}{\numberline {6.6.0.2}重新分区策略的评估}{111}{subsubsection.6.6.0.2}%
+\contentsline {chapter}{\numberline {第七章}总结与展望}{114}{chapter.7}%
+\contentsline {section}{\numberline {7.1}全文总结}{114}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}面向大规模行程请求流的持续最优路线组合规划}{114}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}基于轨迹数据的群体联合移动模式挖掘}{115}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}大规模移动对象上的持续密切接触发现}{116}{subsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.1.4}面向时空运动范围的轨迹相似度连接}{117}{subsection.7.1.4}%
+\contentsline {section}{\numberline {7.2}展望}{118}{section.7.2}%
+\contentsline {chapter}{致\hspace {1em}谢}{121}{chapter*.55}%
+\contentsline {chapter}{参考文献}{122}{section*.56}%
 \contentsfinish 

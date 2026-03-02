@@ -1,5 +1,75 @@
 \chapter{相关技术及相关研究综述}
-本章首先介绍位置点搜索和推荐相关研究。然后，介绍路线搜索和推荐相关工作。最后，对时空-文本关键字搜索技术的相关研究现状进行了总结。其中，分别对时空-文本关键字搜索中的静态搜索，连续搜索以及时空-文本对象匹配和连接的相关工作进行总结。
+本章首先介绍位置点路线和推荐相关研究。然后，介绍了轨迹数据挖掘相关工作。最后，对时空-文本关键字搜索技术的相关研究现状进行了总结。其中，分别对时空-文本关键字搜索中的静态搜索，连续搜索以及时空-文本对象匹配和连接的相关工作进行总结。
+
+\subsection{相关工作}
+与本文研究问题密切相关的方向是协同行为模式挖掘（co-movement pattern mining）。已有研究围绕不同应用需求提出了多种具有代表性的协同行为模式~\cite{DBLP:journals/pvldb/JeungYZJS08,DBLP:journals/pvldb/LiDHK10,flock,tang,DBLP:conf/icde/ZhengZYS13}。其中，flock 模式~\cite{flock} 是最早被提出的协同行为模式之一，用于刻画在连续 $k$ 个时间区间内共同移动的 $m$ 个移动对象所构成的群体，其核心思想是在时空连续性约束下识别稳定的群体结构。在此基础上，文献~\cite{DBLP:conf/icde/ZhengZYS13} 从交通拥堵检测的角度出发，提出了 gathering 模式，用于识别在特定区域内聚集的移动对象集合。此外，文献~\cite{tang} 进一步将协同行为挖掘扩展至数据流环境，设计了面向流式轨迹数据的在线群体发现方法。这类研究通常以发现满足给定规模与持续时间约束的稳定群体为目标，因此往往对群体中对象数量或持续时间施加显式限制。
+
+与上述工作不同，本文研究的 CES 问题不要求对群体规模设置下界约束，也不以识别稳定群体结构为主要目标。相反，我们关注的是在动态环境下持续检测潜在接触关系，即便仅涉及少量对象亦具有重要意义。更为重要的是，在我们的定义框架下，群体之外的个体也可能因间接接触或传播链关系而被判定为感染对象。因此，现有协同行为模式挖掘方法所依赖的群体规模约束与稳定性假设并不适用于本文问题，其提出的算法框架亦难以直接迁移至我们的应用场景。
+
+为有效遏制 SARS、埃博拉以及 COVID-19 等传染病的传播，学术界和工业界已开展了大量相关研究~\cite{web,DBLP:journals/pvldb/Xu0B20,DBLP:journals/corr/abs-2004-06653}。其中，文献~\cite{DBLP:journals/pvldb/Xu0B20} 首次形式化提出了接触追踪（contact tracing）问题，并对疾病传播过程进行了建模与模拟分析，但其主要关注传播链分析与风险评估，未能支持大规模实时查询需求。从查询处理角度出发，文献~\cite{web} 提出了接触追踪查询（Contact Tracing Query, CTQ），用于识别与给定查询对象存在直接或间接接触关系的个体。进一步地，文献~\cite{DBLP:conf/dasfaa/ChaoHLZ021} 提出了广义轨迹接触搜索（Trajectory Contact Search, TCS）查询，并设计了一种基于迭代扩展的求解算法。另一项相关研究~\cite{DBLP:journals/information/AlarabiBHA21} 则提出了一种基于轨迹片段的接触检测技术，用于追踪与患者接触的所有对象并搜索潜在感染者，但该方法主要面向室内定位场景，且对数据组织形式具有特定假设。
+
+据我们所知，现有方法均难以直接用于解决本文提出的问题。一方面，部分方法假设输入为静态轨迹集合，缺乏对持续更新数据流的支持；另一方面，不同工作对密切接触事件或感染判定规则的定义存在差异，难以满足本文所定义的连续接触搜索需求。因此，有必要设计一种面向动态环境、支持大规模对象并行处理且符合本文密切接触定义的新型解决方案。
+
+\section{相关工作}
+\label{cm_sec:related work}
+
+大规模轨迹数据的管理、挖掘与分析问题已受到数据科学领域的广泛关注。该方向的代表性研究主要包括轨迹搜索与推荐~\cite{DBLP:conf/kdd/HanWYS021,DBLP:conf/aaai/YangCWS21,DBLP:conf/ijcai/ChenSFK21,DBLP:journals/vldb/ShangDZJKZ14,DBLP:journals/tkde/ShangZJYKLW15,DBLP:journals/tkde/ShangCJWK17,DBLP:journals/pvldb/ShangCWJ0K17,DBLP:journals/vldb/ShangCWJZK18,DBLP:conf/icde/ChenSJ0K20,DBLP:conf/kdd/ZhaoSWZN018,DBLP:journals/tkde/LiuZSSKLJ16,DBLP:conf/icde/LiuZSSKJ15,DBLP:journals/geoinformatica/ShangYDXZZ12}、位置搜索与推荐~\cite{DBLP:conf/icde/0002CGSMG18,DBLP:conf/ijcai/HanLLZLWS20,DBLP:conf/icde/HanSSZ0K19,DBLP:journals/tkde/ShangCZJWK19,DBLP:conf/sigir/FengTCCLL20,DBLP:conf/kdd/RaoCLSYH22,DBLP:journals/ijon/GuoZXSD16}、路径规划与推荐~\cite{DBLP:conf/ijcai/LiCSK021,DBLP:conf/ijcai/LiCS20,DBLP:conf/kdd/ChenSJ0Z019,DBLP:conf/aaai/ChenSG20,DBLP:conf/aaai/ChenSYL20,DBLP:conf/edbt/ShangDYXZK12,DBLP:conf/icccn/LiuLDSZ14,DBLP:journals/ijon/ShangGLW16}，以及区域查询与交通模式挖掘等其他轨迹分析任务~\cite{DBLP:journals/tkde/ShangCWJWK16,DBLP:conf/ssd/ShangLPX13,DBLP:conf/mdm/ShangLPX13,DBLP:conf/ijcai/RaoWZLS022,DBLP:journals/geoinformatica/LiuWSLZ18}。在上述研究中，联合移动模式搜索与轨迹聚类问题与本文所研究的群体模式发现问题关系最为密切。因此，本章主要调研联合移动模式搜索与轨迹聚类问题上的相关研究工作。
+
+\subsection{联合移动模式搜索}
+现有研究围绕联合移动模式已提出并系统讨论了多种具有代表性的模式定义~\cite{DBLP:journals/pvldb/JeungYZJS08,DBLP:journals/pvldb/LiDHK10,DBLP:journals/dke/WangLH06,DBLP:journals/dke/LiBK15}，并在交通分析、行为建模与公共安全等应用场景中得到广泛应用。具体而言，flock~\cite{DBLP:conf/gis/VieiraBT09,DBLP:journals/jidm/TanakaVK16} 是较早提出的联合移动模式之一，用于刻画在 $k$ 个连续时间间隔内共同移动的 $m$ 个对象组成的群体。随后，Jeung 等人~\cite{DBLP:journals/pvldb/JeungYZJS08} 指出 flock 所采用的固定圆形空间约束难以准确表达真实群体的复杂形态，因此提出了支持任意形状聚类的 convoy 模式。然而，flock 与 convoy 均对时间连续性提出了严格要求，即对象必须在连续时间段内保持群体结构，这在部分应用场景下显得过于苛刻。为适应对持续时间约束更加宽松的需求，研究者进一步提出了 group、swarm、platoon 等多种扩展模式~\cite{DBLP:journals/dke/WangLH06,DBLP:journals/pvldb/LiDHK10,DBLP:journals/dke/LiBK15}，在时间连续性与成员稳定性方面进行了不同程度的放松。
+
+在此基础上，Zheng 等人~\cite{DBLP:conf/icde/ZhengZYS13} 提出了 gathering 模式，用于交通拥堵的早期发现，该模式允许成员在任意时间离开群体，从而增强了模式表达的灵活性。Fan 等人~\cite{DBLP:journals/pvldb/FanZWT16} 给出了更加通用的联合移动定义，并设计了并行化处理框架以提升计算效率。类似地，Naserian 等人~\cite{DBLP:conf/hpcc/NaserianWXD16} 在轨迹数据流环境下提出了一种宽松的伴随群体发现方法，以支持在线场景下的模式挖掘。然而，Shein 等人~\cite{DBLP:journals/access/SheinPI20} 指出上述方法普遍存在较高的计算代价，并提出了一种增量式算法以降低重复计算开销，但其整体效率仍难以满足严格的实时发现需求。
+从数据处理模式的角度来看，现有方法可大致分为静态处理与流式处理两类。一些方法（如~\cite{DBLP:conf/icde/ZhengZYS13,DBLP:journals/tkde/ZhengZYSZ14,DBLP:conf/sigmod/FangGPCMJ20}）能够处理轨迹数据流，支持持续更新与在线检测；而另一些方法则主要面向离线或静态轨迹数据（如~\cite{DBLP:conf/gis/VieiraBT09,DBLP:journals/pvldb/JeungYZJS08,DBLP:journals/pvldb/LiDHK10}）。与本文最为相关的工作之一是 Chen 等人~\cite{DBLP:journals/pvldb/ChenGFMJG19} 提出的实时联合移动模式挖掘方法。该方法定义了一种更为通用的联合移动模式，并通过 $L$-连续性与 $G$-连通性刻画轨迹之间的时间连续性与结构连通性。然而，由于问题定义存在本质差异，该方法无法直接应用于本文场景：一方面，本文不要求时间上的严格连续性或连通性；另一方面，也不要求对象在每个时间点均属于同一聚类结构；此外，当一个对象能够参与多个群体时，本文采用“成员规模最大优先”的归属策略，以保证结果的确定性与可解释性。
+
+为进一步支持轨迹数据流处理，Fang 等人~\cite{DBLP:conf/sigmod/FangGPCMJ20} 构建了一个实时联合移动模式挖掘系统，在给定时空约束下实现在线检测；Chen 等人~\cite{DBLP:journals/pvldb/ChenGFMJG19} 则在分布式环境中研究实时联合移动模式检测问题，并通过基于双层索引的范围连接操作加速聚类过程，从而减少不必要的验证计算。尽管这些方法在系统层面提升了处理能力，但在模式灵活性与效率权衡方面仍存在改进空间。近年来，已有大量研究尝试利用深度学习技术加速轨迹挖掘任务，包括轨迹聚类、异常轨迹检测~\cite{DBLP:conf/icde/Liu0CB20}、轨迹相似性计算~\cite{DBLP:conf/icde/LiZCJW18} 以及风险检测~\cite{DBLP:journals/access/ZhaoCCYXG19} 等。然而，这些方法主要侧重于表示学习或相似性建模，并未针对联合移动模式中的组合结构约束与时间–空间共现判定机制进行专门设计。据我们所知，尚无基于深度学习的方法能够直接、高效地解决本文所研究的伴随群体发现问题，这也进一步凸显了本文研究的必要性与创新意义。
+
+\subsection{轨迹聚类}
+该方向的大多数研究~\cite{DBLP:conf/icde/LiZCJW18,DBLP:conf/icws/Zhang0LL019,DBLP:conf/icde/YaoCZB19} 主要采用深度表示学习方法以加速轨迹相似性计算，其核心思想是将变长轨迹映射为固定长度的低维表示向量，从而在嵌入空间中高效完成相似性度量与近邻搜索。Yao 等人~\cite{DBLP:conf/ijcnn/YaoZZHB17} 通过滑动窗口提取轨迹的局部特征序列，并利用自编码器学习紧凑的深度表示；Boyle 等人~\cite{DBLP:conf/avss/BoyleNF17} 将训练后自编码器最小隐藏层的输出作为轨迹的表达向量，用于后续相似性分析；Fang 等人~\cite{DBLP:conf/icde/FangDCHGC21} 则提出了一种基于自训练机制的端到端聚类框架，在无需人工特征工程的前提下实现轨迹表示学习与聚类优化的联合训练。这类方法在提升相似性计算效率与聚类质量方面取得了显著进展。
+
+除轨迹聚类外，通用的基于位置的群体搜索问题也得到了广泛研究~\cite{DBLP:journals/geoinformatica/ChenSYL20}。相关工作涵盖多个方向，例如基于位置的群体查询处理~\cite{DBLP:conf/cikm/LiCC0Y16,DBLP:journals/ijon/ShangGLZW16}、基于位置的连续查询处理~\cite{DBLP:journals/www/ChenS19}、局部高频模式发现~\cite{DBLP:conf/wise/XuCYSZZL17,DBLP:journals/vldb/ChenSJXKYS20}、局部事件探索~\cite{DBLP:conf/sigmod/ZhaoCC16,DBLP:conf/aaai/ChenS19,DBLP:conf/icde/ChenS0K19}、位置感知传播模式挖掘~\cite{DBLP:conf/kdd/LiCCC17} 以及邻域模式挖掘~\cite{DBLP:conf/icde/HanZSSW16} 等。这些研究在空间索引结构设计、查询优化以及模式挖掘框架构建方面提供了重要技术基础。
+
+然而，需要指出的是，上述针对轨迹聚类或表示学习提出的解决方案，均无法直接应用于本文所研究的伴随群体发现问题。其根本原因在于，聚类方法关注的是整体轨迹相似性或嵌入空间中的距离关系，而处于同一聚类中的移动对象并不一定在具体时间段内真实地满足时空共现约束。换言之，轨迹在全局层面上的相似性并不能保证其在局部时间区间内存在持续的联合移动行为。因此，伴随群体发现问题仍需基于严格的时空约束建模与结构化搜索策略进行专门设计，而不能简单依赖现有的轨迹表示学习或聚类方法。
+
+\section{相关工作}
+\subsection{移动对象索引}
+
+移动对象通常被建模为带时间戳的离散位置采样点序列~\cite{DBLP:conf/www/ZhengZXM09,DBLP:journals/vldb/LiNHLXZ23,DBLP:journals/debu/ZhengXM10}。围绕此类数据模型，大量索引结构被提出以支持高效的空间与时空查询处理。
+
+\paragraph{基于空间划分的索引结构。}
+R-tree 及其变体~\cite{DBLP:conf/sigmod/Guttman84,DBLP:conf/sigmod/BrinkhoffKS93} 是最具代表性的空间索引结构之一，其通过最小外接矩形（Minimum Bounding Rectangle, MBR）对数据进行层次化组织。每个内部节点对应一个矩形区域，子树中的数据对象均位于该区域之内。类似地，KD-tree~\cite{DBLP:journals/cacm/Bentley75,DBLP:journals/pvldb/ZhangCJOZ09} 通过递归空间划分实现高效的点查询与范围查询。这类方法通常适用于基于矩形区域或轴对齐分割的查询场景，在处理高维或动态更新数据时仍具备良好的可扩展性。
+
+\paragraph{基于度量空间的索引结构。}
+为支持基于距离度量的查询，M-tree~\cite{DBLP:conf/sebd/CiacciaPRZ97,DBLP:conf/vldb/CiacciaPZ97} 与 Ball-tree~\cite{DBLP:journals/jmlr/LiuMG06} 被提出用于组织度量空间中的对象。不同于 R-tree 依赖矩形边界，Ball-tree 采用超球体（ball）作为节点覆盖区域，更适用于欧氏距离或其他度量空间下的相似性搜索。Omohundro~\cite{omohundro1989five} 对多种 Ball-tree 构建策略进行了系统比较，分析了构建时间与树结构质量之间的权衡关系。随后，Dolatshah 等人~\cite{DBLP:journals/corr/DolatshahHM15} 通过引入主成分分析（PCA）优化划分方向，从而提升树结构的平衡性与查询效率。
+
+\paragraph{面向移动对象的接触与相似性查询索引。}
+在移动对象查询领域，研究者进一步针对接触搜索与相似性检索设计了专用索引结构。例如，Chao 等人~\cite{DBLP:conf/dasfaa/ChaoHLZ021} 提出了广义接触搜索查询模型，用于识别满足特定接触条件的移动对象集合。Zhang 等人~\cite{DBLP:conf/edbt/ZhangRSL21} 研究了接触相似性查询，并设计了专用的 UTM-tree 索引结构以提升查询效率。这些方法通常基于离散采样点或基于距离阈值的接触判定机制。
+
+尽管上述工作为移动对象查询提供了丰富的索引技术支持，但其核心建模仍然基于离散位置点或静态区域重叠，尚未在索引层面显式引入“运动范围”这一连续时间下的潜在可达区域概念。因此，现有索引结构难以直接支持 IS-Join 所需的区域交集相似性计算，尤其是在稀疏采样条件下对未观测时间区间内潜在交互的建模能力存在明显不足。
+
+本文正是在这一研究空缺基础上，提出了面向时间区间运动范围组织的 HBall-tree 索引结构，使其能够同时支持连续时间区间下的区域交集计算与高效候选对过滤，从而为 IS-Join 提供可扩展的实现基础。
+
+\subsection{轨迹相似性连接}
+
+轨迹相似性搜索与连接问题是时空数据管理领域的重要研究方向，相关工作已从距离度量设计、索引优化以及语义扩展等多个维度展开深入探索~\cite{DBLP:journals/vldb/LiangYWLCXL24,li2023relaxed,DBLP:journals/vldb/NutanongZTK10,DBLP:journals/vldb/WardH0Q14,chang2024trajectory,DBLP:conf/kdd/HanWYS021}。总体而言，现有研究可从相似性建模方式与查询语义两个方面进行归纳。
+
+\paragraph{融合式相似性建模。}
+在传统基于欧氏距离或时空同步距离的基础上，Shang 等人~\cite{DBLP:journals/vldb/ShangCWJZK18} 通过线性组合的方式融合空间相似性与时间相似性，从而增强对轨迹匹配语义的刻画能力。这类方法通常假设轨迹采样点在时间维度上可对齐或可通过插值实现同步，并基于离散时间点进行相似性计算。
+
+\paragraph{基于运动约束的表示方法。}
+为降低系统负载并增强对未观测路径的刻画能力，一系列研究引入基于速度约束的表示模型~\cite{DBLP:conf/icde/SistlaWCD97,DBLP:conf/sigmod/PatelCC04,DBLP:conf/sigmod/SaltenisJLL00}。此类方法通过构造可能到达区域或速度包络来限制对象的可达空间，从而在一定程度上缓解稀疏采样带来的不确定性。Ding 等人~\cite{DBLP:journals/tkde/DingZWLBZL21} 进一步提出数据驱动方法，利用历史轨迹挖掘实际可达区域以刻画运动约束，提高区域建模的现实性。
+
+\paragraph{符号化与近似匹配方法。}
+为了支持更加灵活的相似性定义并提高计算效率，Bakalov 等人~\cite{DBLP:conf/mdm/BakalovHKT05} 采用分段聚合近似（Piecewise Aggregate Approximation, PAA）~\cite{DBLP:conf/vldb/YiF00} 将轨迹映射为符号序列，并构建紧凑索引以支持高效近似连接。该方法通过后过滤步骤对候选结果进行精化，从而在减少 I/O 开销的同时保持结果质量。
+
+\paragraph{通用连接与子轨迹匹配。}
+Chen 等人~\cite{DBLP:conf/gis/ChenP09} 提出了通用轨迹连接框架，统一支持距离连接与 $k$ 最近邻连接。Tampakis 等人~\cite{DBLP:journals/tsas/TampakisDPT20} 则进一步提出子轨迹连接查询，用于识别“最大匹配”子轨迹片段，从而捕获局部相似行为模式。
+
+\medskip
+
+综上所述，现有轨迹相似性连接研究在相似性度量设计与索引优化方面取得了显著进展，并逐步将相似性语义从单纯的位置邻近扩展至时间融合、符号抽象以及局部匹配等更复杂形式。然而，这些方法仍主要基于离散采样点序列或轨迹片段进行建模，其相似性判定通常依赖于同步时间点距离、序列匹配或片段重叠。
+
+与之不同，本文关注的是在连续时间语义下基于“运动范围”的区域交集相似性连接问题。IS-Join 不再直接比较采样点或轨迹片段之间的距离，而是评估对象在给定时间区间内潜在可达区域之间的交集程度。这一建模方式能够在稀疏采样或存在观测不确定性的条件下更准确地识别潜在交互关系。因此，现有轨迹相似性连接算法无法直接适用于 IS-Join，需要构建新的索引组织与剪枝机制以支持连续时间区域交集计算。
+
 
 \section{路线搜索和推荐}
 路径搜索与路径规划在空间数据管理和基于位置的社会服务中一直发挥着重要作用。在此背景下，我们对现有关于路径搜索与路径规划的相关研究文献进行了系统综述，并对每一项具有代表性的路径搜索与路径规划研究工作进行了详细介绍。本文总结了现有研究的主要成果，从而揭示了一些新的研究启示，可为空间数据管理与地理信息系统领域的研究人员和软件工程师提供参考与指导。
@@ -230,6 +300,4 @@ Cao 等人 \cite{DBLP:journals/pvldb/CaoCCX12} 提出了关键词感知最优路
 
 \section{本章小结}
 
-在本文综述中，我们系统地调研并总结了现有关于路径搜索与路径规划的研究工作。我们从三个方面介绍相关研究：路径数据管理、基于位置的路径规划以及基于关键词的路径规划。对于第一类研究，我们分别简要介绍了数据建模、路径搜索以及轨迹搜索，并在该部分中定义了一些基本术语。此外，我们还对若干主流的轨迹相似性度量方法进行了全面比较，重点分析了它们在处理低质量轨迹时的鲁棒性表现。对于基于位置的路径规划，我们重点考察了三类相关研究，分别是基于起点—终点的路径规划、基于多位置的路径规划以及基于多用户的路径规划。针对基于关键词的路径规划，根据关键词匹配方式的不同，我们将现有研究划分为两类：基于精确匹配的路径规划和基于近似匹配的路径规划，并根据查询的输入、输出以及所采用的算法，总结了若干具有代表性的查询类型。
-
-尽管路径搜索与路径规划已经得到了广泛研究，我们认为该领域仍然存在大量亟待解决的问题以及有待改进的方法。对于轨迹相似性度量而言，基于深度学习的方法在处理低质量轨迹时具有较强的鲁棒性，并且能够在轨迹匹配中实现较高的效率。然而，现有相关研究大多未将时间因素纳入考虑，从而难以支持时空数据库中的相似性查询，因为空间信息和时间信息在此类应用中同等重要。因此，在现有基于深度学习模型的基础上进一步引入时间维度，将是一个具有重要研究价值的方向。对于基于位置的路径规划，目前针对大规模出行查询的全局路径规划研究仍然较为有限，该类问题旨在为所有用户寻找一组最优路径组合，以最小化整体交通拥堵和总出行成本。因此，如何支持面向海量出行查询或出行查询流的高效路径规划，是一个亟需深入研究的重要问题。
+在本文综述中，我们系统地调研并总结了现有关于路径搜索与路径规划的研究工作。我们从三个方面介绍相关研究：路径数据管理、基于位置的路径规划以及基于关键词的路径规划。对于第一类研究，我们分别简要介绍了数据建模、路径搜索以及轨迹搜索，并在该部分中定义了一些基本术语。此外，我们还对若干主流的轨迹相似性度量方法进行了全面比较，重点分析了它们在处理低质量轨迹时的鲁棒性表现。对于基于位置的路径规划，我们重点考察了三类相关研究，分别是基于起点—终点的路径规划、基于多位置的路径规划以及基于多用户的路径规划。针对基于关键词的路径规划，根据关键词匹配方式的不同，我们将现有研究划分为两类：基于精确匹配的路径规划和基于近似匹配的路径规划，并根据查询的输入、输出以及所采用的算法，总结了若干具有代表性的查询类型。尽管路径搜索与路径规划已经得到了广泛研究，我们认为该领域仍然存在大量亟待解决的问题以及有待改进的方法。对于轨迹相似性度量而言，基于深度学习的方法在处理低质量轨迹时具有较强的鲁棒性，并且能够在轨迹匹配中实现较高的效率。然而，现有相关研究大多未将时间因素纳入考虑，从而难以支持时空数据库中的相似性查询，因为空间信息和时间信息在此类应用中同等重要。因此，在现有基于深度学习模型的基础上进一步引入时间维度，将是一个具有重要研究价值的方向。对于基于位置的路径规划，目前针对大规模出行查询的全局路径规划研究仍然较为有限，该类问题旨在为所有用户寻找一组最优路径组合，以最小化整体交通拥堵和总出行成本。因此，如何支持面向海量出行查询或出行查询流的高效路径规划，是一个亟需深入研究的重要问题。
