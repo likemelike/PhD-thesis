@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  2 MAR 2026 23:02
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  3 MAR 2026 16:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1470,45 +1470,50 @@ File: p2e-xetex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 \diagbox@insepr=\dimen384
 \diagbox@outsepl=\dimen385
 \diagbox@outsepr=\dimen386
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen387
+\c@nlinenum=\count536
+\TeXr@lab=\toks59
 )
 \symCJKmath=\mathgroup255
 LaTeX Font Info:    Overwriting symbol font `CJKmath' in version `bold'
-(Font)                  TU/SimSun(0)/m/n --> TU/SimSun(0)/b/n on input line 11.
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 11.
+(Font)                  TU/SimSun(0)/m/n --> TU/SimSun(0)/b/n on input line 12.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 12.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 11.
-LaTeX Font Info:    Trying to load font information for T3+cmr on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 12.
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 12.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    ... okay on input line 12.
 
 
-Package layouts Warning: Layout scale set to 0.5 on input line 11.
+Package layouts Warning: Layout scale set to 0.5 on input line 12.
 
-Package hyperref Info: Link coloring ON on input line 11.
+Package hyperref Info: Link coloring ON on input line 12.
 (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -1516,27 +1521,27 @@ Package hyperref Info: Link coloring ON on input line 11.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen387
-\caption@adjustwidth@linewidth=\dimen388
+\caption@adjustwidth@hsize=\dimen388
+\caption@adjustwidth@linewidth=\dimen389
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: scrextend package is loaded.
-\caption@addmargin@hsize=\dimen389
-\caption@addmargin@linewidth=\dimen390
+\caption@addmargin@hsize=\dimen390
+\caption@addmargin@linewidth=\dimen391
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 11.
-\c@lstlisting=\count536
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 12.
+\c@lstlisting=\count537
 Package tocbasic Info: omitting babel extension for `lol'
-(tocbasic)             because of missing \bbl@set@language on input line 11.
+(tocbasic)             because of missing \bbl@set@language on input line 12.
 
-Package chemgreek Info: Activating mapping `fontspec' on line 11.
+Package chemgreek Info: Activating mapping `fontspec' on line 12.
 
  (/usr/local/texlive/2025/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
@@ -1567,23 +1572,13 @@ Underfull \vbox (badness 7869) has occurred while \output is active []
 [1
 
 
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[3])
+])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
 
 
-[4] (./main.lof
+[2] (./main.lof
 LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1591,23 +1586,21 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-
-[5
-
-])
+))
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
 
 
-[6] (./main.lot)
+[3
+
+] (./main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
  (./latex/1_background.tex
 
-[7
+[4
 
 ]
 Chapter 第一章.
@@ -1618,291 +1611,20 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [1
 
-]) (./latex/2_relatedwork.tex
+]) (./latex/6_join.tex
 
 [2]
 Chapter 第二章.
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 4.
+Underfull \vbox (badness 3128) has occurred while \output is active []
 
 
 
 [3
 
 ]
-Underfull \vbox (badness 6316) has occurred while \output is active []
-
-
 
 [4]
-
-[5]
-
-[6]
-
-[7]
-Underfull \vbox (badness 4595) has occurred while \output is active []
-
-
-
-[8]
-Underfull \hbox (badness 6691) in paragraph at lines 100--101
-[] [] |\TU/times(0)/b/n/12.045 2.4.1.1.1 \TU/SimSun(0)/b/n/12.045 道 路 网 络[] \TU/SimSun(0)/m/n/12.045 通 常 情 况 下，|  道 路 网 络 可 建 模 为 一 个 连 通 的 有 向 图
- []
-
-
-
-[9]
-
-[10]
-File: fig/section2/road_network.pdf Graphic file (type pdf)
-<use fig/section2/road_network.pdf>
-
-Underfull \vbox (badness 1038) has occurred while \output is active []
-
-
-
-[11]
-File: fig/section2/location-keyword1.pdf Graphic file (type pdf)
-<use fig/section2/location-keyword1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[12]
-
-[13]
-
-[14]
-Underfull \hbox (badness 1009) in paragraph at lines 207--208
-[] [] |\TU/times(0)/b/n/12.045 2.5.1.1.1 \TU/SimSun(0)/b/n/12.045 时 间 依 赖 最 短 路 径 问 题  |（\TU/times(0)/b/n/12.045 TDSP\TU/SimSun(0)/b/n/12.045 ）|[] \TU/SimSun(0)/m/n/12.045 给 定 一 个 时 间 依 赖 路 网  |（参 见 第
- []
-
-
-
-[15]
-
-[16]
-
-[17]
-
-[18]
-
-LaTeX Warning: Reference `tb:compare_queries' on page 19 undefined on input line 299.
-
-) (./latex/3_routesearch.tex
-Underfull \vbox (badness 3769) has occurred while \output is active []
-
-
-
-[19]
-
-[20]
-Chapter 第三章.
-
-
-[21
-
-]
-
-[22]
-File: fig/section3/ex1.png Graphic file (type bmp)
-<fig/section3/ex1.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[23]
-
-[24]
-
-[25]
-
-[26]
-Underfull \vbox (badness 5091) has occurred while \output is active []
-
-
-
-[27]
-
-[28]
-
-[29]
-
-[30]
-
-[31]
-
-[32]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[33]
-Underfull \vbox (badness 3396) has occurred while \output is active []
-
-
-
-[34]
-
-[35]
-Overfull \hbox (2.47198pt too wide) in paragraph at lines 361--361
-[]|[]| 
- []
-
-
-Overfull \hbox (2.47198pt too wide) in paragraph at lines 361--362
-[]|[]| 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[36]
-File: fig/section3/fig1_NYC_time.png Graphic file (type bmp)
-<fig/section3/fig1_NYC_time.png>
-File: fig/section3/fig1_NYC_cost.png Graphic file (type bmp)
-<fig/section3/fig1_NYC_cost.png>
-File: fig/section3/fig1_TGC_time.png Graphic file (type bmp)
-<fig/section3/fig1_TGC_time.png>
-File: fig/section3/fig1_TGC_cost.png Graphic file (type bmp)
-<fig/section3/fig1_TGC_cost.png>
-
-Underfull \vbox (badness 3612) has occurred while \output is active []
-
-
-
-[37]
-
-[38]
-File: fig/section3/fig2_time.png Graphic file (type bmp)
-<fig/section3/fig2_time.png>
-File: fig/section3/fig2_cost.png Graphic file (type bmp)
-<fig/section3/fig2_cost.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[39]
-File: fig/section3/fig3_alpha_time.png Graphic file (type bmp)
-<fig/section3/fig3_alpha_time.png>
-File: fig/section3/fig3_alpha_cost.png Graphic file (type bmp)
-<fig/section3/fig3_alpha_cost.png>
-File: fig/section3/fig3_beta_time.png Graphic file (type bmp)
-<fig/section3/fig3_beta_time.png>
-File: fig/section3/fig3_beta_cost.png Graphic file (type bmp)
-<fig/section3/fig3_beta_cost.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[40]
-File: fig/section3/fig4_time.png Graphic file (type bmp)
-<fig/section3/fig4_time.png>
-File: fig/section3/fig4_cost.png Graphic file (type bmp)
-<fig/section3/fig4_cost.png>
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 503.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\epsilon' on input line 503.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 503.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[41]
-File: fig/section3/fig5_time.png Graphic file (type bmp)
-<fig/section3/fig5_time.png>
-File: fig/section3/fig5_cost.png Graphic file (type bmp)
-<fig/section3/fig5_cost.png>
-File: fig/section3/fig6_NY.png Graphic file (type bmp)
-<fig/section3/fig6_NY.png>
-
-Overfull \hbox (13.80188pt too wide) in paragraph at lines 516--525
- [][][][][][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[42]
-
-[43]) (./latex/4_comovement.tex
-
-[44]
-Chapter 第四章.
-
-
-[45
-
-]
-
-[46]
-File: fig/section4/group companion.pdf Graphic file (type pdf)
-<use fig/section4/group companion.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[47]
-
-[48]
-Underfull \hbox (badness 1810) in paragraph at lines 52--53
-\TU/SimSun(0)/m/n/12.045 一 种 社 区 感 知 的 近 似 搜 索 算 法  |— —| $[]$\TU/times(0)/m/n/12.045 ommunity-aware $[]$earch with $[]$pproximate
- []
-
-
-
-[49]
-Underfull \vbox (badness 4595) has occurred while \output is active []
-
-
-
-[50]
-
-[51]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[52]
-Underfull \hbox (badness 1466) in paragraph at lines 217--218
-[][][]\TU/SimHei(0)/m/n/12.045 定 理 \TU/times(0)/m/n/12.045 4.1 |\TU/SimHei(0)/m/n/12.045 （\TU/times(0)/m/n/12.045 ES-ECMC \TU/SimHei(0)/m/n/12.045 算 法 时 间 复 杂 度）|  []\TU/times(0)/m/n/12.045 ES-ECMC \TU/SimSun(0)/m/n/12.045 算 法 的 时 间 复 杂 度 为
- []
-
-
-
-[53]
-
-[54]
-
-[55]
-File: fig/section4/picture.pdf Graphic file (type pdf)
-<use fig/section4/picture.pdf>
-
-
-[56]
-
-[57]
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
@@ -1938,277 +1660,65 @@ Package fontspec Info:
 
 
 
-[58]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[59]
-
-[60]
-File: fig/section4/BJ-hitratio-num.pdf Graphic file (type pdf)
-<use fig/section4/BJ-hitratio-num.pdf>
-File: fig/section4/BJ-time-num.pdf Graphic file (type pdf)
-<use fig/section4/BJ-time-num.pdf>
-File: fig/section4/PT-hitratio-num.pdf Graphic file (type pdf)
-<use fig/section4/PT-hitratio-num.pdf>
-File: fig/section4/PT-time-num.pdf Graphic file (type pdf)
-<use fig/section4/PT-time-num.pdf>
-File: fig/section4/BJ-hitratio-k.pdf Graphic file (type pdf)
-<use fig/section4/BJ-hitratio-k.pdf>
-File: fig/section4/BJ-time-k.pdf Graphic file (type pdf)
-<use fig/section4/BJ-time-k.pdf>
-File: fig/section4/PT-hitratio-k.pdf Graphic file (type pdf)
-<use fig/section4/PT-hitratio-k.pdf>
-File: fig/section4/PT-time-k.pdf Graphic file (type pdf)
-<use fig/section4/PT-time-k.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[61]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[62]
-File: fig/section4/BJ-hitratio-m.pdf Graphic file (type pdf)
-<use fig/section4/BJ-hitratio-m.pdf>
-File: fig/section4/BJ-time-m.pdf Graphic file (type pdf)
-<use fig/section4/BJ-time-m.pdf>
-File: fig/section4/PT-hitratio-m.pdf Graphic file (type pdf)
-<use fig/section4/PT-hitratio-m.pdf>
-File: fig/section4/PT-time-m.pdf Graphic file (type pdf)
-<use fig/section4/PT-time-m.pdf>
-File: fig/section4/BJ-hitratio-ep.pdf Graphic file (type pdf)
-<use fig/section4/BJ-hitratio-ep.pdf>
-File: fig/section4/BJ-time-ep.pdf Graphic file (type pdf)
-<use fig/section4/BJ-time-ep.pdf>
-File: fig/section4/PT-hitratio-ep.pdf Graphic file (type pdf)
-<use fig/section4/PT-hitratio-ep.pdf>
-File: fig/section4/PT-time-ep.pdf Graphic file (type pdf)
-<use fig/section4/PT-time-ep.pdf>
-
-Underfull \vbox (badness 2564) has occurred while \output is active []
-
-
-
-[63]
-
-[64]
-Underfull \vbox (badness 4595) has occurred while \output is active []
-
-
-
-[65]) (./latex/5_contact.tex
-
-[66]
-Chapter 第五章.
-
-
-[67
-
-]
-File: fig/section5/intro.pdf Graphic file (type pdf)
-<use fig/section5/intro.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[68]
-
-[69]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[70]
-
-[71]
-Underfull \vbox (badness 2302) has occurred while \output is active []
-
-
-
-[72]
-File: fig/section5/cells.pdf Graphic file (type pdf)
-<use fig/section5/cells.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[73]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[74]
-Underfull \vbox (badness 2302) has occurred while \output is active []
-
-
-
-[75]
-
-[76]
-
-[77]
-
-LaTeX Warning: Reference `contact_alg:app' on page 78 undefined on input line 291.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[78]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[79]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[80]
-File: fig/section5/BJ-Q-CE.png Graphic file (type bmp)
-<fig/section5/BJ-Q-CE.png>
-File: fig/section5/BJ-Q-time.png Graphic file (type bmp)
-<fig/section5/BJ-Q-time.png>
-File: fig/section5/PT-Q-CE.png Graphic file (type bmp)
-<fig/section5/PT-Q-CE.png>
-File: fig/section5/PT-Q-time.png Graphic file (type bmp)
-<fig/section5/PT-Q-time.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[81]
-Underfull \vbox (badness 7468) has occurred while \output is active []
-
-
-
-[82]
-File: fig/section5/BJ-ep-CE.png Graphic file (type bmp)
-<fig/section5/BJ-ep-CE.png>
-File: fig/section5/BJ-ep-time.png Graphic file (type bmp)
-<fig/section5/BJ-ep-time.png>
-File: fig/section5/PT-ep-CE.png Graphic file (type bmp)
-<fig/section5/PT-ep-CE.png>
-File: fig/section5/PT-ep-time.png Graphic file (type bmp)
-<fig/section5/PT-ep-time.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[83]
-File: fig/section5/BJ-k-CE.png Graphic file (type bmp)
-<fig/section5/BJ-k-CE.png>
-File: fig/section5/BJ-k-time.png Graphic file (type bmp)
-<fig/section5/BJ-k-time.png>
-File: fig/section5/PT-k-CE.png Graphic file (type bmp)
-<fig/section5/PT-k-CE.png>
-File: fig/section5/PT-k-time.png Graphic file (type bmp)
-<fig/section5/PT-k-time.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[84]
-File: fig/section5/accuracy_Q4.png Graphic file (type bmp)
-<fig/section5/accuracy_Q4.png>
-File: fig/section5/accuracy_ep4.png Graphic file (type bmp)
-<fig/section5/accuracy_ep4.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[85]
-File: fig/section5/BJ-precheck5.png Graphic file (type bmp)
-<fig/section5/BJ-precheck5.png>
-File: fig/section5/PT-precheck5.png Graphic file (type bmp)
-<fig/section5/PT-precheck5.png>
-) (./latex/6_join.tex
-Underfull \vbox (badness 3098) has occurred while \output is active []
-
-
-
-[86]
-
-[87]
-Chapter 第六章.
-
-Underfull \vbox (badness 3128) has occurred while \output is active []
-
-
-
-[88
-
-]
-
-[89]
-
-[90]
+[5]
 File: fig/section6/intro.png Graphic file (type bmp)
 <fig/section6/intro.png>
 
 
-[91]
+[6]
 
-LaTeX Warning: Reference `sec:statement' on page 92 undefined on input line 79.
+LaTeX Warning: Reference `sec:statement' on page 7 undefined on input line 79.
 
 
 
-[92]
+[7]
 
-[93]
+[8]
 Overfull \hbox (51.83327pt too wide) detected at line 161
 [][][]\OML/cmm/m/it/12.045 MR\OT1/cmr/m/n/12.045 (\OML/cmm/m/it/12.045 o; t\OT1/cmr/m/n/12.045 ) = \OMS/cmsy/m/n/12.045 f\OT1/cmr/m/n/12.045 (\OML/cmm/m/it/12.045 x; y\OT1/cmr/m/n/12.045 ) \OMS/cmsy/m/n/12.045 2 \U/msb/m/n/12.045 R[] \OMS/cmsy/m/n/12.045 j \OML/cmm/m/it/12.045 dist\OT1/cmr/m/n/12.045 ((\OML/cmm/m/it/12.045 x; y\OT1/cmr/m/n/12.045 )\OML/cmm/m/it/12.045 ; \OT1/cmr/m/n/12.045 (\OML/cmm/m/it/12.045 x[]; y[]\OT1/cmr/m/n/12.045 )) \OMS/cmsy/m/n/12.045 ^^T \OML/cmm/m/it/12.045 v[]\OT1/cmr/m/n/12.045 (\OML/cmm/m/it/12.045 t \OMS/cmsy/m/n/12.045 ^^@ \OML/cmm/m/it/12.045 t[]\OT1/cmr/m/n/12.045 ) \OMS/cmsy/m/n/12.045 ^ \OML/cmm/m/it/12.045 dist\OT1/cmr/m/n/12.045 ((\OML/cmm/m/it/12.045 x; y\OT1/cmr/m/n/12.045 )\OML/cmm/m/it/12.045 ; \OT1/cmr/m/n/12.045 (\OML/cmm/m/it/12.045 x[]; y[]\OT1/cmr/m/n/12.045 )) \OMS/cmsy/m/n/12.045 ^^T \OML/cmm/m/it/12.045 v[]\OT1/cmr/m/n/12.045 (\OML/cmm/m/it/12.045 t[] \OMS/cmsy/m/n/12.045 ^^@ \OML/cmm/m/it/12.045 t\OT1/cmr/m/n/12.045 )\OMS/cmsy/m/n/12.045 g
  []
 
-File: fig/section6/lens.png Graphic file (type bmp)
-<fig/section6/lens.png>
-
-
-[94]
-
-[95]
-File: fig/section6/overall example.png Graphic file (type bmp)
-<fig/section6/overall example.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[96]
+[9]
+File: fig/section6/lens.png Graphic file (type bmp)
+<fig/section6/lens.png>
+
+
+[10]
+File: fig/section6/overall example.png Graphic file (type bmp)
+<fig/section6/overall example.png>
+
+
+[11]
 File: fig/section6/mtree.pdf Graphic file (type pdf)
 <use fig/section6/mtree.pdf>
 
-
-[97]
-
-[98]
-
-[99]
-Underfull \vbox (badness 3260) has occurred while \output is active []
+Underfull \vbox (badness 2080) has occurred while \output is active []
 
 
 
-[100]
+[12]
 
-LaTeX Warning: Reference `eq:timestamped motion range' on page 101 undefined on input line 393.
+[13]
+
+[14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[15]
+
+LaTeX Warning: Reference `eq:timestamped motion range' on page 16 undefined on input line 393.
 
 File: fig/section6/ellipse.pdf Graphic file (type pdf)
 <use fig/section6/ellipse.pdf>
 
 
-[101]
+[16]
 File: fig/section6/ball-tree.pdf Graphic file (type pdf)
 <use fig/section6/ball-tree.pdf>
 
@@ -2216,7 +1726,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[102]
+[17]
 Underfull \hbox (badness 1184) in paragraph at lines 435--440
 \TU/SimSun(0)/m/n/12.045 非 叶 节 点 仅 包 含 两 个 子 节 点 不 同，| \TU/times(0)/m/n/12.045 HBall-tree \TU/SimSun(0)/m/n/12.045 通 过 一 种 重 新 划 分  |（\TU/times(0)/m/n/12.045 repartition\TU/SimSun(0)/m/n/12.045 ）|
  []
@@ -2231,24 +1741,32 @@ Underfull \vbox (badness 2012) has occurred while \output is active []
 
 
 
-[103]
+[18]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[104]
+[19]
 
-[105]
+[20]
 
-[106]
+[21]
+Underfull \vbox (badness 3803) has occurred while \output is active []
 
-[107]
+
+
+[22]
+Underfull \vbox (badness 1845) has occurred while \output is active []
+
+
+
+[23]
 File: fig/section6/geo-num-ctime.png Graphic file (type bmp)
 <fig/section6/geo-num-ctime.png>
 File: fig/section6/pt-num-ctime.png Graphic file (type bmp)
 <fig/section6/pt-num-ctime.png>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 612--617
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 617--622
  [][][][] 
  []
 
@@ -2257,7 +1775,7 @@ File: fig/section6/geo-num-ftime.png Graphic file (type bmp)
 File: fig/section6/pt-num-ftime.png Graphic file (type bmp)
 <fig/section6/pt-num-ftime.png>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 626--631
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 631--636
  [][][][] 
  []
 
@@ -2266,133 +1784,106 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[108]
+[24]
 File: fig/section6/geo-poi-ftime.png Graphic file (type bmp)
 <fig/section6/geo-poi-ftime.png>
 File: fig/section6/pt-poi-ftime.png Graphic file (type bmp)
 <fig/section6/pt-poi-ftime.png>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 643--648
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 648--653
  [][][][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[109]
 File: fig/section6/geo-I-ftime.png Graphic file (type bmp)
 <fig/section6/geo-I-ftime.png>
 File: fig/section6/pt-I-ftime.png Graphic file (type bmp)
 <fig/section6/pt-I-ftime.png>
 
-
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 670.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\epsilon' on input line 670.
+(hyperref)                removing `math shift' on input line 675.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 670.
+(hyperref)                removing `\epsilon' on input line 675.
 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 675.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[25]
 File: fig/section6/geo-ep-ftime.png Graphic file (type bmp)
 <fig/section6/geo-ep-ftime.png>
 File: fig/section6/pt-ep-ftime.png Graphic file (type bmp)
 <fig/section6/pt-ep-ftime.png>
 
+
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 692.
+(hyperref)                than one, level fixed on input line 697.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1024) has occurred while \output is active []
 
 
 
-[110]
+[26]
 File: fig/section6/geo-sim-ftime.png Graphic file (type bmp)
 <fig/section6/geo-sim-ftime.png>
 File: fig/section6/pt-sim-ftime.png Graphic file (type bmp)
 <fig/section6/pt-sim-ftime.png>
-
-
-[111]
 File: fig/section6/geo-num-access.png Graphic file (type bmp)
 <fig/section6/geo-num-access.png>
 File: fig/section6/pt-num-access.png Graphic file (type bmp)
 <fig/section6/pt-num-access.png>
-) (./latex/7_conclusion.tex
 
-[112]
-
-[113]
-Chapter 第七章.
-
-Underfull \vbox (badness 2237) has occurred while \output is active []
-
-
-
-[114
-
-]
-
-[115]
-
-[116]
-
-[117]
-Underfull \vbox (badness 2653) has occurred while \output is active []
-
-
-
-[118]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[119])
+[27])
 
-[120]
+[28]
 
-[121
+[29
 
 ] (./main.bbl
 
-[122
+[30
 
 
 ]
 
-[123]
+[31]
 
-[124]
+[32]
 
-[125]
+[33]
 
-[126]
+[34]
 
-[127]
+[35]
 
-[128]
+[36]
 
-[129]
+[37]
 
-[130]
+[38]
 
-[131]
+[39]
 
-[132]
+[40]
 
-[133]
+[41]
 
-[134]
+[42]
 
-[135])
+[43])
 
-[136] (./main.aux)
+[44] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/08/05>
@@ -2401,22 +1892,16 @@ L3 programming layer <2022/08/05>
 
 LaTeX Warning: There were undefined references.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: F96E35DF24873B5124488CE6FFDDCB22;27709
-(rerunfilecheck)             After:  9EFAFEE808F3550A40EE4C0543DF4A13;28093.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D9B9B08E0D34EB599FE131908C794FA0;7690.
  ) 
 Here is how much of TeX's memory you used:
- 52339 strings out of 473832
- 1119668 string characters out of 5729481
- 1585862 words of memory out of 5000000
- 74447 multiletter control sequences out of 15000+600000
- 575872 words of font info for 168 fonts, out of 8000000 for 9000
+ 51447 strings out of 473832
+ 1081883 string characters out of 5729481
+ 1554982 words of memory out of 5000000
+ 73642 multiletter control sequences out of 15000+600000
+ 571216 words of font info for 147 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 125i,24n,134p,1241b,1948s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,24n,134p,1035b,1948s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (143 pages).
+Output written on main.pdf (48 pages).
