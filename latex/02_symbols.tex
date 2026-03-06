@@ -1,12 +1,4 @@
-生成主要符号表的章标题需使用本模板提供的\shadcmd{listofsymbs}命令。排版主要符号表的内容则需要使用本模板提供的\shad{symbtable}环境。该环境基于\shad{longtable}环境进行封装，依次接受两个可选参数：
-	
-	\shadcmd{begin\{symbtable\}[<表格整体位置>](<主要符号表的列控制参数>)}
-	
-	\noindent 其中，第一项可选参数用于设置\shad{longtable}环境的可选参数，且默认值与\shad{longtable}环境保持一致；第二项可选参数用于设置\shad{longtable}环境的必选参数，其默认值设置为\shad{p\{3.5em\} p\{$\backslash$linewidth-9em\} p\{3em\}<\{$\backslash$centering\}}。
-	
-	若非必要，用户不应指定\shad{symbtable}环境的可选参数。但若出于对排版美观性的考虑，可适当调整主要符号表各列的宽度。注意，按照学位论文撰写规范中的示例，\textbf{主要符号表有且仅有三列}。因此，切勿对第二项可选参数设置其他列数。
-	
-	\textbf{重要提醒}：\shadcmd{listofsymbs}命令和\shad{symbtable}环境必须同时出现或消失。不需要主要符号表时，通通注释掉即可；需要时，必须使用\shad{symbtable}环境生成表格内容。
+
 	
 	\begin{symbtable}
 		a & 加速度（acceleration） & 1 \\
@@ -70,18 +62,3 @@
 		\end{verbatim}
 	\end{boxedminipage}
 	
-
-	\begin{figure}[!htb]
-		\centering
-		\includegraphics[width=0.95\linewidth]{TeXstudio-nomenclature1}
-		\\
-		\includegraphics[width=0.95\linewidth]{TeXstudio-nomenclature2}
-		\\
-		\includegraphics[width=0.95\linewidth]{TeXstudio-nomenclature3}
-		\caption{TeXstudio编译缩略词表的操作步骤} \label{fig: TeXstudio编译缩略词表}
-	\end{figure}
-	\begin{figure}[!htb]
-		\centering
-		\includegraphics[width=0.95\linewidth]{VSCode-nomenclature}
-		\caption{VSCode手动编译缩略词表的操作步骤} \label{fig: VSCode手动编译缩略词表}
-	\end{figure}
