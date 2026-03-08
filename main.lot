@@ -1,9 +1,36 @@
 \addvspace {10\p@ }
-\cftsetpnumwidth {\widthof {6}-1bp}
-\contentsline {table}{\numberline {1-1}{\ignorespaces 主要符号解释}}{6}{table.caption.7}%
-\cftsetpnumwidth {\widthof {15}-1bp}
-\contentsline {table}{\numberline {1-2}{\ignorespaces 参数设定}}{15}{table.caption.10}%
-\cftsetpnumwidth {\widthof {15}-1bp}
-\contentsline {table}{\numberline {1-3}{\ignorespaces 比较算法}}{15}{table.caption.11}%
+\addvspace {10\p@ }
+\cftsetpnumwidth {\widthof {23}-1bp}
+\contentsline {table}{\numberline {2-1}{\ignorespaces 相似度度量方法比较}}{23}{table.caption.9}%
+\addvspace {10\p@ }
+\cftsetpnumwidth {\widthof {33}-1bp}
+\contentsline {table}{\numberline {3-1}{\ignorespaces 主要符号解释}}{33}{table.caption.11}%
+\cftsetpnumwidth {\widthof {42}-1bp}
+\contentsline {table}{\numberline {3-2}{\ignorespaces 参数设定}}{42}{table.caption.15}%
+\cftsetpnumwidth {\widthof {42}-1bp}
+\contentsline {table}{\numberline {3-3}{\ignorespaces 比较算法}}{42}{table.caption.16}%
+\addvspace {10\p@ }
+\cftsetpnumwidth {\widthof {57}-1bp}
+\contentsline {table}{\numberline {4-1}{\ignorespaces 主要符号解释}}{57}{table.caption.23}%
+\cftsetpnumwidth {\widthof {66}-1bp}
+\contentsline {table}{\numberline {4-2}{\ignorespaces 参数设定}}{66}{table.caption.26}%
+\cftsetpnumwidth {\widthof {66}-1bp}
+\contentsline {table}{\numberline {4-3}{\ignorespaces 比较算法}}{66}{table.caption.27}%
+\addvspace {10\p@ }
+\cftsetpnumwidth {\widthof {78}-1bp}
+\contentsline {table}{\numberline {5-1}{\ignorespaces 主要符号解释}}{78}{table.caption.33}%
+\cftsetpnumwidth {\widthof {87}-1bp}
+\contentsline {table}{\numberline {5-2}{\ignorespaces 比较算法}}{87}{table.caption.37}%
+\cftsetpnumwidth {\widthof {88}-1bp}
+\contentsline {table}{\numberline {5-3}{\ignorespaces 参数设置}}{88}{table.caption.38}%
+\addvspace {10\p@ }
+\cftsetpnumwidth {\widthof {100}-1bp}
+\contentsline {table}{\numberline {6-1}{\ignorespaces 主要符号解释}}{100}{table.caption.45}%
+\cftsetpnumwidth {\widthof {113}-1bp}
+\contentsline {table}{\numberline {6-2}{\ignorespaces 比较算法}}{113}{table.caption.53}%
+\cftsetpnumwidth {\widthof {113}-1bp}
+\contentsline {table}{\numberline {6-3}{\ignorespaces 评估参数设置}}{113}{table.caption.54}%
+\cftsetpnumwidth {\widthof {114}-1bp}
+\contentsline {table}{\numberline {6-4}{\ignorespaces 剪枝性能}}{114}{table.caption.55}%
 \addvspace {10\p@ }
 \contentsfinish 

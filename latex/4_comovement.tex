@@ -1,7 +1,7 @@
 \chapter{基于轨迹数据的群体联合移动模式挖掘}
-
+\label{cha:comovement}
 \section{引言}
-本章通过对大规模移动轨迹的系统分析，旨在设计高效且可扩展的算法框架，用于识别在特定时间区间内频繁共同出现在相邻空间位置，且在多个时间点存在联合移动的对象集合，即特定群体联合移动模式。该问题有助于为城市规划、交通管理以及社会行为研究等应用场景提供更加深入和精细化的决策支持。
+本章研究如何针对联合移动模式挖掘这一城市计算应用设计高性能算法。通过对大规模移动轨迹的系统分析，旨在设计高效且可扩展的算法框架，用于识别在特定时间区间内频繁共同出现在相邻空间位置，且在多个时间点存在联合移动的对象集合，即特定群体联合移动模式。该问题有助于为城市规划、交通管理以及社会行为研究等应用场景提供更加深入和精细化的决策支持。
 
 为实现上述目标，本章从数据建模、索引结构设计与算法优化等多个层面展开研究。首先，对特定群体模式检测问题进行形式化定义，明确问题输入、输出及约束条件，并系统分析其在大规模数据环境下面临的计算复杂性与存储开销挑战；其次，结合时空数据挖掘技术，构建适用于大规模轨迹数据的高效索引结构，以支持高性能的候选模式生成与验证过程。在研究背景方面，调研了联合移动模式搜索与轨迹聚类领域的代表性工作，总结其在模式表达能力、计算效率与扩展性方面的优势与不足，从而引出本章研究的核心问题与技术挑战。在问题描述层面，本章依次给出了移动对象及其轨迹的形式化定义，刻画了协同行为的时间持续约束以及空间共现条件，并在此基础上提出了一个更加简化且具有实际意义的伴随群体发现问题定义。
 
@@ -22,10 +22,10 @@
 
 为了解决上述问题，本文提出了一种联合移动模式概念——伴随群体。相较于已经存在的传统的联合移动模式定义，伴随群体的约束更加宽松且更具实用性。具体而言，一个伴随群体由至少 $m$ 个移动对象组成，这些对象需要在至少 $k$ 个时间段内在空间上保持接近（例如，两两距离不超过预定义的距离阈值 $\epsilon$），并允许对象在时间维度上暂时离开群体而不破坏整体模式的有效性。基于该模式定义，进一步形式化提出了伴随群体发现问题。给定一组移动对象及其轨迹数据，伴随群体发现问题旨在在用户可交互时间范围内高效发现所有满足条件的伴随群体。此外，在问题设定中，若某一对象能够同时参与多个伴随群体，则将其归属于成员规模最大的伴随群体，以保证群体划分结果的确定性与可解释性。伴随群体发现问题问题具有广泛的应用前景，可服务于交通监测与管理、疫情防控、公共安全预警以及群体行为分析等多种实际场景，为大规模时空数据环境下的群体行为挖掘提供一种高效且可扩展的解决方案。
 
-\begin{figure}[htbp]
+\begin{figure}[htp]
     \centering
-    \includegraphics[width=1\textwidth]{fig/section4/group companion.pdf}
-    \caption{伴随群体发现问题示例}
+    \includegraphics[width=1\textwidth]{fig/section4/group companion.png}
+    \caption{伴随群体发现问题示例(空间距离阈值为 $\epsilon = 10$ 米，联合移动的最小持续时间阈值为 $k = 3$，群体规模阈值为 $m = 3$)}
     \label{cm_fig:intro}
 \end{figure}
 
@@ -67,16 +67,12 @@
 
 本节介绍所需的基础概念，并给出问题的形式化定义。给定一组移动对象，依次定义移动对象及其轨迹、协同行为持续时间、协同行为对、伴随群体以及伴随群体发现问题。本章所使用的主要符号及其解释如表\ref{cm_tab:notation}所示。
 
-\begin{table}[htbp]
-    \centering
-    \setlength{\tabcolsep}{8pt}% column separation
-    \caption{主要符号解释}
-    \label{cm_tab:notation}
-    \renewcommand{\arraystretch}{1}%row space 
+\begin{table}[!ht]
+    \caption{主要符号解释}\label{cm_tab:notation}
     \begin{tabular}{ll}
-        \hline
+        \toprule
 		\bfseries 符号 & \bfseries 解释 \\
-        \hline
+        \midrule
         $o$ & 一个移动对象\\
         $O$ & 一组移动对象集合\\
         $s$ & 一个采样位置点\\
@@ -88,7 +84,7 @@
         $m$ & 最小群体规模阈值 \\
         $g$ &一个伴随群体\\
         $\mathcal{G}$ & 一组伴随群体 \\
-        \hline
+        \bottomrule
     \end{tabular}
 \end{table}
 
@@ -130,7 +126,7 @@ ES-ECMC 算法整体上包含三个核心步骤。首先，给定输入数据，
 \end{definition}
 
 
-\begin{algorithm}[htbp]
+\begin{algorithm}[htp]
     \caption{ES-ECMC}
     \label{cm_alg:S-ECMC}
     \Input{轨迹集$\mathcal{T}=\{\tau_1,\tau_2,\ldots,\tau_{|\mathcal{O}|}\}$;\newline
@@ -319,52 +315,39 @@ $。综上，CS-ACMC 算法的总体时间复杂度为 $O(|\mathcal{T}|^2 \times
 
 为统一实验设定，所有时间戳均被映射到 24 小时范围内。对于波尔图数据集，每条轨迹的出发时间被随机分配至 24 小时区间内，以避免时间分布偏置。所有轨迹数据在实验前均被预处理并转换为轨迹网格编号序列。生成网格编号序列及伴随群体发现所使用的默认参数设置如表 \ref{cm_tb: group settings} 所示。同时，对轨迹的经纬度范围以及轨迹长度进行了筛选与限制，以保证实验规模可控且具有代表性，具体参数同样列于表 \ref{cm_tb: group settings} 中。
 
-\begin{table}[tb]
+\begin{table}[!ht]
 	\centering
 	\caption{参数设定}
 	\label{cm_tb: group settings}
 	\begin{tabular}{|l|l|l|}
-		\hline
+		\toprule
 		\bfseries & \bfseries 北京数据集  & \bfseries 波尔图数据集 \\
-		\hline
-		\hline
+		\midrule
 		经度范围  & \tabincell{l}{[116.250, 116.550]} &  \tabincell{l}{[-8.735, -8.156]} \\
-		\hline
 		维度范围  & \tabincell{l}{[39.830,  40.030]}& \tabincell{l}{[40.953, 41.307]} \\
-		\hline
 		轨迹长度范围  & \tabincell{l}{[20, 100]}& \tabincell{l}{[20, 100]} \\
-		\hline
 		\tabincell{l}{$\epsilon_s$} & \tabincell{l}{200 米} &  \tabincell{l}{200 米} \\
-  \hline
 		\tabincell{l}{$\epsilon_t$} & \tabincell{l}{200 秒} &  \tabincell{l}{200 秒} \\
-  \hline
 		$|\mathcal{T}|$ & \tabincell{l}{2K--10K / 默认 6K}& \tabincell{l}{20K--100K / 默认 20K} \\
-		\hline
   $k$ & \tabincell{l}{2--6 / 默认 4}& \tabincell{l}{2--6 / 默认 4} \\
-		\hline
 		 $m$ & \tabincell{l}{2--6 / 默认 4}& \tabincell{l}{2--6 /默认 4} \\
-   \hline
    $\mu$ & \tabincell{l}{0.42--0.50 / 默认 0.50}& \tabincell{l}{0.42--0.50 / 默认 0.50} \\
-		\hline
+		\bottomrule
 	\end{tabular}
 \end{table}
     
 
 \subsubsection{比较算法}
 
-\begin{table}[htbp]
-    \centering
-    \setlength{\tabcolsep}{8pt}% column separation
-    \caption{比较算法}
-    \label{cm_tab:compared_alg}
-    \renewcommand{\arraystretch}{1}%row space 
+\begin{table}[!ht]
+    \caption{比较算法}\label{cm_tab:compared_alg}
     \begin{tabular}{ll}
-        \hline
+        \toprule
 		\bfseries 算法标识 & \bfseries 算法描述 \\
-        \hline
+        \midrule
         ES-ECMC & 精确搜索算法\\
         CS-ACMC & 基于近似协同行为计算的社区感知搜索算法 \\ 
-        \hline
+        \bottomrule
     \end{tabular}
 \end{table}
 
@@ -385,25 +368,25 @@ $。综上，CS-ACMC 算法的总体时间复杂度为 $O(|\mathcal{T}|^2 \times
 
 首先，在默认参数设置下，研究轨迹数量变化对算法性能的影响。具体而言，在波尔图数据集中，轨迹数量从 20{,}000 增加至 100{,}000；在北京数据集中，轨迹数量从 2{,}000 增加至 10{,}000。之所以采用该设置，是因为北京数据集的轨迹空间分布更加密集、采样间隔更小，因此任意两条轨迹更容易满足距离约束并形成协同行为对，从而带来更高的计算压力。从命中率结果来看，波尔图数据集上的命中率随轨迹数量增加呈现明显上升趋势（见图~\ref{cm_fig:波尔图数据集-ratios-num}）。当轨迹数量由 20K 增加至 100K 时，命中率由约 0.70 提升至接近 0.88。这一现象说明，在轨迹规模较小时，近似方法可能因协同行为对数量较少而遗漏部分结构；随着轨迹数量增加，对象之间的连接关系更加充分，社区结构更加清晰，基于共享邻居的聚类策略能够更准确地恢复真实伴随群体结构。相比之下，北京数据集上的命中率始终稳定在 0.91--0.93 之间（见图~\ref{cm_fig:北京数据集-ratios-num}），整体波动较小。这是因为北京数据集本身轨迹密度较高，在较小规模下已能形成相对稳定的协同行为图结构，因此随着规模增加，近似算法的结果质量提升空间有限，但整体保持较高水平。
 
-\begin{figure}[htbp]
+\begin{figure}[htp]
     \centering
     \subfloat[]{
-        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-hitratio-num.pdf}
+        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-hitratio-num.png}
         \label{cm_fig:北京数据集-ratios-num}
     }
     \hfill
     \subfloat[]{
-        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-time-num.pdf}
+        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-time-num.png}
         \label{cm_fig:北京数据集-time-num}
     }
     \\
     \subfloat[]{
-        \includegraphics[width=0.4\textwidth]{fig/section4/PT-hitratio-num.pdf}
+        \includegraphics[width=0.4\textwidth]{fig/section4/PT-hitratio-num.png}
         \label{cm_fig:波尔图数据集-ratios-num}
     }
     \hfill
     \subfloat[]{
-        \includegraphics[width=0.4\textwidth]{fig/section4/PT-time-num.pdf}
+        \includegraphics[width=0.4\textwidth]{fig/section4/PT-time-num.png}
         \label{cm_fig:波尔图数据集-time-num}
     }
     \caption{轨迹数量的影响。 \subref{cm_fig:北京数据集-ratios-num} 北京数据集上的命中率 \subref{cm_fig:北京数据集-time-num} 北京数据集上的运行时间 \subref{cm_fig:波尔图数据集-ratios-num} 波尔图数据集上的命中率 \subref{cm_fig:波尔图数据集-time-num} 波尔图数据集上的运行时间}
@@ -418,22 +401,22 @@ $。综上，CS-ACMC 算法的总体时间复杂度为 $O(|\mathcal{T}|^2 \times
 \begin{figure}
     \centering
     \subfloat[]{ 
-        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-hitratio-k.pdf}
+        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-hitratio-k.png}
         \label{cm_fig:北京数据集-ratios-k}
     }
     \hfill
     \subfloat[]{
-        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-time-k.pdf}
+        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-time-k.png}
         \label{cm_fig:北京数据集-time-k}
     }
     \\
     \subfloat[]{
-        \includegraphics[width=0.4\textwidth]{fig/section4/PT-hitratio-k.pdf}
+        \includegraphics[width=0.4\textwidth]{fig/section4/PT-hitratio-k.png}
         \label{cm_fig:波尔图数据集-ratios-k}
     }
     \hfill
     \subfloat[]{
-        \includegraphics[width=0.4\textwidth]{fig/section4/PT-time-k.pdf}
+        \includegraphics[width=0.4\textwidth]{fig/section4/PT-time-k.png}
         \label{cm_fig:波尔图数据集-time-k}
     }
     \caption{协同行为持续时间阈值的影响。\subref{cm_fig:北京数据集-ratios-k} 北京数据集上的命中率 \subref{cm_fig:北京数据集-time-k} 北京数据集上的运行时间 \subref{cm_fig:波尔图数据集-ratios-k} 波尔图数据集上的命中率 \subref{cm_fig:波尔图数据集-time-k} 波尔图数据集上的运行时间}
@@ -454,25 +437,25 @@ $。综上，CS-ACMC 算法的总体时间复杂度为 $O(|\mathcal{T}|^2 \times
 综上所述，在不同 $m$ 参数设置下，CS-ACMC 在保持较高命中率（尤其在高密度数据集上）的同时，显著降低了运行时间，表现出良好的稳定性与参数鲁棒性。这表明该方法能够适应不同规模约束条件，在多种实际应用场景中具有较强的实用价值。
 
 
-\begin{figure}[htbp]
+\begin{figure}[htp]
     \centering
     \subfloat[]{
-        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-hitratio-m.pdf}
+        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-hitratio-m.png}
         \label{cm_fig:北京数据集-ratios-m}
     }
     \hfill
     \subfloat[]{
-        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-time-m.pdf}
+        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-time-m.png}
         \label{cm_fig:北京数据集-time-m}
     }
     \\
     \subfloat[]{
-        \includegraphics[width=0.4\textwidth]{fig/section4/PT-hitratio-m.pdf}
+        \includegraphics[width=0.4\textwidth]{fig/section4/PT-hitratio-m.png}
         \label{cm_fig:波尔图数据集-ratios-m}
     }
     \hfill
     \subfloat[]{
-        \includegraphics[width=0.4\textwidth]{fig/section4/PT-time-m.pdf}
+        \includegraphics[width=0.4\textwidth]{fig/section4/PT-time-m.png}
         \label{cm_fig:波尔图数据集-time-m}
     }
     \caption{群体规模阈值的影响。\subref{cm_fig:北京数据集-ratios-m} 北京数据集上的命中率 \subref{cm_fig:北京数据集-time-m} 北京数据集上的运行时间 \subref{cm_fig:波尔图数据集-ratios-m} 波尔图数据集上的命中率 \subref{cm_fig:波尔图数据集-time-m} 波尔图数据集上的运行时间}
@@ -481,25 +464,25 @@ $。综上，CS-ACMC 算法的总体时间复杂度为 $O(|\mathcal{T}|^2 \times
 
 
 \subsubsection{聚类参数的影响}
-\begin{figure}[htbp]
+\begin{figure}[htp]
     \centering
     \subfloat[]{
-        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-hitratio-ep.pdf}
+        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-hitratio-ep.png}
         \label{cm_fig:北京数据集-ratios-ep}
     }
     \hfill
     \subfloat[]{
-        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-time-ep.pdf}
+        \includegraphics[width=0.4\textwidth]{fig/section4/BJ-time-ep.png}
         \label{cm_fig:北京数据集-time-ep}
     }
 
     \subfloat[]{
-        \includegraphics[width=0.4\textwidth]{fig/section4/PT-hitratio-ep.pdf}
+        \includegraphics[width=0.4\textwidth]{fig/section4/PT-hitratio-ep.png}
         \label{cm_fig:波尔图数据集-ratios-ep}
     }
     \hfill
     \subfloat[]{
-        \includegraphics[width=0.4\textwidth]{fig/section4/PT-time-ep.pdf}
+        \includegraphics[width=0.4\textwidth]{fig/section4/PT-time-ep.png}
         \label{cm_fig:波尔图数据集-time-ep}
     }
     \caption{SCAN聚类结构相似度参数的影响。\subref{cm_fig:北京数据集-ratios-ep} 北京数据集上的命中率 \subref{cm_fig:北京数据集-time-ep} 北京数据集上的运行时间 \subref{cm_fig:波尔图数据集-ratios-ep} 波尔图数据集上的命中率 \subref{cm_fig:波尔图数据集-time-ep} 波尔图数据集上的运行时间}
