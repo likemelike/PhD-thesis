@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  8 MAR 2026 23:53
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  9 MAR 2026 22:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1540,97 +1540,7 @@ Package chemgreek Info: Activating mapping `fontspec' on line 12.
 
  (/usr/local/texlive/2025/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
-) (./latex/00_cover.tex
-Overfull \hbox (19.72725pt too wide) in paragraph at lines 3--3
-[][] 
- []
-
-File: ./fig/uestclogo.pdf Graphic file (type pdf)
-<use ./fig/uestclogo.pdf>
-
-Package fontspec Info: 
-(fontspec)             Font family 'STZHONGS(0)' created for font 'STZHONGS'
-(fontspec)             with options
-(fontspec)             [Script={CJK},Path={./font/},AutoFakeBold={2},AutoFakeSlant={0.3}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[./font/STZHONGS]/OT:script=hani;language=dflt;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[./font/STZHONGS]/OT:script=hani;language=dflt;embolden=2;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[./font/STZHONGS]/OT:script=hani;language=dflt;slant=0.3;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"[./font/STZHONGS]/OT:script=hani;language=dflt;embolden=2;slant=0.3;"
-
-
-Overfull \hbox (1.50562pt too wide) in paragraph at lines 3--3
- [][] 
- []
-
-
-
-[1
-
-]
-Overfull \hbox (19.72725pt too wide) in paragraph at lines 11--11
-[][] 
- []
-
-File: ./fig/uestclogo.pdf Graphic file (type pdf)
-<use ./fig/uestclogo.pdf>
-
-Overfull \hbox (1.50562pt too wide) in paragraph at lines 11--11
- [][] 
- []
-
-
-
-[2]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-
-[3]
-
-[4]
-Overfull \hbox (1.00371pt too wide) in paragraph at lines 46--46
- [][]| [] 
- []
-
-
-Overfull \hbox (1.00372pt too wide) in paragraph at lines 46--46
-[][]| [] 
- []
-
-
-
-[5]
-Overfull \hbox (1.00371pt too wide) in paragraph at lines 52--52
- [][]| [] 
- []
-
-
-Overfull \hbox (1.00372pt too wide) in paragraph at lines 52--52
-[][]| [] 
- []
-
-
-
-[6]
-
-[7]
-
-[8]) (./latex/01_abstract.tex
-
-[9]
 
 Package fontspec Info: 
 (fontspec)             Font family 'SimHei(0)' created for font 'SimHei' with
@@ -1649,84 +1559,38 @@ Package fontspec Info:
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
 (fontspec)             <->"[./font/SimHei]/OT:script=hani;language=dflt;embolden=2;slant=0.3;"
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[1
-
-]
-
-[2]
-Underfull \hbox (badness 1092) in paragraph at lines 27--28
-[]\TU/times(0)/m/n/12.045 (2) This dissertation proposes and studies a relaxed accompanying group co-
- []
-
-
-Underfull \hbox (badness 2293) in paragraph at lines 27--28
-\TU/times(0)/m/n/12.045 movement pattern mining problem in urban computing. Existing group pattern
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[3
-
-]
-
-[4])
-Underfull \hbox (badness 10000) in paragraph at lines 40--25
-
- []
-
-
-
-[5] (./main.toc
-Underfull \vbox (badness 7869) has occurred while \output is active []
-
-
-
-[6
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[7]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[8])
+ (./main.toc)
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
 
 
-[9] (./main.lof
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[1
 
 
-
-[10
-
-])
+] (./main.lof
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
 
 
-[11] (./main.lot)
+[2
+
+] (./main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
- (./latex/1_background.tex
+ (./latex/4_comovement.tex
 
-[12
+[3
 
 ]
 Chapter 第一章.
@@ -1735,6 +1599,9 @@ Chapter 第一章.
 [1
 
 ]
+File: fig/section4/group companion.png Graphic file (type bmp)
+<fig/section4/group companion.png>
+
 
 [2]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1742,303 +1609,37 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [3]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [4]
-Underfull \vbox (badness 6316) has occurred while \output is active []
-
-
 
 [5]
+Underfull \vbox (badness 1502) has occurred while \output is active []
+
+
 
 [6]
-Underfull \vbox (badness 3657) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [7]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [8]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[10]
-File: fig/framework.png Graphic file (type bmp)
-<fig/framework.png>
-
-Underfull \vbox (badness 3343) has occurred while \output is active []
-
-
-
-[11]) (./latex/2_relatedwork.tex
-
-[12]
-Chapter 第二章.
-
-
-[13
-
-]
-
-[14]
-File: fig/section2/road_network.png Graphic file (type bmp)
-<fig/section2/road_network.png>
-
-
-[15]
-
-[16]
-File: fig/section2/location-keyword.pdf Graphic file (type pdf)
-<use fig/section2/location-keyword.pdf>
-
-Underfull \vbox (badness 4595) has occurred while \output is active []
-
-
-
-[17]
-
-[18]
-
-[19]
-
-[20]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[21]
-Underfull \vbox (badness 2469) has occurred while \output is active []
-
-
-
-[22]
-
-[23]
-
-[24]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[25]) (./latex/3_routesearch.tex
-
-[26]
-
-[27]
-Chapter 第三章.
-
-
-[28
-
-]
-File: fig/section3/ex1.pdf Graphic file (type pdf)
-<use fig/section3/ex1.pdf>
-
-
-[29]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[30]
-
-[31]
-
-[32]
-Underfull \vbox (badness 7981) has occurred while \output is active []
-
-
-
-[33]
-Underfull \vbox (badness 3240) has occurred while \output is active []
-
-
-
-[34]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[35]
-Underfull \vbox (badness 1924) has occurred while \output is active []
-
-
-
-[36]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[37]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[38]
-
-[39]
-
-[40]
-
-[41]
-Underfull \vbox (badness 1152) has occurred while \output is active []
-
-
-
-[42]
-File: fig/section3/fig1_NYC_time.png Graphic file (type bmp)
-<fig/section3/fig1_NYC_time.png>
-File: fig/section3/fig1_NYC_cost.png Graphic file (type bmp)
-<fig/section3/fig1_NYC_cost.png>
-File: fig/section3/fig1_TGC_time.png Graphic file (type bmp)
-<fig/section3/fig1_TGC_time.png>
-File: fig/section3/fig1_TGC_cost.png Graphic file (type bmp)
-<fig/section3/fig1_TGC_cost.png>
-
-Underfull \vbox (badness 3657) has occurred while \output is active []
-
-
-
-[43]
-
-[44]
-
-[45]
-File: fig/section3/fig2_time.png Graphic file (type bmp)
-<fig/section3/fig2_time.png>
-File: fig/section3/fig2_cost.png Graphic file (type bmp)
-<fig/section3/fig2_cost.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[46]
-File: fig/section3/fig3_alpha_time.png Graphic file (type bmp)
-<fig/section3/fig3_alpha_time.png>
-File: fig/section3/fig3_alpha_cost.png Graphic file (type bmp)
-<fig/section3/fig3_alpha_cost.png>
-File: fig/section3/fig3_beta_time.png Graphic file (type bmp)
-<fig/section3/fig3_beta_time.png>
-File: fig/section3/fig3_beta_cost.png Graphic file (type bmp)
-<fig/section3/fig3_beta_cost.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[47]
-File: fig/section3/fig4_time.png Graphic file (type bmp)
-<fig/section3/fig4_time.png>
-File: fig/section3/fig4_cost.png Graphic file (type bmp)
-<fig/section3/fig4_cost.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[48]
-File: fig/section3/fig5_time.png Graphic file (type bmp)
-<fig/section3/fig5_time.png>
-File: fig/section3/fig5_cost.png Graphic file (type bmp)
-<fig/section3/fig5_cost.png>
-File: fig/section3/fig6_NY.png Graphic file (type bmp)
-<fig/section3/fig6_NY.png>
-
-Overfull \hbox (13.80188pt too wide) in paragraph at lines 490--499
- [][][][][][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[49]
-
-[50]) (./latex/4_comovement.tex
-
-[51]
-Chapter 第四章.
-
-
-[52
-
-]
-
-[53]
-File: fig/section4/group companion.png Graphic file (type bmp)
-<fig/section4/group companion.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[54]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[55]
-
-[56]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[57]
-Underfull \vbox (badness 4595) has occurred while \output is active []
-
-
-
-[58]
-
-[59]
-Underfull \hbox (badness 1466) in paragraph at lines 205--206
-[][][]\TU/SimHei(0)/m/n/12.045 定 理 \TU/times(0)/m/n/12.045 4.1 |\TU/SimHei(0)/m/n/12.045 （\TU/times(0)/m/n/12.045 ES-ECMC \TU/SimHei(0)/m/n/12.045 算 法 时 间 复 杂 度）|  []\TU/times(0)/m/n/12.045 ES-ECMC \TU/SimSun(0)/m/n/12.045 算 法 的 时 间 复 杂 度 为
- []
-
-
-
-[60]
-
-[61]
 File: fig/section4/picture.pdf Graphic file (type pdf)
 <use fig/section4/picture.pdf>
 
-Underfull \vbox (badness 1466) has occurred while \output is active []
 
+[10]
 
+[11]
 
-[62]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[12]
 
+[13]
 
-
-[63]
-Underfull \vbox (badness 1173) has occurred while \output is active []
-
-
-
-[64]
-
-[65]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[66]
+[14]
 File: fig/section4/BJ-hitratio-num.png Graphic file (type bmp)
 <fig/section4/BJ-hitratio-num.png>
 File: fig/section4/BJ-time-num.png Graphic file (type bmp)
@@ -2052,7 +1653,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[67]
+[15]
 File: fig/section4/BJ-hitratio-k.png Graphic file (type bmp)
 <fig/section4/BJ-hitratio-k.png>
 File: fig/section4/BJ-time-k.png Graphic file (type bmp)
@@ -2062,13 +1663,8 @@ File: fig/section4/PT-hitratio-k.png Graphic file (type bmp)
 File: fig/section4/PT-time-k.png Graphic file (type bmp)
 <fig/section4/PT-time-k.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-[68]
-
-[69]
+[16]
 File: fig/section4/BJ-hitratio-m.png Graphic file (type bmp)
 <fig/section4/BJ-hitratio-m.png>
 File: fig/section4/BJ-time-m.png Graphic file (type bmp)
@@ -2077,6 +1673,12 @@ File: fig/section4/PT-hitratio-m.png Graphic file (type bmp)
 <fig/section4/PT-hitratio-m.png>
 File: fig/section4/PT-time-m.png Graphic file (type bmp)
 <fig/section4/PT-time-m.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[17]
 File: fig/section4/BJ-hitratio-ep.png Graphic file (type bmp)
 <fig/section4/BJ-hitratio-ep.png>
 File: fig/section4/BJ-time-ep.png Graphic file (type bmp)
@@ -2086,406 +1688,66 @@ File: fig/section4/PT-hitratio-ep.png Graphic file (type bmp)
 File: fig/section4/PT-time-ep.png Graphic file (type bmp)
 <fig/section4/PT-time-ep.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
+[18]
 
+[19])
 
-[70]
+[20]
 
-[71]
-Underfull \vbox (badness 4595) has occurred while \output is active []
-
-
-
-[72]) (./latex/5_contact.tex
-
-[73]
-Chapter 第五章.
-
-
-[74
-
-]
-File: fig/section5/contact_intro.pdf Graphic file (type pdf)
-<use fig/section5/contact_intro.pdf>
-
-
-[75]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[76]
-
-[77]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[78]
-Underfull \vbox (badness 3657) has occurred while \output is active []
-
-
-
-[79]
-File: fig/section5/cells.pdf Graphic file (type pdf)
-<use fig/section5/cells.pdf>
-
-
-[80]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[81]
-
-[82]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[83]
-
-[84]
-
-[85]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[86]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[87]
-File: fig/section5/BJ-Q-CE.png Graphic file (type bmp)
-<fig/section5/BJ-Q-CE.png>
-File: fig/section5/BJ-Q-time.png Graphic file (type bmp)
-<fig/section5/BJ-Q-time.png>
-File: fig/section5/PT-Q-CE.png Graphic file (type bmp)
-<fig/section5/PT-Q-CE.png>
-File: fig/section5/PT-Q-time.png Graphic file (type bmp)
-<fig/section5/PT-Q-time.png>
-
-Underfull \vbox (badness 4940) has occurred while \output is active []
-
-
-
-[88]
-Underfull \vbox (badness 7468) has occurred while \output is active []
-
-
-
-[89]
-File: fig/section5/BJ-ep-CE.png Graphic file (type bmp)
-<fig/section5/BJ-ep-CE.png>
-File: fig/section5/BJ-ep-time.png Graphic file (type bmp)
-<fig/section5/BJ-ep-time.png>
-File: fig/section5/PT-ep-CE.png Graphic file (type bmp)
-<fig/section5/PT-ep-CE.png>
-File: fig/section5/PT-ep-time.png Graphic file (type bmp)
-<fig/section5/PT-ep-time.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[90]
-File: fig/section5/BJ-k-CE.png Graphic file (type bmp)
-<fig/section5/BJ-k-CE.png>
-File: fig/section5/BJ-k-time.png Graphic file (type bmp)
-<fig/section5/BJ-k-time.png>
-File: fig/section5/PT-k-CE.png Graphic file (type bmp)
-<fig/section5/PT-k-CE.png>
-File: fig/section5/PT-k-time.png Graphic file (type bmp)
-<fig/section5/PT-k-time.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[91]
-File: fig/section5/accuracy_Q4.png Graphic file (type bmp)
-<fig/section5/accuracy_Q4.png>
-File: fig/section5/accuracy_ep4.png Graphic file (type bmp)
-<fig/section5/accuracy_ep4.png>
-
-Underfull \vbox (badness 1107) has occurred while \output is active []
-
-
-
-[92]
-File: fig/section5/BJ-precheck5.png Graphic file (type bmp)
-<fig/section5/BJ-precheck5.png>
-File: fig/section5/PT-precheck5.png Graphic file (type bmp)
-<fig/section5/PT-precheck5.png>
-
-Underfull \vbox (badness 7362) has occurred while \output is active []
-
-
-
-[93]) (./latex/6_join.tex
-
-[94]
-Chapter 第六章.
-
-
-[95
-
-]
-
-Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font
-(fontspec)             'STFangsong'. Check the typeset output, and if it is
-(fontspec)             okay then ignore this warning. Otherwise a different
-(fontspec)             font should be chosen.
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "STFangsong/BI" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "STFangsong/B" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "STFangsong/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'STFangsong(0)' created for font
-(fontspec)             'STFangsong' with options [Script={CJK}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"STFangsong/OT:script=hani;language=dflt;"
-
-
-Underfull \vbox (badness 3657) has occurred while \output is active []
-
-
-
-[96]
-
-[97]
-File: fig/section6/intro.png Graphic file (type bmp)
-<fig/section6/intro.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[98]
-
-[99]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[100]
-File: fig/section6/lens.png Graphic file (type bmp)
-<fig/section6/lens.png>
-
-
-[101]
-File: fig/section6/overall example.png Graphic file (type bmp)
-<fig/section6/overall example.png>
-
-
-[102]
-File: fig/section6/mtree.pdf Graphic file (type pdf)
-<use fig/section6/mtree.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[103]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[104]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[105]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[106]
-File: fig/section6/ellipse.pdf Graphic file (type pdf)
-<use fig/section6/ellipse.pdf>
-
-
-[107]
-File: fig/section6/ball-tree.pdf Graphic file (type pdf)
-<use fig/section6/ball-tree.pdf>
-
-Underfull \hbox (badness 4505) in paragraph at lines 378--383
-[]\TU/SimSun(0)/m/n/12.045 图 [][]\TU/times(0)/m/n/12.045 6-6[][] \TU/SimSun(0)/m/n/12.045 给 出 了 混 合 球 树 的 示 意 图。|  每 个 时 间 区 间 运 动 范 围 被 表 示 为
- []
-
-
-
-[108]
-Underfull \vbox (badness 6608) has occurred while \output is active []
-
-
-
-[109]
-
-[110]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[111]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[112]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[113]
-File: fig/section6/geo-num-ctime.png Graphic file (type bmp)
-<fig/section6/geo-num-ctime.png>
-File: fig/section6/pt-num-ctime.png Graphic file (type bmp)
-<fig/section6/pt-num-ctime.png>
-
-Underfull \vbox (badness 3375) has occurred while \output is active []
-
-
-
-[114]
-File: fig/section6/geo-num-ftime.png Graphic file (type bmp)
-<fig/section6/geo-num-ftime.png>
-File: fig/section6/pt-num-ftime.png Graphic file (type bmp)
-<fig/section6/pt-num-ftime.png>
-File: fig/section6/geo-poi-ftime.png Graphic file (type bmp)
-<fig/section6/geo-poi-ftime.png>
-File: fig/section6/pt-poi-ftime.png Graphic file (type bmp)
-<fig/section6/pt-poi-ftime.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[115]
-File: fig/section6/geo-I-ftime.png Graphic file (type bmp)
-<fig/section6/geo-I-ftime.png>
-File: fig/section6/pt-I-ftime.png Graphic file (type bmp)
-<fig/section6/pt-I-ftime.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[116]
-File: fig/section6/geo-ep-ftime.png Graphic file (type bmp)
-<fig/section6/geo-ep-ftime.png>
-File: fig/section6/pt-ep-ftime.png Graphic file (type bmp)
-<fig/section6/pt-ep-ftime.png>
-
-
-[117]) (./latex/7_conclusion.tex
-
-[118]
-Chapter 第七章.
-
-Underfull \vbox (badness 2237) has occurred while \output is active []
-
-
-
-[119
-
-]
-
-[120]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[121]
-
-[122]
-
-[123])
-
-[124]
-
-[125
+[21
 
 ] (./main.bbl
 
-[126
+[22
 
 
 ]
 
-[127]
+[23]
 
-[128]
+[24]
 
-[129]
+[25]
 
-[130]
+[26]
 
-[131]
+[27]
 
-[132]
+[28]
 
-[133]
+[29]
 
-[134]
+[30]
 
-[135]
+[31]) (./latex/achivement.tex
 
-[136]) (./latex/achivement.tex
-
-[137]
+[32]
 Underfull \vbox (badness 3250) has occurred while \output is active []
 
 
 
-[138
+[33
 
 ]
 
-[139]
-Underfull \hbox (badness 2245) in paragraph at lines 58--59
-[]\TU/SimSun(0)/b/n/12.045 作 者 \TU/times(0)/b/n/12.045 1\TU/times(0)/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 作 者 \TU/times(0)/m/n/12.045 2*, \TU/SimSun(0)/m/n/12.045 作 者 \TU/times(0)/m/n/12.045 3, \TU/SimSun(0)/m/n/12.045 作 者 \TU/times(0)/m/n/12.045 4\TU/SimSun(0)/m/n/12.045 。|  一 种 基 于 \TU/times(0)/m/n/12.045 xxxxx \TU/SimSun(0)/m/n/12.045 的 真 气 运 转 方 法\TU/times(0)/m/n/12.045 :
- []
+[34])
 
-)
-
-[140] (./main.aux)
+[35] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 935916C4F913F8BA27BEFAF7F8EFFFB6;26224.
+(rerunfilecheck)             Checksum: B91AE4B0D976E7E3BF0A3A8F550DA010;4139.
  ) 
 Here is how much of TeX's memory you used:
- 52152 strings out of 473832
- 1110911 string characters out of 5729481
- 1585451 words of memory out of 5000000
- 74240 multiletter control sequences out of 15000+600000
- 573845 words of font info for 178 fonts, out of 8000000 for 9000
+ 50923 strings out of 473832
+ 1065649 string characters out of 5729481
+ 1546874 words of memory out of 5000000
+ 73137 multiletter control sequences out of 15000+600000
+ 571176 words of font info for 142 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 125i,24n,134p,1716b,1760s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,18n,134p,1035b,1688s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (161 pages).
+Output written on main.pdf (38 pages).

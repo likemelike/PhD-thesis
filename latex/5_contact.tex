@@ -22,7 +22,7 @@
 \begin{figure}[htp]
     \centering
     \includegraphics[width=0.8\textwidth]{fig/section5/contact_intro.pdf}
-    \caption{持续暴露接触搜索问题}
+    \caption{持续暴露接触搜索示例}
     \label{contact_fig:intro}
 \end{figure}
 
@@ -167,11 +167,11 @@ $
 \caption{精确分组处理算法}
 \label{contact_alg:EGP}
 
-\Input{对象集合 $\mathcal{O}$；\newline
-位置流 $L_t(\mathcal{O}), L_{t+1}(\mathcal{O}), \ldots$；\newline
-查询对象集合 $\mathcal{Q} \subseteq \mathcal{O}$；\newline
-接触距离阈值 $\epsilon$；\newline
-接触时长阈值 $k$。
+\Input{1) 移动对象集合 $\mathcal{O}$；\newline
+2) 位置流 $L_t(\mathcal{O}), L_{t+1}(\mathcal{O}), \ldots$；\newline
+3) 查询对象集合 $\mathcal{Q} \subseteq \mathcal{O}$；\newline
+4) 接触距离阈值 $\epsilon$；\newline
+5) 接触时长阈值 $k$。
 }
 \Output{更新后的查询对象集合 $\mathcal{Q}$。
 }
@@ -238,16 +238,16 @@ $\mathcal{Q} \leftarrow \{\mathcal{Q} \cup o \mid cd(o) \geq k\}$；
 
 
     
-\subsection{算法细节。}
+\subsection{算法细节}
 \begin{algorithm}[tb]
     \caption{近似分组处理算法}
     \label{contact_alg:AGP}
-    \Input{对象集合 $\mathcal{O}$；\newline
-    位置流 $L_t(\mathcal{O}), L_{t+1}(\mathcal{O}), \ldots$；\newline
-    查询对象集合 $\mathcal{Q} \subseteq \mathcal{O}$；\newline
-    接触距离阈值 $\epsilon$；\newline
-    接触持续时间阈值 $k$；\newline
-    跳跃步长 $m$。
+    \Input{1) 移动对象集合 $\mathcal{O}$；\newline
+    2) 位置流 $L_t(\mathcal{O}), L_{t+1}(\mathcal{O}), \ldots$；\newline
+    3) 查询对象集合 $\mathcal{Q} \subseteq \mathcal{O}$；\newline
+    4) 接触距离阈值 $\epsilon$；\newline
+    5) 接触持续时间阈值 $k$；\newline
+    6) 跳跃步长 $m$。
     }
     \Output{实时近似暴露接触结果（更新后的查询集合 $\mathcal{Q}$）。}
     
@@ -298,7 +298,7 @@ $\mathcal{Q} \leftarrow \{\mathcal{Q} \cup o \mid cd(o) \geq k\}$；
 于，通过设置不同的参数 (查询对象数目，距离阈值，接触时长阈值等)，对比不同的算法的运行时间并进行分析。
 \subsection{实验设置}
 
-\subsubsection{数据准备。}
+\subsubsection{数据准备}
 实验基于两个真实世界的轨迹数据集开展。第一个数据集来源于北京出租车数据集 \cite{DBLP:conf/kdd/YuanZXS11}，
 包含在北京一周内跟踪到的 10,357 辆出租车的轨迹，总数据点数量约为 1,500 万。
 第二个数据集采集自葡萄牙波尔图市，时间跨度为 19 个月，包含超过 170 万条轨迹。
@@ -310,7 +310,22 @@ $\mathcal{Q} \leftarrow \{\mathcal{Q} \cup o \mid cd(o) \geq k\}$；
 通过线性插值对所有轨迹进行时间对齐，使得每个对象以固定频率返回其实时位置，
 其中北京和波尔图数据集的频率分别为 10 秒和 5 秒。
 最终，北京和波尔图数据集中分别包含 296,364,033 和 23,767,470 个有效位置点。
-在不失一般性的前提下，从 $\mathcal{O}$ 中随机选取部分对象 $Q$ 作为初始查询对象。
+在不失一般性的前提下，从 $\mathcal{O}$ 中随机选取部分对象 $Q$ 作为初始查询对象。默认评估参数设置如表~\ref{contact_tb:para} 所示，该设置基于两个数据集的具体数据分布。
+
+\begin{table}[!ht]
+    \caption{评估参数设定}\label{contact_tb:para}
+    \begin{tabular}{l|ll}
+    \toprule
+        &\textbf{北京（Beijing）}&\textbf{波尔图（Porto）}\\
+    \midrule
+        经度 & [116.250, 116.550] & [-8.735, -8.156] \\
+        纬度 & [39.830, 40.030] & [40.953, 41.307] \\
+        $\epsilon$ & \{2米, 4米, 6米, 8米, 10米\}；默认2米 & \{2米, 4米, 6米, 8米, 10米\}；默认2米  \\ 
+        $k$ & \{5, 10, 15, 20, 25\}；默认15 & \{5, 7, 9, 11\}；默认15 \\
+        $|\mathcal{Q}|$ & \{2, 4, 6, 8, 10\} $\times 10^2$；默认600  & \{2, 4, 6, 8, 10\} $\times 10^4$；默认100,000 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
 
 \subsubsection{比较算法}
 
@@ -334,25 +349,11 @@ $\mathcal{Q} \leftarrow \{\mathcal{Q} \cup o \mid cd(o) \geq k\}$；
 CPU 时间定义为每一轮算法运行的平均执行时间。
 此外，还评估了 AGP 的准确性，其计算方式为真实暴露接触案例数量与近似暴露接触案例数量之比。
 
-\subsubsection{参数设置。}
-默认参数设置如表 \ref{contact_tb:para} 所示，该设置基于两个数据集的具体数据分布。
+\subsubsection{实验环境}
+
 所有算法均采用 Java 实现，并在配备 AMD Ryzen 5 处理器（3.6GHz）和 32GB 内存的 Windows 10 平台上进行评测。
 除非另有说明，实验结果均为在不同查询对象输入条件下进行 20 次独立实验后的平均值。
-\begin{table}[!ht]
-    \caption{参数设置}\label{contact_tb:para}
-    \begin{tabular}{l|ll}
-    \toprule
-        &\textbf{北京（北京）}&\textbf{波尔图（波尔图）}\\
-    \midrule
-        经度 & [116.250, 116.550] & [-8.735, -8.156] \\
-        纬度 & [39.830, 40.030] & [40.953, 41.307] \\
-        $\epsilon$ & \{2米, 4米, 6米, 8米, 10米\}；默认2米 & \{2米, 4米, 6米, 8米, 10米\}；默认2米  \\ 
-        $k$ & \{5, 10, 15, 20, 25\}；默认15 & \{5, 7, 9, 11\}；默认15 \\
-        $|\mathcal{Q}|$ & \{2, 4, 6, 8, 10\} $\times 10^2$；默认600  & \{2, 4, 6, 8, 10\} $\times 10^4$；默认100,000 \\
-    \bottomrule
-    \end{tabular}
-    
-\end{table}
+
 
 \subsection{实验结果与分析}
 
@@ -414,7 +415,7 @@ CPU 时间定义为每一轮算法运行的平均执行时间。
            \includegraphics[width=0.4\textwidth]{fig/section5/PT-ep-time.png}
            \label{contact_波尔图-ep-CPU}
 	}%
-	\caption{距离阈值 $\epsilon$ 的影响。 \subref{contact_北京-ep-CE} 北京数据集上暴露接触案例数量；\subref{contact_北京-ep-CPU} 北京数据集上算法运行时间；\subref{contact_波尔图-ep-CE} 波尔图数据集上暴露接触案例数量；\subref{contact_波尔图-ep-CPU} 波尔图数据集上算法运行时间}
+	\caption{距离阈值的影响。 \subref{contact_北京-ep-CE} 北京数据集上暴露接触案例数量；\subref{contact_北京-ep-CPU} 北京数据集上算法运行时间；\subref{contact_波尔图-ep-CE} 波尔图数据集上暴露接触案例数量；\subref{contact_波尔图-ep-CPU} 波尔图数据集上算法运行时间}
 	\label{contact_img:ep}
 \end{figure}
 
@@ -443,7 +444,7 @@ CPU 时间定义为每一轮算法运行的平均执行时间。
            \includegraphics[width=0.4\textwidth]{fig/section5/PT-k-time.png}
            \label{contact_波尔图-k-CPU}
 	}%
-	\caption{接触持续时长阈值$k$的影响。\subref{contact_北京-k-CE} 北京数据集上暴露接触案例数量；\subref{contact_北京-k-CPU} 北京数据集上算法运行时间；\subref{contact_波尔图-k-CE} 波尔图数据集上暴露接触案例数量；\subref{contact_波尔图-k-CPU} 波尔图数据集上算法运行时间}
+	\caption{接触持续时长阈值的影响。\subref{contact_北京-k-CE} 北京数据集上暴露接触案例数量；\subref{contact_北京-k-CPU} 北京数据集上算法运行时间；\subref{contact_波尔图-k-CE} 波尔图数据集上暴露接触案例数量；\subref{contact_波尔图-k-CPU} 波尔图数据集上算法运行时间}
 	\label{contact_img:k}
 \end{figure}
 

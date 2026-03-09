@@ -48,7 +48,7 @@
 \begin{figure}[htb]
     \centering
 \includegraphics[width=0.8\columnwidth]{fig/section6/intro.png}
-    \caption{交集相似度连接问题示例}
+    \caption{交集相似度连接示例}
     \label{fig:intro}
 \end{figure}
 
@@ -59,7 +59,7 @@
 \subsection{研究内容与挑战}
 为克服上述局限性，本文引入“运动范围”以刻画对象在观测间隔内的潜在可达区域。以对象 $o_3$ 在 $t_1$ 和 $t_2$ 时刻的位置为例，其在时间区间 $[t_1,t_2]$ 内任意时间点 $t$ 的运动范围可表示为由速度约束确定的透镜形区域（其严格定义将在第~\ref{join_sec:statement} 节给出）。类似地，对象 $o_1$ 和 $o_2$ 在时间区间 $(t_1,t_3)$ 内的运动范围分别对应图中的紫色与棕色透镜区域。可以观察到，两者的运动范围在某些时间点存在重叠区域（图中阴影部分），这表明两对象在未观测时间段内可能存在空间交集。
     
-    进一步地，考虑时间区间 $[t_4, t_5]$。图中展示了对象 $o_2$ 和 $o_3$ 在该区间若干离散时间点上的运动范围示意。为在理论上处理连续时间区间，本文将区间 $[t_4,t_5]$ 内的交集相似度定义为该区间内交集相似度函数的时间平均值。
+    进一步地，考虑时间区间 $[t_4, t_5]$。图中展示了对象 $o_2$ 和 $o_3$ 在该区间若干离散时间点上的运动范围示例。为在理论上处理连续时间区间，本文将区间 $[t_4,t_5]$ 内的交集相似度定义为该区间内交集相似度函数的时间平均值。
     
     给定时间区间 $[T_s,T_e]$ 以及相似度阈值 $\theta$，交集相似度连接 问题旨在识别并返回所有在该时间区间内平均交集相似度不低于 $\theta$ 的对象对。与现有移动对象相似度连接研究主要基于离散采样点或区域近似不同，本文在连接语义层面显式引入“运动范围”概念，并将相似度度量从点级距离扩展至连续时间下的区域交集度量。这一转变显著提升了在稀疏采样条件下识别潜在交互关系的能力。然而，使 交集相似度连接 在实际系统中具备可行性面临两项关键挑战：
     
@@ -140,7 +140,7 @@
 \begin{figure}
     \centering
     \includegraphics[width=0.5\columnwidth]{fig/section6/lens.png}
-    \caption{时间点运动范围示例图}
+    \caption{时间点运动范围示例}
     \label{fig:lens}
 \end{figure}
 
@@ -198,7 +198,7 @@
 \begin{figure}[htp]
     \centering
     \includegraphics[width=0.6\columnwidth]{fig/section6/overall example.png}
-    \caption{时间区间交集相似度的示意图}
+    \caption{时间区间交集相似度示例}
     \label{fig:relaxed similarity example}
 \end{figure}
 
@@ -210,7 +210,7 @@ $IS(o_i,o_j,I,\epsilon)<\theta$。
 
 
 
-\section{基于 M*树的连接算法}
+\section{基于M*树的连接算法}
 \label{sec:baseLine}
 首先，介绍一种基于 M*树的连接算法用于计算 交集相似度连接，作为本文的基线方法。M*树是经典 M树 的扩展~\cite{DBLP:conf/sebd/CiacciaPRZ97,DBLP:conf/vldb/CiacciaPZ97}。M树 是一种面向一般度量空间的动态平衡索引结构，其设计建立在距离函数满足三角不等式的基础之上，因此能够在不依赖具体空间坐标结构的情况下进行有效剪枝。M*树继承了这一性质，并针对时间区间运动范围的近似表示进行了结构扩展。
 
@@ -219,7 +219,7 @@ $IS(o_i,o_j,I,\epsilon)<\theta$。
 \begin{figure}[htp]
     \centering
 \includegraphics[width=1\textwidth]{fig/section6/mtree.pdf}
-\caption{M*树的结构}
+\caption{M*树的结构示例}
 \label{fig:m*树}
 \end{figure}
 
@@ -241,11 +241,11 @@ $d(q, E)=\sqrt{(x_q-x)^2+(y_q-y)^2}$。如果 $d(q, E) \leq r + r_q$，则时间
 \begin{algorithm}[htp]
     \caption{$MBJ(\mathcal{A},\mathcal{B},N_r, I,\epsilon,\theta)$}
     \label{alg:MBJ-Join}
-    \Input{两组移动对象，$\mathcal{A}$ 和 $\mathcal{B}$；\newline
-    M*树的根节点 $N_r$；\newline
-    时间间隔 $I$；\newline
-    分区参数 $\epsilon$；\newline
-    交集相似度阈值 $\theta$。
+    \Input{1) 两组移动对象，$\mathcal{A}$ 和 $\mathcal{B}$；\newline
+    2) M*树的根节点 $N_r$；\newline
+    3) 时间间隔 $I$；\newline
+    4) 分区参数 $\epsilon$；\newline
+    5) 交集相似度阈值 $\theta$。
     }
     \Output{$\mathcal{R} = \{(o,o') \mid IS(o,o',I,\epsilon) \geq \theta, (o,o') \in \mathcal{A} \times \mathcal{B}\}$。
     }
@@ -371,17 +371,17 @@ $dist(MR(o,I),MR(o',I))$ 表示 $MR(o,I)$ 与 $MR(o',I)$ 中心点之间的距�
 \begin{figure}[htp]
     \centering
     \includegraphics[width=1\textwidth]{fig/section6/ball-tree.pdf}
-    \caption{混合 球树 的示意图}
+    \caption{混合球树结构示例}
     \label{fig:ball树}
 \end{figure}
 
-图~\ref{fig:ball树} 给出了 混合球树 的示意图。每个时间区间运动范围被表示为
+图~\ref{fig:ball树} 给出了 混合球树 的示例图。每个时间区间运动范围被表示为
 $E=\{o,x,y,r,MR(o,I)\}$，
 其中 $(x,y)$ 和 $r$ 分别表示近似圆的中心和半径，$o$ 表示对象标识符。与原始 球树 每个非叶节点仅包含两个子节点不同，混合球树 通过一种重新划分（repartition）技术，使得每个父节点最多可以拥有三个子节点。每个节点的结构表示为
 $N=\{p,R,pt(child_l),pt(child_m),pt(child_r),\mathcal{I}\}$，
 其中 $p$ 表示节点 $N$ 所覆盖的时间区间运动范围的中心点，$R$ 表示能够包围节点 $N$ 中所有条目（即圆）的半径，$pt(\cdot)$ 为指向子节点的指针，$\mathcal{I}$ 表示该节点中包含的时间区间运动范围集合。混合球树 中的插入策略、分裂策略以及枢轴点选择均遵循已有研究中的成熟方法~\cite{DBLP:conf/uai/Moore00}。当某一子划分中的对象数量低于预定义阈值（即生成新子节点所需的最小对象数）时，子划分过程终止。
 
-\subsubsection{混合球树 的重新划分策略}
+\subsubsection{混合球树的重新划分策略}
 直观上，更加平衡的树结构通常能够在搜索过程中减少节点访问次数。重新划分方法的整体思想如下：对于每一个初始划分，评估其两个子划分中的点数差异是否超过重新划分阈值 $\beta$（$\beta \in (0,1)$）。如果差异超过该阈值，则保留点数较少的子划分，并将点数较多的子划分进一步划分为两个新的子划分。考虑一个节点 $N$，初始时 $N.child_m=\emptyset$。当较大的子划分规模至少以比例 $\beta$ 超过较小子划分时，即触发重新划分。例如，当 $|N.child_l.\mathcal{I}|>|N.child_r.\mathcal{I}|$，且
 $\frac{|N.child_l.\mathcal{I}|-|N.child_r.\mathcal{I}|}{|N.child_r.\mathcal{I}|} \ge \beta$，
 则触发重新划分。从理论上看，较小的重新划分阈值会使初始子树更容易被重新划分，从而增加三叉节点的数量，使树结构更加平衡。然而，三叉节点数量的增加也可能导致节点访问次数上升，因此需要在树高与三叉节点数量之间进行权衡。
@@ -413,12 +413,12 @@ $\frac{|N.child_l.\mathcal{I}|-|N.child_r.\mathcal{I}|}{|N.child_r.\mathcal{I}|}
     \caption{基于 混合球树 的 连接}
     \label{alg:ball filter}
     
-    \Input{两组移动对象，$\mathcal{A}$ 和 $\mathcal{B}$；\newline
-    混合球树 的根节点 $N_r$；\newline
-    时间间隔 $I$；\newline
-    松弛参数 $\epsilon$；\newline
-    重分区阈值 $\beta$；\newline
-    交集相似度阈值 $\theta$。
+    \Input{1) 两组移动对象，$\mathcal{A}$ 和 $\mathcal{B}$；\newline
+    2) 混合球树的根节点 $N_r$；\newline
+    3) 时间间隔 $I$；\newline
+    4) 松弛参数 $\epsilon$；\newline
+    5) 重分区阈值 $\beta$；\newline
+    6) 交集相似度阈值 $\theta$。
     }
     \Output{交集相似度连接结果，$\mathcal{R}$。
     }
@@ -508,9 +508,9 @@ $。
 
 \begin{table}[!ht]
     \caption{评估参数设置}\label{tb:algorithm_para}
-    \begin{tabular}{l|rr}
+    \begin{tabular}{l|ll}
 	\toprule
-		&\textbf{Geolife}&\textbf{波尔图}\\
+		&\textbf{Geolife数据集}&\textbf{波尔图数据集}\\
 	\midrule
         $|O|$ & \{4,6,8,10,12\} $\times 10^3$；默认8K  & \{1,2,3,4,5\} $\times 10^4$；默认10K \\ 
         $|I|$ & \{10s, 20s, 30s, 40s, 50s\}；默认30s  & \{15s,  30s, 45s, 60s, 75s\}；默认45s \\
@@ -521,8 +521,8 @@ $。
     
 \end{table}
 
-\subsubsection{参数设置}
-参数设置如表~\ref{tb:algorithm_para} 所示。M$^\ast$树 和 混合球树 的叶节点容量均设置为 10。默认情况下，重新划分阈值 $\alpha$ 设为 0.5。在实验中，特征集合 $\mathcal{F}$ 由随机生成的兴趣点（POIs）构成。具体而言，首先确定所有轨迹的最小和最大经度与纬度值，在该空间范围内使用均匀分布随机生成固定数量的 POIs。默认情况下，在 波尔图 数据集的坐标范围内生成 100,000 个 POIs，在 Geolife 数据集中生成 600,000 个 POIs。默认距离度量采用欧氏距离。所有方法均使用 Java 实现，并在配备 AMD Ryzen 5 CPU（3.6GHz）和 32GB 内存的 Ubuntu 系统上进行评测，采用单线程执行。除非另有说明，实验结果均为 20 次独立实验的平均值，每次实验使用不同的轨迹数据和特征集。
+\subsubsection{运行环境}
+参数设置如表~\ref{tb:algorithm_para} 所示。M$^\ast$树 和 混合球树 的叶节点容量均设置为 10。默认情况下，重新划分阈值 $\alpha$ 设为 0.5。在实验中，特征集合 $\mathcal{F}$ 由随机生成的兴趣点构成。具体而言，首先确定所有轨迹的最小和最大经度与纬度值，在该空间范围内使用均匀分布随机生成固定数量的兴趣点。默认情况下，在 波尔图 数据集的坐标范围内生成 100,000 个兴趣点，在 Geolife 数据集中生成 600,000 个 兴趣点。默认距离度量采用欧氏距离。所有方法均使用 Java 实现，并在配备 AMD Ryzen 5 CPU（3.6GHz）和 32GB 内存的 Ubuntu 系统上进行评测，采用单线程执行。除非另有说明，实验结果均为 20 次独立实验的平均值，每次实验使用不同的轨迹数据和特征集。
 
 
 \subsection{实验结果与分析}
@@ -561,7 +561,7 @@ $。
     \includegraphics[width=0.4\textwidth]{fig/section6/pt-num-ctime.png}
     \label{pt-num-ctime}
 }% 
-\caption{不同 $|O|$ 下的构建时间影响 \subref{geo-num-ctime}:Geolife数据集下的实验; \subref{pt-num-ctime}:波尔图数据集下的实验}
+\caption{不同移动对象基数下的构建时间。 \subref{geo-num-ctime}: Geolife数据集下的实验； \subref{pt-num-ctime}:波尔图数据集下的实验}
 \label{img:vary_num_ctime}
 \end{figure}
 
@@ -579,7 +579,7 @@ $。
     \includegraphics[width=0.4\textwidth]{fig/section6/pt-num-ftime.png}
     \label{pt-num-ftime}
 }% 
-\caption{不同 $|O|$ 下的查询时间影响 \subref{geo-num-ftime}:Geolife数据集下的实验; \subref{pt-num-ftime}:波尔图数据集下的实验}
+\caption{不同 移动对象基数下的查询时间。 \subref{geo-num-ftime}:Geolife数据集下的实验； \subref{pt-num-ftime}:波尔图数据集下的实验}
 \label{img:vary_num_ftime}
 \end{figure}
 
@@ -592,11 +592,12 @@ $。
     \includegraphics[width=0.4\textwidth]{fig/section6/geo-poi-ftime.png}
     \label{geo-poi-ftime}
 }% 
+\hfill
  \subfloat[]{
     \includegraphics[width=0.4\textwidth]{fig/section6/pt-poi-ftime.png}
     \label{pt-poi-ftime}
 }% 
-\caption{POI 数量对运行时间的影响 \subref{geo-poi-ftime}:Geolife数据集下的实验; \subref{pt-poi-ftime}:波尔图数据集下的实验}
+\caption{兴趣点数量对运行时间的影响。 \subref{geo-poi-ftime}:Geolife数据集下的实验； \subref{pt-poi-ftime}:波尔图数据集下的实验}
 \label{img:vary_poi_ftime}
 \end{figure}
 
@@ -614,7 +615,7 @@ $。
     \includegraphics[width=0.4\textwidth]{fig/section6/pt-I-ftime.png}
     \label{pt-I-ftime}
 }% 
-\caption{$|I|$ 对运行时间的影响 \subref{geo-I-ftime}:Geolife数据集下的实验; \subref{pt-I-ftime}:波尔图数据集下的实验}
+\caption{时间区间对运行时间的影响。 \subref{geo-I-ftime}:Geolife数据集下的实验； \subref{pt-I-ftime}:波尔图数据集下的实验}
 \label{img:vary_I_ftime}
 \end{figure}
 
@@ -633,7 +634,7 @@ $。
     \includegraphics[width=0.4\textwidth]{fig/section6/pt-ep-ftime.png}
     \label{pt-ep-ftime}
 }% 
-\caption{参数 $\epsilon$ 的影响 \subref{geo-ep-ftime}:Geolife数据集下的实验; \subref{pt-ep-ftime}:波尔图数据集下的实验}
+\caption{放宽参数对运行时间的影响。 \subref{geo-ep-ftime}:Geolife数据集下的实验；\subref{pt-ep-ftime}:波尔图数据集下的实验}
 \label{img:vary_ep_ftime}
 \end{figure}
 

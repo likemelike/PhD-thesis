@@ -131,7 +131,8 @@ Omohundro S~M.
 \bibitem{DBLP:journals/corr/DolatshahHM15}
 Dolatshah M, Hadian A, Minaei{-}Bidgoli B.
 \newblock Ball*-tree: Efficient spatial indexing for constrained nearest-neighbor search in metric spaces[J].
-\newblock CoRR, 2015.
+\newblock CoRR, 2015, abs/1511.00628.
+\newblock \eprint{1511.00628}.
 
 \bibitem{DBLP:conf/dasfaa/ChaoHLZ021}
 Chao P, He D, Li L, et~al.
@@ -211,7 +212,7 @@ Ge Y, Xiong H, Tuzhilin A, et~al.
 \bibitem{DBLP:journals/tkde/HuangHSLZCS15}
 Huang J, Huangfu X, Sun H, et~al.
 \newblock Backward path growth for efficient mobile sequential recommendation[J].
-\newblock {IEEE} Trans. Knowl. Data Eng., 2015, 27(1): 46--60.
+\newblock TKDE, 2015, 27(1): 46--60.
 
 \bibitem{DBLP:conf/icdm/YeXD18}
 Ye Z, Xiao K, Deng Y.
@@ -483,15 +484,15 @@ Tampakis P, Doulkeridis C, Pelekis N, et~al.
 \newblock Distributed subtrajectory join on massive datasets[J].
 \newblock {ACM} Trans. Spatial Algorithms Syst., 2020, 6(2): 8:1--8:29.
 
-\bibitem{Yuan19}
+\bibitem{DBLP:conf/icde/Yuan019}
 Yuan H, Li G.
-\newblock Distributed in-memory trajectory similarity search and join on road network[J].
-\newblock ICDE, 2019: 1262-1273.
+\newblock Distributed in-memory trajectory similarity search and join on road network[C].
+\newblock ICDE, {IEEE}, 2019: 1262--1273.
 
-\bibitem{Chen20}
+\bibitem{DBLP:conf/icde/ChenSJ0K20}
 Chen L, Shang S, Jensen C~S, et~al.
-\newblock Parallel semantic trajectory similarity join[J].
-\newblock ICDE, 2020: 997-1008.
+\newblock Parallel semantic trajectory similarity join[C].
+\newblock ICDE, {IEEE}, 2020: 997--1008.
 
 \bibitem{Pan20}
 Pan Z, Chao P, Fang J, et~al.
@@ -502,16 +503,6 @@ Pan Z, Chao P, Fang J, et~al.
 Atev S, Miller G, Papanikolopoulos N.
 \newblock Clustering of vehicle trajectories[J].
 \newblock IEEE Transactions on Intelligent Transportation Systems, 2010, 11: 647-657.
-
-\bibitem{Yi98}
-Yi B~K, Jagadish H~V, Faloutsos C.
-\newblock Efficient retrieval of similar time sequences under time warping[C].
-\newblock ICDE, IEEE, 1998: 201--208.
-
-\bibitem{Vlachos02}
-Vlachos M, Kollios G, Gunopulos D.
-\newblock Discovering similar multidimensional trajectories[C].
-\newblock ICDE, IEEE, 2002: 673--684.
 
 \bibitem{Fang23}
 Fang Z, Gong S, Chen L, et~al.
@@ -674,25 +665,15 @@ Dafermos, C S.
 \newblock The traffic assignment problem for multiclass-user transportation networks[J].
 \newblock Transportation Science, 1972, 6(1): 73-87.
 
-\bibitem{Lim2012Stochastic}
-Lim S, Rus D.
-\newblock Stochastic distributed multi-agent planning and applications to traffic[J].
-\newblock ICRA, 2012: 2873-2879.
-
-\bibitem{JavaniPath}
-Babak J, Abbas B, (Avi) C~A.
+\bibitem{javani2019path}
+Javani B, Babazadeh A, Ceder A.
 \newblock Path-based capacity-restrained dynamic traffic assignment algorithm[J].
-\newblock Transportmetrica B: Transport Dynamics, 2018: 1-24.
+\newblock Transportmetrica B: Transport Dynamics, 2019, 7(1): 741--764.
 
 \bibitem{DBLP:journals/tkde/ZhengZYSZ14}
 Zheng K, Zheng Y, Yuan N~J, et~al.
 \newblock Online discovery of gathering patterns over trajectories[J].
 \newblock TKDE, 2014, 26(8): 1974--1988.
-
-\bibitem{imo}
-Xu J, Lu H, Bao Z.
-\newblock {IMO:} {A} toolbox for simulating and querying "infected" moving objects[J].
-\newblock Proc. {VLDB} Endow., 2020, 13(12): 2825--2828.
 
 \bibitem{DBLP:conf/kdd/XuYFS07}
 Xu X, Yuruk N, Feng Z, et~al.
@@ -733,11 +714,6 @@ Yuan J, Zheng Y, Xie X, et~al.
 Yuan J, Zheng Y, Zhang C, et~al.
 \newblock T-drive: driving directions based on taxi trajectories[C].
 \newblock ACM-GIS, {ACM}, 2010: 99--108.
-
-\bibitem{DBLP:conf/icde/ChenSJ0K20}
-Chen L, Shang S, Jensen C~S, et~al.
-\newblock Parallel semantic trajectory similarity join[C].
-\newblock ICDE, {IEEE}, 2020: 997--1008.
 
 \bibitem{DBLP:conf/ijcai/ChenSFK21}
 Chen L, Shang S, Feng S, et~al.
