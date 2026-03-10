@@ -174,7 +174,7 @@
 \contentsline {paragraph}{\numberline {7.2.0.0.1}分布式查询}{116}{paragraph.7.2.0.0.1}%
 \contentsline {paragraph}{\numberline {7.2.0.0.2}基于深度学习的方法优化}{116}{paragraph.7.2.0.0.2}%
 \contentsline {paragraph}{\numberline {7.2.0.0.3}时空大模型设计}{117}{paragraph.7.2.0.0.3}%
-\contentsline {chapter}{致\hspace {1em}谢}{118}{chapter*.59}%
-\contentsline {chapter}{参考文献}{119}{section*.60}%
-\contentsline {chapter}{攻读博士学位期间取得的成果}{130}{chapter*.62}%
+\contentsline {chapter}{致\hspace {1em}谢}{118}{chapter*.61}%
+\contentsline {chapter}{参考文献}{119}{section*.62}%
+\contentsline {chapter}{攻读博士学位期间取得的成果}{130}{chapter*.64}%
 \contentsfinish 

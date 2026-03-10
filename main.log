@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  10 MAR 2026 21:51
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  10 MAR 2026 23:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1540,7 +1540,97 @@ Package chemgreek Info: Activating mapping `fontspec' on line 12.
 
  (/usr/local/texlive/2025/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
+) (./latex/00_cover.tex
+Overfull \hbox (19.72725pt too wide) in paragraph at lines 3--3
+[][] 
+ []
+
+File: ./fig/uestclogo.pdf Graphic file (type pdf)
+<use ./fig/uestclogo.pdf>
+
+Package fontspec Info: 
+(fontspec)             Font family 'STZHONGS(0)' created for font 'STZHONGS'
+(fontspec)             with options
+(fontspec)             [Script={CJK},Path={./font/},AutoFakeBold={2},AutoFakeSlant={0.3}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[./font/STZHONGS]/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[./font/STZHONGS]/OT:script=hani;language=dflt;embolden=2;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[./font/STZHONGS]/OT:script=hani;language=dflt;slant=0.3;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"[./font/STZHONGS]/OT:script=hani;language=dflt;embolden=2;slant=0.3;"
+
+
+Overfull \hbox (1.50562pt too wide) in paragraph at lines 3--3
+ [][] 
+ []
+
+
+
+[1
+
+]
+Overfull \hbox (19.72725pt too wide) in paragraph at lines 11--11
+[][] 
+ []
+
+File: ./fig/uestclogo.pdf Graphic file (type pdf)
+<use ./fig/uestclogo.pdf>
+
+Overfull \hbox (1.50562pt too wide) in paragraph at lines 11--11
+ [][] 
+ []
+
+
+
+[2]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
+LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+[3]
+
+[4]
+Overfull \hbox (1.00371pt too wide) in paragraph at lines 46--46
+ [][]| [] 
+ []
+
+
+Overfull \hbox (1.00372pt too wide) in paragraph at lines 46--46
+[][]| [] 
+ []
+
+
+
+[5]
+Overfull \hbox (1.00371pt too wide) in paragraph at lines 52--52
+ [][]| [] 
+ []
+
+
+Overfull \hbox (1.00372pt too wide) in paragraph at lines 52--52
+[][]| [] 
+ []
+
+
+
+[6]
+
+[7]
+
+[8]) (./latex/01_abstract.tex
+
+[9]
 
 Package fontspec Info: 
 (fontspec)             Font family 'SimHei(0)' created for font 'SimHei' with
@@ -1559,44 +1649,65 @@ Package fontspec Info:
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
 (fontspec)             <->"[./font/SimHei]/OT:script=hani;language=dflt;embolden=2;slant=0.3;"
 
- (./main.toc
-Underfull \vbox (badness 7869) has occurred while \output is active []
+
+Underfull \vbox (badness 5403) has occurred while \output is active []
 
 
 
 [1
 
-
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [2]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[3])
+[3
+
+]
+
+[4]
+Underfull \hbox (badness 2980) in paragraph at lines 40--40
+[]\TU/times(0)/m/n/12.045 Large-scale Dynamic Trajectory; Route Planning; Urban Computing;
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 40--25
+
+ []
+
+
+
+[5] (./main.toc
+Underfull \vbox (badness 7869) has occurred while \output is active []
+
+
+
+[6
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[8])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
 
 
-[4] (./main.lof
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+[9] (./main.lof
 Underfull \vbox (badness 1005) has occurred while \output is active []
 
 
 
-[5
+[10
 
 ])
 \tf@lof=\write7
@@ -1604,13 +1715,13 @@ Underfull \vbox (badness 1005) has occurred while \output is active []
 
 
 
-[6] (./main.lot)
+[11] (./main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
  (./latex/1_background.tex
 
-[7
+[12
 
 ]
 Chapter 第一章.
@@ -2281,15 +2392,15 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C4B6E9D266C80A9B587B15E6C7A2AB31;24236.
+(rerunfilecheck)             Checksum: 88B6EFAB1DD645E3854990C7CB42ABC9;25239.
  ) 
 Here is how much of TeX's memory you used:
- 51850 strings out of 473832
- 1095702 string characters out of 5729481
- 1582826 words of memory out of 5000000
- 73969 multiletter control sequences out of 15000+600000
- 573332 words of font info for 156 fonts, out of 8000000 for 9000
+ 52053 strings out of 473832
+ 1105680 string characters out of 5729481
+ 1584146 words of memory out of 5000000
+ 74143 multiletter control sequences out of 15000+600000
+ 573492 words of font info for 176 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  125i,24n,134p,1364b,1692s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (139 pages).
+Output written on main.pdf (153 pages).
