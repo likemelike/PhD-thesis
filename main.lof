@@ -2,10 +2,10 @@
 \cftsetpnumwidth {\widthof {11}-1bp}
 \contentsline {figure}{\numberline {1-1}{\ignorespaces 本文组织结构}}{11}{figure.caption.6}%
 \addvspace {10\p@ }
-\cftsetpnumwidth {\widthof {16}-1bp}
-\contentsline {figure}{\numberline {2-1}{\ignorespaces 轨迹与路径示例}}{16}{figure.caption.7}%
+\cftsetpnumwidth {\widthof {14}-1bp}
+\contentsline {figure}{\numberline {2-1}{\ignorespaces 轨迹与路线示例}}{14}{figure.caption.7}%
 \cftsetpnumwidth {\widthof {18}-1bp}
-\contentsline {figure}{\numberline {2-2}{\ignorespaces 基于位置的路径搜索与基于关键词的路径搜索示例}}{18}{figure.caption.8}%
+\contentsline {figure}{\numberline {2-2}{\ignorespaces 基于位置的路线搜索与基于关键词的路线搜索示例}}{18}{figure.caption.8}%
 \addvspace {10\p@ }
 \cftsetpnumwidth {\widthof {30}-1bp}
 \contentsline {figure}{\numberline {3-1}{\ignorespaces 个人最优下潜在交通拥堵示例}}{30}{figure.caption.10}%

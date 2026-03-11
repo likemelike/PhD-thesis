@@ -2,7 +2,7 @@
 \label{cha:join}
 本章研究如何针对特定场景下的轨迹相似度连接这一城市计算应用设计高性能算法。如何在存在位置不确定性的轨迹数据上，设计一种移动范围感知的相似连接方法，以更加准确地刻画移动对象之间的潜在时空交互关系。在真实应用场景中，由于采样频率不一致、定位误差不可避免、以及相邻采样点之间运动过程不可观测等因素，轨迹数据往往具有不确定性与稀疏性特征。现有多数相似度连接方法主要基于离散采样点进行距离计算，难以有效反映对象在采样间隔内的连续运动状态，从而可能遗漏在现实中具有重要意义的潜在交互行为。
 
-为克服上述局限，本章提出了一种相似连接模型——交集相似度连接。不同于传统基于点邻近关系的建模方式，以对象在给定时间段内的潜在运动范围为基本分析单元。首先将运动范围定义为对象在某一时间段内可能到达的空间区域，用以刻画其位置不确定性；在此基础上，引入交集相似度度量，用于量化两个对象运动范围之间的重叠程度。通过该建模方式，能够从区域特征交集的角度识别对象对，从而更真实地反映移动对象之间的潜在接触或协同行为。
+为克服上述局限，提出了一种相似连接模型——交集相似度连接。不同于传统基于点邻近关系的建模方式，以对象在给定时间段内的潜在运动范围为基本分析单元。首先将运动范围定义为对象在某一时间段内可能到达的空间区域，用以刻画其位置不确定性；在此基础上，引入交集相似度度量，用于量化两个对象运动范围之间的重叠程度。通过该建模方式，能够从区域特征交集的角度识别对象对，从而更真实地反映移动对象之间的潜在接触或协同行为。
 
 % 在问题描述上，形式化定义了时间段、运动范围模型、交集相似度函数以及 交集相似度连接 查询语义。具体而言，给定一组移动对象及其在统一时间段内的运动范围表示，交集相似度连接 旨在检索所有满足交集相似度不低于给定阈值的对象对。每个对象的运动范围由其轨迹点及速度约束推导得到，并在时间维度上保持对齐。在满足时间一致性的前提下，通过计算不同对象运动范围之间的空间重叠比例，判断其是否满足连接条件。
 
@@ -29,15 +29,13 @@
 
 交集相似度连接在多个实际应用场景中具有重要价值，例如疾病防控、轨迹数据清洗、拼车推荐以及交通拥堵预测等~\cite{DBLP:journals/ral/VishnuARMB23,DBLP:conf/ijcai/LiCS20}。这些场景的共同特点在于：对象之间的潜在交互往往发生在未被精确观测的时间段内，因此仅依赖离散采样点难以准确刻画真实关系。通过引入运动范围并基于区域交集进行相似度度量，能够更稳健地建模对象之间的潜在交互行为。下面讨论若干代表性应用场景。
 
-\paragraph{场景一：城市交通监测与拥堵分析}
+\noindent\textbf{场景一：城市交通监测与拥堵分析。 }
 在城市交通管理系统中，移动对象通常对应于车辆，其运动轨迹反映了实时交通状态。特征集合可以包括道路路段、交叉路口以及交通信号灯等交通基础设施要素。通过计算车辆之间的交集相似度，可以刻画其在一定时间段内经历相似交通环境或共享道路资源的程度，从而辅助拥堵预测、异常路段识别以及交通调度优化。对于兴趣点和道路交叉口等点状特征，可为每一个特征分配唯一标识符。对于线状道路网络，为保证建模粒度的一致性，可将道路划分为等长度子路段，并为每个子路段分配唯一标识符。基于此表示方式，车辆在某时间段内的运动范围可映射为一组可能访问的路段或节点集合。若两辆车辆的运动范围在特征集合层面存在显著交集，则说明它们可能受到相似交通流影响。相比传统基于同步采样点距离的相似度计算方法，能够在稀疏采样条件下更准确地反映潜在交通关联关系。
 
-\paragraph{场景二：野生动物迁徙分析}
-
+\noindent\textbf{场景二：野生动物迁徙分析。  }
 在生态监测与保护领域，移动对象可对应于佩戴定位设备的野生动物。由于设备能耗限制与通信条件约束，动物轨迹通常具有较低采样频率。在此背景下，基于采样点的直接距离度量难以识别共享迁徙路径或潜在接触行为。通过引入运动范围，可以综合考虑栖息地、水源分布以及已知迁徙通道等环境特征，构建动物在观测间隔内的潜在活动区域。交集相似度用于衡量不同个体之间在生态特征空间中的重叠程度，从而识别共享迁徙走廊或高频活动区域。此外，该建模方式在节能数据采集与准确交互检测之间提供了一种有效折中方案~\cite{forrest2022moving}：即在降低采样频率的同时，仍能通过区域建模保持对关键交互事件的识别能力。
 
-\paragraph{场景三：接触追踪与疾病传播控制}
-
+\noindent\textbf{场景三：接触追踪与疾病传播控制。  }
 在公共卫生领域，移动对象可表示为个体用户，其潜在接触关系是疾病传播建模的关键因素。在诸如新冠疫情等大规模传染病暴发期间，精准识别高风险接触事件对于抑制传播链条具有重要意义~\cite{DBLP:conf/ijcai/LiCSWLK022}。由于实际系统中定位数据通常存在时间间隔和空间误差，仅依据同步采样点判断是否发生接触容易产生误判。通过运动范围建模，可以估计个体在给定时间段内的潜在活动区域，从而更合理地推断可能的接触事件。交集相似度度量反映了两个个体在潜在活动区域层面的重叠程度，可用于评估感染风险等级并支持后续防控决策。
 
 综上所述，不同应用场景虽然关注对象类型与特征集合各不相同，但其核心需求均可归结为：在存在观测不确定性的条件下，识别对象之间的潜在运动交集关系。交集相似度连接 通过统一的运动范围建模与区域交集度量框架，为上述问题提供了通用且可扩展的解决方案。
@@ -117,7 +115,7 @@
 \end{definition}
 
 \begin{definition}[时间点运动范围]
-给定移动对象 $o$ 的两个连续位置采样点 $s_i = ([x_i, y_i], t_i)$ 和 $s_j = ([x_j, y_j], t_j)$，其中 $t_i < t_j$，以及对象的最大速度 $v_{\max}$，则对于任意时间点 $t \in [t_i, t_j]$，对象 $o$ 在时间 $t$ 的运动范围（motion range）记为 $MR(o,t)$，其定义如式\ref{eq:timestamped motion range}。其中 $dist(\cdot,\cdot)$ 表示欧氏距离度量。几何上，$MR(o,t)$ 为两个圆形区域的交集，呈透镜形状，如图~\ref{fig:lens} 所示，其两个半径分别为 $r_i = v_{\max}(t-t_i)$ 和 $r_j = v_{\max}(t_j-t)$。
+给定移动对象 $o$ 的两个连续位置采样点 $s_i = ([x_i, y_i], t_i)$ 和 $s_j = ([x_j, y_j], t_j)$，其中 $t_i < t_j$，以及对象的最大速度 $v_{\max}$，则对于任意时间点 $t \in [t_i, t_j]$，对象 $o$ 在时间 $t$ 的运动范围（motion range）记为 $MR(o,t)$，其定义如式\eqref{eq:timestamped motion range}。其中 $dist(\cdot,\cdot)$ 表示欧氏距离度量。几何上，$MR(o,t)$ 为两个圆形区域的交集，呈透镜形状，如图~\ref{fig:lens} 所示，其两个半径分别为 $r_i = v_{\max}(t-t_i)$ 和 $r_j = v_{\max}(t_j-t)$。
 
 \begin{equation}    
     \label{eq:timestamped motion range}
@@ -147,7 +145,7 @@
     \end{definition}
     
     \begin{definition}[时间点交集相似度]
-    对象 $o$ 与 $o'$ 在时间 $t$ 处的时间点交集相似度记为 $IS(o,o',t)$，用于度量其特征集合的重叠程度，定义如下式\ref{eq: time-point intersection similarity}。
+    对象 $o$ 与 $o'$ 在时间 $t$ 处的时间点交集相似度记为 $IS(o,o',t)$，用于度量其特征集合的重叠程度，定义如下式\eqref{eq: time-point intersection similarity}。
     \begin{equation}
     \label{eq: time-point intersection similarity}
     IS(o,o',t) =
@@ -162,7 +160,7 @@
     时间点交集相似度的定义基于如下考虑。$MR(o,t)$ 描述对象 $o$ 在时间 $t$ 可能占据的位置范围，而 $\mathcal{F}(o,t)$ 表示该范围内的相关特征集合。采用乘积形式意味着两个比例因子必须同时较大，相似度才会取得较高数值，从而保证仅当运动范围重叠程度高且特征相似度强这两个条件同时满足时，相似度得分才显著提升。相比 Jaccard 指数、算术平均或最小值策略，该定义能够更有效地平衡覆盖率与一致性。
     
     \begin{definition}[时间段交集相似度]\label{defi:interval similarity}
-    给定时间段 $I = [t_s,t_e]$，对象 $o$ 与 $o'$ 在区间 $I$ 上的时间段交集相似度定义为时间点交集相似度的时间平均值，由式\ref{eq:interval intersection similarity}计算。
+    给定时间段 $I = [t_s,t_e]$，对象 $o$ 与 $o'$ 在区间 $I$ 上的时间段交集相似度定义为时间点交集相似度的时间平均值，由式\eqref{eq:interval intersection similarity}计算。
     \begin{equation}
     \label{eq:interval intersection similarity}
     IS(o,o',I) =
@@ -174,7 +172,7 @@
 
 
 \begin{definition}[放宽的时间段交集相似度]\label{defi:relaxed similarity}
-给定一个较小的放宽划分常数 $\epsilon$，对时间段 $I=[t_s,t_e]$ 进行 $\epsilon$-采样，通过均匀采样得到一组时间点 $T^\epsilon=\{t_1^\epsilon,\ldots,t_m^\epsilon\}$，其中 $t_1^\epsilon=t_s$，$t_m^\epsilon=t_e$，且满足 $t_{i+1}^\epsilon-t_i^\epsilon=\epsilon$。随后，将 $\epsilon$-放宽的时间段交集相似度定义为对象 $o$ 与 $o'$ 在所有采样时间点 $t^\epsilon\in T^\epsilon$ 上的时间点交集相似度的平均值，记为 $IS(o,o',I,\epsilon)$，其计算方式如公式~\ref{eq:relaxed similarity} 所示。
+给定一个较小的放宽划分常数 $\epsilon$，对时间段 $I=[t_s,t_e]$ 进行 $\epsilon$-采样，通过均匀采样得到一组时间点 $T^\epsilon=\{t_1^\epsilon,\ldots,t_m^\epsilon\}$，其中 $t_1^\epsilon=t_s$，$t_m^\epsilon=t_e$，且满足 $t_{i+1}^\epsilon-t_i^\epsilon=\epsilon$。随后，将 $\epsilon$-放宽的时间段交集相似度定义为对象 $o$ 与 $o'$ 在所有采样时间点 $t^\epsilon\in T^\epsilon$ 上的时间点交集相似度的平均值，记为 $IS(o,o',I,\epsilon)$，其计算方式如公式~\eqref{eq:relaxed similarity} 所示。
 \begin{equation}
     \label{eq:relaxed similarity}
      IS(o,o',I,\epsilon) = \frac{\sum_{i=1}^{m} IS(o,o',t_i^\epsilon)}{m}
@@ -185,7 +183,7 @@
 从本质上看，时间段相似度的计算需要对多个时间点上的时间点交集相似度进行评估。在下文中，如无特殊说明，为表述简洁起见，使用“交集相似度”来指代 $\epsilon$-放宽的交集相似度。当 $\epsilon$ 趋近于 0 时，$IS(o,o',I,\epsilon)$ 将收敛到 $IS(o,o',I)$。
 
 \begin{example}
-    图~\ref{fig:relaxed similarity example} 给出了一个时间段交集相似度计算的示例。考虑时间段 $I=(t_4,t_5)$，令 $\epsilon=|I|/4$，则采样得到的时间集合为 $T^\epsilon={t_4,t_4+\epsilon,t_4+2\epsilon,t_4+3\epsilon,t_5}$。两个移动对象 $o_2$ 和 $o_3$ 在 $T^\epsilon$ 中各采样时间点处均具有对应的时间点运动范围。在时间点 $t_4$ 和 $t_4+\epsilon$ 处，两者的运动范围不存在交集，因此 $IS(o_2,o_3,t_4)=0$ 且 $IS(o_2,o_3,t_4+\epsilon)=0$。在 $t_5$ 时刻，$o_2$ 与 $o_3$ 的位置采样点相同，从而得到 $IS(o_2,o_3,t_5)=1$。因此，区间 $I$ 上的 $\epsilon$-放宽时间段交集相似度可计算为 $(0+0+IS(o_2,o_3,t_4+2\epsilon)+IS(o_2,o_3,t_4+3\epsilon)+1)/5$。其中，$IS(o_2,o_3,t_4+2\epsilon)$ 和 $IS(o_2,o_3,t_4+3\epsilon)$ 的取值依据公式~\ref{eq: time-point intersection similarity} 计算，该公式能够适应不同应用场景下的具体需求。
+    图~\ref{fig:relaxed similarity example} 给出了一个时间段交集相似度计算的示例。考虑时间段 $I=(t_4,t_5)$，令 $\epsilon=|I|/4$，则采样得到的时间集合为 $T^\epsilon={t_4,t_4+\epsilon,t_4+2\epsilon,t_4+3\epsilon,t_5}$。两个移动对象 $o_2$ 和 $o_3$ 在 $T^\epsilon$ 中各采样时间点处均具有对应的时间点运动范围。在时间点 $t_4$ 和 $t_4+\epsilon$ 处，两者的运动范围不存在交集，因此 $IS(o_2,o_3,t_4)=0$ 且 $IS(o_2,o_3,t_4+\epsilon)=0$。在 $t_5$ 时刻，$o_2$ 与 $o_3$ 的位置采样点相同，从而得到 $IS(o_2,o_3,t_5)=1$。因此，区间 $I$ 上的 $\epsilon$-放宽时间段交集相似度可计算为 $(0+0+IS(o_2,o_3,t_4+2\epsilon)+IS(o_2,o_3,t_4+3\epsilon)+1)/5$。其中，$IS(o_2,o_3,t_4+2\epsilon)$ 和 $IS(o_2,o_3,t_4+3\epsilon)$ 的取值依据公式~\eqref{eq: time-point intersection similarity} 计算，该公式能够适应不同应用场景下的具体需求。
 \end{example}
 
 
@@ -215,7 +213,7 @@ $IS(o_i,o_j,I,\epsilon)<\theta$。
 定理~\ref{theorem:motion} 给出了计算 $MR(o,I)$ 的方法。
 
 \begin{theorem}\label{theorem:motion}
-对象 $o$ 的运动范围 $MR(o,I)$ 是由公式~\ref{eq:ellipse} 表示的一个椭圆区域。椭圆的中心点记为 $(x_c, y_c)$，由公式~\ref{eq:center} 计算得到；椭圆的旋转角度记为 $\alpha$，由公式~\ref{eq:angle} 计算，其中 $a$ 和 $b$ 分别表示半长轴和半短轴。
+对象 $o$ 的运动范围 $MR(o,I)$ 是由公式~\eqref{eq:ellipse} 表示的一个椭圆区域。椭圆的中心点记为 $(x_c, y_c)$，由公式~\eqref{eq:center} 计算得到；椭圆的旋转角度记为 $\alpha$，由公式~\eqref{eq:angle} 计算，其中 $a$ 和 $b$ 分别表示半长轴和半短轴。
 \begin{equation}
     \label{eq:ellipse}
     \begin{aligned}
@@ -238,7 +236,7 @@ $IS(o_i,o_j,I,\epsilon)<\theta$。
 \end{theorem}
 
 \begin{proof} 
-对象 $o$ 在时间段 $I$ 内能够行进的最大距离为 $(t_j-t_i)\cdot v_{max}$，该结论同时适用于欧氏空间和路网空间。给定两个位置样本 $s_i$ 和 $s_j$，对象 $o$ 在某一具体时间点 $t$ 的运动范围可由公式~\ref{eq:timestamped motion range} 定义。需要注意的是，椭圆上任意一点到其两个焦点的距离之和为常数 $2a$。当 $v_{max}\cdot (t_j-t_i)=2a$ 时，从 $t_i$ 到 $t_j$ 的所有可能到达位置构成一个以 $(x_i, y_i)$ 和 $(x_j, y_j)$ 为焦点的椭圆区域，如图~\ref{fig:ellipse} 所示。对时间段运动范围的建模方式与已有研究保持一致~\cite{DBLP:conf/edbt/ZhangRSL21,trajcevski2010uncertain}。
+对象 $o$ 在时间段 $I$ 内能够行进的最大距离为 $(t_j-t_i)\cdot v_{max}$，该结论同时适用于欧氏空间和路网空间。给定两个位置样本 $s_i$ 和 $s_j$，对象 $o$ 在某一具体时间点 $t$ 的运动范围可由公式~\eqref{eq:timestamped motion range} 定义。需要注意的是，椭圆上任意一点到其两个焦点的距离之和为常数 $2a$。当 $v_{max}\cdot (t_j-t_i)=2a$ 时，从 $t_i$ 到 $t_j$ 的所有可能到达位置构成一个以 $(x_i, y_i)$ 和 $(x_j, y_j)$ 为焦点的椭圆区域，如图~\ref{fig:ellipse} 所示。对时间段运动范围的建模方式与已有研究保持一致~\cite{DBLP:conf/edbt/ZhangRSL21,trajcevski2010uncertain}。
 \end{proof}
 
 \begin{figure}[tbp]
@@ -384,7 +382,7 @@ $\frac{|N.child_l.\mathcal{I}|-|N.child_r.\mathcal{I}|}{|N.child_r.\mathcal{I}|}
 提出了一种基于 混合球树 的 连接 算法。为了进一步提升效率，引入了一种剪枝增强方法，利用交集相似度的上界来进一步剔除不满足条件的对象对，从而优化整体处理流程。
 
 \subsubsection{剪枝增强策略}
-由于运动范围交集形状的不规则性，很难直接计算两个特征集合 $\mathcal{F}(o,t)$ 与 $\mathcal{F}(o',t)$ 的交集。给定时间点 $t$，若 $MR(o,t)\cap MR(o',t)\neq \emptyset$，当其中一个对象的运动范围完全被另一个对象覆盖时，$IS(o,o',t)$ 取得其最大值。基于此，公式~\ref{eq:t-IS-ub} 给出了 $IS(o,o',t)$ 的一个上界。将公式~\ref{eq:t-IS-ub} 代入公式~\ref{eq:relaxed similarity}，可得到公式~\ref{eq:I-IS-ub1}，用于估计 $IS(o,o',I,\epsilon)$ 的上界。若 $IS(o,o',I,\epsilon)_{ub}<\theta$，则可以安全地剪枝对象对 $(o,o')$。
+由于运动范围交集形状的不规则性，很难直接计算两个特征集合 $\mathcal{F}(o,t)$ 与 $\mathcal{F}(o',t)$ 的交集。给定时间点 $t$，若 $MR(o,t)\cap MR(o',t)\neq \emptyset$，当其中一个对象的运动范围完全被另一个对象覆盖时，$IS(o,o',t)$ 取得其最大值。基于此，公式~\eqref{eq:t-IS-ub} 给出了 $IS(o,o',t)$ 的一个上界。将公式~\eqref{eq:t-IS-ub} 代入公式~\eqref{eq:relaxed similarity}，可得到公式~\eqref{eq:I-IS-ub1}，用于估计 $IS(o,o',I,\epsilon)$ 的上界。若 $IS(o,o',I,\epsilon)_{ub}<\theta$，则可以安全地剪枝对象对 $(o,o')$。
 
     \begin{equation}
     \label{eq:t-IS-ub}
@@ -450,7 +448,7 @@ $\frac{|N.child_l.\mathcal{I}|-|N.child_r.\mathcal{I}|}{|N.child_r.\mathcal{I}|}
     \end{algorithm}
 
 
-算法~\ref{alg:ball filter} 给出了基于 混合球树 的 连接 算法的伪代码。该算法的输入包括两个移动对象集合、混合球树 的根节点、给定的时间间隔、放宽划分参数、重分区阈值以及交集相似度阈值；输出结果为交集对象对集合 $\mathcal{R}$。初始时，$\mathcal{R}$ 为空（第 1 行）。对于每一个 $o\in\mathcal{A}$，使用列表 $\mathcal{L}$ 存储可能与 $MR(o,I)$ 发生交集的候选节点，初始时 $\mathcal{L}$ 仅包含根节点 $N_r$（第 3 行）。混合球树 通过插入对象集合 $\mathcal{B}$ 的时间段运动范围构建完成。当 $\mathcal{L}$ 非空时，算法调用 $\mathcal{L}.pop()$ 取出一个节点 $N$（第 5 行）。随后，在“圆级别”执行基于 混合球树 的过滤，以识别潜在的交集候选（第 6--9 行）。具体而言，检索 混合球树 中满足 $dist(o,N_c)\leq R+r_q$ 的节点，从而判断 $MR(o,I)$ 与 $N_c$ 之间是否可能存在交集。若 $N$ 为非叶节点，则检查其子节点。对于每个子节点 $N_c$，若对象 $o$ 与 $N_c$ 的距离不大于二者半径之和，则将 $N_c$ 压入优先队列（第 8--9 行）。若 $N$ 为叶节点，则遍历 $N.\mathcal{I}$ 中的所有条目。对于每个条目 $E$，计算 $(E.x,E.y)$ 与 $(MR(o,I).x_c,MR(o,I).y_c)$ 之间的欧氏距离 $dist(o,E)$。若 $dist(o,E)>E.r+o.r$，则可安全剪枝 $(o,E.o)$（第 12--13 行）。否则，继续执行进一步的剪枝操作，即剪枝增强策略（第 14--15 行）。仅对保留下来的对象对，才进行精确的交集相似度计算，即利用公式~\ref{eq: time-point intersection similarity} 计算多个时间点的交集相似度（第 16--17 行）。%最终返回结果集合 $\mathcal{R}$（第 18 行）。
+算法~\ref{alg:ball filter} 给出了基于 混合球树 的 连接 算法的伪代码。该算法的输入包括两个移动对象集合、混合球树 的根节点、给定的时间间隔、放宽划分参数、重分区阈值以及交集相似度阈值；输出结果为交集对象对集合 $\mathcal{R}$。初始时，$\mathcal{R}$ 为空（第 1 行）。对于每一个 $o\in\mathcal{A}$，使用列表 $\mathcal{L}$ 存储可能与 $MR(o,I)$ 发生交集的候选节点，初始时 $\mathcal{L}$ 仅包含根节点 $N_r$（第 3 行）。混合球树 通过插入对象集合 $\mathcal{B}$ 的时间段运动范围构建完成。当 $\mathcal{L}$ 非空时，算法调用 $\mathcal{L}.pop()$ 取出一个节点 $N$（第 5 行）。随后，在“圆级别”执行基于 混合球树 的过滤，以识别潜在的交集候选（第 6--9 行）。具体而言，检索 混合球树 中满足 $dist(o,N_c)\leq R+r_q$ 的节点，从而判断 $MR(o,I)$ 与 $N_c$ 之间是否可能存在交集。若 $N$ 为非叶节点，则检查其子节点。对于每个子节点 $N_c$，若对象 $o$ 与 $N_c$ 的距离不大于二者半径之和，则将 $N_c$ 压入优先队列（第 8--9 行）。若 $N$ 为叶节点，则遍历 $N.\mathcal{I}$ 中的所有条目。对于每个条目 $E$，计算 $(E.x,E.y)$ 与 $(MR(o,I).x_c,MR(o,I).y_c)$ 之间的欧氏距离 $dist(o,E)$。若 $dist(o,E)>E.r+o.r$，则可安全剪枝 $(o,E.o)$（第 12--13 行）。否则，继续执行进一步的剪枝操作，即剪枝增强策略（第 14--15 行）。仅对保留下来的对象对，才进行精确的交集相似度计算，即利用公式~\eqref{eq: time-point intersection similarity} 计算多个时间点的交集相似度（第 16--17 行）。%最终返回结果集合 $\mathcal{R}$（第 18 行）。
 
 \subsubsection{时间复杂度}
 混合球树 的构建时间复杂度为 $O(|\mathcal{B}|\times \log|\mathcal{B}|)$。预检查阶段的时间复杂度为 $O(|\mathcal{A}|\times\log|\mathcal{B}|)$。设 $\mathcal{C}'$ 为候选集合，则候选精化阶段的时间复杂度为 $O(|\mathcal{C}'|\times |I|/\epsilon\times p)$。因此，基于 混合球树 的 连接算法的总体时间复杂度为
@@ -470,7 +468,7 @@ $。
 
 
 \section{实验研究}
-在本节中，开展了广泛的实验对本章算法性能进行评估。首先介绍实验设
+在本节中，开展了广泛的实验对算法性能进行评估。首先介绍实验设
 定，包括实验所使用的数据集，运行环境等，然后给出实验结果与分析。实验结
 果主要关注所提出的搜索算法的运行时间，即高效性方面的表现。实验的目的在
 于，通过设置不同的参数 (移动对象数目、特征数量以及相似度阈值等)，对比不同的算法的运行效率并进行分析。

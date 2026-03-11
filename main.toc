@@ -1,46 +1,32 @@
 \contentsline {chapter}{\numberline {第一章}绪论}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}研究背景与意义}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}研究目标}{3}{section.1.2}%
-\contentsline {section}{\numberline {1.3}研究内容}{5}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}面向大规模行程请求流的持续最优路径组合规划}{5}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}基于轨迹数据的群体联合移动模式挖掘}{6}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}大规模移动对象上的持续密切接触发现}{6}{subsection.1.3.3}%
-\contentsline {subsection}{\numberline {1.3.4}面向时空运动范围的轨迹相似性连接方法}{7}{subsection.1.3.4}%
-\contentsline {section}{\numberline {1.4}研究所面临的挑战}{7}{section.1.4}%
+\contentsline {section}{\numberline {1.2}研究目标}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}研究内容}{6}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}全局持续最优路线组合规划}{6}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}群体联合移动模式挖掘}{6}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}面向大规模移动对象的暴露接触搜索}{7}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}运动范围感知的的轨迹交集相似度连接}{7}{subsection.1.3.4}%
+\contentsline {section}{\numberline {1.4}研究所面临的挑战}{8}{section.1.4}%
 \contentsline {section}{\numberline {1.5}论文的主要贡献}{9}{section.1.5}%
 \contentsline {section}{\numberline {1.6}论文的组织结构}{11}{section.1.6}%
 \contentsline {chapter}{\numberline {第二章}相关技术及研究综述}{13}{chapter.2}%
 \contentsline {section}{\numberline {2.1}时空数据建模和索引}{13}{section.2.1}%
-\contentsline {paragraph}{\numberline {2.1.0.0.1}\textbf {数据空间}}{13}{paragraph.2.1.0.0.1}%
-\contentsline {paragraph}{\numberline {2.1.0.0.2}\textbf {道路网络}}{13}{paragraph.2.1.0.0.2}%
-\contentsline {paragraph}{\numberline {2.1.0.0.3}\textbf {地理位置点}}{14}{paragraph.2.1.0.0.3}%
-\contentsline {paragraph}{\numberline {2.1.0.0.4}\textbf {时空位置点}}{14}{paragraph.2.1.0.0.4}%
-\contentsline {paragraph}{\numberline {2.1.0.0.5}Dijkstra 算法}{14}{paragraph.2.1.0.0.5}%
-\contentsline {paragraph}{\numberline {2.1.0.0.6}位置点间的路网距离计算}{15}{paragraph.2.1.0.0.6}%
-\contentsline {paragraph}{\numberline {2.1.0.0.7}\textbf {路径}}{15}{paragraph.2.1.0.0.7}%
-\contentsline {paragraph}{\numberline {2.1.0.0.8}\textbf {精确轨迹}}{15}{paragraph.2.1.0.0.8}%
-\contentsline {paragraph}{\numberline {2.1.0.0.9}\textbf {采样轨迹}}{15}{paragraph.2.1.0.0.9}%
-\contentsline {paragraph}{\numberline {2.1.0.0.10}\textbf {常见时空索引}}{16}{paragraph.2.1.0.0.10}%
-\contentsline {section}{\numberline {2.2}路径搜索和推荐}{17}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}基于位置的路径规划}{18}{subsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.1}基于单个起点终点的路径搜索和推荐}{18}{subsubsection.2.2.1.1}%
-\contentsline {paragraph}{\numberline {2.2.1.1.1}\textbf {时间依赖最短路径问题}}{19}{paragraph.2.2.1.1.1}%
-\contentsline {paragraph}{\numberline {2.2.1.1.2}\textbf {交通感知路径规划}}{19}{paragraph.2.2.1.1.2}%
-\contentsline {paragraph}{\numberline {2.2.1.1.3}\textbf {自感知路径规划}}{19}{paragraph.2.2.1.1.3}%
-\contentsline {paragraph}{\numberline {2.2.1.1.4}\textbf {基于用户偏好的路径规划}}{19}{paragraph.2.2.1.1.4}%
-\contentsline {subsubsection}{\numberline {2.2.1.2}基于多位置或多用户的路径搜索和推荐}{20}{subsubsection.2.2.1.2}%
-\contentsline {subsection}{\numberline {2.2.2}基于关键词的路径规划}{20}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.1.1}位置点间的路网距离计算}{15}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}常见时空索引}{16}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}路线搜索和推荐}{17}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}基于位置的路线规划}{18}{subsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.1}基于单个起点终点的路线搜索和推荐}{18}{subsubsection.2.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.2}基于多位置或多用户的路线搜索和推荐}{20}{subsubsection.2.2.1.2}%
+\contentsline {subsection}{\numberline {2.2.2}基于关键词的路线规划}{20}{subsection.2.2.2}%
 \contentsline {section}{\numberline {2.3}轨迹数据挖掘和应用}{22}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}轨迹相似度连接}{22}{subsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.1.1}轨迹相似度度量}{22}{subsubsection.2.3.1.1}%
-\contentsline {paragraph}{\numberline {2.3.1.1.1}传统相似性度量方法}{22}{paragraph.2.3.1.1.1}%
-\contentsline {paragraph}{\numberline {2.3.1.1.2}基于深度学习的方法}{23}{paragraph.2.3.1.1.2}%
 \contentsline {subsubsection}{\numberline {2.3.1.2}轨迹相似度搜索与连接}{24}{subsubsection.2.3.1.2}%
 \contentsline {subsection}{\numberline {2.3.2}轨迹模式挖掘}{25}{subsection.2.3.2}%
 \contentsline {subsubsection}{\numberline {2.3.2.1}协同行为模式挖掘}{25}{subsubsection.2.3.2.1}%
 \contentsline {subsubsection}{\numberline {2.3.2.2}接触模式搜索}{26}{subsubsection.2.3.2.2}%
 \contentsline {subsubsection}{\numberline {2.3.2.3}轨迹聚类模式挖掘}{26}{subsubsection.2.3.2.3}%
-\contentsline {section}{\numberline {2.4}本章小结}{26}{section.2.4}%
+\contentsline {section}{\numberline {2.4}本章小结}{27}{section.2.4}%
 \contentsline {chapter}{\numberline {第三章}全局持续最优路线组合规划}{28}{chapter.3}%
 \contentsline {section}{\numberline {3.1}引言}{28}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}研究背景与意义}{28}{subsection.3.1.1}%
@@ -89,10 +75,10 @@
 \contentsline {section}{\numberline {4.5}实验评估}{61}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}实验设置}{61}{subsection.4.5.1}%
 \contentsline {subsubsection}{\numberline {4.5.1.1}数据准备}{61}{subsubsection.4.5.1.1}%
-\contentsline {paragraph}{\numberline {4.5.1.1.1}数据预处理}{62}{paragraph.4.5.1.1.1}%
-\contentsline {subsubsection}{\numberline {4.5.1.2}比较算法}{62}{subsubsection.4.5.1.2}%
-\contentsline {subsubsection}{\numberline {4.5.1.3}评估指标}{63}{subsubsection.4.5.1.3}%
-\contentsline {subsubsection}{\numberline {4.5.1.4}实验环境}{63}{subsubsection.4.5.1.4}%
+\contentsline {subsubsection}{\numberline {4.5.1.2}数据预处理}{62}{subsubsection.4.5.1.2}%
+\contentsline {subsubsection}{\numberline {4.5.1.3}比较算法}{62}{subsubsection.4.5.1.3}%
+\contentsline {subsubsection}{\numberline {4.5.1.4}评估指标}{63}{subsubsection.4.5.1.4}%
+\contentsline {subsubsection}{\numberline {4.5.1.5}实验环境}{63}{subsubsection.4.5.1.5}%
 \contentsline {subsection}{\numberline {4.5.2}实验结果与分析}{63}{subsection.4.5.2}%
 \contentsline {subsubsection}{\numberline {4.5.2.1}轨迹数目的影响}{63}{subsubsection.4.5.2.1}%
 \contentsline {subsubsection}{\numberline {4.5.2.2}联合移动时长阈值的影响}{65}{subsubsection.4.5.2.2}%
@@ -132,9 +118,6 @@
 \contentsline {chapter}{\numberline {第六章}运动范围感知的轨迹交集相似度连接}{90}{chapter.6}%
 \contentsline {section}{\numberline {6.1}引言}{90}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}研究背景与意义}{90}{subsection.6.1.1}%
-\contentsline {paragraph}{\numberline {6.1.1.0.1}场景一：城市交通监测与拥堵分析}{92}{paragraph.6.1.1.0.1}%
-\contentsline {paragraph}{\numberline {6.1.1.0.2}场景二：野生动物迁徙分析}{92}{paragraph.6.1.1.0.2}%
-\contentsline {paragraph}{\numberline {6.1.1.0.3}场景三：接触追踪与疾病传播控制}{92}{paragraph.6.1.1.0.3}%
 \contentsline {subsection}{\numberline {6.1.2}研究内容与挑战}{93}{subsection.6.1.2}%
 \contentsline {subsection}{\numberline {6.1.3}研究成果与贡献}{94}{subsection.6.1.3}%
 \contentsline {section}{\numberline {6.2}问题描述}{95}{section.6.2}%
@@ -166,15 +149,15 @@
 \contentsline {section}{\numberline {6.7}本章小结}{111}{section.6.7}%
 \contentsline {chapter}{\numberline {第七章}总结与展望}{112}{chapter.7}%
 \contentsline {section}{\numberline {7.1}全文总结}{112}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}面向大规模行程请求流的持续最优路线组合规划}{112}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}基于轨迹数据的群体联合移动模式挖掘}{113}{subsection.7.1.2}%
-\contentsline {subsection}{\numberline {7.1.3}大规模移动对象上的持续密切接触发现}{114}{subsection.7.1.3}%
-\contentsline {subsection}{\numberline {7.1.4}面向时空运动范围的轨迹相似度连接}{115}{subsection.7.1.4}%
+\contentsline {subsection}{\numberline {7.1.1}全局持续最优路线组合规划}{112}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}群体联合移动模式挖掘}{113}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}面向大规模移动对象的暴露接触搜索}{114}{subsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.1.4}运动范围感知的轨迹交集相似度连接}{115}{subsection.7.1.4}%
 \contentsline {section}{\numberline {7.2}展望}{116}{section.7.2}%
 \contentsline {paragraph}{\numberline {7.2.0.0.1}分布式查询}{116}{paragraph.7.2.0.0.1}%
 \contentsline {paragraph}{\numberline {7.2.0.0.2}基于深度学习的方法优化}{116}{paragraph.7.2.0.0.2}%
 \contentsline {paragraph}{\numberline {7.2.0.0.3}时空大模型设计}{117}{paragraph.7.2.0.0.3}%
 \contentsline {chapter}{致\hspace {1em}谢}{118}{chapter*.61}%
 \contentsline {chapter}{参考文献}{119}{section*.62}%
-\contentsline {chapter}{攻读博士学位期间取得的成果}{130}{chapter*.64}%
+\contentsline {chapter}{攻读博士学位期间取得的成果}{131}{chapter*.64}%
 \contentsfinish 
