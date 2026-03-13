@@ -1,36 +1,36 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\cftsetpnumwidth {\widthof {24}-1bp}
-\contentsline {table}{\numberline {2-1}{\ignorespaces 相似度度量方法比较}}{24}{table.caption.9}%
+\cftsetpnumwidth {\widthof {25}-1bp}
+\contentsline {table}{\numberline {2-1}{\ignorespaces 相似度度量方法比较}}{25}{table.caption.10}%
 \addvspace {10\p@ }
-\cftsetpnumwidth {\widthof {33}-1bp}
-\contentsline {table}{\numberline {3-1}{\ignorespaces 主要符号解释}}{33}{table.caption.11}%
-\cftsetpnumwidth {\widthof {41}-1bp}
-\contentsline {table}{\numberline {3-2}{\ignorespaces 评估参数设定}}{41}{table.caption.15}%
+\cftsetpnumwidth {\widthof {34}-1bp}
+\contentsline {table}{\numberline {3-1}{\ignorespaces 主要符号解释}}{34}{table.caption.12}%
 \cftsetpnumwidth {\widthof {42}-1bp}
-\contentsline {table}{\numberline {3-3}{\ignorespaces 比较算法}}{42}{table.caption.16}%
+\contentsline {table}{\numberline {3-2}{\ignorespaces 评估参数设定}}{42}{table.caption.16}%
+\cftsetpnumwidth {\widthof {43}-1bp}
+\contentsline {table}{\numberline {3-3}{\ignorespaces 比较算法}}{43}{table.caption.17}%
 \addvspace {10\p@ }
-\cftsetpnumwidth {\widthof {55}-1bp}
-\contentsline {table}{\numberline {4-1}{\ignorespaces 主要符号解释}}{55}{table.caption.23}%
-\cftsetpnumwidth {\widthof {62}-1bp}
-\contentsline {table}{\numberline {4-2}{\ignorespaces 评估参数设定}}{62}{table.caption.26}%
+\cftsetpnumwidth {\widthof {56}-1bp}
+\contentsline {table}{\numberline {4-1}{\ignorespaces 主要符号解释}}{56}{table.caption.24}%
 \cftsetpnumwidth {\widthof {63}-1bp}
-\contentsline {table}{\numberline {4-3}{\ignorespaces 比较算法}}{63}{table.caption.27}%
+\contentsline {table}{\numberline {4-2}{\ignorespaces 评估参数设定}}{63}{table.caption.27}%
+\cftsetpnumwidth {\widthof {64}-1bp}
+\contentsline {table}{\numberline {4-3}{\ignorespaces 比较算法}}{64}{table.caption.28}%
 \addvspace {10\p@ }
-\cftsetpnumwidth {\widthof {73}-1bp}
-\contentsline {table}{\numberline {5-1}{\ignorespaces 主要符号解释}}{73}{table.caption.33}%
-\cftsetpnumwidth {\widthof {82}-1bp}
-\contentsline {table}{\numberline {5-2}{\ignorespaces 评估参数设定}}{82}{table.caption.37}%
+\cftsetpnumwidth {\widthof {74}-1bp}
+\contentsline {table}{\numberline {5-1}{\ignorespaces 主要符号解释}}{74}{table.caption.34}%
 \cftsetpnumwidth {\widthof {83}-1bp}
-\contentsline {table}{\numberline {5-3}{\ignorespaces 比较算法}}{83}{table.caption.38}%
+\contentsline {table}{\numberline {5-2}{\ignorespaces 评估参数设定}}{83}{table.caption.38}%
+\cftsetpnumwidth {\widthof {84}-1bp}
+\contentsline {table}{\numberline {5-3}{\ignorespaces 比较算法}}{84}{table.caption.39}%
 \addvspace {10\p@ }
-\cftsetpnumwidth {\widthof {95}-1bp}
-\contentsline {table}{\numberline {6-1}{\ignorespaces 主要符号解释}}{95}{table.caption.45}%
-\cftsetpnumwidth {\widthof {107}-1bp}
-\contentsline {table}{\numberline {6-2}{\ignorespaces 比较算法}}{107}{table.caption.53}%
-\cftsetpnumwidth {\widthof {107}-1bp}
-\contentsline {table}{\numberline {6-3}{\ignorespaces 评估参数设置}}{107}{table.caption.54}%
+\cftsetpnumwidth {\widthof {96}-1bp}
+\contentsline {table}{\numberline {6-1}{\ignorespaces 主要符号解释}}{96}{table.caption.46}%
 \cftsetpnumwidth {\widthof {108}-1bp}
-\contentsline {table}{\numberline {6-4}{\ignorespaces 剪枝性能}}{108}{table.caption.55}%
+\contentsline {table}{\numberline {6-2}{\ignorespaces 比较算法}}{108}{table.caption.54}%
+\cftsetpnumwidth {\widthof {108}-1bp}
+\contentsline {table}{\numberline {6-3}{\ignorespaces 评估参数设置}}{108}{table.caption.55}%
+\cftsetpnumwidth {\widthof {109}-1bp}
+\contentsline {table}{\numberline {6-4}{\ignorespaces 剪枝性能}}{109}{table.caption.56}%
 \addvspace {10\p@ }
 \contentsfinish 

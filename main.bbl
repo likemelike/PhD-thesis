@@ -81,7 +81,7 @@ Ding Y, Zhou X, Wu G, et~al.
 \bibitem{DBLP:conf/mdm/BakalovHKT05}
 Bakalov P, Hadjieleftheriou M, Keogh E~J, et~al.
 \newblock Efficient trajectory joins using symbolic representations[C].
-\newblock Chrysanthis P~K, Samaras G, (Eds.) MDM, {ACM}, 2005: 86--93.
+\newblock MDM, {ACM}, 2005: 86--93.
 
 \bibitem{DBLP:conf/vldb/YiF00}
 Yi B, Faloutsos C.
@@ -272,7 +272,7 @@ Chen Z, Shen H~T, Zhou X, et~al.
 \bibitem{DBLP:conf/icde/ZhengSYY13}
 Zheng K, Shang S, Yuan N~J, et~al.
 \newblock Towards efficient search for activity trajectories[C].
-\newblock Jensen C~S, Jermaine C~M, Zhou X, (Eds.) ICDE, {IEEE} Computer Society, 2013: 230--241.
+\newblock ICDE, {IEEE} Computer Society, 2013: 230--241.
 
 \bibitem{DBLP:conf/icde/ShangCWJWK17}
 Shang S, Chen L, Wei Z, et~al.
@@ -292,7 +292,7 @@ Reza R~M, Ali M~E, Cheema M~A.
 \bibitem{DBLP:conf/ssd/HashemHAK13}
 Hashem T, Hashem T, Ali M~E, et~al.
 \newblock Group trip planning queries in spatial databases[C].
-\newblock Advances in Spatial and Temporal Databases - 13th International Symposium, {SSTD} 2013, Munich, Germany, August 21-23, 2013. Proceedings, Springer, vol. 8098 of Lecture Notes in Computer Science, 2013: 259--276.
+\newblock {SSTD}, Springer, vol. 8098 of Lecture Notes in Computer Science, 2013: 259--276.
 
 \bibitem{DBLP:conf/cikm/HashemBAKT15}
 Hashem T, Barua S, Ali M~E, et~al.
@@ -422,7 +422,7 @@ Roy S~B, Das G, Amer{-}Yahia S, et~al.
 \bibitem{DBLP:conf/ssd/FanBS017}
 Fan L, Bonomi L, Shahabi C, et~al.
 \newblock Multi-user itinerary planning for optimal group preference[C].
-\newblock Advances in Spatial and Temporal Databases - 15th International Symposium, {SSTD} 2017, Arlington, VA, USA, August 21-23, 2017, Proceedings, Springer, vol. 10411 of Lecture Notes in Computer Science, 2017: 3--23.
+\newblock SSTD, Springer, vol. 10411 of Lecture Notes in Computer Science, 2017: 3--23.
 
 \bibitem{DBLP:journals/geoinformatica/FanBSX18}
 Fan L, Bonomi L, Shahabi C, et~al.
@@ -507,7 +507,7 @@ Perng C, Wang H, Zhang S~R, et~al.
 \bibitem{DBLP:conf/icde/ChenNOT07}
 Chen Y, Nascimento M~A, Ooi B~C, et~al.
 \newblock Spade: On shape-based pattern detection in streaming time series[C].
-\newblock Chirkova R, Dogac A, {\"{O}}zsu M~T, et~al., (Eds.) ICDE, {IEEE} Computer Society, 2007: 786--795.
+\newblock ICDE, {IEEE} Computer Society, 2007: 786--795.
 
 \bibitem{曹翰林2021轨迹表示学习技术研究进展}
 曹翰林, 唐海娜, 王飞, et~al.
@@ -657,7 +657,7 @@ Li Y, Bailey J, Kulik L.
 \bibitem{DBLP:conf/sigmod/FangGPCMJ20}
 Fang Z, Gao Y, Pan L, et~al.
 \newblock Coming: {A} real-time co-movement mining system for streaming trajectories[C].
-\newblock Maier D, Pottinger R, Doan A, et~al., (Eds.) SIGMOD, {ACM}, 2020: 2777--2780.
+\newblock SIGMOD, {ACM}, 2020: 2777--2780.
 
 \bibitem{DBLP:journals/pvldb/ChenGFMJG19}
 Chen L, Gao Y, Fang Z, et~al.
@@ -833,7 +833,7 @@ Yuan J, Zheng Y, Zhang C, et~al.
 \bibitem{DBLP:conf/ijcai/ChenSFK21}
 Chen L, Shang S, Feng S, et~al.
 \newblock Parallel subtrajectory alignment over massive-scale trajectory data[C].
-\newblock Zhou Z, (Ed.) IJCAI, ijcai.org, 2021: 3613--3619.
+\newblock IJCAI, ijcai.org, 2021: 3613--3619.
 
 \bibitem{DBLP:journals/tkde/ShangCZJWK19}
 Shang S, Chen L, Zheng K, et~al.
