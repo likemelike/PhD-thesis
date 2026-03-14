@@ -1,6 +1,6 @@
 \addvspace {10\p@ }
 \cftsetpnumwidth {\widthof {2}-1bp}
-\contentsline {figure}{\numberline {1-1}{\ignorespaces 针对大规模动态轨迹的城市计算算法框架}}{2}{figure.caption.6}%
+\contentsline {figure}{\numberline {1-1}{\ignorespaces 面向城市时空计算：大规模轨迹驱动的核心计算任务与关键应用}}{2}{figure.caption.6}%
 \cftsetpnumwidth {\widthof {12}-1bp}
 \contentsline {figure}{\numberline {1-2}{\ignorespaces 本文组织结构}}{12}{figure.caption.7}%
 \addvspace {10\p@ }

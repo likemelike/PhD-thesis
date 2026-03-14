@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  14 MAR 2026 00:05
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  14 MAR 2026 18:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1672,12 +1672,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 
-[4]
-Underfull \hbox (badness 2980) in paragraph at lines 40--40
-[]\TU/times(0)/m/n/12.045 Large-scale Dynamic Trajectory; Route Planning; Urban Computing;
- []
-
-)
+[4])
 Underfull \hbox (badness 10000) in paragraph at lines 40--25
 
  []
@@ -1774,6 +1769,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: fig/framework.png Graphic file (type bmp)
 <fig/framework.png>
 
+Underfull \vbox (badness 4366) has occurred while \output is active []
+
+
 
 [12]) (./latex/2_relatedwork.tex
 
@@ -1820,6 +1818,9 @@ Underfull \vbox (badness 2469) has occurred while \output is active []
 
 
 [23]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [24]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1854,9 +1855,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [31]
 
 [32]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [33]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1950,7 +1948,7 @@ File: fig/section3/fig5_cost.png Graphic file (type bmp)
 File: fig/section3/fig6_NY.png Graphic file (type bmp)
 <fig/section3/fig6_NY.png>
 
-Overfull \hbox (9.53632pt too wide) in paragraph at lines 503--512
+Overfull \hbox (9.53632pt too wide) in paragraph at lines 505--514
  [][][][][][] 
  []
 
@@ -2416,12 +2414,12 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 52C358F8E80CBDA945C3BBAFC2583FA0;24891.
+(rerunfilecheck)             Checksum: 6BCCAB9D2E6D995CA237C26943F78D64;25115.
  ) 
 Here is how much of TeX's memory you used:
  52164 strings out of 473832
  1109774 string characters out of 5729481
- 1585224 words of memory out of 5000000
+ 1585460 words of memory out of 5000000
  74253 multiletter control sequences out of 15000+600000
  573492 words of font info for 176 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
