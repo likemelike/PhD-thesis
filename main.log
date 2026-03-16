@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  14 MAR 2026 18:27
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  16 MAR 2026 12:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1655,7 +1655,7 @@ Package fontspec Info:
 (fontspec)             <->"[./font/SimHei]/OT:script=hani;language=dflt;embolden=2;slant=0.3;"
 
 
-Underfull \vbox (badness 5403) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -1673,7 +1673,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 
 [4])
-Underfull \hbox (badness 10000) in paragraph at lines 40--25
+Underfull \hbox (badness 10000) in paragraph at lines 32--25
 
  []
 
@@ -1948,64 +1948,61 @@ File: fig/section3/fig5_cost.png Graphic file (type bmp)
 File: fig/section3/fig6_NY.png Graphic file (type bmp)
 <fig/section3/fig6_NY.png>
 
-Overfull \hbox (9.53632pt too wide) in paragraph at lines 505--514
+Overfull \hbox (9.53632pt too wide) in paragraph at lines 503--512
  [][][][][][] 
  []
 
+) (./latex/4_comovement.tex
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[49]) (./latex/4_comovement.tex
-
-[50]
+[49]
 Chapter 第四章.
 
 
-[51
+[50
 
 ]
 File: fig/section4/group companion.png Graphic file (type bmp)
 <fig/section4/group companion.png>
 
 
-[52]
+[51]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[53]
+[52]
 
-[54]
+[53]
 Underfull \vbox (badness 4595) has occurred while \output is active []
 
 
 
-[55]
+[54]
 Underfull \vbox (badness 1502) has occurred while \output is active []
 
 
 
-[56]
+[55]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
+
+[56]
 
 [57]
-
-[58]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[59]
+[58]
 File: fig/section4/picture.pdf Graphic file (type pdf)
 <use fig/section4/picture.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
+
+[59]
 
 [60]
 
@@ -2014,8 +2011,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [62]
 
 [63]
-
-[64]
 File: fig/section4/BJ-hitratio-num.png Graphic file (type bmp)
 <fig/section4/BJ-hitratio-num.png>
 File: fig/section4/BJ-time-num.png Graphic file (type bmp)
@@ -2029,7 +2024,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[65]
+[64]
 File: fig/section4/BJ-hitratio-k.png Graphic file (type bmp)
 <fig/section4/BJ-hitratio-k.png>
 File: fig/section4/BJ-time-k.png Graphic file (type bmp)
@@ -2043,7 +2038,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[66]
+[65]
 File: fig/section4/BJ-hitratio-m.png Graphic file (type bmp)
 <fig/section4/BJ-hitratio-m.png>
 File: fig/section4/BJ-time-m.png Graphic file (type bmp)
@@ -2057,7 +2052,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[67]
+[66]
 File: fig/section4/BJ-hitratio-ep.png Graphic file (type bmp)
 <fig/section4/BJ-hitratio-ep.png>
 File: fig/section4/BJ-time-ep.png Graphic file (type bmp)
@@ -2068,68 +2063,68 @@ File: fig/section4/PT-time-ep.png Graphic file (type bmp)
 <fig/section4/PT-time-ep.png>
 
 
-[68]
+[67]
 Underfull \vbox (badness 1394) has occurred while \output is active []
 
 
 
-[69]) (./latex/5_contact.tex
+[68]) (./latex/5_contact.tex
 
-[70]
+[69]
 Chapter 第五章.
 
 
-[71
+[70
 
 ]
 File: fig/section5/contact_intro.pdf Graphic file (type pdf)
 <use fig/section5/contact_intro.pdf>
 
 
-[72]
+[71]
 
-[73]
+[72]
 Underfull \vbox (badness 2142) has occurred while \output is active []
 
 
 
-[74]
+[73]
 Underfull \vbox (badness 4193) has occurred while \output is active []
 
 
 
-[75]
+[74]
 
-[76]
+[75]
 File: fig/section5/cells.pdf Graphic file (type pdf)
 <use fig/section5/cells.pdf>
 
 
-[77]
+[76]
 
-[78]
+[77]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[79]
+[78]
 Underfull \vbox (badness 6316) has occurred while \output is active []
 
 
 
-[80]
+[79]
 Underfull \vbox (badness 1584) has occurred while \output is active []
 
 
 
-[81]
+[80]
 
-[82]
+[81]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[83]
+[82]
 File: fig/section5/BJ-Q-CE.png Graphic file (type bmp)
 <fig/section5/BJ-Q-CE.png>
 File: fig/section5/BJ-Q-time.png Graphic file (type bmp)
@@ -2143,12 +2138,12 @@ Underfull \vbox (badness 1796) has occurred while \output is active []
 
 
 
-[84]
+[83]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[85]
+[84]
 File: fig/section5/BJ-ep-CE.png Graphic file (type bmp)
 <fig/section5/BJ-ep-CE.png>
 File: fig/section5/BJ-ep-time.png Graphic file (type bmp)
@@ -2162,7 +2157,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[86]
+[85]
 File: fig/section5/BJ-k-CE.png Graphic file (type bmp)
 <fig/section5/BJ-k-CE.png>
 File: fig/section5/BJ-k-time.png Graphic file (type bmp)
@@ -2173,7 +2168,7 @@ File: fig/section5/PT-k-time.png Graphic file (type bmp)
 <fig/section5/PT-k-time.png>
 
 
-[87]
+[86]
 File: fig/section5/accuracy_Q4.png Graphic file (type bmp)
 <fig/section5/accuracy_Q4.png>
 File: fig/section5/accuracy_ep4.png Graphic file (type bmp)
@@ -2183,7 +2178,7 @@ Underfull \vbox (badness 1107) has occurred while \output is active []
 
 
 
-[88]
+[87]
 File: fig/section5/BJ-precheck5.png Graphic file (type bmp)
 <fig/section5/BJ-precheck5.png>
 File: fig/section5/PT-precheck5.png Graphic file (type bmp)
@@ -2193,13 +2188,13 @@ Underfull \vbox (badness 3919) has occurred while \output is active []
 
 
 
-[89]) (./latex/6_join.tex
+[88]) (./latex/6_join.tex
 
-[90]
+[89]
 Chapter 第六章.
 
 
-[91
+[90
 
 ]
 
@@ -2237,9 +2232,9 @@ Package fontspec Info:
 
 
 
-[92]
+[91]
 
-[93]
+[92]
 File: fig/section6/intro.png Graphic file (type bmp)
 <fig/section6/intro.png>
 
@@ -2247,22 +2242,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[94]
+[93]
 Underfull \vbox (badness 4595) has occurred while \output is active []
 
 
 
-[95]
+[94]
 Underfull \vbox (badness 5091) has occurred while \output is active []
 
 
 
-[96]
+[95]
 File: fig/section6/lens.png Graphic file (type bmp)
 <fig/section6/lens.png>
 
 
-[97]
+[96]
 File: fig/section6/overall example.png Graphic file (type bmp)
 <fig/section6/overall example.png>
 
@@ -2270,34 +2265,39 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[98]
+[97]
 File: fig/section6/ellipse.pdf Graphic file (type pdf)
 <use fig/section6/ellipse.pdf>
 
 
-[99]
+[98]
 
-[100]
+[99]
 File: fig/section6/mtree.pdf Graphic file (type pdf)
 <use fig/section6/mtree.pdf>
 
 
-[101]
+[100]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[102]
+[101]
 File: fig/section6/ball-tree.pdf Graphic file (type pdf)
 <use fig/section6/ball-tree.pdf>
 
 
-[103]
+[102]
 Underfull \vbox (badness 6608) has occurred while \output is active []
 
 
 
+[103]
+
 [104]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [105]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2310,11 +2310,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [107]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[108]
 File: fig/section6/geo-num-ctime.png Graphic file (type bmp)
 <fig/section6/geo-num-ctime.png>
 File: fig/section6/pt-num-ctime.png Graphic file (type bmp)
@@ -2324,7 +2319,7 @@ Underfull \vbox (badness 2343) has occurred while \output is active []
 
 
 
-[109]
+[108]
 File: fig/section6/geo-num-ftime.png Graphic file (type bmp)
 <fig/section6/geo-num-ftime.png>
 File: fig/section6/pt-num-ftime.png Graphic file (type bmp)
@@ -2338,7 +2333,7 @@ Underfull \vbox (badness 4899) has occurred while \output is active []
 
 
 
-[110]
+[109]
 File: fig/section6/geo-I-ftime.png Graphic file (type bmp)
 <fig/section6/geo-I-ftime.png>
 File: fig/section6/pt-I-ftime.png Graphic file (type bmp)
@@ -2352,37 +2347,39 @@ Underfull \vbox (badness 3668) has occurred while \output is active []
 
 
 
-[111]) (./latex/7_conclusion.tex
+[110]) (./latex/7_conclusion.tex
 
-[112]
+[111]
 Chapter 第七章.
 
 Underfull \vbox (badness 2644) has occurred while \output is active []
 
 
 
-[113
+[112
 
 ]
+
+[113]
 
 [114]
 
 [115]
 
-[116]
+[116])
 
-[117])
+[117]
 
-[118]
-
-[119
+[118
 
 ] (./main.bbl
 
-[120
+[119
 
 
 ]
+
+[120]
 
 [121]
 
@@ -2400,13 +2397,11 @@ Underfull \vbox (badness 2644) has occurred while \output is active []
 
 [128]
 
-[129]
+[129]) (./latex/achivement.tex
 
-[130]) (./latex/achivement.tex
+[130]
 
-[131]
-
-[132
+[131
 
 ]) (./main.aux)
  ***********
@@ -2414,15 +2409,15 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6BCCAB9D2E6D995CA237C26943F78D64;25115.
+(rerunfilecheck)             Checksum: 05BAFE70B06059A1F58E2889348A0163;25131.
  ) 
 Here is how much of TeX's memory you used:
  52164 strings out of 473832
  1109774 string characters out of 5729481
- 1585460 words of memory out of 5000000
+ 1585475 words of memory out of 5000000
  74253 multiletter control sequences out of 15000+600000
  573492 words of font info for 176 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  125i,24n,134p,1506b,1824s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (152 pages).
+Output written on main.pdf (151 pages).
