@@ -8,20 +8,35 @@
 \newblock 多模式移动对象不确定性轨迹预测模型[J].
 \newblock 自动化学报, 2018, 44(4): 608--618.
 
-\bibitem{DBLP:journals/geoinformatica/ChenSYL20}
-Chen L, Shang S, Yang C, et~al.
-\newblock Spatial keyword search: a survey[J].
-\newblock GeoInformatica, 2020, 24(1): 85--106.
-
 \bibitem{DBLP:conf/ijcai/LiCS20}
 Li K, Chen L, Shang S.
 \newblock Towards alleviating traffic congestion: Optimal route planning for massive-scale trips[C].
 \newblock {IJCAI}, ijcai.org, 2020: 3400--3406.
 
-\bibitem{DBLP:conf/gis/WilkieBL14}
-Wilkie D, Baykal C, Lin M~C.
-\newblock Participatory route planning[C].
-\newblock {SIGSPATIAL/GIS}, {ACM}, 2014: 213--222.
+\bibitem{DBLP:conf/ijcai/LiCSK021}
+Li K, Chen L, Shang S, et~al.
+\newblock Traffic congestion alleviation over dynamic road networks: Continuous optimal route combination for trip query streams[C].
+\newblock IJCAI, ijcai.org, 2021: 3656--3662.
+
+\bibitem{DBLP:journals/fgcs/LiWCC23}
+Li K, Wang H, Chen Z, et~al.
+\newblock Relaxed group pattern detection over massive-scale trajectories[J].
+\newblock FGCS, 2023, 144: 131--139.
+
+\bibitem{DBLP:conf/ijcai/LiCSWLK022}
+Li K, Chen L, Shang S, et~al.
+\newblock Towards controlling the transmission of diseases: Continuous exposure discovery over massive-scale moving objects[C].
+\newblock IJCAI, 2022: 3891--3897.
+
+\bibitem{DBLP:conf/kdd/00190SJK25}
+Li K, Chen L, Shang S, et~al.
+\newblock Beyond locations: {A} motion range-aware similarity join[C].
+\newblock Proceedings of the 31st {ACM} {SIGKDD} Conference on Knowledge Discovery and Data Mining, V.2, {KDD} 2025, Toronto ON, Canada, August 3-7, 2025, {ACM}, 2025: 1424--1434.
+
+\bibitem{DBLP:journals/geoinformatica/ChenSYL20}
+Chen L, Shang S, Yang C, et~al.
+\newblock Spatial keyword search: a survey[J].
+\newblock GeoInformatica, 2020, 24(1): 85--106.
 
 \bibitem{DBLP:conf/edbt/DingYQ08}
 Ding B, Yu J~X, Qin L.
@@ -794,11 +809,6 @@ Zheng K, Zheng Y, Yuan N~J, et~al.
 Xu X, Yuruk N, Feng Z, et~al.
 \newblock {SCAN:} a structural clustering algorithm for networks[C].
 \newblock SIGKDD, {ACM}, 2007: 824--833.
-
-\bibitem{DBLP:conf/ijcai/LiCSWLK022}
-Li K, Chen L, Shang S, et~al.
-\newblock Towards controlling the transmission of diseases: Continuous exposure discovery over massive-scale moving objects[C].
-\newblock IJCAI, 2022: 3891--3897.
 
 \bibitem{DBLP:conf/icdm/PelekisKKFT09}
 Pelekis N, Kopanakis I, Kotsifakos E~E, et~al.

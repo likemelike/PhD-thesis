@@ -2,7 +2,7 @@
 \cftsetpnumwidth {\widthof {2}-1bp}
 \contentsline {figure}{\numberline {1-1}{\ignorespaces 面向城市时空计算：大规模轨迹驱动的核心计算任务与关键应用}}{2}{figure.caption.6}%
 \cftsetpnumwidth {\widthof {12}-1bp}
-\contentsline {figure}{\numberline {1-2}{\ignorespaces 本文组织结构}}{12}{figure.caption.7}%
+\contentsline {figure}{\numberline {1-2}{\ignorespaces 本研究组织结构}}{12}{figure.caption.7}%
 \addvspace {10\p@ }
 \cftsetpnumwidth {\widthof {15}-1bp}
 \contentsline {figure}{\numberline {2-1}{\ignorespaces 轨迹与路线示例}}{15}{figure.caption.8}%
@@ -38,7 +38,7 @@
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{49}{subfigure.6.3}%
 \addvspace {10\p@ }
 \cftsetpnumwidth {\widthof {53}-1bp}
-\contentsline {figure}{\numberline {4-1}{\ignorespaces 伴随群体发现问题示例 (空间距离阈值为10米，联合移动的最小联合移动时长阈值为3分钟，伴随群体规模阈值为3)}}{53}{figure.caption.23}%
+\contentsline {figure}{\numberline {4-1}{\ignorespaces 伴随群体发现问题示例 \textcolor {red}{\ttfamily (空间距离阈值$\epsilon $为10米，联合移动的最小联合移动时长阈值为3分钟，伴随群体规模阈值为3)}}}{53}{figure.caption.23}%
 \cftsetpnumwidth {\widthof {61}-1bp}
 \contentsline {figure}{\numberline {4-2}{\ignorespaces 轨迹网格编号及网格编号序列示例}}{61}{figure.caption.26}%
 \cftsetpnumwidth {\widthof {65}-1bp}
@@ -82,52 +82,52 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{86}{subfigure.4.2}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{86}{subfigure.4.3}%
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{86}{subfigure.4.4}%
-\cftsetpnumwidth {\widthof {87}-1bp}
-\contentsline {figure}{\numberline {5-5}{\ignorespaces 接触持续时长阈值的影响。\subref {contact_北京-k-CE} 北京数据集上暴露接触案例数量；\subref {contact_北京-k-CPU} 北京数据集上算法运行时间；\subref {contact_波尔图-k-CE} 波尔图数据集上暴露接触案例数量；\subref {contact_波尔图-k-CPU} 波尔图数据集上算法运行时间}}{87}{figure.caption.42}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{87}{subfigure.5.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{87}{subfigure.5.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{87}{subfigure.5.3}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{87}{subfigure.5.4}%
 \cftsetpnumwidth {\widthof {88}-1bp}
-\contentsline {figure}{\numberline {5-6}{\ignorespaces 近似算法的评估。\subref {AGP-Q} 变化查询对象数目；\subref {AGP-ep} 变化接触阈值 }}{88}{figure.caption.43}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{88}{subfigure.6.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{88}{subfigure.6.2}%
+\contentsline {figure}{\numberline {5-5}{\ignorespaces 接触持续时长阈值的影响。\subref {contact_北京-k-CE} 北京数据集上暴露接触案例数量；\subref {contact_北京-k-CPU} 北京数据集上算法运行时间；\subref {contact_波尔图-k-CE} 波尔图数据集上暴露接触案例数量；\subref {contact_波尔图-k-CPU} 波尔图数据集上算法运行时间}}{88}{figure.caption.42}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{88}{subfigure.5.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{88}{subfigure.5.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{88}{subfigure.5.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{88}{subfigure.5.4}%
 \cftsetpnumwidth {\widthof {89}-1bp}
-\contentsline {figure}{\numberline {5-7}{\ignorespaces 预检查策略的评估。\subref {北京-pre-CPU} 北京数据集；\subref {波尔图-pre-CPU} 波尔图数据集}}{89}{figure.caption.44}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{89}{subfigure.7.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {波尔图}}}{89}{subfigure.7.2}%
+\contentsline {figure}{\numberline {5-6}{\ignorespaces 近似算法的评估。\subref {AGP-Q} 变化查询对象数目；\subref {AGP-ep} 变化接触阈值 }}{89}{figure.caption.43}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{89}{subfigure.6.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{89}{subfigure.6.2}%
+\cftsetpnumwidth {\widthof {90}-1bp}
+\contentsline {figure}{\numberline {5-7}{\ignorespaces 预检查策略的评估。\subref {北京-pre-CPU} 北京数据集；\subref {波尔图-pre-CPU} 波尔图数据集}}{90}{figure.caption.44}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{90}{subfigure.7.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {波尔图}}}{90}{subfigure.7.2}%
 \addvspace {10\p@ }
-\cftsetpnumwidth {\widthof {94}-1bp}
-\contentsline {figure}{\numberline {6-1}{\ignorespaces 交集相似度连接示例}}{94}{figure.caption.45}%
-\cftsetpnumwidth {\widthof {97}-1bp}
-\contentsline {figure}{\numberline {6-2}{\ignorespaces 时间点运动范围示例}}{97}{figure.caption.47}%
+\cftsetpnumwidth {\widthof {95}-1bp}
+\contentsline {figure}{\numberline {6-1}{\ignorespaces 交集相似度连接示例}}{95}{figure.caption.45}%
 \cftsetpnumwidth {\widthof {98}-1bp}
-\contentsline {figure}{\numberline {6-3}{\ignorespaces 时间段交集相似度示例}}{98}{figure.caption.48}%
-\cftsetpnumwidth {\widthof {100}-1bp}
-\contentsline {figure}{\numberline {6-4}{\ignorespaces 时间段运动范围示例}}{100}{figure.caption.49}%
+\contentsline {figure}{\numberline {6-2}{\ignorespaces 时间点运动范围示例}}{98}{figure.caption.47}%
+\cftsetpnumwidth {\widthof {99}-1bp}
+\contentsline {figure}{\numberline {6-3}{\ignorespaces \textcolor {red}{\ttfamily 时间段交集相似度示例}}}{99}{figure.caption.48}%
 \cftsetpnumwidth {\widthof {101}-1bp}
-\contentsline {figure}{\numberline {6-5}{\ignorespaces M*树的结构示例}}{101}{figure.caption.50}%
-\cftsetpnumwidth {\widthof {104}-1bp}
-\contentsline {figure}{\numberline {6-6}{\ignorespaces 混合球树结构示例}}{104}{figure.caption.52}%
-\cftsetpnumwidth {\widthof {109}-1bp}
-\contentsline {figure}{\numberline {6-7}{\ignorespaces 不同移动对象数目下的构建时间。 \subref {geo-num-ctime}: Geolife； \subref {pt-num-ctime}:波尔图}}{109}{figure.caption.57}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{109}{subfigure.7.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{109}{subfigure.7.2}%
+\contentsline {figure}{\numberline {6-4}{\ignorespaces 时间段运动范围示例}}{101}{figure.caption.49}%
+\cftsetpnumwidth {\widthof {102}-1bp}
+\contentsline {figure}{\numberline {6-5}{\ignorespaces M*树的结构示例}}{102}{figure.caption.50}%
+\cftsetpnumwidth {\widthof {105}-1bp}
+\contentsline {figure}{\numberline {6-6}{\ignorespaces 混合球树结构示例}}{105}{figure.caption.52}%
 \cftsetpnumwidth {\widthof {110}-1bp}
-\contentsline {figure}{\numberline {6-8}{\ignorespaces 不同 移动对象数目下的查询时间。 \subref {geo-num-ftime}:Geolife； \subref {pt-num-ftime}:波尔图}}{110}{figure.caption.58}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{110}{subfigure.8.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{110}{subfigure.8.2}%
+\contentsline {figure}{\numberline {6-7}{\ignorespaces 不同移动对象数目下的构建时间。 \subref {geo-num-ctime}: Geolife； \subref {pt-num-ctime}:波尔图}}{110}{figure.caption.57}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{110}{subfigure.7.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{110}{subfigure.7.2}%
 \cftsetpnumwidth {\widthof {111}-1bp}
-\contentsline {figure}{\numberline {6-9}{\ignorespaces 兴趣点数量对运行时间的影响。 \subref {geo-poi-ftime}:Geolife； \subref {pt-poi-ftime}:波尔图}}{111}{figure.caption.59}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{111}{subfigure.9.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{111}{subfigure.9.2}%
-\cftsetpnumwidth {\widthof {111}-1bp}
-\contentsline {figure}{\numberline {6-10}{\ignorespaces 时间段对运行时间的影响。 \subref {geo-I-ftime}:Geolife； \subref {pt-I-ftime}:波尔图}}{111}{figure.caption.60}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{111}{subfigure.10.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{111}{subfigure.10.2}%
+\contentsline {figure}{\numberline {6-8}{\ignorespaces 不同 移动对象数目下的查询时间。 \subref {geo-num-ftime}:Geolife； \subref {pt-num-ftime}:波尔图}}{111}{figure.caption.58}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{111}{subfigure.8.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{111}{subfigure.8.2}%
 \cftsetpnumwidth {\widthof {112}-1bp}
-\contentsline {figure}{\numberline {6-11}{\ignorespaces 放宽参数对运行时间的影响。 \subref {geo-ep-ftime}:Geolife；\subref {pt-ep-ftime}:波尔图}}{112}{figure.caption.61}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{112}{subfigure.11.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{112}{subfigure.11.2}%
+\contentsline {figure}{\numberline {6-9}{\ignorespaces 兴趣点数量对运行时间的影响。 \subref {geo-poi-ftime}:Geolife； \subref {pt-poi-ftime}:波尔图}}{112}{figure.caption.59}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{112}{subfigure.9.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{112}{subfigure.9.2}%
+\cftsetpnumwidth {\widthof {112}-1bp}
+\contentsline {figure}{\numberline {6-10}{\ignorespaces 时间段对运行时间的影响。 \subref {geo-I-ftime}:Geolife； \subref {pt-I-ftime}:波尔图}}{112}{figure.caption.60}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{112}{subfigure.10.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{112}{subfigure.10.2}%
+\cftsetpnumwidth {\widthof {113}-1bp}
+\contentsline {figure}{\numberline {6-11}{\ignorespaces 放宽参数对运行时间的影响。 \subref {geo-ep-ftime}:Geolife；\subref {pt-ep-ftime}:波尔图}}{113}{figure.caption.61}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{113}{subfigure.11.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{113}{subfigure.11.2}%
 \addvspace {10\p@ }
 \contentsfinish 
