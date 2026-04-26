@@ -17,7 +17,7 @@
 
 
 \begin{definition}[地理位置点]
-    一个地理位置点通常被定义为地理空间中的一个二元组 $\langle x, y \rangle$， 通常由经度和纬度构成。每一个二元组对应于由具备 GPS 功能的设备记录的一个唯一空间点。
+    一个地理位置点通常被定义为地理空间中的一个二元组 $\langle x, y \rangle$，通常由经度和纬度构成。每一个二元组对应于由具备 GPS 功能的设备记录的一个唯一空间点。
 \end{definition}
 \begin{example}[地理位置点示例]
     北京天安门广场的位置表示为$\langle39^{\circ}54^{'}27^{''}\mathrm{N}$，$116^{\circ}23^{'}17^{''}\mathrm{E}\rangle$。
@@ -82,7 +82,7 @@ Dijkstra 算法由 Dijkstra 于 1959 年提出，用于求解带非负权重图�
     \item \textbf{顶点选择：}  
     从 $V \setminus T$ 中选择满足$u = \arg\min_{v \in V \setminus T} dis[v]$的顶点 $u$，并将其加入集合 $T$。
     \item \textbf{更新最短距离：}  
-    对于所有与 $u$ 相邻且尚未加入 $T$ 的顶点 $v$，若满足$dis[u] + t_m(u,v) < dis[v]$， 则更新 $dis[v] = dis[u] + t_m(u,v)$。
+    对于所有与 $u$ 相邻且尚未加入 $T$ 的顶点 $v$，若满足$dis[u] + t_m(u,v) < dis[v]$，则更新 $dis[v] = dis[u] + t_m(u,v)$。
     \item \textbf{终止条件：}  
     重复步骤 2--3，直至 $T = V$ 或所有可达顶点均被确定。
 \end{enumerate}
@@ -92,7 +92,7 @@ Dijkstra 算法由 Dijkstra 于 1959 年提出，用于求解带非负权重图�
 
 \subsection{常见时空索引}
 围绕上述定义的时空数据模型，大量索引结构被提出以支持高效的空间与时空查询处理。其中，
-R树及其变体~\cite{DBLP:conf/sigmod/Guttman84,DBLP:conf/sigmod/BrinkhoffKS93} 是最具代表性的空间索引结构之一，其通过最小外接矩形对数据进行层次化组织。每个内部节点对应一个矩形区域，子树中的数据对象均位于该区域之内。类似地，KD树~\cite{DBLP:journals/cacm/Bentley75,DBLP:journals/pvldb/ZhangCJOZ09} 通过递归空间划分实现高效的点查询与范围查询。这类方法通常适用于基于矩形区域或轴对齐分割的查询场景，在处理高维或动态更新数据时仍具备良好的可扩展性。为支持基于距离度量的查询，M树~\cite{DBLP:conf/sebd/CiacciaPRZ97,DBLP:conf/vldb/CiacciaPZ97} 与 球树~\cite{DBLP:journals/jmlr/LiuMG06} 被提出用于组织度量空间中的对象。不同于 R树依赖矩形边界，球树采用超球体作为节点覆盖区域，更适用于欧氏距离或其他度量空间下的相似性搜索。Omohundro~\cite{omohundro1989five} 对多种球树 构建策略进行了系统比较，分析了构建时间与树结构质量之间的权衡关系。随后，Dolatshah 等人~\cite{DBLP:journals/corr/DolatshahHM15} 通过引入主成分分析优化划分方向，从而提升树结构的平衡性与查询效率。在移动对象查询领域，研究者进一步针对接触搜索与相似性检索设计了专用索引结构。例如，Chao 等人~\cite{DBLP:conf/dasfaa/ChaoHLZ021} 提出了广义接触搜索查询模型，用于识别满足特定接触条件的移动对象集合。Zhang 等人~\cite{DBLP:conf/edbt/ZhangRSL21} 研究了接触相似性查询，并设计了专用的 UTM-tree 索引结构以提升查询效率。这些方法通常基于离散采样点或基于距离阈值的接触判定机制。
+R树及其变体~\cite{DBLP:conf/sigmod/Guttman84,DBLP:conf/sigmod/BrinkhoffKS93} 是最具代表性的空间索引结构之一，其通过最小外接矩形对数据进行层次化组织。每个内部节点对应一个矩形区域，子树中的数据对象均位于该区域之内。类似地，KD树~\cite{DBLP:journals/cacm/Bentley75,DBLP:journals/pvldb/ZhangCJOZ09} 通过递归空间划分实现高效的点查询与范围查询。这类方法通常适用于基于矩形区域或轴对齐分割的查询场景，在处理高维或动态更新数据时仍具备良好的可扩展性。为支持基于距离度量的查询，M树~\cite{DBLP:conf/vldb/CiacciaPZ97} 与 球树~\cite{DBLP:journals/jmlr/LiuMG06} 被提出用于组织度量空间中的对象。不同于 R树依赖矩形边界，球树采用超球体作为节点覆盖区域，更适用于欧氏距离或其他度量空间下的相似性搜索。Omohundro~\cite{omohundro1989five} 对多种球树 构建策略进行了系统比较，分析了构建时间与树结构质量之间的权衡关系。随后，Dolatshah 等人~\cite{DBLP:journals/corr/DolatshahHM15} 通过引入主成分分析优化划分方向，从而提升树结构的平衡性与查询效率。在移动对象查询领域，研究者进一步针对接触搜索与相似性检索设计了专用索引结构。例如，Chao 等人~\cite{DBLP:conf/dasfaa/ChaoHLZ021} 提出了广义接触搜索查询模型，用于识别满足特定接触条件的移动对象集合。Zhang 等人~\cite{DBLP:conf/edbt/ZhangRSL21} 研究了接触相似性查询，并设计了专用的 UTM-tree 索引结构以提升查询效率。这些方法通常基于离散采样点或基于距离阈值的接触判定机制。
 
 
 
@@ -128,11 +128,11 @@ R树及其变体~\cite{DBLP:conf/sigmod/Guttman84,DBLP:conf/sigmod/BrinkhoffKS93
 
 交通感知路线规划主要关注在考虑实时交通状况的前提下，寻找行程时间最短的路线。Xu 等人 \cite{DBLP:conf/dasfaa/XuGDSL12} 通过分析路网中的交通状态并挖掘时空知识来指导路线规划，以避免在大规模图上的冗余计算和频繁重计算。Shang 等人 \cite{DBLP:journals/geoinformatica/ShangLZLPW15} 提出了交通感知空间网络中的无阻塞路线规划问题，通过分析移动对象的不确定轨迹构建交通感知路网，并设计了高效算法。另一项研究 \cite{DBLP:journals/ijon/ShangGLW16} 利用人群轨迹数据预测人类移动行为，识别拥挤站点，并规划避开拥挤区域的路线。此外，Malviya 等人 \cite{DBLP:conf/icde/MalviyaMB11} 提出了连续查询系统，在交通状态变化时动态更新用户的最短路线。
 
-DBLP:conf/ijcai/LiCS20
+
 随着路线规划系统的广泛应用，规划出的路线会反过来影响未来的交通状况，即已有路线规划会对后续规划产生影响 \cite{DBLP:conf/aaai/WilkieBLM11,DBLP:conf/ijcai/LiCS20}。为此，自感知路线规划被提出，用以避免由先前规划路线引发的潜在交通拥堵。早期工作 \cite{DBLP:conf/aaai/WilkieBLM11} 提出了自感知路线规划算法，利用当前规划路线预测未来交通状态；后续研究 \cite{DBLP:conf/ijcai/LiCS20,DBLP:conf/ijcai/LiCSK021} 进一步表明，当为较大比例的车辆生成路线时，可以有效估计整体交通模式，并提出了适用于城市级规模的解决方案。此外，文献\cite{11090024}揭示了现有研究多局限于单平台最优规划，易因多平台独立决策导致交通拥堵；提出了协同全局路线规划框架，通过跨平台协作查询与多智能体强化学习优化查询策略，从而提升整体路线规划效果并降低交通拥堵风险。
 
 
-传统路线规划算法通常围绕单一优化目标（如最短路线）展开，但研究表明，现实中的驾驶员往往选择既非最短也非最快的路线 \cite{DBLP:journals/vldb/0002GMJ15}。Guo 等人 \cite{DBLP:journals/vldb/GuoYHJC20} 发现，不同驾驶情境对应不同的路线偏好，并据此提出了情境感知的偏好路线规划问题。现有研究多通过挖掘历史轨迹数据来学习用户偏好，并据此指导路线规划算法 \cite{DBLP:journals/vldb/0002GMJ15,DBLP:conf/aaai/LetchnerKH06,DBLP:conf/ssd/BalteanuJS13, 吴清霞2016基于用户兴趣和兴趣点流行度的个性化旅游路线推荐}。宋等人\cite{宋晓宇2013基于签到数据的短时间体验式路线搜索}提出并研究了短时间体验式路线搜索．该路线搜索方法根据用户给定的查询位置狊、旅行时间限定以及用户对景点类别选择的集合，找到一条非重复多类别且收益最大化的最优景点访问路线。
+传统路线规划算法通常围绕单一优化目标（如最短路线）展开，但研究表明，现实中的驾驶员往往选择既非最短也非最快的路线 \cite{DBLP:journals/vldb/0002GMJ15}。Guo 等人 \cite{DBLP:journals/vldb/GuoYHJC20} 发现，不同驾驶情境对应不同的路线偏好，并据此提出了情境感知的偏好路线规划问题。现有研究多通过挖掘历史轨迹数据来学习用户偏好，并据此指导路线规划算法 \cite{DBLP:journals/vldb/0002GMJ15,DBLP:conf/aaai/LetchnerKH06,DBLP:conf/ssd/BalteanuJS13, 吴清霞2016基于用户兴趣和兴趣点流行度的个性化旅游路线推荐}。宋等人\cite{宋晓宇2013基于签到数据的短时间体验式路线搜索}提出并研究了短时间体验式路线搜索．该路线搜索方法根据用户给定的查询位置狊、旅行时间限定以及用户对景点类别选择的集合，找到一条非重复多类别且收益最大化的最优景点访问路线。\shad{此外，文献\cite{DBLP:journals/access/SundarrajRBGFN23}提出了一种用于自动驾驶车辆路径规划的方法，将粒子群优化与Dijkstra算法结合，形成一种带权重控制的混合算法。实验结果表明，该方法能够在复杂环境中更高效地找到安全、最优的路径。 针对电动车长途出行中的充电排队问题，\cite{DBLP:journals/tiv/SchoenbergD23}提出了一种结合路径规划与充电策略的多目标优化方法。通过引入充电站数据库预测等待时间，并结合高效路径搜索算法，显著降低了充电等待时间和整体出行时间。 文献\cite{yao2026drivesuprim}通过“由粗到细”的候选轨迹筛选、多样化增强和自蒸馏训练，提升自动驾驶轨迹选择的安全性与鲁棒性。该方法在复杂和极端场景下显著提高了路径规划性能。}
 
 
 
@@ -210,7 +210,7 @@ Cao 等人 \cite{DBLP:journals/pvldb/CaoCCX12} 提出了关键词感知最优路
 
 \subsection{轨迹模式挖掘}
 \subsubsection{协同行为模式挖掘}
-与本研究研究问题密切相关的方向是协同行为模式挖掘。已有研究围绕不同应用需求提出了多种具有代表性的协同行为模式~\cite{DBLP:journals/pvldb/JeungYZJS08,DBLP:journals/pvldb/LiDHK10,tang,DBLP:conf/icde/ZhengZYS13,王汝言2025群组感知的行人轨迹预测方法研究}，并在交通分析、行为建模与公共安全等应用场景中得到广泛应用。 其中，flock 模式~\cite{DBLP:conf/gis/VieiraBT09,DBLP:journals/jidm/TanakaVK16} 是最早被提出的协同行为模式之一，用于刻画在连续 $k$ 个时间区间内共同移动的 $m$ 个移动对象所构成的群体，其核心思想是在时空连续性约束下识别稳定的群体结构。Jeung 等人~\cite{DBLP:journals/pvldb/JeungYZJS08} 提出了支持任意形状聚类的 convoy 模式。然而，flock 与 convoy 均对时间连续性提出了严格要求，即对象必须在连续时间段内保持群体结构，这在部分应用场景下显得过于苛刻。在此基础上，文献~\cite{DBLP:conf/icde/ZhengZYS13} 从交通拥堵检测的角度出发，提出了 gathering 模式，用于交通拥堵的早期发现，该模式允许成员在任意时间离开群体，从而增强了模式表达的灵活性。类似地，Naserian 等人~\cite{DBLP:conf/hpcc/NaserianWXD16} 在轨迹数据流环境下提出了一种宽松的伴随群体发现方法，以支持在线场景下的模式挖掘。然而，Shein 等人~\cite{DBLP:journals/access/SheinPI20} 指出上述方法普遍存在较高的计算代价，并提出了一种增量式算法以降低重复计算开销，但其整体效率仍难以满足严格的实时发现需求。为适应对持续时间约束更加宽松的需求，研究者进一步提出了 group、swarm、platoon 等多种扩展模式~\cite{DBLP:journals/dke/WangLH06,DBLP:journals/pvldb/LiDHK10,DBLP:journals/dke/LiBK15}，在时间连续性与成员稳定性方面进行了不同程度的放松。
+与本研究研究问题密切相关的方向是协同行为模式挖掘。已有研究围绕不同应用需求提出了多种具有代表性的协同行为模式~\cite{DBLP:journals/pvldb/JeungYZJS08,DBLP:journals/pvldb/LiDHK10,tang,DBLP:conf/icde/ZhengZYS13,王汝言2025群组感知的行人轨迹预测方法研究}，并在交通分析、行为建模与公共安全等应用场景中得到广泛应用。 其中，flock 模式~\cite{DBLP:conf/gis/VieiraBT09,DBLP:journals/jidm/TanakaVK16} 是最早被提出的协同行为模式之一，用于刻画在连续 $k$ 个时间区间内共同移动的 $m$ 个移动对象所构成的群体，其核心思想是在时空连续性约束下识别稳定的群体结构。Jeung 等人~\cite{DBLP:journals/pvldb/JeungYZJS08} 提出了支持任意形状聚类的 convoy 模式。然而，flock 与 convoy 均对时间连续性提出了严格要求，即对象必须在连续时间段内保持群体结构，这在部分应用场景下显得过于苛刻。在此基础上，文献~\cite{DBLP:conf/icde/ZhengZYS13} 从交通拥堵检测的角度出发，提出了 gathering 模式，用于交通拥堵的早期发现，该模式允许成员在任意时间离开群体，从而增强了模式表达的灵活性。类似地，Naserian 等人~\cite{DBLP:conf/hpcc/NaserianWXD16} 在轨迹数据流环境下提出了一种宽松的伴随群体发现方法，以支持在线场景下的模式挖掘。然而，Shein 等人~\cite{DBLP:journals/access/SheinPI20} 指出上述方法普遍存在较高的计算代价，并提出了一种增量式算法以降低重复计算开销，但其整体效率仍难以满足严格的实时发现需求。为适应对持续时间约束更加宽松的需求，研究者进一步提出了 group、swarm、platoon 等多种扩展模式~\cite{DBLP:journals/dke/WangLH06,DBLP:journals/pvldb/LiDHK10,DBLP:journals/dke/LiBK15}，在时间连续性与成员稳定性方面进行了不同程度的放松。\shad{针对移动数据中的群体共移动行为预测，文献\cite{DBLP:journals/geoinformatica/TritsarolisCTPT24}提出了一种在线框架，不仅能预测未来的共移动群体，还能刻画其随时间的演化（如分裂、持续等），并通过设计相似度指标来量化预测与真实结果的差异。}
 
 
 
@@ -218,7 +218,7 @@ Cao 等人 \cite{DBLP:journals/pvldb/CaoCCX12} 提出了关键词感知最优路
 
 
 \subsubsection{接触模式搜索}
-为有效遏制 SARS、埃博拉以及 COVID-19 等传染病的传播，学术界和工业界已开展了大量相关研究~\cite{web,DBLP:journals/pvldb/Xu0B20,DBLP:journals/corr/abs-2004-06653}。其中，文献~\cite{DBLP:journals/pvldb/Xu0B20} 首次形式化提出了接触追踪问题，并对疾病传播过程进行了建模与模拟分析，但其主要关注传播链分析与风险评估，未能支持大规模实时查询需求。从查询处理角度出发，文献~\cite{web} 提出了接触追踪查询，用于识别与给定查询对象存在直接或间接接触关系的个体。进一步地，文献~\cite{DBLP:conf/dasfaa/ChaoHLZ021} 提出了广义轨迹接触搜索查询，并设计了一种基于迭代扩展的求解算法。另一项相关研究~\cite{DBLP:journals/information/AlarabiBHA21} 则提出了一种基于轨迹片段的接触检测技术，用于追踪与患者接触的所有对象并搜索潜在感染者，但该方法主要面向室内定位场景，且对数据组织形式具有特定假设。文献\cite{zhang2024continuous}提出频繁接触检测问题，并通过邻居搜索框架与两阶段算法高效发现移动对象之间的频繁接触事件。针对现有接触追踪查询难以同时兼顾隐私、准确性与效率的问题，文献\cite{10598064}提出联邦接触追踪查询问题及其层次化联邦框架，通过二进制秘密共享机制保障数据隐私，并建立索引实现高效并行查询，从而支持近实时且准确的接触追踪。针对疫情防控中室内环境下高风险接触检测的问题，文献\cite{10107792}提出室内接触查询，通过建模不确定室内定位数据并构建增强室内图结构，设计高效查询框架以识别与感染者长时间近距离接触的对象。
+为有效遏制 SARS、埃博拉以及 COVID-19 等传染病的传播，学术界和工业界已开展了大量相关研究~\cite{web,DBLP:journals/pvldb/Xu0B20,DBLP:journals/corr/abs-2004-06653}。其中，文献~\cite{DBLP:journals/pvldb/Xu0B20} 首次形式化提出了接触追踪问题，并对疾病传播过程进行了建模与模拟分析，但其主要关注传播链分析与风险评估，未能支持大规模实时查询需求。从查询处理角度出发，文献~\cite{web} 提出了接触追踪查询，用于识别与给定查询对象存在直接或间接接触关系的个体。进一步地，文献~\cite{DBLP:conf/dasfaa/ChaoHLZ021} 提出了广义轨迹接触搜索查询，并设计了一种基于迭代扩展的求解算法。另一项相关研究~\cite{DBLP:journals/information/AlarabiBHA21} 则提出了一种基于轨迹片段的接触检测技术，用于追踪与患者接触的所有对象并搜索潜在感染者，但该方法主要面向室内定位场景，且对数据组织形式具有特定假设。文献\cite{zhang2024continuous}提出频繁接触检测问题，并通过邻居搜索框架与两阶段算法高效发现移动对象之间的频繁接触事件。针对现有接触追踪查询难以同时兼顾隐私、准确性与效率的问题，文献\cite{10598064}提出联邦接触追踪查询问题及其层次化联邦框架，通过二进制秘密共享机制保障数据隐私，并建立索引实现高效并行查询，从而支持近实时且准确的接触追踪。针对疫情防控中室内环境下高风险接触检测的问题，文献\cite{10107792}提出室内接触查询，通过建模不确定室内定位数据并构建增强室内图结构，设计高效查询框架以识别与感染者长时间近距离接触的对象。\shad{文献\cite{DBLP:conf/dasfaa/WangCFS24}研究了轨迹之间的时空接触关联问题，提出了深度学习模型，通过注意力机制和软选择模块来学习轨迹间的接触强度。}
 
 
 

@@ -26,7 +26,7 @@
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{intro_fig: relations}{{1-1}{2}{面向城市时空计算：大规模轨迹驱动的核心计算任务与关键应用}{figure.caption.6}{}}
 \citation{乔少杰2018多模式移动对象不确定性轨迹预测模型}
-\@writefile{toc}{\contentsline {section}{\numberline {1.2}研究目标}{4}{section.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}研究目标}{5}{section.1.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {1.3}研究内容}{7}{section.1.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}轨迹决策计算：全局持续最优路线组合规划}{7}{subsection.1.3.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}轨迹模式计算：群体联合移动模式挖掘}{7}{subsection.1.3.2}\protected@file@percent }
@@ -66,7 +66,7 @@
 \newlabel{rela_eq: sd}{{2-1}{16}{位置点间的路网距离计算}{equation.2.1}{}}
 \citation{DBLP:conf/sigmod/Guttman84,DBLP:conf/sigmod/BrinkhoffKS93}
 \citation{DBLP:journals/cacm/Bentley75,DBLP:journals/pvldb/ZhangCJOZ09}
-\citation{DBLP:conf/sebd/CiacciaPRZ97,DBLP:conf/vldb/CiacciaPZ97}
+\citation{DBLP:conf/vldb/CiacciaPZ97}
 \citation{DBLP:journals/jmlr/LiuMG06}
 \citation{omohundro1989five}
 \citation{DBLP:journals/corr/DolatshahHM15}
@@ -106,6 +106,9 @@
 \citation{DBLP:journals/vldb/GuoYHJC20}
 \citation{DBLP:journals/vldb/0002GMJ15,DBLP:conf/aaai/LetchnerKH06,DBLP:conf/ssd/BalteanuJS13,吴清霞2016基于用户兴趣和兴趣点流行度的个性化旅游路线推荐}
 \citation{宋晓宇2013基于签到数据的短时间体验式路线搜索}
+\citation{DBLP:journals/access/SundarrajRBGFN23}
+\citation{DBLP:journals/tiv/SchoenbergD23}
+\citation{yao2026drivesuprim}
 \citation{DBLP:conf/kdd/GeXTXGP10}
 \citation{DBLP:journals/tkde/HuangHSLZCS15,DBLP:conf/icdm/YeXD18,DBLP:journals/tkde/YeXGD19,DBLP:conf/kdd/YeZXZGD18}
 \citation{DBLP:conf/sigmod/ChenSZZX10,DBLP:conf/icde/ZhengSYY13}
@@ -158,6 +161,9 @@
 \citation{DBLP:conf/icde/RanuPTDR15}
 \citation{DBLP:conf/icde/PerngWZP00}
 \citation{DBLP:conf/icde/ChenNOT07}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}轨迹数据挖掘和应用}{23}{section.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}轨迹相似度连接}{23}{subsection.2.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1.1}轨迹相似度度量}{23}{subsubsection.2.3.1.1}\protected@file@percent }
 \citation{曹翰林2021轨迹表示学习技术研究进展,吴晨昊2023基于地理空间感知型表征学习的轨迹相似度计算}
 \citation{DBLP:conf/icde/LiZCJW18}
 \citation{DBLP:conf/icde/YaoCZB19}
@@ -166,9 +172,6 @@
 \citation{han2025bridging}
 \citation{11113111}
 \citation{liu2025gpe}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}轨迹数据挖掘和应用}{23}{section.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}轨迹相似度连接}{23}{subsection.2.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1.1}轨迹相似度度量}{23}{subsubsection.2.3.1.1}\protected@file@percent }
 \citation{DBLP:conf/fodo/AgrawalFS93}
 \citation{DBLP:conf/icde/YiJF98}
 \citation{DBLP:conf/icde/VlachosGK02}
@@ -199,6 +202,7 @@
 \citation{DBLP:conf/hpcc/NaserianWXD16}
 \citation{DBLP:journals/access/SheinPI20}
 \citation{DBLP:journals/dke/WangLH06,DBLP:journals/pvldb/LiDHK10,DBLP:journals/dke/LiBK15}
+\citation{DBLP:journals/geoinformatica/TritsarolisCTPT24}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}轨迹模式挖掘}{26}{subsection.2.3.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2.1}协同行为模式挖掘}{26}{subsubsection.2.3.2.1}\protected@file@percent }
 \citation{DBLP:conf/sigmod/FangGPCMJ20}
@@ -214,28 +218,29 @@
 \citation{zhang2024continuous}
 \citation{10598064}
 \citation{10107792}
+\citation{DBLP:conf/dasfaa/WangCFS24}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2.2}接触模式搜索}{27}{subsubsection.2.3.2.2}\protected@file@percent }
 \citation{DBLP:conf/icde/LiZCJW18,DBLP:conf/icws/Zhang0LL019,DBLP:conf/icde/YaoCZB19}
 \citation{DBLP:conf/ijcnn/YaoZZHB17}
 \citation{DBLP:conf/avss/BoyleNF17}
 \citation{DBLP:conf/icde/FangDCHGC21}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2.2}接触模式搜索}{27}{subsubsection.2.3.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2.3}轨迹聚类模式挖掘}{27}{subsubsection.2.3.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2.3}轨迹聚类模式挖掘}{28}{subsubsection.2.3.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.4}本章小结}{28}{section.2.4}\protected@file@percent }
 \citation{唐科萍2012基于位置服务的研究综述}
-\pp@pagectr{footnote}{8}{87}{29}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第三章}轨迹决策计算：全局持续最优路线组合规划}{29}{chapter.3}\protected@file@percent }
+\pp@pagectr{footnote}{8}{89}{30}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第三章}轨迹决策计算：全局持续最优路线组合规划}{30}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{cha:route search}{{第三章}{29}{轨迹决策计算：全局持续最优路线组合规划}{chapter.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}引言}{29}{section.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}持续行程请求流场景下的路线规划问题背景}{29}{subsection.3.1.1}\protected@file@percent }
-\pp@pagectr{footnote}{9}{87}{29}
-\pp@pagectr{footnote}{10}{87}{29}
-\pp@pagectr{footnote}{11}{87}{29}
-\pp@pagectr{footnote}{12}{87}{29}
-\pp@pagectr{footnote}{13}{87}{29}
-\pp@pagectr{footnote}{14}{87}{29}
+\newlabel{cha:route search}{{第三章}{30}{轨迹决策计算：全局持续最优路线组合规划}{chapter.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}引言}{30}{section.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}持续行程请求流场景下的路线规划问题背景}{30}{subsection.3.1.1}\protected@file@percent }
+\pp@pagectr{footnote}{9}{89}{30}
+\pp@pagectr{footnote}{10}{89}{30}
+\pp@pagectr{footnote}{11}{89}{30}
+\pp@pagectr{footnote}{12}{89}{30}
+\pp@pagectr{footnote}{13}{89}{30}
+\pp@pagectr{footnote}{14}{89}{30}
 \citation{DBLP:journals/vldb/SharifzadehKS08,DBLP:journals/pvldb/LevinKSS10,DBLP:journals/tkde/LiYM13,DBLP:conf/ijcai/ZengCCQCX15,DBLP:conf/wise/XuCYSZZL17}
 \citation{DBLP:journals/tkde/ShangCWJWK16,DBLP:conf/icde/Guo0HJ18,DBLP:conf/kdd/ChenSJ0Z019,DBLP:conf/aaai/ChenSG20,DBLP:conf/aaai/ChenSYL20}
 \citation{DBLP:conf/sigmod/ChenSZZX10,DBLP:journals/pvldb/CaoCCX12,DBLP:journals/vldb/ShangDZJKZ14}
@@ -243,123 +248,123 @@
 \citation{彭晓燕2020无人驾驶汽车局部路径规划算法研究}
 \citation{DBLP:conf/icde/MalviyaMB11,DBLP:conf/dasfaa/XuGDSL12}
 \citation{DBLP:conf/ijcai/LiCS20}
-\@writefile{lof}{\cftsetpnumwidth {\widthof {31}-1bp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3-1}{\ignorespaces 个人最优下潜在交通拥堵示例}}{31}{figure.caption.11}\protected@file@percent }
-\newlabel{route_fig:selfaware_example}{{3-1}{31}{个人最优下潜在交通拥堵示例}{figure.caption.11}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}全局持续最优路线组合规划问题与研究挑战}{32}{subsection.3.1.2}\protected@file@percent }
+\@writefile{lof}{\cftsetpnumwidth {\widthof {32}-1bp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3-1}{\ignorespaces 个人最优下潜在交通拥堵示例}}{32}{figure.caption.11}\protected@file@percent }
+\newlabel{route_fig:selfaware_example}{{3-1}{32}{个人最优下潜在交通拥堵示例}{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}全局持续最优路线组合规划问题与研究挑战}{33}{subsection.3.1.2}\protected@file@percent }
 \citation{DBLP:conf/ijcai/LiCS20}
 \citation{DBLP:conf/icra/LimR12,DBLP:conf/ijcai/LiCS20}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}问题描述}{34}{section.3.2}\protected@file@percent }
-\@writefile{lot}{\cftsetpnumwidth {\widthof {34}-1bp}}
-\@writefile{lot}{\contentsline {table}{\numberline {3-1}{\ignorespaces 主要符号解释}}{34}{table.caption.12}\protected@file@percent }
-\newlabel{route_tab:notation}{{3-1}{34}{主要符号解释}{table.caption.12}{}}
-\newlabel{route_eq:tf}{{3-1}{35}{车辆通行时间函数}{equation.3.1}{}}
-\newlabel{route_eq:tpi}{{3-2}{35}{路线及其通行时间}{equation.3.2}{}}
-\newlabel{route_eq:gt}{{3-3}{35}{全局持续最优路线组合规划问题}{equation.3.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}精确遍历算法}{35}{section.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}自感知的批处理算法}{36}{section.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}初始轨迹生成}{36}{subsection.3.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1.1}路段标签}{36}{subsubsection.3.4.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1.2}系统内的车流量计算}{36}{subsubsection.3.4.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1.3}通行时间下界}{37}{subsubsection.3.4.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1.4}算法描述}{37}{subsubsection.3.4.1.4}\protected@file@percent }
-\@writefile{loa}{\contentsline {algocf}{\numberline {3-1}{\ignorespaces 初始轨迹生成}}{37}{algocf.3-1}\protected@file@percent }
-\newlabel{route_alg:alg1}{{3-1}{37}{算法描述}{algocf.3-1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}批量优化处理}{38}{subsection.3.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.1}交换操作}{39}{subsubsection.3.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.2}预检查策略}{39}{subsubsection.3.4.2.2}\protected@file@percent }
-\newlabel{route_eq:pre-check}{{3-4}{39}{预检查策略}{equation.3.4}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.3}算法描述}{39}{subsubsection.3.4.2.3}\protected@file@percent }
-\@writefile{loa}{\contentsline {algocf}{\numberline {3-2}{\ignorespaces 批量优化处理}}{40}{algocf.3-2}\protected@file@percent }
-\newlabel{route_alg:alg2}{{3-2}{40}{预检查策略}{algocf.3-2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}总体解决方案}{40}{subsection.3.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3.1}批优化处理间隔}{40}{subsubsection.3.4.3.1}\protected@file@percent }
-\@writefile{loa}{\contentsline {algocf}{\numberline {3-3}{\ignorespaces 持续最优路线组合}}{41}{algocf.3-3}\protected@file@percent }
-\newlabel{route_alg:alg3}{{3-3}{41}{批优化处理间隔}{algocf.3-3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3.2}算法描述}{41}{subsubsection.3.4.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}实验研究}{42}{section.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}实验设定}{42}{subsection.3.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1.1}数据集}{42}{subsubsection.3.5.1.1}\protected@file@percent }
-\pp@pagectr{footnote}{15}{113}{42}
-\pp@pagectr{footnote}{16}{113}{42}
-\@writefile{lot}{\cftsetpnumwidth {\widthof {42}-1bp}}
-\@writefile{lot}{\contentsline {table}{\numberline {3-2}{\ignorespaces 评估参数设定}}{42}{table.caption.16}\protected@file@percent }
-\newlabel{route_tb:para}{{3-2}{42}{评估参数设定}{table.caption.16}{}}
-\citation{DBLP:conf/icde/MalviyaMB11,DBLP:conf/dasfaa/XuGDSL12}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1.2}车流量计算}{43}{subsubsection.3.5.1.2}\protected@file@percent }
-\newlabel{route_eq:flow}{{3-5}{43}{车流量计算}{equation.3.5}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1.3}算法评估}{43}{subsubsection.3.5.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}问题描述}{35}{section.3.2}\protected@file@percent }
+\@writefile{lot}{\cftsetpnumwidth {\widthof {35}-1bp}}
+\@writefile{lot}{\contentsline {table}{\numberline {3-1}{\ignorespaces 主要符号解释}}{35}{table.caption.12}\protected@file@percent }
+\newlabel{route_tab:notation}{{3-1}{35}{主要符号解释}{table.caption.12}{}}
+\newlabel{route_eq:tf}{{3-1}{36}{车辆通行时间函数}{equation.3.1}{}}
+\newlabel{route_eq:tpi}{{3-2}{36}{路线及其通行时间}{equation.3.2}{}}
+\newlabel{route_eq:gt}{{3-3}{36}{全局持续最优路线组合规划问题}{equation.3.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}精确遍历算法}{36}{section.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}自感知的批处理算法}{37}{section.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}初始轨迹生成}{37}{subsection.3.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1.1}路段标签}{37}{subsubsection.3.4.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1.2}系统内的车流量计算}{37}{subsubsection.3.4.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1.3}通行时间下界}{38}{subsubsection.3.4.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1.4}算法描述}{38}{subsubsection.3.4.1.4}\protected@file@percent }
+\@writefile{loa}{\contentsline {algocf}{\numberline {3-1}{\ignorespaces 初始轨迹生成}}{38}{algocf.3-1}\protected@file@percent }
+\newlabel{route_alg:alg1}{{3-1}{38}{算法描述}{algocf.3-1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}批量优化处理}{39}{subsection.3.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.1}交换操作}{40}{subsubsection.3.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.2}预检查策略}{40}{subsubsection.3.4.2.2}\protected@file@percent }
+\newlabel{route_eq:pre-check}{{3-4}{40}{预检查策略}{equation.3.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.3}算法描述}{40}{subsubsection.3.4.2.3}\protected@file@percent }
+\@writefile{loa}{\contentsline {algocf}{\numberline {3-2}{\ignorespaces 批量优化处理}}{41}{algocf.3-2}\protected@file@percent }
+\newlabel{route_alg:alg2}{{3-2}{41}{预检查策略}{algocf.3-2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}总体解决方案}{41}{subsection.3.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3.1}批优化处理间隔}{41}{subsubsection.3.4.3.1}\protected@file@percent }
+\@writefile{loa}{\contentsline {algocf}{\numberline {3-3}{\ignorespaces 持续最优路线组合}}{42}{algocf.3-3}\protected@file@percent }
+\newlabel{route_alg:alg3}{{3-3}{42}{批优化处理间隔}{algocf.3-3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3.2}算法描述}{42}{subsubsection.3.4.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}实验研究}{43}{section.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}实验设定}{43}{subsection.3.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1.1}数据集}{43}{subsubsection.3.5.1.1}\protected@file@percent }
+\pp@pagectr{footnote}{15}{115}{43}
+\pp@pagectr{footnote}{16}{115}{43}
 \@writefile{lot}{\cftsetpnumwidth {\widthof {43}-1bp}}
-\@writefile{lot}{\contentsline {table}{\numberline {3-3}{\ignorespaces 比较算法}}{43}{table.caption.17}\protected@file@percent }
-\newlabel{route_tab:compared_alg}{{3-3}{43}{比较算法}{table.caption.17}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1.4}运行环境}{44}{subsubsection.3.5.1.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}实验结果与分析}{44}{subsection.3.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2.1}行程请求数目的影响}{44}{subsubsection.3.5.2.1}\protected@file@percent }
-\@writefile{lof}{\cftsetpnumwidth {\widthof {44}-1bp}}
-\newlabel{route_exp_fig1:a}{{3-2(a)}{44}{Subfigure 第三章 3-2(a)}{subfigure.3-2.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3-2}{\ignorespaces 评估参数设定}}{43}{table.caption.16}\protected@file@percent }
+\newlabel{route_tb:para}{{3-2}{43}{评估参数设定}{table.caption.16}{}}
+\citation{DBLP:conf/icde/MalviyaMB11,DBLP:conf/dasfaa/XuGDSL12}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1.2}车流量计算}{44}{subsubsection.3.5.1.2}\protected@file@percent }
+\newlabel{route_eq:flow}{{3-5}{44}{车流量计算}{equation.3.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1.3}算法评估}{44}{subsubsection.3.5.1.3}\protected@file@percent }
+\@writefile{lot}{\cftsetpnumwidth {\widthof {44}-1bp}}
+\@writefile{lot}{\contentsline {table}{\numberline {3-3}{\ignorespaces 比较算法}}{44}{table.caption.17}\protected@file@percent }
+\newlabel{route_tab:compared_alg}{{3-3}{44}{比较算法}{table.caption.17}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1.4}运行环境}{45}{subsubsection.3.5.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}实验结果与分析}{45}{subsection.3.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2.1}行程请求数目的影响}{45}{subsubsection.3.5.2.1}\protected@file@percent }
+\@writefile{lof}{\cftsetpnumwidth {\widthof {45}-1bp}}
+\newlabel{route_exp_fig1:a}{{3-2(a)}{45}{Subfigure 第三章 3-2(a)}{subfigure.3-2.1}{}}
 \newlabel{sub@route_exp_fig1:a}{{(a)}{(a)}{Subfigure 第三章 3-2(a)\relax }{subfigure.3-2.1}{}}
-\newlabel{route_exp_fig1:b}{{3-2(b)}{44}{Subfigure 第三章 3-2(b)}{subfigure.3-2.2}{}}
+\newlabel{route_exp_fig1:b}{{3-2(b)}{45}{Subfigure 第三章 3-2(b)}{subfigure.3-2.2}{}}
 \newlabel{sub@route_exp_fig1:b}{{(b)}{(b)}{Subfigure 第三章 3-2(b)\relax }{subfigure.3-2.2}{}}
-\newlabel{route_exp_fig1:c}{{3-2(c)}{44}{Subfigure 第三章 3-2(c)}{subfigure.3-2.3}{}}
+\newlabel{route_exp_fig1:c}{{3-2(c)}{45}{Subfigure 第三章 3-2(c)}{subfigure.3-2.3}{}}
 \newlabel{sub@route_exp_fig1:c}{{(c)}{(c)}{Subfigure 第三章 3-2(c)\relax }{subfigure.3-2.3}{}}
-\newlabel{route_exp_fig1:d}{{3-2(d)}{44}{Subfigure 第三章 3-2(d)}{subfigure.3-2.4}{}}
+\newlabel{route_exp_fig1:d}{{3-2(d)}{45}{Subfigure 第三章 3-2(d)}{subfigure.3-2.4}{}}
 \newlabel{sub@route_exp_fig1:d}{{(d)}{(d)}{Subfigure 第三章 3-2(d)\relax }{subfigure.3-2.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3-2}{\ignorespaces 行程请求数目对算法运行时间和全局通行时间的影响。\subref {route_exp_fig1:a} NY路网下的算法运行时间；\subref {route_exp_fig1:b} NY路网下的总通行时间；\subref {route_exp_fig1:c} TG路网下的算法运行时间；\subref {route_exp_fig1:d} TG路网下的总通行时间}}{44}{figure.caption.18}\protected@file@percent }
-\newlabel{route_exp_fig1}{{3-2}{44}{行程请求数目对算法运行时间和全局通行时间的影响。\subref {route_exp_fig1:a} NY路网下的算法运行时间；\subref {route_exp_fig1:b} NY路网下的总通行时间；\subref {route_exp_fig1:c} TG路网下的算法运行时间；\subref {route_exp_fig1:d} TG路网下的总通行时间}{figure.caption.18}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{44}{subfigure.2.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{44}{subfigure.2.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{44}{subfigure.2.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{44}{subfigure.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2.2}行程请求到达速率的影响}{45}{subsubsection.3.5.2.2}\protected@file@percent }
-\@writefile{lof}{\cftsetpnumwidth {\widthof {46}-1bp}}
-\newlabel{route_exp_fig2:a}{{3-3(a)}{46}{Subfigure 第三章 3-3(a)}{subfigure.3-3.1}{}}
-\newlabel{sub@route_exp_fig2:a}{{(a)}{(a)}{Subfigure 第三章 3-3(a)\relax }{subfigure.3-3.1}{}}
-\newlabel{route_exp_fig2:b}{{3-3(b)}{46}{Subfigure 第三章 3-3(b)}{subfigure.3-3.2}{}}
-\newlabel{sub@route_exp_fig2:b}{{(b)}{(b)}{Subfigure 第三章 3-3(b)\relax }{subfigure.3-3.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3-3}{\ignorespaces 行程请求到达速率的影响。 \subref {route_exp_fig2:a} 对算法运行时间的影响； \subref {route_exp_fig2:b} 对总通行时间的影响}}{46}{figure.caption.19}\protected@file@percent }
-\newlabel{route_exp_fig2}{{3-3}{46}{行程请求到达速率的影响。 \subref {route_exp_fig2:a} 对算法运行时间的影响； \subref {route_exp_fig2:b} 对总通行时间的影响}{figure.caption.19}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{46}{subfigure.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{46}{subfigure.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2.3}通行时间函数各参数的影响}{46}{subsubsection.3.5.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3-2}{\ignorespaces 行程请求数目对算法运行时间和全局通行时间的影响。\subref {route_exp_fig1:a} NY路网下的算法运行时间；\subref {route_exp_fig1:b} NY路网下的总通行时间；\subref {route_exp_fig1:c} TG路网下的算法运行时间；\subref {route_exp_fig1:d} TG路网下的总通行时间}}{45}{figure.caption.18}\protected@file@percent }
+\newlabel{route_exp_fig1}{{3-2}{45}{行程请求数目对算法运行时间和全局通行时间的影响。\subref {route_exp_fig1:a} NY路网下的算法运行时间；\subref {route_exp_fig1:b} NY路网下的总通行时间；\subref {route_exp_fig1:c} TG路网下的算法运行时间；\subref {route_exp_fig1:d} TG路网下的总通行时间}{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{45}{subfigure.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{45}{subfigure.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{45}{subfigure.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{45}{subfigure.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2.2}行程请求到达速率的影响}{46}{subsubsection.3.5.2.2}\protected@file@percent }
 \@writefile{lof}{\cftsetpnumwidth {\widthof {47}-1bp}}
-\newlabel{route_exp_fig3:a}{{3-4(a)}{47}{Subfigure 第三章 3-4(a)}{subfigure.3-4.1}{}}
-\newlabel{sub@route_exp_fig3:a}{{(a)}{(a)}{Subfigure 第三章 3-4(a)\relax }{subfigure.3-4.1}{}}
-\newlabel{route_exp_fig3:b}{{3-4(b)}{47}{Subfigure 第三章 3-4(b)}{subfigure.3-4.2}{}}
-\newlabel{sub@route_exp_fig3:b}{{(b)}{(b)}{Subfigure 第三章 3-4(b)\relax }{subfigure.3-4.2}{}}
-\newlabel{route_exp_fig3:c}{{3-4(c)}{47}{Subfigure 第三章 3-4(c)}{subfigure.3-4.3}{}}
-\newlabel{sub@route_exp_fig3:c}{{(c)}{(c)}{Subfigure 第三章 3-4(c)\relax }{subfigure.3-4.3}{}}
-\newlabel{route_exp_fig3:d}{{3-4(d)}{47}{Subfigure 第三章 3-4(d)}{subfigure.3-4.4}{}}
-\newlabel{sub@route_exp_fig3:d}{{(d)}{(d)}{Subfigure 第三章 3-4(d)\relax }{subfigure.3-4.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3-4}{\ignorespaces 路段通行时间函数中两个参数的影响}}{47}{figure.caption.20}\protected@file@percent }
-\newlabel{route_exp_fig3}{{3-4}{47}{路段通行时间函数中两个参数的影响}{figure.caption.20}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{47}{subfigure.4.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{47}{subfigure.4.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{47}{subfigure.4.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{47}{subfigure.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2.4}优化时间间隔的影响}{47}{subsubsection.3.5.2.4}\protected@file@percent }
+\newlabel{route_exp_fig2:a}{{3-3(a)}{47}{Subfigure 第三章 3-3(a)}{subfigure.3-3.1}{}}
+\newlabel{sub@route_exp_fig2:a}{{(a)}{(a)}{Subfigure 第三章 3-3(a)\relax }{subfigure.3-3.1}{}}
+\newlabel{route_exp_fig2:b}{{3-3(b)}{47}{Subfigure 第三章 3-3(b)}{subfigure.3-3.2}{}}
+\newlabel{sub@route_exp_fig2:b}{{(b)}{(b)}{Subfigure 第三章 3-3(b)\relax }{subfigure.3-3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3-3}{\ignorespaces 行程请求到达速率的影响。 \subref {route_exp_fig2:a} 对算法运行时间的影响； \subref {route_exp_fig2:b} 对总通行时间的影响}}{47}{figure.caption.19}\protected@file@percent }
+\newlabel{route_exp_fig2}{{3-3}{47}{行程请求到达速率的影响。 \subref {route_exp_fig2:a} 对算法运行时间的影响； \subref {route_exp_fig2:b} 对总通行时间的影响}{figure.caption.19}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{47}{subfigure.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{47}{subfigure.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2.3}通行时间函数各参数的影响}{47}{subsubsection.3.5.2.3}\protected@file@percent }
 \@writefile{lof}{\cftsetpnumwidth {\widthof {48}-1bp}}
-\newlabel{route_exp_fig4:a}{{3-5(a)}{48}{Subfigure 第三章 3-5(a)}{subfigure.3-5.1}{}}
-\newlabel{sub@route_exp_fig4:a}{{(a)}{(a)}{Subfigure 第三章 3-5(a)\relax }{subfigure.3-5.1}{}}
-\newlabel{route_exp_fig4:b}{{3-5(b)}{48}{Subfigure 第三章 3-5(b)}{subfigure.3-5.2}{}}
-\newlabel{sub@route_exp_fig4:b}{{(b)}{(b)}{Subfigure 第三章 3-5(b)\relax }{subfigure.3-5.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3-5}{\ignorespaces 批优化时间间隔的影响}}{48}{figure.caption.21}\protected@file@percent }
-\newlabel{route_exp_fig4}{{3-5}{48}{批优化时间间隔的影响}{figure.caption.21}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{48}{subfigure.5.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{48}{subfigure.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2.5}提升参数和预检查策略的影响}{48}{subsubsection.3.5.2.5}\protected@file@percent }
+\newlabel{route_exp_fig3:a}{{3-4(a)}{48}{Subfigure 第三章 3-4(a)}{subfigure.3-4.1}{}}
+\newlabel{sub@route_exp_fig3:a}{{(a)}{(a)}{Subfigure 第三章 3-4(a)\relax }{subfigure.3-4.1}{}}
+\newlabel{route_exp_fig3:b}{{3-4(b)}{48}{Subfigure 第三章 3-4(b)}{subfigure.3-4.2}{}}
+\newlabel{sub@route_exp_fig3:b}{{(b)}{(b)}{Subfigure 第三章 3-4(b)\relax }{subfigure.3-4.2}{}}
+\newlabel{route_exp_fig3:c}{{3-4(c)}{48}{Subfigure 第三章 3-4(c)}{subfigure.3-4.3}{}}
+\newlabel{sub@route_exp_fig3:c}{{(c)}{(c)}{Subfigure 第三章 3-4(c)\relax }{subfigure.3-4.3}{}}
+\newlabel{route_exp_fig3:d}{{3-4(d)}{48}{Subfigure 第三章 3-4(d)}{subfigure.3-4.4}{}}
+\newlabel{sub@route_exp_fig3:d}{{(d)}{(d)}{Subfigure 第三章 3-4(d)\relax }{subfigure.3-4.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3-4}{\ignorespaces 路段通行时间函数中两个参数的影响}}{48}{figure.caption.20}\protected@file@percent }
+\newlabel{route_exp_fig3}{{3-4}{48}{路段通行时间函数中两个参数的影响}{figure.caption.20}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{48}{subfigure.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{48}{subfigure.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{48}{subfigure.4.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{48}{subfigure.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2.4}优化时间间隔的影响}{48}{subsubsection.3.5.2.4}\protected@file@percent }
 \@writefile{lof}{\cftsetpnumwidth {\widthof {49}-1bp}}
-\newlabel{route_exp_fig5:a}{{3-6(a)}{49}{Subfigure 第三章 3-6(a)}{subfigure.3-6.1}{}}
+\newlabel{route_exp_fig4:a}{{3-5(a)}{49}{Subfigure 第三章 3-5(a)}{subfigure.3-5.1}{}}
+\newlabel{sub@route_exp_fig4:a}{{(a)}{(a)}{Subfigure 第三章 3-5(a)\relax }{subfigure.3-5.1}{}}
+\newlabel{route_exp_fig4:b}{{3-5(b)}{49}{Subfigure 第三章 3-5(b)}{subfigure.3-5.2}{}}
+\newlabel{sub@route_exp_fig4:b}{{(b)}{(b)}{Subfigure 第三章 3-5(b)\relax }{subfigure.3-5.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3-5}{\ignorespaces 批优化时间间隔的影响}}{49}{figure.caption.21}\protected@file@percent }
+\newlabel{route_exp_fig4}{{3-5}{49}{批优化时间间隔的影响}{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{49}{subfigure.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{49}{subfigure.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2.5}提升参数和预检查策略的影响}{49}{subsubsection.3.5.2.5}\protected@file@percent }
+\@writefile{lof}{\cftsetpnumwidth {\widthof {50}-1bp}}
+\newlabel{route_exp_fig5:a}{{3-6(a)}{50}{Subfigure 第三章 3-6(a)}{subfigure.3-6.1}{}}
 \newlabel{sub@route_exp_fig5:a}{{(a)}{(a)}{Subfigure 第三章 3-6(a)\relax }{subfigure.3-6.1}{}}
-\newlabel{route_exp_fig5:b}{{3-6(b)}{49}{Subfigure 第三章 3-6(b)}{subfigure.3-6.2}{}}
+\newlabel{route_exp_fig5:b}{{3-6(b)}{50}{Subfigure 第三章 3-6(b)}{subfigure.3-6.2}{}}
 \newlabel{sub@route_exp_fig5:b}{{(b)}{(b)}{Subfigure 第三章 3-6(b)\relax }{subfigure.3-6.2}{}}
-\newlabel{route_exp_fig5:c}{{3-6(c)}{49}{Subfigure 第三章 3-6(c)}{subfigure.3-6.3}{}}
+\newlabel{route_exp_fig5:c}{{3-6(c)}{50}{Subfigure 第三章 3-6(c)}{subfigure.3-6.3}{}}
 \newlabel{sub@route_exp_fig5:c}{{(c)}{(c)}{Subfigure 第三章 3-6(c)\relax }{subfigure.3-6.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3-6}{\ignorespaces 提升参数和预检查策略的影响。 \subref {route_exp_fig5:a} 运行时间；\subref {route_exp_fig5:b} 通行时间；\subref {route_exp_fig5:c} 预先检查策略的影响评估 }}{49}{figure.caption.22}\protected@file@percent }
-\newlabel{route_exp_fig5}{{3-6}{49}{提升参数和预检查策略的影响。 \subref {route_exp_fig5:a} 运行时间；\subref {route_exp_fig5:b} 通行时间；\subref {route_exp_fig5:c} 预先检查策略的影响评估}{figure.caption.22}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{49}{subfigure.6.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{49}{subfigure.6.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{49}{subfigure.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}\textcolor {red}{\ttfamily  本章小结}}{49}{section.3.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3-6}{\ignorespaces 提升参数和预检查策略的影响。 \subref {route_exp_fig5:a} 运行时间；\subref {route_exp_fig5:b} 通行时间；\subref {route_exp_fig5:c} 预先检查策略的影响评估 }}{50}{figure.caption.22}\protected@file@percent }
+\newlabel{route_exp_fig5}{{3-6}{50}{提升参数和预检查策略的影响。 \subref {route_exp_fig5:a} 运行时间；\subref {route_exp_fig5:b} 通行时间；\subref {route_exp_fig5:c} 预先检查策略的影响评估}{figure.caption.22}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{50}{subfigure.6.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{50}{subfigure.6.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{50}{subfigure.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}\textcolor {red}{\ttfamily  本章小结}}{50}{section.3.6}\protected@file@percent }
 \citation{DBLP:conf/gis/VieiraBT09,DBLP:journals/jidm/TanakaVK16}
 \citation{DBLP:journals/pvldb/JeungYZJS08}
 \citation{DBLP:journals/pvldb/LiDHK10}
@@ -368,233 +373,233 @@
 \citation{DBLP:conf/icde/ZhengZYS13,DBLP:journals/tkde/ZhengZYSZ14}
 \citation{DBLP:journals/pvldb/Xu0B20,DBLP:journals/information/AlarabiBHA21}
 \citation{DBLP:conf/icde/Liu0CB20}
-\pp@pagectr{footnote}{17}{131}{51}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第四章}轨迹模式计算：群体联合移动模式挖掘}{51}{chapter.4}\protected@file@percent }
+\pp@pagectr{footnote}{17}{133}{52}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第四章}轨迹模式计算：群体联合移动模式挖掘}{52}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{cha:comovement}{{第四章}{51}{轨迹模式计算：群体联合移动模式挖掘}{chapter.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}引言}{51}{section.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}轨迹联合移动模式挖掘的研究背景}{51}{subsection.4.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}伴随群体发现问题与计算挑战}{52}{subsection.4.1.2}\protected@file@percent }
-\@writefile{lof}{\cftsetpnumwidth {\widthof {53}-1bp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4-1}{\ignorespaces 伴随群体发现问题示例 \textcolor {red}{\ttfamily  (空间距离阈值$\epsilon $为10米，联合移动的最小联合移动时长阈值为3分钟，伴随群体规模阈值为3)}}}{53}{figure.caption.23}\protected@file@percent }
-\newlabel{cm_fig:intro}{{4-1}{53}{伴随群体发现问题示例 \shad {(空间距离阈值$\epsilon $为10米，联合移动的最小联合移动时长阈值为3分钟，伴随群体规模阈值为3)}}{figure.caption.23}{}}
+\newlabel{cha:comovement}{{第四章}{52}{轨迹模式计算：群体联合移动模式挖掘}{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}引言}{52}{section.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}轨迹联合移动模式挖掘的研究背景}{52}{subsection.4.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}伴随群体发现问题与计算挑战}{53}{subsection.4.1.2}\protected@file@percent }
+\@writefile{lof}{\cftsetpnumwidth {\widthof {54}-1bp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-1}{\ignorespaces 伴随群体发现问题示例 \textcolor {red}{\ttfamily  (空间距离阈值$\epsilon $为10米，联合移动的最小联合移动时长阈值为3分钟，伴随群体规模阈值为3)}}}{54}{figure.caption.23}\protected@file@percent }
+\newlabel{cm_fig:intro}{{4-1}{54}{伴随群体发现问题示例 \shad {(空间距离阈值$\epsilon $为10米，联合移动的最小联合移动时长阈值为3分钟，伴随群体规模阈值为3)}}{figure.caption.23}{}}
 \citation{DBLP:conf/kdd/XuYFS07}
 \citation{DBLP:conf/ijcai/LiCSWLK022,DBLP:conf/icde/RanuPTDR15,DBLP:conf/sigmod/SuZWHZ13}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}问题描述}{55}{section.4.2}\protected@file@percent }
-\newlabel{cm_sec:problem}{{4.2}{55}{问题描述}{section.4.2}{}}
-\@writefile{lot}{\cftsetpnumwidth {\widthof {56}-1bp}}
-\@writefile{lot}{\contentsline {table}{\numberline {4-1}{\ignorespaces 主要符号解释}}{56}{table.caption.24}\protected@file@percent }
-\newlabel{cm_tab:notation}{{4-1}{56}{主要符号解释}{table.caption.24}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}精确搜索算法}{56}{section.4.3}\protected@file@percent }
-\newlabel{cm_sec:exact}{{4.3}{56}{精确搜索算法}{section.4.3}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {4-1}{\ignorespaces 精确搜索算法}}{57}{algocf.4-1}\protected@file@percent }
-\newlabel{cm_alg:ES-ECMC}{{4-1}{57}{精确搜索算法}{algocf.4-1}{}}
-\pp@pagectr{footnote}{18}{145}{58}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}问题描述}{56}{section.4.2}\protected@file@percent }
+\newlabel{cm_sec:problem}{{4.2}{56}{问题描述}{section.4.2}{}}
+\@writefile{lot}{\cftsetpnumwidth {\widthof {57}-1bp}}
+\@writefile{lot}{\contentsline {table}{\numberline {4-1}{\ignorespaces 主要符号解释}}{57}{table.caption.24}\protected@file@percent }
+\newlabel{cm_tab:notation}{{4-1}{57}{主要符号解释}{table.caption.24}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}精确搜索算法}{57}{section.4.3}\protected@file@percent }
+\newlabel{cm_sec:exact}{{4.3}{57}{精确搜索算法}{section.4.3}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {4-1}{\ignorespaces 精确搜索算法}}{58}{algocf.4-1}\protected@file@percent }
+\newlabel{cm_alg:ES-ECMC}{{4-1}{58}{精确搜索算法}{algocf.4-1}{}}
+\pp@pagectr{footnote}{18}{147}{59}
 \citation{DBLP:journals/pvldb/JeungYZJS08}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}社区感知的近似搜索算法}{59}{section.4.4}\protected@file@percent }
-\newlabel{cm_sec:approximate}{{4.4}{59}{社区感知的近似搜索算法}{section.4.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}近似联合移动对搜索}{59}{subsection.4.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1.1}轨迹网格编号序列生成}{60}{subsubsection.4.4.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1.2}近似联合移动对搜索}{60}{subsubsection.4.4.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}社区感知的近似搜索算法}{60}{section.4.4}\protected@file@percent }
+\newlabel{cm_sec:approximate}{{4.4}{60}{社区感知的近似搜索算法}{section.4.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}近似联合移动对搜索}{60}{subsection.4.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1.1}轨迹网格编号序列生成}{61}{subsubsection.4.4.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1.2}近似联合移动对搜索}{61}{subsubsection.4.4.1.2}\protected@file@percent }
 \citation{DBLP:conf/icdm/PelekisKKFT09,DBLP:conf/sigmod/LeeHW07}
 \citation{DBLP:conf/dasfaa/LiLLH10,DBLP:journals/access/LiLWYLX18}
 \citation{DBLP:conf/icde/LiZCJW18,DBLP:conf/icws/Zhang0LL019,DBLP:conf/icde/YaoCZB19}
 \citation{DBLP:conf/kdd/XuYFS07}
-\@writefile{lof}{\cftsetpnumwidth {\widthof {61}-1bp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4-2}{\ignorespaces 轨迹网格编号及网格编号序列示例}}{61}{figure.caption.26}\protected@file@percent }
-\newlabel{cm_fig1:cell_partition}{{4-2}{61}{轨迹网格编号及网格编号序列示例}{figure.caption.26}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}社区感知聚类}{61}{subsection.4.4.2}\protected@file@percent }
+\@writefile{lof}{\cftsetpnumwidth {\widthof {62}-1bp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-2}{\ignorespaces 轨迹网格编号及网格编号序列示例}}{62}{figure.caption.26}\protected@file@percent }
+\newlabel{cm_fig1:cell_partition}{{4-2}{62}{轨迹网格编号及网格编号序列示例}{figure.caption.26}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}社区感知聚类}{62}{subsection.4.4.2}\protected@file@percent }
 \citation{DBLP:conf/kdd/YuanZXS11,DBLP:conf/gis/YuanZZXXSH10}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}实验评估}{62}{section.4.5}\protected@file@percent }
-\newlabel{cm_sec:exp}{{4.5}{62}{实验评估}{section.4.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}实验设置}{62}{subsection.4.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.1}数据准备}{62}{subsubsection.4.5.1.1}\protected@file@percent }
-\pp@pagectr{footnote}{19}{153}{62}
-\pp@pagectr{footnote}{20}{153}{62}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}实验评估}{63}{section.4.5}\protected@file@percent }
+\newlabel{cm_sec:exp}{{4.5}{63}{实验评估}{section.4.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}实验设置}{63}{subsection.4.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.1}数据准备}{63}{subsubsection.4.5.1.1}\protected@file@percent }
+\pp@pagectr{footnote}{19}{155}{63}
+\pp@pagectr{footnote}{20}{155}{63}
 \citation{DBLP:conf/sigmod/Guttman84}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.2}数据预处理}{63}{subsubsection.4.5.1.2}\protected@file@percent }
-\@writefile{lot}{\cftsetpnumwidth {\widthof {63}-1bp}}
-\@writefile{lot}{\contentsline {table}{\numberline {4-2}{\ignorespaces 评估参数设定}}{63}{table.caption.27}\protected@file@percent }
-\newlabel{cm_tb: group settings}{{4-2}{63}{评估参数设定}{table.caption.27}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.3}算法评估}{63}{subsubsection.4.5.1.3}\protected@file@percent }
-\@writefile{lot}{\cftsetpnumwidth {\widthof {63}-1bp}}
-\@writefile{lot}{\contentsline {table}{\numberline {4-3}{\ignorespaces 比较算法}}{63}{table.caption.28}\protected@file@percent }
-\newlabel{cm_tab:compared_alg}{{4-3}{63}{比较算法}{table.caption.28}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.4}评估指标}{64}{subsubsection.4.5.1.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.5}实验环境}{64}{subsubsection.4.5.1.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}实验结果与分析}{64}{subsection.4.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2.1}轨迹数目的影响}{64}{subsubsection.4.5.2.1}\protected@file@percent }
-\@writefile{lof}{\cftsetpnumwidth {\widthof {65}-1bp}}
-\newlabel{cm_fig:北京数据集-ratios-num}{{4-3(a)}{65}{Subfigure 第四章 4-3(a)}{subfigure.4-3.1}{}}
-\newlabel{sub@cm_fig:北京数据集-ratios-num}{{(a)}{(a)}{Subfigure 第四章 4-3(a)\relax }{subfigure.4-3.1}{}}
-\newlabel{cm_fig:北京数据集-time-num}{{4-3(b)}{65}{Subfigure 第四章 4-3(b)}{subfigure.4-3.2}{}}
-\newlabel{sub@cm_fig:北京数据集-time-num}{{(b)}{(b)}{Subfigure 第四章 4-3(b)\relax }{subfigure.4-3.2}{}}
-\newlabel{cm_fig:波尔图数据集-ratios-num}{{4-3(c)}{65}{Subfigure 第四章 4-3(c)}{subfigure.4-3.3}{}}
-\newlabel{sub@cm_fig:波尔图数据集-ratios-num}{{(c)}{(c)}{Subfigure 第四章 4-3(c)\relax }{subfigure.4-3.3}{}}
-\newlabel{cm_fig:波尔图数据集-time-num}{{4-3(d)}{65}{Subfigure 第四章 4-3(d)}{subfigure.4-3.4}{}}
-\newlabel{sub@cm_fig:波尔图数据集-time-num}{{(d)}{(d)}{Subfigure 第四章 4-3(d)\relax }{subfigure.4-3.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4-3}{\ignorespaces 轨迹数目的影响。 \subref {cm_fig:北京数据集-ratios-num} 北京数据集上的命中率 \subref {cm_fig:北京数据集-time-num} 北京数据集上的运行时间 \subref {cm_fig:波尔图数据集-ratios-num} 波尔图数据集上的命中率 \subref {cm_fig:波尔图数据集-time-num} 波尔图数据集上的运行时间}}{65}{figure.caption.29}\protected@file@percent }
-\newlabel{cm_fig:trjNum}{{4-3}{65}{轨迹数目的影响。 \subref {cm_fig:北京数据集-ratios-num} 北京数据集上的命中率 \subref {cm_fig:北京数据集-time-num} 北京数据集上的运行时间 \subref {cm_fig:波尔图数据集-ratios-num} 波尔图数据集上的命中率 \subref {cm_fig:波尔图数据集-time-num} 波尔图数据集上的运行时间}{figure.caption.29}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{65}{subfigure.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{65}{subfigure.3.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{65}{subfigure.3.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{65}{subfigure.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2.2}联合移动时长阈值的影响}{66}{subsubsection.4.5.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.2}数据预处理}{64}{subsubsection.4.5.1.2}\protected@file@percent }
+\@writefile{lot}{\cftsetpnumwidth {\widthof {64}-1bp}}
+\@writefile{lot}{\contentsline {table}{\numberline {4-2}{\ignorespaces 评估参数设定}}{64}{table.caption.27}\protected@file@percent }
+\newlabel{cm_tb: group settings}{{4-2}{64}{评估参数设定}{table.caption.27}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.3}算法评估}{64}{subsubsection.4.5.1.3}\protected@file@percent }
+\@writefile{lot}{\cftsetpnumwidth {\widthof {64}-1bp}}
+\@writefile{lot}{\contentsline {table}{\numberline {4-3}{\ignorespaces 比较算法}}{64}{table.caption.28}\protected@file@percent }
+\newlabel{cm_tab:compared_alg}{{4-3}{64}{比较算法}{table.caption.28}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.4}评估指标}{65}{subsubsection.4.5.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1.5}实验环境}{65}{subsubsection.4.5.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}实验结果与分析}{65}{subsection.4.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2.1}轨迹数目的影响}{65}{subsubsection.4.5.2.1}\protected@file@percent }
 \@writefile{lof}{\cftsetpnumwidth {\widthof {66}-1bp}}
-\newlabel{cm_fig:北京数据集-ratios-k}{{4-4(a)}{66}{Subfigure 第四章 4-4(a)}{subfigure.4-4.1}{}}
-\newlabel{sub@cm_fig:北京数据集-ratios-k}{{(a)}{(a)}{Subfigure 第四章 4-4(a)\relax }{subfigure.4-4.1}{}}
-\newlabel{cm_fig:北京数据集-time-k}{{4-4(b)}{66}{Subfigure 第四章 4-4(b)}{subfigure.4-4.2}{}}
-\newlabel{sub@cm_fig:北京数据集-time-k}{{(b)}{(b)}{Subfigure 第四章 4-4(b)\relax }{subfigure.4-4.2}{}}
-\newlabel{cm_fig:波尔图数据集-ratios-k}{{4-4(c)}{66}{Subfigure 第四章 4-4(c)}{subfigure.4-4.3}{}}
-\newlabel{sub@cm_fig:波尔图数据集-ratios-k}{{(c)}{(c)}{Subfigure 第四章 4-4(c)\relax }{subfigure.4-4.3}{}}
-\newlabel{cm_fig:波尔图数据集-time-k}{{4-4(d)}{66}{Subfigure 第四章 4-4(d)}{subfigure.4-4.4}{}}
-\newlabel{sub@cm_fig:波尔图数据集-time-k}{{(d)}{(d)}{Subfigure 第四章 4-4(d)\relax }{subfigure.4-4.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4-4}{\ignorespaces 联合移动时长阈值的影响。\subref {cm_fig:北京数据集-ratios-k} 北京数据集上的命中率 \subref {cm_fig:北京数据集-time-k} 北京数据集上的运行时间 \subref {cm_fig:波尔图数据集-ratios-k} 波尔图数据集上的命中率 \subref {cm_fig:波尔图数据集-time-k} 波尔图数据集上的运行时间}}{66}{figure.caption.30}\protected@file@percent }
-\newlabel{cm_fig:k}{{4-4}{66}{联合移动时长阈值的影响。\subref {cm_fig:北京数据集-ratios-k} 北京数据集上的命中率 \subref {cm_fig:北京数据集-time-k} 北京数据集上的运行时间 \subref {cm_fig:波尔图数据集-ratios-k} 波尔图数据集上的命中率 \subref {cm_fig:波尔图数据集-time-k} 波尔图数据集上的运行时间}{figure.caption.30}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{66}{subfigure.4.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{66}{subfigure.4.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{66}{subfigure.4.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{66}{subfigure.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2.3}伴随群体规模阈值的影响}{67}{subsubsection.4.5.2.3}\protected@file@percent }
+\newlabel{cm_fig:北京数据集-ratios-num}{{4-3(a)}{66}{Subfigure 第四章 4-3(a)}{subfigure.4-3.1}{}}
+\newlabel{sub@cm_fig:北京数据集-ratios-num}{{(a)}{(a)}{Subfigure 第四章 4-3(a)\relax }{subfigure.4-3.1}{}}
+\newlabel{cm_fig:北京数据集-time-num}{{4-3(b)}{66}{Subfigure 第四章 4-3(b)}{subfigure.4-3.2}{}}
+\newlabel{sub@cm_fig:北京数据集-time-num}{{(b)}{(b)}{Subfigure 第四章 4-3(b)\relax }{subfigure.4-3.2}{}}
+\newlabel{cm_fig:波尔图数据集-ratios-num}{{4-3(c)}{66}{Subfigure 第四章 4-3(c)}{subfigure.4-3.3}{}}
+\newlabel{sub@cm_fig:波尔图数据集-ratios-num}{{(c)}{(c)}{Subfigure 第四章 4-3(c)\relax }{subfigure.4-3.3}{}}
+\newlabel{cm_fig:波尔图数据集-time-num}{{4-3(d)}{66}{Subfigure 第四章 4-3(d)}{subfigure.4-3.4}{}}
+\newlabel{sub@cm_fig:波尔图数据集-time-num}{{(d)}{(d)}{Subfigure 第四章 4-3(d)\relax }{subfigure.4-3.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-3}{\ignorespaces 轨迹数目的影响。 \subref {cm_fig:北京数据集-ratios-num} 北京数据集上的命中率 \subref {cm_fig:北京数据集-time-num} 北京数据集上的运行时间 \subref {cm_fig:波尔图数据集-ratios-num} 波尔图数据集上的命中率 \subref {cm_fig:波尔图数据集-time-num} 波尔图数据集上的运行时间}}{66}{figure.caption.29}\protected@file@percent }
+\newlabel{cm_fig:trjNum}{{4-3}{66}{轨迹数目的影响。 \subref {cm_fig:北京数据集-ratios-num} 北京数据集上的命中率 \subref {cm_fig:北京数据集-time-num} 北京数据集上的运行时间 \subref {cm_fig:波尔图数据集-ratios-num} 波尔图数据集上的命中率 \subref {cm_fig:波尔图数据集-time-num} 波尔图数据集上的运行时间}{figure.caption.29}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{66}{subfigure.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{66}{subfigure.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{66}{subfigure.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{66}{subfigure.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2.2}联合移动时长阈值的影响}{67}{subsubsection.4.5.2.2}\protected@file@percent }
 \@writefile{lof}{\cftsetpnumwidth {\widthof {67}-1bp}}
-\newlabel{cm_fig:北京数据集-ratios-m}{{4-5(a)}{67}{Subfigure 第四章 4-5(a)}{subfigure.4-5.1}{}}
+\newlabel{cm_fig:北京数据集-ratios-k}{{4-4(a)}{67}{Subfigure 第四章 4-4(a)}{subfigure.4-4.1}{}}
+\newlabel{sub@cm_fig:北京数据集-ratios-k}{{(a)}{(a)}{Subfigure 第四章 4-4(a)\relax }{subfigure.4-4.1}{}}
+\newlabel{cm_fig:北京数据集-time-k}{{4-4(b)}{67}{Subfigure 第四章 4-4(b)}{subfigure.4-4.2}{}}
+\newlabel{sub@cm_fig:北京数据集-time-k}{{(b)}{(b)}{Subfigure 第四章 4-4(b)\relax }{subfigure.4-4.2}{}}
+\newlabel{cm_fig:波尔图数据集-ratios-k}{{4-4(c)}{67}{Subfigure 第四章 4-4(c)}{subfigure.4-4.3}{}}
+\newlabel{sub@cm_fig:波尔图数据集-ratios-k}{{(c)}{(c)}{Subfigure 第四章 4-4(c)\relax }{subfigure.4-4.3}{}}
+\newlabel{cm_fig:波尔图数据集-time-k}{{4-4(d)}{67}{Subfigure 第四章 4-4(d)}{subfigure.4-4.4}{}}
+\newlabel{sub@cm_fig:波尔图数据集-time-k}{{(d)}{(d)}{Subfigure 第四章 4-4(d)\relax }{subfigure.4-4.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-4}{\ignorespaces 联合移动时长阈值的影响。\subref {cm_fig:北京数据集-ratios-k} 北京数据集上的命中率 \subref {cm_fig:北京数据集-time-k} 北京数据集上的运行时间 \subref {cm_fig:波尔图数据集-ratios-k} 波尔图数据集上的命中率 \subref {cm_fig:波尔图数据集-time-k} 波尔图数据集上的运行时间}}{67}{figure.caption.30}\protected@file@percent }
+\newlabel{cm_fig:k}{{4-4}{67}{联合移动时长阈值的影响。\subref {cm_fig:北京数据集-ratios-k} 北京数据集上的命中率 \subref {cm_fig:北京数据集-time-k} 北京数据集上的运行时间 \subref {cm_fig:波尔图数据集-ratios-k} 波尔图数据集上的命中率 \subref {cm_fig:波尔图数据集-time-k} 波尔图数据集上的运行时间}{figure.caption.30}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{67}{subfigure.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{67}{subfigure.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{67}{subfigure.4.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{67}{subfigure.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2.3}伴随群体规模阈值的影响}{68}{subsubsection.4.5.2.3}\protected@file@percent }
+\@writefile{lof}{\cftsetpnumwidth {\widthof {68}-1bp}}
+\newlabel{cm_fig:北京数据集-ratios-m}{{4-5(a)}{68}{Subfigure 第四章 4-5(a)}{subfigure.4-5.1}{}}
 \newlabel{sub@cm_fig:北京数据集-ratios-m}{{(a)}{(a)}{Subfigure 第四章 4-5(a)\relax }{subfigure.4-5.1}{}}
-\newlabel{cm_fig:北京数据集-time-m}{{4-5(b)}{67}{Subfigure 第四章 4-5(b)}{subfigure.4-5.2}{}}
+\newlabel{cm_fig:北京数据集-time-m}{{4-5(b)}{68}{Subfigure 第四章 4-5(b)}{subfigure.4-5.2}{}}
 \newlabel{sub@cm_fig:北京数据集-time-m}{{(b)}{(b)}{Subfigure 第四章 4-5(b)\relax }{subfigure.4-5.2}{}}
-\newlabel{cm_fig:波尔图数据集-ratios-m}{{4-5(c)}{67}{Subfigure 第四章 4-5(c)}{subfigure.4-5.3}{}}
+\newlabel{cm_fig:波尔图数据集-ratios-m}{{4-5(c)}{68}{Subfigure 第四章 4-5(c)}{subfigure.4-5.3}{}}
 \newlabel{sub@cm_fig:波尔图数据集-ratios-m}{{(c)}{(c)}{Subfigure 第四章 4-5(c)\relax }{subfigure.4-5.3}{}}
-\newlabel{cm_fig:波尔图数据集-time-m}{{4-5(d)}{67}{Subfigure 第四章 4-5(d)}{subfigure.4-5.4}{}}
+\newlabel{cm_fig:波尔图数据集-time-m}{{4-5(d)}{68}{Subfigure 第四章 4-5(d)}{subfigure.4-5.4}{}}
 \newlabel{sub@cm_fig:波尔图数据集-time-m}{{(d)}{(d)}{Subfigure 第四章 4-5(d)\relax }{subfigure.4-5.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4-5}{\ignorespaces 伴随群体规模阈值的影响。\subref {cm_fig:北京数据集-ratios-m} 北京数据集上的命中率 \subref {cm_fig:北京数据集-time-m} 北京数据集上的运行时间 \subref {cm_fig:波尔图数据集-ratios-m} 波尔图数据集上的命中率 \subref {cm_fig:波尔图数据集-time-m} 波尔图数据集上的运行时间}}{67}{figure.caption.31}\protected@file@percent }
-\newlabel{cm_fig:m}{{4-5}{67}{伴随群体规模阈值的影响。\subref {cm_fig:北京数据集-ratios-m} 北京数据集上的命中率 \subref {cm_fig:北京数据集-time-m} 北京数据集上的运行时间 \subref {cm_fig:波尔图数据集-ratios-m} 波尔图数据集上的命中率 \subref {cm_fig:波尔图数据集-time-m} 波尔图数据集上的运行时间}{figure.caption.31}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{67}{subfigure.5.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{67}{subfigure.5.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{67}{subfigure.5.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{67}{subfigure.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2.4}聚类参数的影响}{68}{subsubsection.4.5.2.4}\protected@file@percent }
-\@writefile{lof}{\cftsetpnumwidth {\widthof {69}-1bp}}
-\newlabel{cm_fig:北京数据集-ratios-ep}{{4-6(a)}{69}{Subfigure 第四章 4-6(a)}{subfigure.4-6.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-5}{\ignorespaces 伴随群体规模阈值的影响。\subref {cm_fig:北京数据集-ratios-m} 北京数据集上的命中率 \subref {cm_fig:北京数据集-time-m} 北京数据集上的运行时间 \subref {cm_fig:波尔图数据集-ratios-m} 波尔图数据集上的命中率 \subref {cm_fig:波尔图数据集-time-m} 波尔图数据集上的运行时间}}{68}{figure.caption.31}\protected@file@percent }
+\newlabel{cm_fig:m}{{4-5}{68}{伴随群体规模阈值的影响。\subref {cm_fig:北京数据集-ratios-m} 北京数据集上的命中率 \subref {cm_fig:北京数据集-time-m} 北京数据集上的运行时间 \subref {cm_fig:波尔图数据集-ratios-m} 波尔图数据集上的命中率 \subref {cm_fig:波尔图数据集-time-m} 波尔图数据集上的运行时间}{figure.caption.31}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{68}{subfigure.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{68}{subfigure.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{68}{subfigure.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{68}{subfigure.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2.4}聚类参数的影响}{69}{subsubsection.4.5.2.4}\protected@file@percent }
+\@writefile{lof}{\cftsetpnumwidth {\widthof {70}-1bp}}
+\newlabel{cm_fig:北京数据集-ratios-ep}{{4-6(a)}{70}{Subfigure 第四章 4-6(a)}{subfigure.4-6.1}{}}
 \newlabel{sub@cm_fig:北京数据集-ratios-ep}{{(a)}{(a)}{Subfigure 第四章 4-6(a)\relax }{subfigure.4-6.1}{}}
-\newlabel{cm_fig:北京数据集-time-ep}{{4-6(b)}{69}{Subfigure 第四章 4-6(b)}{subfigure.4-6.2}{}}
+\newlabel{cm_fig:北京数据集-time-ep}{{4-6(b)}{70}{Subfigure 第四章 4-6(b)}{subfigure.4-6.2}{}}
 \newlabel{sub@cm_fig:北京数据集-time-ep}{{(b)}{(b)}{Subfigure 第四章 4-6(b)\relax }{subfigure.4-6.2}{}}
-\newlabel{cm_fig:波尔图数据集-ratios-ep}{{4-6(c)}{69}{Subfigure 第四章 4-6(c)}{subfigure.4-6.3}{}}
+\newlabel{cm_fig:波尔图数据集-ratios-ep}{{4-6(c)}{70}{Subfigure 第四章 4-6(c)}{subfigure.4-6.3}{}}
 \newlabel{sub@cm_fig:波尔图数据集-ratios-ep}{{(c)}{(c)}{Subfigure 第四章 4-6(c)\relax }{subfigure.4-6.3}{}}
-\newlabel{cm_fig:波尔图数据集-time-ep}{{4-6(d)}{69}{Subfigure 第四章 4-6(d)}{subfigure.4-6.4}{}}
+\newlabel{cm_fig:波尔图数据集-time-ep}{{4-6(d)}{70}{Subfigure 第四章 4-6(d)}{subfigure.4-6.4}{}}
 \newlabel{sub@cm_fig:波尔图数据集-time-ep}{{(d)}{(d)}{Subfigure 第四章 4-6(d)\relax }{subfigure.4-6.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4-6}{\ignorespaces SCAN聚类结构相似度参数的影响。\subref {cm_fig:北京数据集-ratios-ep} 北京数据集上的命中率 \subref {cm_fig:北京数据集-time-ep} 北京数据集上的运行时间 \subref {cm_fig:波尔图数据集-ratios-ep} 波尔图数据集上的命中率 \subref {cm_fig:波尔图数据集-time-ep} 波尔图数据集上的运行时间}}{69}{figure.caption.32}\protected@file@percent }
-\newlabel{cm_fig:ep}{{4-6}{69}{SCAN聚类结构相似度参数的影响。\subref {cm_fig:北京数据集-ratios-ep} 北京数据集上的命中率 \subref {cm_fig:北京数据集-time-ep} 北京数据集上的运行时间 \subref {cm_fig:波尔图数据集-ratios-ep} 波尔图数据集上的命中率 \subref {cm_fig:波尔图数据集-time-ep} 波尔图数据集上的运行时间}{figure.caption.32}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{69}{subfigure.6.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{69}{subfigure.6.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{69}{subfigure.6.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{69}{subfigure.6.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}\textcolor {red}{\ttfamily  本章小结}}{69}{section.4.6}\protected@file@percent }
-\newlabel{cm_sec:conclusion}{{4.6}{69}{\shad {本章小结}}{section.4.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4-6}{\ignorespaces SCAN聚类结构相似度参数的影响。\subref {cm_fig:北京数据集-ratios-ep} 北京数据集上的命中率 \subref {cm_fig:北京数据集-time-ep} 北京数据集上的运行时间 \subref {cm_fig:波尔图数据集-ratios-ep} 波尔图数据集上的命中率 \subref {cm_fig:波尔图数据集-time-ep} 波尔图数据集上的运行时间}}{70}{figure.caption.32}\protected@file@percent }
+\newlabel{cm_fig:ep}{{4-6}{70}{SCAN聚类结构相似度参数的影响。\subref {cm_fig:北京数据集-ratios-ep} 北京数据集上的命中率 \subref {cm_fig:北京数据集-time-ep} 北京数据集上的运行时间 \subref {cm_fig:波尔图数据集-ratios-ep} 波尔图数据集上的命中率 \subref {cm_fig:波尔图数据集-time-ep} 波尔图数据集上的运行时间}{figure.caption.32}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{70}{subfigure.6.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{70}{subfigure.6.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{70}{subfigure.6.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{70}{subfigure.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}\textcolor {red}{\ttfamily  本章小结}}{70}{section.4.6}\protected@file@percent }
+\newlabel{cm_sec:conclusion}{{4.6}{70}{\shad {本章小结}}{section.4.6}{}}
 \citation{DBLP:conf/icde/ChenSJ0K20,DBLP:journals/vldb/ShangCWJZK18,DBLP:conf/ijcai/ChenSFK21,DBLP:journals/tkde/ShangCZJWK19}
 \citation{DBLP:journals/pvldb/Xu0B20,DBLP:conf/dasfaa/ChaoHLZ021,react}
 \citation{DBLP:conf/sigmod/FaloutsosRM94,DBLP:journals/pvldb/AssentWKKS09}
 \citation{DBLP:conf/icde/RongLSWLD17,DBLP:journals/pvldb/XieLP17}
-\pp@pagectr{footnote}{21}{171}{71}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第五章}轨迹关系计算：面向大规模移动对象的暴露接触搜索}{71}{chapter.5}\protected@file@percent }
+\pp@pagectr{footnote}{21}{173}{72}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第五章}轨迹关系计算：面向大规模移动对象的暴露接触搜索}{72}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{cha:contact}{{第五章}{71}{轨迹关系计算：面向大规模移动对象的暴露接触搜索}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}引言}{71}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}动态轨迹数据中的暴露接触搜索问题背景}{71}{subsection.5.1.1}\protected@file@percent }
+\newlabel{cha:contact}{{第五章}{72}{轨迹关系计算：面向大规模移动对象的暴露接触搜索}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}引言}{72}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}动态轨迹数据中的暴露接触搜索问题背景}{72}{subsection.5.1.1}\protected@file@percent }
 \citation{DBLP:journals/information/AlarabiBHA21,DBLP:conf/dasfaa/ChaoHLZ021}
 \citation{DBLP:journals/corr/abs-2004-06653,DBLP:ptop}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}持续暴露接触搜索模型与关键技术挑战}{72}{subsection.5.1.2}\protected@file@percent }
-\@writefile{lof}{\cftsetpnumwidth {\widthof {73}-1bp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5-1}{\ignorespaces 持续暴露接触搜索示例}}{73}{figure.caption.33}\protected@file@percent }
-\newlabel{contact_fig:intro}{{5-1}{73}{持续暴露接触搜索示例}{figure.caption.33}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}问题描述}{74}{section.5.2}\protected@file@percent }
-\@writefile{lot}{\cftsetpnumwidth {\widthof {74}-1bp}}
-\@writefile{lot}{\contentsline {table}{\numberline {5-1}{\ignorespaces 主要符号解释}}{74}{table.caption.34}\protected@file@percent }
-\newlabel{contact_tab:symbols}{{5-1}{74}{主要符号解释}{table.caption.34}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}精确遍历算法}{75}{section.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}精确分组处理算法}{75}{section.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}持续暴露接触搜索模型与关键技术挑战}{73}{subsection.5.1.2}\protected@file@percent }
+\@writefile{lof}{\cftsetpnumwidth {\widthof {74}-1bp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5-1}{\ignorespaces 持续暴露接触搜索示例}}{74}{figure.caption.33}\protected@file@percent }
+\newlabel{contact_fig:intro}{{5-1}{74}{持续暴露接触搜索示例}{figure.caption.33}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}问题描述}{75}{section.5.2}\protected@file@percent }
+\@writefile{lot}{\cftsetpnumwidth {\widthof {75}-1bp}}
+\@writefile{lot}{\contentsline {table}{\numberline {5-1}{\ignorespaces 主要符号解释}}{75}{table.caption.34}\protected@file@percent }
+\newlabel{contact_tab:symbols}{{5-1}{75}{主要符号解释}{table.caption.34}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}精确遍历算法}{76}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}精确分组处理算法}{76}{section.5.4}\protected@file@percent }
 \citation{DBLP:journals/pami/TahaH15}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}组距离}{76}{subsection.5.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}分组划分}{76}{subsection.5.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}预检查策略}{77}{subsection.5.4.3}\protected@file@percent }
-\@writefile{lof}{\cftsetpnumwidth {\widthof {77}-1bp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5-2}{\ignorespaces 潜在的近距离接触候选集}}{77}{figure.caption.35}\protected@file@percent }
-\newlabel{contact_fig:group}{{5-2}{77}{潜在的近距离接触候选集}{figure.caption.35}{}}
-\newlabel{contact_eq:pre-check}{{5-1}{78}{预检查策略}{equation.5.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}算法细节}{78}{subsection.5.4.4}\protected@file@percent }
-\@writefile{loa}{\contentsline {algocf}{\numberline {5-1}{\ignorespaces 精确分组处理算法}}{79}{algocf.5-1}\protected@file@percent }
-\newlabel{contact_alg:EGP}{{5-1}{79}{算法细节}{algocf.5-1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.5}时间复杂度分析}{79}{subsection.5.4.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}近似分组处理算法}{80}{section.5.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}首尾优先检查策略}{80}{subsection.5.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.2}跳跃检查}{81}{subsection.5.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.3}算法细节}{81}{subsection.5.5.3}\protected@file@percent }
-\@writefile{loa}{\contentsline {algocf}{\numberline {5-2}{\ignorespaces 近似分组处理算法}}{82}{algocf.5-2}\protected@file@percent }
-\newlabel{contact_alg:AGP}{{5-2}{82}{算法细节}{algocf.5-2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.4}时间复杂度分析}{82}{subsection.5.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}实验研究}{83}{section.5.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.1}实验设置}{83}{subsection.5.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.1.1}数据准备}{83}{subsubsection.5.6.1.1}\protected@file@percent }
-\@writefile{lot}{\cftsetpnumwidth {\widthof {83}-1bp}}
-\@writefile{lot}{\contentsline {table}{\numberline {5-2}{\ignorespaces 评估参数设定}}{83}{table.caption.38}\protected@file@percent }
-\newlabel{contact_tb:para}{{5-2}{83}{评估参数设定}{table.caption.38}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.1.2}算法评估}{84}{subsubsection.5.6.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}组距离}{77}{subsection.5.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}分组划分}{77}{subsection.5.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}预检查策略}{78}{subsection.5.4.3}\protected@file@percent }
+\@writefile{lof}{\cftsetpnumwidth {\widthof {78}-1bp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5-2}{\ignorespaces 潜在的近距离接触候选集}}{78}{figure.caption.35}\protected@file@percent }
+\newlabel{contact_fig:group}{{5-2}{78}{潜在的近距离接触候选集}{figure.caption.35}{}}
+\newlabel{contact_eq:pre-check}{{5-1}{79}{预检查策略}{equation.5.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}算法细节}{79}{subsection.5.4.4}\protected@file@percent }
+\@writefile{loa}{\contentsline {algocf}{\numberline {5-1}{\ignorespaces 精确分组处理算法}}{80}{algocf.5-1}\protected@file@percent }
+\newlabel{contact_alg:EGP}{{5-1}{80}{算法细节}{algocf.5-1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.5}时间复杂度分析}{80}{subsection.5.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}近似分组处理算法}{81}{section.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}首尾优先检查策略}{81}{subsection.5.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.2}跳跃检查}{82}{subsection.5.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.3}算法细节}{82}{subsection.5.5.3}\protected@file@percent }
+\@writefile{loa}{\contentsline {algocf}{\numberline {5-2}{\ignorespaces 近似分组处理算法}}{83}{algocf.5-2}\protected@file@percent }
+\newlabel{contact_alg:AGP}{{5-2}{83}{算法细节}{algocf.5-2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.4}时间复杂度分析}{83}{subsection.5.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}实验研究}{84}{section.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.1}实验设置}{84}{subsection.5.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.1.1}数据准备}{84}{subsubsection.5.6.1.1}\protected@file@percent }
 \@writefile{lot}{\cftsetpnumwidth {\widthof {84}-1bp}}
-\@writefile{lot}{\contentsline {table}{\numberline {5-3}{\ignorespaces 比较算法}}{84}{table.caption.39}\protected@file@percent }
-\newlabel{contact_tb:compared_alg}{{5-3}{84}{比较算法}{table.caption.39}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.1.3}实验环境}{84}{subsubsection.5.6.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.2}实验结果与分析}{84}{subsection.5.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.2.1}查询对象数量的影响}{84}{subsubsection.5.6.2.1}\protected@file@percent }
-\@writefile{lof}{\cftsetpnumwidth {\widthof {85}-1bp}}
-\newlabel{contact_北京-Q-CE}{{5-3(a)}{85}{Subfigure 第五章 5-3(a)}{subfigure.5-3.1}{}}
-\newlabel{sub@contact_北京-Q-CE}{{(a)}{(a)}{Subfigure 第五章 5-3(a)\relax }{subfigure.5-3.1}{}}
-\newlabel{contact_北京-Q-CPU}{{5-3(b)}{85}{Subfigure 第五章 5-3(b)}{subfigure.5-3.2}{}}
-\newlabel{sub@contact_北京-Q-CPU}{{(b)}{(b)}{Subfigure 第五章 5-3(b)\relax }{subfigure.5-3.2}{}}
-\newlabel{contact_波尔图-Q-CE}{{5-3(c)}{85}{Subfigure 第五章 5-3(c)}{subfigure.5-3.3}{}}
-\newlabel{sub@contact_波尔图-Q-CE}{{(c)}{(c)}{Subfigure 第五章 5-3(c)\relax }{subfigure.5-3.3}{}}
-\newlabel{contact_波尔图-Q-CPU}{{5-3(d)}{85}{Subfigure 第五章 5-3(d)}{subfigure.5-3.4}{}}
-\newlabel{sub@contact_波尔图-Q-CPU}{{(d)}{(d)}{Subfigure 第五章 5-3(d)\relax }{subfigure.5-3.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5-3}{\ignorespaces 查询对象数量的影响。 \subref {contact_北京-Q-CE} 北京数据集上暴露接触案例数量；\subref {contact_北京-Q-CPU} 北京数据集上算法运行时间；\subref {contact_波尔图-Q-CE} 波尔图数据集上暴露接触案例数量；\subref {contact_波尔图-Q-CPU} 波尔图数据集上算法运行时间}}{85}{figure.caption.40}\protected@file@percent }
-\newlabel{contact_img:queryNum}{{5-3}{85}{查询对象数量的影响。 \subref {contact_北京-Q-CE} 北京数据集上暴露接触案例数量；\subref {contact_北京-Q-CPU} 北京数据集上算法运行时间；\subref {contact_波尔图-Q-CE} 波尔图数据集上暴露接触案例数量；\subref {contact_波尔图-Q-CPU} 波尔图数据集上算法运行时间}{figure.caption.40}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{85}{subfigure.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{85}{subfigure.3.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{85}{subfigure.3.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{85}{subfigure.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.2.2}距离阈值的影响}{86}{subsubsection.5.6.2.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5-2}{\ignorespaces 评估参数设定}}{84}{table.caption.38}\protected@file@percent }
+\newlabel{contact_tb:para}{{5-2}{84}{评估参数设定}{table.caption.38}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.1.2}算法评估}{85}{subsubsection.5.6.1.2}\protected@file@percent }
+\@writefile{lot}{\cftsetpnumwidth {\widthof {85}-1bp}}
+\@writefile{lot}{\contentsline {table}{\numberline {5-3}{\ignorespaces 比较算法}}{85}{table.caption.39}\protected@file@percent }
+\newlabel{contact_tb:compared_alg}{{5-3}{85}{比较算法}{table.caption.39}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.1.3}实验环境}{85}{subsubsection.5.6.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.2}实验结果与分析}{85}{subsection.5.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.2.1}查询对象数量的影响}{85}{subsubsection.5.6.2.1}\protected@file@percent }
 \@writefile{lof}{\cftsetpnumwidth {\widthof {86}-1bp}}
-\newlabel{contact_北京-ep-CE}{{5-4(a)}{86}{Subfigure 第五章 5-4(a)}{subfigure.5-4.1}{}}
+\newlabel{contact_北京-Q-CE}{{5-3(a)}{86}{Subfigure 第五章 5-3(a)}{subfigure.5-3.1}{}}
+\newlabel{sub@contact_北京-Q-CE}{{(a)}{(a)}{Subfigure 第五章 5-3(a)\relax }{subfigure.5-3.1}{}}
+\newlabel{contact_北京-Q-CPU}{{5-3(b)}{86}{Subfigure 第五章 5-3(b)}{subfigure.5-3.2}{}}
+\newlabel{sub@contact_北京-Q-CPU}{{(b)}{(b)}{Subfigure 第五章 5-3(b)\relax }{subfigure.5-3.2}{}}
+\newlabel{contact_波尔图-Q-CE}{{5-3(c)}{86}{Subfigure 第五章 5-3(c)}{subfigure.5-3.3}{}}
+\newlabel{sub@contact_波尔图-Q-CE}{{(c)}{(c)}{Subfigure 第五章 5-3(c)\relax }{subfigure.5-3.3}{}}
+\newlabel{contact_波尔图-Q-CPU}{{5-3(d)}{86}{Subfigure 第五章 5-3(d)}{subfigure.5-3.4}{}}
+\newlabel{sub@contact_波尔图-Q-CPU}{{(d)}{(d)}{Subfigure 第五章 5-3(d)\relax }{subfigure.5-3.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5-3}{\ignorespaces 查询对象数量的影响。 \subref {contact_北京-Q-CE} 北京数据集上暴露接触案例数量；\subref {contact_北京-Q-CPU} 北京数据集上算法运行时间；\subref {contact_波尔图-Q-CE} 波尔图数据集上暴露接触案例数量；\subref {contact_波尔图-Q-CPU} 波尔图数据集上算法运行时间}}{86}{figure.caption.40}\protected@file@percent }
+\newlabel{contact_img:queryNum}{{5-3}{86}{查询对象数量的影响。 \subref {contact_北京-Q-CE} 北京数据集上暴露接触案例数量；\subref {contact_北京-Q-CPU} 北京数据集上算法运行时间；\subref {contact_波尔图-Q-CE} 波尔图数据集上暴露接触案例数量；\subref {contact_波尔图-Q-CPU} 波尔图数据集上算法运行时间}{figure.caption.40}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{86}{subfigure.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{86}{subfigure.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{86}{subfigure.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{86}{subfigure.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.2.2}距离阈值的影响}{87}{subsubsection.5.6.2.2}\protected@file@percent }
+\@writefile{lof}{\cftsetpnumwidth {\widthof {87}-1bp}}
+\newlabel{contact_北京-ep-CE}{{5-4(a)}{87}{Subfigure 第五章 5-4(a)}{subfigure.5-4.1}{}}
 \newlabel{sub@contact_北京-ep-CE}{{(a)}{(a)}{Subfigure 第五章 5-4(a)\relax }{subfigure.5-4.1}{}}
-\newlabel{contact_北京-ep-CPU}{{5-4(b)}{86}{Subfigure 第五章 5-4(b)}{subfigure.5-4.2}{}}
+\newlabel{contact_北京-ep-CPU}{{5-4(b)}{87}{Subfigure 第五章 5-4(b)}{subfigure.5-4.2}{}}
 \newlabel{sub@contact_北京-ep-CPU}{{(b)}{(b)}{Subfigure 第五章 5-4(b)\relax }{subfigure.5-4.2}{}}
-\newlabel{contact_波尔图-ep-CE}{{5-4(c)}{86}{Subfigure 第五章 5-4(c)}{subfigure.5-4.3}{}}
+\newlabel{contact_波尔图-ep-CE}{{5-4(c)}{87}{Subfigure 第五章 5-4(c)}{subfigure.5-4.3}{}}
 \newlabel{sub@contact_波尔图-ep-CE}{{(c)}{(c)}{Subfigure 第五章 5-4(c)\relax }{subfigure.5-4.3}{}}
-\newlabel{contact_波尔图-ep-CPU}{{5-4(d)}{86}{Subfigure 第五章 5-4(d)}{subfigure.5-4.4}{}}
+\newlabel{contact_波尔图-ep-CPU}{{5-4(d)}{87}{Subfigure 第五章 5-4(d)}{subfigure.5-4.4}{}}
 \newlabel{sub@contact_波尔图-ep-CPU}{{(d)}{(d)}{Subfigure 第五章 5-4(d)\relax }{subfigure.5-4.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5-4}{\ignorespaces 距离阈值的影响。 \subref {contact_北京-ep-CE} 北京数据集上暴露接触案例数量；\subref {contact_北京-ep-CPU} 北京数据集上算法运行时间；\subref {contact_波尔图-ep-CE} 波尔图数据集上暴露接触案例数量；\subref {contact_波尔图-ep-CPU} 波尔图数据集上算法运行时间}}{86}{figure.caption.41}\protected@file@percent }
-\newlabel{contact_img:ep}{{5-4}{86}{距离阈值的影响。 \subref {contact_北京-ep-CE} 北京数据集上暴露接触案例数量；\subref {contact_北京-ep-CPU} 北京数据集上算法运行时间；\subref {contact_波尔图-ep-CE} 波尔图数据集上暴露接触案例数量；\subref {contact_波尔图-ep-CPU} 波尔图数据集上算法运行时间}{figure.caption.41}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{86}{subfigure.4.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{86}{subfigure.4.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{86}{subfigure.4.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{86}{subfigure.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.2.3}接触持续时长阈值的影响}{87}{subsubsection.5.6.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.2.4}近似算法的评估}{87}{subsubsection.5.6.2.4}\protected@file@percent }
-\@writefile{lof}{\cftsetpnumwidth {\widthof {88}-1bp}}
-\newlabel{contact_北京-k-CE}{{5-5(a)}{88}{Subfigure 第五章 5-5(a)}{subfigure.5-5.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5-4}{\ignorespaces 距离阈值的影响。 \subref {contact_北京-ep-CE} 北京数据集上暴露接触案例数量；\subref {contact_北京-ep-CPU} 北京数据集上算法运行时间；\subref {contact_波尔图-ep-CE} 波尔图数据集上暴露接触案例数量；\subref {contact_波尔图-ep-CPU} 波尔图数据集上算法运行时间}}{87}{figure.caption.41}\protected@file@percent }
+\newlabel{contact_img:ep}{{5-4}{87}{距离阈值的影响。 \subref {contact_北京-ep-CE} 北京数据集上暴露接触案例数量；\subref {contact_北京-ep-CPU} 北京数据集上算法运行时间；\subref {contact_波尔图-ep-CE} 波尔图数据集上暴露接触案例数量；\subref {contact_波尔图-ep-CPU} 波尔图数据集上算法运行时间}{figure.caption.41}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{87}{subfigure.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{87}{subfigure.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{87}{subfigure.4.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{87}{subfigure.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.2.3}接触持续时长阈值的影响}{88}{subsubsection.5.6.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.2.4}近似算法的评估}{88}{subsubsection.5.6.2.4}\protected@file@percent }
+\@writefile{lof}{\cftsetpnumwidth {\widthof {89}-1bp}}
+\newlabel{contact_北京-k-CE}{{5-5(a)}{89}{Subfigure 第五章 5-5(a)}{subfigure.5-5.1}{}}
 \newlabel{sub@contact_北京-k-CE}{{(a)}{(a)}{Subfigure 第五章 5-5(a)\relax }{subfigure.5-5.1}{}}
-\newlabel{contact_北京-k-CPU}{{5-5(b)}{88}{Subfigure 第五章 5-5(b)}{subfigure.5-5.2}{}}
+\newlabel{contact_北京-k-CPU}{{5-5(b)}{89}{Subfigure 第五章 5-5(b)}{subfigure.5-5.2}{}}
 \newlabel{sub@contact_北京-k-CPU}{{(b)}{(b)}{Subfigure 第五章 5-5(b)\relax }{subfigure.5-5.2}{}}
-\newlabel{contact_波尔图-k-CE}{{5-5(c)}{88}{Subfigure 第五章 5-5(c)}{subfigure.5-5.3}{}}
+\newlabel{contact_波尔图-k-CE}{{5-5(c)}{89}{Subfigure 第五章 5-5(c)}{subfigure.5-5.3}{}}
 \newlabel{sub@contact_波尔图-k-CE}{{(c)}{(c)}{Subfigure 第五章 5-5(c)\relax }{subfigure.5-5.3}{}}
-\newlabel{contact_波尔图-k-CPU}{{5-5(d)}{88}{Subfigure 第五章 5-5(d)}{subfigure.5-5.4}{}}
+\newlabel{contact_波尔图-k-CPU}{{5-5(d)}{89}{Subfigure 第五章 5-5(d)}{subfigure.5-5.4}{}}
 \newlabel{sub@contact_波尔图-k-CPU}{{(d)}{(d)}{Subfigure 第五章 5-5(d)\relax }{subfigure.5-5.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5-5}{\ignorespaces 接触持续时长阈值的影响。\subref {contact_北京-k-CE} 北京数据集上暴露接触案例数量；\subref {contact_北京-k-CPU} 北京数据集上算法运行时间；\subref {contact_波尔图-k-CE} 波尔图数据集上暴露接触案例数量；\subref {contact_波尔图-k-CPU} 波尔图数据集上算法运行时间}}{88}{figure.caption.42}\protected@file@percent }
-\newlabel{contact_img:k}{{5-5}{88}{接触持续时长阈值的影响。\subref {contact_北京-k-CE} 北京数据集上暴露接触案例数量；\subref {contact_北京-k-CPU} 北京数据集上算法运行时间；\subref {contact_波尔图-k-CE} 波尔图数据集上暴露接触案例数量；\subref {contact_波尔图-k-CPU} 波尔图数据集上算法运行时间}{figure.caption.42}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{88}{subfigure.5.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{88}{subfigure.5.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{88}{subfigure.5.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{88}{subfigure.5.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5-5}{\ignorespaces 接触持续时长阈值的影响。\subref {contact_北京-k-CE} 北京数据集上暴露接触案例数量；\subref {contact_北京-k-CPU} 北京数据集上算法运行时间；\subref {contact_波尔图-k-CE} 波尔图数据集上暴露接触案例数量；\subref {contact_波尔图-k-CPU} 波尔图数据集上算法运行时间}}{89}{figure.caption.42}\protected@file@percent }
+\newlabel{contact_img:k}{{5-5}{89}{接触持续时长阈值的影响。\subref {contact_北京-k-CE} 北京数据集上暴露接触案例数量；\subref {contact_北京-k-CPU} 北京数据集上算法运行时间；\subref {contact_波尔图-k-CE} 波尔图数据集上暴露接触案例数量；\subref {contact_波尔图-k-CPU} 波尔图数据集上算法运行时间}{figure.caption.42}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{89}{subfigure.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{89}{subfigure.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{89}{subfigure.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{89}{subfigure.5.4}\protected@file@percent }
 \@writefile{lof}{\cftsetpnumwidth {\widthof {89}-1bp}}
 \newlabel{AGP-Q}{{5-6(a)}{89}{Subfigure 第五章 5-6(a)}{subfigure.5-6.1}{}}
 \newlabel{sub@AGP-Q}{{(a)}{(a)}{Subfigure 第五章 5-6(a)\relax }{subfigure.5-6.1}{}}
@@ -604,8 +609,7 @@
 \newlabel{contact_img:app}{{5-6}{89}{近似算法的评估。\subref {AGP-Q} 变化查询对象数目；\subref {AGP-ep} 变化接触阈值}{figure.caption.43}{}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{89}{subfigure.6.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{89}{subfigure.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.2.5}预检查策略的评估}{89}{subsubsection.5.6.2.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.7}\textcolor {red}{\ttfamily  本章小结}}{89}{section.5.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.2.5}预检查策略的评估}{90}{subsubsection.5.6.2.5}\protected@file@percent }
 \@writefile{lof}{\cftsetpnumwidth {\widthof {90}-1bp}}
 \newlabel{北京-pre-CPU}{{5-7(a)}{90}{Subfigure 第五章 5-7(a)}{subfigure.5-7.1}{}}
 \newlabel{sub@北京-pre-CPU}{{(a)}{(a)}{Subfigure 第五章 5-7(a)\relax }{subfigure.5-7.1}{}}
@@ -615,15 +619,16 @@
 \newlabel{contact_img:precheck}{{5-7}{90}{预检查策略的评估。\subref {北京-pre-CPU} 北京数据集；\subref {波尔图-pre-CPU} 波尔图数据集}{figure.caption.44}{}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{90}{subfigure.7.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {波尔图}}}{90}{subfigure.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.7}\textcolor {red}{\ttfamily  本章小结}}{90}{section.5.7}\protected@file@percent }
 \citation{DBLP:journals/pvldb/Xu0B20,DBLP:journals/tkde/ShangCZJWK19,DBLP:journals/vldb/ShangCWJZK18,ding2025parallel}
-\pp@pagectr{footnote}{22}{213}{92}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第六章}轨迹关系计算：运动范围感知的轨迹交集相似度连接}{92}{chapter.6}\protected@file@percent }
+\pp@pagectr{footnote}{22}{215}{93}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第六章}轨迹关系计算：运动范围感知的轨迹交集相似度连接}{93}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{cha:join}{{第六章}{92}{轨迹关系计算：运动范围感知的轨迹交集相似度连接}{chapter.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}引言}{92}{section.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}城市计算中的轨迹相似度连接问题背景}{92}{subsection.6.1.1}\protected@file@percent }
+\newlabel{cha:join}{{第六章}{93}{轨迹关系计算：运动范围感知的轨迹交集相似度连接}{chapter.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}引言}{93}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}城市计算中的轨迹相似度连接问题背景}{93}{subsection.6.1.1}\protected@file@percent }
 \citation{DBLP:journals/air/KongCHWX23}
 \citation{DBLP:conf/icde/SistlaWCD97,DBLP:conf/sigmod/PatelCC04,DBLP:conf/sigmod/SaltenisJLL00,DBLP:conf/icde/ZhangLRB08,DBLP:journals/vldb/ZhangQLWW12}
 \citation{DBLP:conf/mdm/BakalovHKT05}
@@ -631,154 +636,154 @@
 \citation{DBLP:journals/ral/VishnuARMB23,DBLP:conf/ijcai/LiCS20}
 \citation{forrest2022moving}
 \citation{DBLP:conf/ijcai/LiCSWLK022}
-\@writefile{lof}{\cftsetpnumwidth {\widthof {95}-1bp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-1}{\ignorespaces 交集相似度连接示例}}{95}{figure.caption.45}\protected@file@percent }
-\newlabel{fig:intro}{{6-1}{95}{交集相似度连接示例}{figure.caption.45}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}面向稀疏轨迹的交集相似度连接模型与计算挑战}{95}{subsection.6.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}问题描述}{96}{section.6.2}\protected@file@percent }
-\newlabel{join_sec:statement}{{6.2}{96}{问题描述}{section.6.2}{}}
+\@writefile{lof}{\cftsetpnumwidth {\widthof {96}-1bp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-1}{\ignorespaces 交集相似度连接示例}}{96}{figure.caption.45}\protected@file@percent }
+\newlabel{fig:intro}{{6-1}{96}{交集相似度连接示例}{figure.caption.45}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}面向稀疏轨迹的交集相似度连接模型与计算挑战}{96}{subsection.6.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}问题描述}{97}{section.6.2}\protected@file@percent }
+\newlabel{join_sec:statement}{{6.2}{97}{问题描述}{section.6.2}{}}
 \citation{DBLP:conf/ssd/PfoserJ99,DBLP:conf/edbt/ZhangRSL21,trajcevski2010uncertain}
-\@writefile{lot}{\cftsetpnumwidth {\widthof {97}-1bp}}
-\@writefile{lot}{\contentsline {table}{\numberline {6-1}{\ignorespaces 主要符号解释}}{97}{table.caption.46}\protected@file@percent }
-\newlabel{tab:notation}{{6-1}{97}{主要符号解释}{table.caption.46}{}}
-\newlabel{eq:timestamped motion range}{{6-1}{97}{时间点运动范围}{equation.6.1}{}}
-\@writefile{lof}{\cftsetpnumwidth {\widthof {98}-1bp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-2}{\ignorespaces 时间点运动范围示例}}{98}{figure.caption.47}\protected@file@percent }
-\newlabel{fig:lens}{{6-2}{98}{时间点运动范围示例}{figure.caption.47}{}}
-\newlabel{eq: time-point intersection similarity}{{6-2}{98}{时间点交集相似度}{equation.6.2}{}}
-\newlabel{defi:interval similarity}{{6.5}{98}{时间段交集相似度}{definition.6.5}{}}
-\newlabel{eq:interval intersection similarity}{{6-3}{98}{时间段交集相似度}{equation.6.3}{}}
+\@writefile{lot}{\cftsetpnumwidth {\widthof {98}-1bp}}
+\@writefile{lot}{\contentsline {table}{\numberline {6-1}{\ignorespaces 主要符号解释}}{98}{table.caption.46}\protected@file@percent }
+\newlabel{tab:notation}{{6-1}{98}{主要符号解释}{table.caption.46}{}}
+\newlabel{eq:timestamped motion range}{{6-1}{98}{时间点运动范围}{equation.6.1}{}}
 \@writefile{lof}{\cftsetpnumwidth {\widthof {99}-1bp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-3}{\ignorespaces \textcolor {red}{\ttfamily  时间段交集相似度示例}}}{99}{figure.caption.48}\protected@file@percent }
-\newlabel{fig:relaxed similarity example}{{6-3}{99}{\shad {时间段交集相似度示例}}{figure.caption.48}{}}
-\newlabel{defi:relaxed similarity}{{6.6}{99}{放宽的时间段交集相似度}{definition.6.6}{}}
-\newlabel{eq:relaxed similarity}{{6-4}{99}{放宽的时间段交集相似度}{equation.6.4}{}}
-\newlabel{defi:Tb-IS-Join}{{6.7}{99}{交集相似度连接问题}{definition.6.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-2}{\ignorespaces 时间点运动范围示例}}{99}{figure.caption.47}\protected@file@percent }
+\newlabel{fig:lens}{{6-2}{99}{时间点运动范围示例}{figure.caption.47}{}}
+\newlabel{eq: time-point intersection similarity}{{6-2}{99}{时间点交集相似度}{equation.6.2}{}}
+\newlabel{defi:interval similarity}{{6.5}{99}{时间段交集相似度}{definition.6.5}{}}
+\newlabel{eq:interval intersection similarity}{{6-3}{99}{时间段交集相似度}{equation.6.3}{}}
+\@writefile{lof}{\cftsetpnumwidth {\widthof {100}-1bp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-3}{\ignorespaces \textcolor {red}{\ttfamily  时间段交集相似度示例}}}{100}{figure.caption.48}\protected@file@percent }
+\newlabel{fig:relaxed similarity example}{{6-3}{100}{\shad {时间段交集相似度示例}}{figure.caption.48}{}}
+\newlabel{defi:relaxed similarity}{{6.6}{100}{放宽的时间段交集相似度}{definition.6.6}{}}
+\newlabel{eq:relaxed similarity}{{6-4}{100}{放宽的时间段交集相似度}{equation.6.4}{}}
+\newlabel{defi:Tb-IS-Join}{{6.7}{100}{交集相似度连接问题}{definition.6.7}{}}
 \citation{DBLP:conf/edbt/ZhangRSL21,trajcevski2010uncertain}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}时间段预检查}{100}{section.6.3}\protected@file@percent }
-\newlabel{defi:interval motion}{{6.8}{100}{时间段运动范围}{definition.6.8}{}}
-\newlabel{theorem:motion}{{6.1}{100}{}{theorem.6.1}{}}
-\newlabel{eq:ellipse}{{6-5}{100}{}{equation.6.5}{}}
-\newlabel{eq:center}{{6-6}{100}{}{equation.6.6}{}}
-\newlabel{eq:angle}{{6-7}{100}{}{equation.6.7}{}}
-\citation{DBLP:conf/sebd/CiacciaPRZ97,DBLP:conf/vldb/CiacciaPZ97}
-\@writefile{lof}{\cftsetpnumwidth {\widthof {101}-1bp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-4}{\ignorespaces 时间段运动范围示例}}{101}{figure.caption.49}\protected@file@percent }
-\newlabel{fig:ellipse}{{6-4}{101}{时间段运动范围示例}{figure.caption.49}{}}
-\newlabel{theorem:pre-checking}{{6.2}{101}{}{theorem.6.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}基于M*树的连接算法}{101}{section.6.4}\protected@file@percent }
-\newlabel{sec:baseLine}{{6.4}{101}{基于M*树的连接算法}{section.6.4}{}}
-\citation{DBLP:conf/edbt/ZhangRSL21,DBLP:conf/vldb/CiacciaPZ97}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}时间段预检查}{101}{section.6.3}\protected@file@percent }
+\newlabel{defi:interval motion}{{6.8}{101}{时间段运动范围}{definition.6.8}{}}
+\newlabel{theorem:motion}{{6.1}{101}{}{theorem.6.1}{}}
+\newlabel{eq:ellipse}{{6-5}{101}{}{equation.6.5}{}}
+\newlabel{eq:center}{{6-6}{101}{}{equation.6.6}{}}
+\newlabel{eq:angle}{{6-7}{101}{}{equation.6.7}{}}
+\citation{DBLP:conf/vldb/CiacciaPZ97}
 \@writefile{lof}{\cftsetpnumwidth {\widthof {102}-1bp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-5}{\ignorespaces M*树的结构示例}}{102}{figure.caption.50}\protected@file@percent }
-\newlabel{fig:m*树}{{6-5}{102}{M*树的结构示例}{figure.caption.50}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}M*树结构}{102}{subsection.6.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}交集检查}{102}{subsection.6.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.3}算法细节}{103}{subsection.6.4.3}\protected@file@percent }
-\@writefile{loa}{\contentsline {algocf}{\numberline {6-1}{\ignorespaces $MBJ(\mathcal  {A},\mathcal  {B},N_r, I,\epsilon ,\theta )$}}{103}{algocf.6-1}\protected@file@percent }
-\newlabel{alg:MBJ-Join}{{6-1}{103}{算法细节}{algocf.6-1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-4}{\ignorespaces 时间段运动范围示例}}{102}{figure.caption.49}\protected@file@percent }
+\newlabel{fig:ellipse}{{6-4}{102}{时间段运动范围示例}{figure.caption.49}{}}
+\newlabel{theorem:pre-checking}{{6.2}{102}{}{theorem.6.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}基于M*树的连接算法}{102}{section.6.4}\protected@file@percent }
+\newlabel{sec:baseLine}{{6.4}{102}{基于M*树的连接算法}{section.6.4}{}}
+\citation{DBLP:conf/edbt/ZhangRSL21,DBLP:conf/vldb/CiacciaPZ97}
+\@writefile{lof}{\cftsetpnumwidth {\widthof {103}-1bp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-5}{\ignorespaces M*树的结构示例}}{103}{figure.caption.50}\protected@file@percent }
+\newlabel{fig:m*树}{{6-5}{103}{M*树的结构示例}{figure.caption.50}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}M*树结构}{103}{subsection.6.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}交集检查}{103}{subsection.6.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.3}算法细节}{104}{subsection.6.4.3}\protected@file@percent }
+\@writefile{loa}{\contentsline {algocf}{\numberline {6-1}{\ignorespaces $MBJ(\mathcal  {A},\mathcal  {B},N_r, I,\epsilon ,\theta )$}}{104}{algocf.6-1}\protected@file@percent }
+\newlabel{alg:MBJ-Join}{{6-1}{104}{算法细节}{algocf.6-1}{}}
 \citation{omohundro1989five,DBLP:journals/jmlr/LiuMG06,DBLP:conf/uai/Moore00}
 \citation{DBLP:conf/sigmod/Guttman84}
 \citation{DBLP:journals/csur/Samet84}
-\citation{DBLP:conf/edbt/ZhangRSL21,DBLP:conf/sebd/CiacciaPRZ97,DBLP:conf/vldb/CiacciaPZ97}
+\citation{DBLP:conf/edbt/ZhangRSL21,DBLP:conf/vldb/CiacciaPZ97}
 \citation{DBLP:journals/corr/DolatshahHM15}
 \citation{DBLP:conf/edbt/ZhangRSL21}
 \citation{DBLP:conf/uai/Moore00}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.3.1}时间复杂度分析}{104}{subsubsection.6.4.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}基于混合球树的连接方法}{104}{section.6.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.1}基于混合球树的交集预检查}{104}{subsection.6.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.1.1}混合球树}{104}{subsubsection.6.5.1.1}\protected@file@percent }
-\newlabel{sec:hballtree}{{6.5.1.1}{104}{混合球树}{subsubsection.6.5.1.1}{}}
-\@writefile{lof}{\cftsetpnumwidth {\widthof {105}-1bp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-6}{\ignorespaces 混合球树结构示例}}{105}{figure.caption.52}\protected@file@percent }
-\newlabel{fig:ball树}{{6-6}{105}{混合球树结构示例}{figure.caption.52}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.1.2}混合球树的重新划分策略}{105}{subsubsection.6.5.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.2}剪枝增强的基于混合球树的连接}{106}{subsection.6.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.2.1}剪枝增强策略}{106}{subsubsection.6.5.2.1}\protected@file@percent }
-\newlabel{eq:t-IS-ub}{{6-8}{106}{剪枝增强策略}{equation.6.8}{}}
-\newlabel{eq:I-IS-ub1}{{6-9}{106}{剪枝增强策略}{equation.6.9}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.2.2}算法细节}{106}{subsubsection.6.5.2.2}\protected@file@percent }
-\@writefile{loa}{\contentsline {algocf}{\numberline {6-2}{\ignorespaces 基于 混合球树 的 连接}}{107}{algocf.6-2}\protected@file@percent }
-\newlabel{alg:ball filter}{{6-2}{107}{算法细节}{algocf.6-2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.3.1}时间复杂度分析}{105}{subsubsection.6.4.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}基于混合球树的连接方法}{105}{section.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.1}基于混合球树的交集预检查}{105}{subsection.6.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.1.1}混合球树}{105}{subsubsection.6.5.1.1}\protected@file@percent }
+\newlabel{sec:hballtree}{{6.5.1.1}{105}{混合球树}{subsubsection.6.5.1.1}{}}
+\@writefile{lof}{\cftsetpnumwidth {\widthof {106}-1bp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-6}{\ignorespaces 混合球树结构示例}}{106}{figure.caption.52}\protected@file@percent }
+\newlabel{fig:ball树}{{6-6}{106}{混合球树结构示例}{figure.caption.52}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.1.2}混合球树的重新划分策略}{106}{subsubsection.6.5.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.2}剪枝增强的基于混合球树的连接}{107}{subsection.6.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.2.1}剪枝增强策略}{107}{subsubsection.6.5.2.1}\protected@file@percent }
+\newlabel{eq:t-IS-ub}{{6-8}{107}{剪枝增强策略}{equation.6.8}{}}
+\newlabel{eq:I-IS-ub1}{{6-9}{107}{剪枝增强策略}{equation.6.9}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.2.2}算法细节}{107}{subsubsection.6.5.2.2}\protected@file@percent }
+\@writefile{loa}{\contentsline {algocf}{\numberline {6-2}{\ignorespaces 基于 混合球树 的 连接}}{108}{algocf.6-2}\protected@file@percent }
+\newlabel{alg:ball filter}{{6-2}{108}{算法细节}{algocf.6-2}{}}
 \citation{DBLP:conf/huc/ZhengLCXM08,DBLP:journals/debu/ZhengXM10}
 \citation{DBLP:journals/tits/Moreira-MatiasGFMD13}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.2.3}时间复杂度}{108}{subsubsection.6.5.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.6}实验研究}{108}{section.6.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.1}实验设置}{108}{subsection.6.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.1.1}数据准备}{108}{subsubsection.6.6.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.1.2}算法评估}{109}{subsubsection.6.6.1.2}\protected@file@percent }
-\@writefile{lot}{\cftsetpnumwidth {\widthof {109}-1bp}}
-\@writefile{lot}{\contentsline {table}{\numberline {6-2}{\ignorespaces 比较算法}}{109}{table.caption.54}\protected@file@percent }
-\newlabel{join_tb:compared_alg}{{6-2}{109}{比较算法}{table.caption.54}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.1.3}运行环境}{109}{subsubsection.6.6.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.2.3}时间复杂度}{109}{subsubsection.6.5.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}实验研究}{109}{section.6.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.1}实验设置}{109}{subsection.6.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.1.1}数据准备}{109}{subsubsection.6.6.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.1.2}算法评估}{110}{subsubsection.6.6.1.2}\protected@file@percent }
 \@writefile{lot}{\cftsetpnumwidth {\widthof {110}-1bp}}
-\@writefile{lot}{\contentsline {table}{\numberline {6-3}{\ignorespaces 评估参数设置}}{110}{table.caption.55}\protected@file@percent }
-\newlabel{tb:algorithm_para}{{6-3}{110}{评估参数设置}{table.caption.55}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.2}实验结果与分析}{110}{subsection.6.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.2.1}剪枝有效性评估}{110}{subsubsection.6.6.2.1}\protected@file@percent }
-\@writefile{lot}{\cftsetpnumwidth {\widthof {110}-1bp}}
-\@writefile{lot}{\contentsline {table}{\numberline {6-4}{\ignorespaces 剪枝性能}}{110}{table.caption.56}\protected@file@percent }
-\newlabel{tb:prune}{{6-4}{110}{剪枝性能}{table.caption.56}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.2.2}移动对象数目的影响}{110}{subsubsection.6.6.2.2}\protected@file@percent }
-\@writefile{lof}{\cftsetpnumwidth {\widthof {110}-1bp}}
-\newlabel{geo-num-ctime}{{6-7(a)}{110}{Subfigure 第六章 6-7(a)}{subfigure.6-7.1}{}}
-\newlabel{sub@geo-num-ctime}{{(a)}{(a)}{Subfigure 第六章 6-7(a)\relax }{subfigure.6-7.1}{}}
-\newlabel{pt-num-ctime}{{6-7(b)}{110}{Subfigure 第六章 6-7(b)}{subfigure.6-7.2}{}}
-\newlabel{sub@pt-num-ctime}{{(b)}{(b)}{Subfigure 第六章 6-7(b)\relax }{subfigure.6-7.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-7}{\ignorespaces 不同移动对象数目下的构建时间。 \subref {geo-num-ctime}: Geolife； \subref {pt-num-ctime}:波尔图}}{110}{figure.caption.57}\protected@file@percent }
-\newlabel{img:vary_num_ctime}{{6-7}{110}{不同移动对象数目下的构建时间。 \subref {geo-num-ctime}: Geolife； \subref {pt-num-ctime}:波尔图}{figure.caption.57}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{110}{subfigure.7.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{110}{subfigure.7.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6-2}{\ignorespaces 比较算法}}{110}{table.caption.54}\protected@file@percent }
+\newlabel{join_tb:compared_alg}{{6-2}{110}{比较算法}{table.caption.54}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.1.3}运行环境}{110}{subsubsection.6.6.1.3}\protected@file@percent }
+\@writefile{lot}{\cftsetpnumwidth {\widthof {111}-1bp}}
+\@writefile{lot}{\contentsline {table}{\numberline {6-3}{\ignorespaces 评估参数设置}}{111}{table.caption.55}\protected@file@percent }
+\newlabel{tb:algorithm_para}{{6-3}{111}{评估参数设置}{table.caption.55}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.2}实验结果与分析}{111}{subsection.6.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.2.1}剪枝有效性评估}{111}{subsubsection.6.6.2.1}\protected@file@percent }
+\@writefile{lot}{\cftsetpnumwidth {\widthof {111}-1bp}}
+\@writefile{lot}{\contentsline {table}{\numberline {6-4}{\ignorespaces 剪枝性能}}{111}{table.caption.56}\protected@file@percent }
+\newlabel{tb:prune}{{6-4}{111}{剪枝性能}{table.caption.56}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.2.2}移动对象数目的影响}{111}{subsubsection.6.6.2.2}\protected@file@percent }
 \@writefile{lof}{\cftsetpnumwidth {\widthof {111}-1bp}}
-\newlabel{geo-num-ftime}{{6-8(a)}{111}{Subfigure 第六章 6-8(a)}{subfigure.6-8.1}{}}
+\newlabel{geo-num-ctime}{{6-7(a)}{111}{Subfigure 第六章 6-7(a)}{subfigure.6-7.1}{}}
+\newlabel{sub@geo-num-ctime}{{(a)}{(a)}{Subfigure 第六章 6-7(a)\relax }{subfigure.6-7.1}{}}
+\newlabel{pt-num-ctime}{{6-7(b)}{111}{Subfigure 第六章 6-7(b)}{subfigure.6-7.2}{}}
+\newlabel{sub@pt-num-ctime}{{(b)}{(b)}{Subfigure 第六章 6-7(b)\relax }{subfigure.6-7.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-7}{\ignorespaces 不同移动对象数目下的构建时间。 \subref {geo-num-ctime}: Geolife； \subref {pt-num-ctime}:波尔图}}{111}{figure.caption.57}\protected@file@percent }
+\newlabel{img:vary_num_ctime}{{6-7}{111}{不同移动对象数目下的构建时间。 \subref {geo-num-ctime}: Geolife； \subref {pt-num-ctime}:波尔图}{figure.caption.57}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{111}{subfigure.7.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{111}{subfigure.7.2}\protected@file@percent }
+\@writefile{lof}{\cftsetpnumwidth {\widthof {112}-1bp}}
+\newlabel{geo-num-ftime}{{6-8(a)}{112}{Subfigure 第六章 6-8(a)}{subfigure.6-8.1}{}}
 \newlabel{sub@geo-num-ftime}{{(a)}{(a)}{Subfigure 第六章 6-8(a)\relax }{subfigure.6-8.1}{}}
-\newlabel{pt-num-ftime}{{6-8(b)}{111}{Subfigure 第六章 6-8(b)}{subfigure.6-8.2}{}}
+\newlabel{pt-num-ftime}{{6-8(b)}{112}{Subfigure 第六章 6-8(b)}{subfigure.6-8.2}{}}
 \newlabel{sub@pt-num-ftime}{{(b)}{(b)}{Subfigure 第六章 6-8(b)\relax }{subfigure.6-8.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-8}{\ignorespaces 不同 移动对象数目下的查询时间。 \subref {geo-num-ftime}:Geolife； \subref {pt-num-ftime}:波尔图}}{111}{figure.caption.58}\protected@file@percent }
-\newlabel{img:vary_num_ftime}{{6-8}{111}{不同 移动对象数目下的查询时间。 \subref {geo-num-ftime}:Geolife； \subref {pt-num-ftime}:波尔图}{figure.caption.58}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{111}{subfigure.8.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{111}{subfigure.8.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.2.3}特征数量的影响}{111}{subsubsection.6.6.2.3}\protected@file@percent }
-\@writefile{lof}{\cftsetpnumwidth {\widthof {112}-1bp}}
-\newlabel{geo-poi-ftime}{{6-9(a)}{112}{Subfigure 第六章 6-9(a)}{subfigure.6-9.1}{}}
-\newlabel{sub@geo-poi-ftime}{{(a)}{(a)}{Subfigure 第六章 6-9(a)\relax }{subfigure.6-9.1}{}}
-\newlabel{pt-poi-ftime}{{6-9(b)}{112}{Subfigure 第六章 6-9(b)}{subfigure.6-9.2}{}}
-\newlabel{sub@pt-poi-ftime}{{(b)}{(b)}{Subfigure 第六章 6-9(b)\relax }{subfigure.6-9.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-9}{\ignorespaces 兴趣点数量对运行时间的影响。 \subref {geo-poi-ftime}:Geolife； \subref {pt-poi-ftime}:波尔图}}{112}{figure.caption.59}\protected@file@percent }
-\newlabel{img:vary_poi_ftime}{{6-9}{112}{兴趣点数量对运行时间的影响。 \subref {geo-poi-ftime}:Geolife； \subref {pt-poi-ftime}:波尔图}{figure.caption.59}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{112}{subfigure.9.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{112}{subfigure.9.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.2.4}时间段的影响}{112}{subsubsection.6.6.2.4}\protected@file@percent }
-\@writefile{lof}{\cftsetpnumwidth {\widthof {112}-1bp}}
-\newlabel{geo-I-ftime}{{6-10(a)}{112}{Subfigure 第六章 6-10(a)}{subfigure.6-10.1}{}}
-\newlabel{sub@geo-I-ftime}{{(a)}{(a)}{Subfigure 第六章 6-10(a)\relax }{subfigure.6-10.1}{}}
-\newlabel{pt-I-ftime}{{6-10(b)}{112}{Subfigure 第六章 6-10(b)}{subfigure.6-10.2}{}}
-\newlabel{sub@pt-I-ftime}{{(b)}{(b)}{Subfigure 第六章 6-10(b)\relax }{subfigure.6-10.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-10}{\ignorespaces 时间段对运行时间的影响。 \subref {geo-I-ftime}:Geolife； \subref {pt-I-ftime}:波尔图}}{112}{figure.caption.60}\protected@file@percent }
-\newlabel{img:vary_I_ftime}{{6-10}{112}{时间段对运行时间的影响。 \subref {geo-I-ftime}:Geolife； \subref {pt-I-ftime}:波尔图}{figure.caption.60}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{112}{subfigure.10.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{112}{subfigure.10.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.2.5}放宽参数的影响}{113}{subsubsection.6.6.2.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-8}{\ignorespaces 不同 移动对象数目下的查询时间。 \subref {geo-num-ftime}:Geolife； \subref {pt-num-ftime}:波尔图}}{112}{figure.caption.58}\protected@file@percent }
+\newlabel{img:vary_num_ftime}{{6-8}{112}{不同 移动对象数目下的查询时间。 \subref {geo-num-ftime}:Geolife； \subref {pt-num-ftime}:波尔图}{figure.caption.58}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{112}{subfigure.8.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{112}{subfigure.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.2.3}特征数量的影响}{112}{subsubsection.6.6.2.3}\protected@file@percent }
 \@writefile{lof}{\cftsetpnumwidth {\widthof {113}-1bp}}
-\newlabel{geo-ep-ftime}{{6-11(a)}{113}{Subfigure 第六章 6-11(a)}{subfigure.6-11.1}{}}
+\newlabel{geo-poi-ftime}{{6-9(a)}{113}{Subfigure 第六章 6-9(a)}{subfigure.6-9.1}{}}
+\newlabel{sub@geo-poi-ftime}{{(a)}{(a)}{Subfigure 第六章 6-9(a)\relax }{subfigure.6-9.1}{}}
+\newlabel{pt-poi-ftime}{{6-9(b)}{113}{Subfigure 第六章 6-9(b)}{subfigure.6-9.2}{}}
+\newlabel{sub@pt-poi-ftime}{{(b)}{(b)}{Subfigure 第六章 6-9(b)\relax }{subfigure.6-9.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-9}{\ignorespaces 兴趣点数量对运行时间的影响。 \subref {geo-poi-ftime}:Geolife； \subref {pt-poi-ftime}:波尔图}}{113}{figure.caption.59}\protected@file@percent }
+\newlabel{img:vary_poi_ftime}{{6-9}{113}{兴趣点数量对运行时间的影响。 \subref {geo-poi-ftime}:Geolife； \subref {pt-poi-ftime}:波尔图}{figure.caption.59}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{113}{subfigure.9.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{113}{subfigure.9.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.2.4}时间段的影响}{113}{subsubsection.6.6.2.4}\protected@file@percent }
+\@writefile{lof}{\cftsetpnumwidth {\widthof {113}-1bp}}
+\newlabel{geo-I-ftime}{{6-10(a)}{113}{Subfigure 第六章 6-10(a)}{subfigure.6-10.1}{}}
+\newlabel{sub@geo-I-ftime}{{(a)}{(a)}{Subfigure 第六章 6-10(a)\relax }{subfigure.6-10.1}{}}
+\newlabel{pt-I-ftime}{{6-10(b)}{113}{Subfigure 第六章 6-10(b)}{subfigure.6-10.2}{}}
+\newlabel{sub@pt-I-ftime}{{(b)}{(b)}{Subfigure 第六章 6-10(b)\relax }{subfigure.6-10.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6-10}{\ignorespaces 时间段对运行时间的影响。 \subref {geo-I-ftime}:Geolife； \subref {pt-I-ftime}:波尔图}}{113}{figure.caption.60}\protected@file@percent }
+\newlabel{img:vary_I_ftime}{{6-10}{113}{时间段对运行时间的影响。 \subref {geo-I-ftime}:Geolife； \subref {pt-I-ftime}:波尔图}{figure.caption.60}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{113}{subfigure.10.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{113}{subfigure.10.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.2.5}放宽参数的影响}{114}{subsubsection.6.6.2.5}\protected@file@percent }
+\@writefile{lof}{\cftsetpnumwidth {\widthof {114}-1bp}}
+\newlabel{geo-ep-ftime}{{6-11(a)}{114}{Subfigure 第六章 6-11(a)}{subfigure.6-11.1}{}}
 \newlabel{sub@geo-ep-ftime}{{(a)}{(a)}{Subfigure 第六章 6-11(a)\relax }{subfigure.6-11.1}{}}
-\newlabel{pt-ep-ftime}{{6-11(b)}{113}{Subfigure 第六章 6-11(b)}{subfigure.6-11.2}{}}
+\newlabel{pt-ep-ftime}{{6-11(b)}{114}{Subfigure 第六章 6-11(b)}{subfigure.6-11.2}{}}
 \newlabel{sub@pt-ep-ftime}{{(b)}{(b)}{Subfigure 第六章 6-11(b)\relax }{subfigure.6-11.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6-11}{\ignorespaces 放宽参数对运行时间的影响。 \subref {geo-ep-ftime}:Geolife；\subref {pt-ep-ftime}:波尔图}}{113}{figure.caption.61}\protected@file@percent }
-\newlabel{img:vary_ep_ftime}{{6-11}{113}{放宽参数对运行时间的影响。 \subref {geo-ep-ftime}:Geolife；\subref {pt-ep-ftime}:波尔图}{figure.caption.61}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{113}{subfigure.11.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{113}{subfigure.11.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.7}\textcolor {red}{\ttfamily  本章小结}}{113}{section.6.7}\protected@file@percent }
-\pp@pagectr{footnote}{23}{259}{115}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第七章}总结与展望}{115}{chapter.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6-11}{\ignorespaces 放宽参数对运行时间的影响。 \subref {geo-ep-ftime}:Geolife；\subref {pt-ep-ftime}:波尔图}}{114}{figure.caption.61}\protected@file@percent }
+\newlabel{img:vary_ep_ftime}{{6-11}{114}{放宽参数对运行时间的影响。 \subref {geo-ep-ftime}:Geolife；\subref {pt-ep-ftime}:波尔图}{figure.caption.61}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{114}{subfigure.11.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{114}{subfigure.11.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.7}\textcolor {red}{\ttfamily  本章小结}}{114}{section.6.7}\protected@file@percent }
+\pp@pagectr{footnote}{23}{261}{116}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第七章}总结与展望}{116}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}论文工作总结}{115}{section.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}未来工作展望}{119}{section.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{致\hspace  {1em}谢}{121}{chapter*.62}\protected@file@percent }
-\zref@newlabel{page: acknowledgement begin}{\default{7.2}\page{121}\abspage{136}}
-\zref@newlabel{page: acknowledgement end}{\default{7.2}\page{121}\abspage{136}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}论文工作总结}{116}{section.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}未来工作展望}{120}{section.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{致\hspace  {1em}谢}{122}{chapter*.62}\protected@file@percent }
+\zref@newlabel{page: acknowledgement begin}{\default{7.2}\page{122}\abspage{137}}
+\zref@newlabel{page: acknowledgement end}{\default{7.2}\page{122}\abspage{137}}
 \bibdata{ref}
 \bibcite{乔少杰2018多模式移动对象不确定性轨迹预测模型}{{1}{}{{}}{{}}}
 \bibcite{DBLP:conf/ijcai/LiCS20}{{2}{}{{}}{{}}}
@@ -795,8 +800,8 @@
 \bibcite{DBLP:journals/ijon/ShangGLW16}{{13}{}{{}}{{}}}
 \bibcite{DBLP:conf/aaai/WilkieBLM11}{{14}{}{{}}{{}}}
 \bibcite{DBLP:conf/icde/SistlaWCD97}{{15}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{参考文献}{122}{section*.63}\protected@file@percent }
 \bibcite{DBLP:conf/sigmod/PatelCC04}{{16}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {chapter}{参考文献}{123}{section*.63}\protected@file@percent }
 \bibcite{DBLP:conf/sigmod/SaltenisJLL00}{{17}{}{{}}{{}}}
 \bibcite{DBLP:journals/tkde/DingZWLBZL21}{{18}{}{{}}{{}}}
 \bibcite{DBLP:conf/mdm/BakalovHKT05}{{19}{}{{}}{{}}}
@@ -806,170 +811,174 @@
 \bibcite{DBLP:conf/sigmod/BrinkhoffKS93}{{23}{}{{}}{{}}}
 \bibcite{DBLP:journals/cacm/Bentley75}{{24}{}{{}}{{}}}
 \bibcite{DBLP:journals/pvldb/ZhangCJOZ09}{{25}{}{{}}{{}}}
-\bibcite{DBLP:conf/sebd/CiacciaPRZ97}{{26}{}{{}}{{}}}
-\bibcite{DBLP:conf/vldb/CiacciaPZ97}{{27}{}{{}}{{}}}
-\bibcite{DBLP:journals/jmlr/LiuMG06}{{28}{}{{}}{{}}}
-\bibcite{omohundro1989five}{{29}{}{{}}{{}}}
-\bibcite{DBLP:journals/corr/DolatshahHM15}{{30}{}{{}}{{}}}
-\bibcite{DBLP:conf/dasfaa/ChaoHLZ021}{{31}{}{{}}{{}}}
-\bibcite{DBLP:conf/edbt/ZhangRSL21}{{32}{}{{}}{{}}}
-\bibcite{DBLP:conf/aips/LikhachevFGST05}{{33}{}{{}}{{}}}
-\bibcite{余翔2024改进}{{34}{}{{}}{{}}}
-\bibcite{王云亮2025基于改进}{{35}{}{{}}{{}}}
-\bibcite{康丽丽2010最优交通路线搜索算法研究}{{36}{}{{}}{{}}}
-\bibcite{DBLP:journals/networks/CaiKW97}{{37}{}{{}}{{}}}
-\bibcite{DBLP:journals/ton/NarvaezST01}{{38}{}{{}}{{}}}
-\bibcite{DBLP:journals/ijrr/LimBGMR11}{{39}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/YangGJKS14}{{40}{}{{}}{{}}}
-\bibcite{DBLP:journals/pvldb/PedersenYJ20}{{41}{}{{}}{{}}}
-\bibcite{DBLP:conf/edbt/HuaP10}{{42}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/MalviyaMB11}{{43}{}{{}}{{}}}
-\bibcite{11090024}{{44}{}{{}}{{}}}
-\bibcite{DBLP:journals/vldb/0002GMJ15}{{45}{}{{}}{{}}}
-\bibcite{DBLP:journals/vldb/GuoYHJC20}{{46}{}{{}}{{}}}
-\bibcite{DBLP:conf/aaai/LetchnerKH06}{{47}{}{{}}{{}}}
-\bibcite{DBLP:conf/ssd/BalteanuJS13}{{48}{}{{}}{{}}}
-\bibcite{吴清霞2016基于用户兴趣和兴趣点流行度的个性化旅游路线推荐}{{49}{}{{}}{{}}}
-\bibcite{宋晓宇2013基于签到数据的短时间体验式路线搜索}{{50}{}{{}}{{}}}
-\bibcite{DBLP:conf/kdd/GeXTXGP10}{{51}{}{{}}{{}}}
-\bibcite{DBLP:journals/tkde/HuangHSLZCS15}{{52}{}{{}}{{}}}
-\bibcite{DBLP:conf/icdm/YeXD18}{{53}{}{{}}{{}}}
-\bibcite{DBLP:journals/tkde/YeXGD19}{{54}{}{{}}{{}}}
-\bibcite{DBLP:conf/kdd/YeZXZGD18}{{55}{}{{}}{{}}}
-\bibcite{DBLP:conf/sigmod/ChenSZZX10}{{56}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/ZhengSYY13}{{57}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/ShangCWJWK17}{{58}{}{{}}{{}}}
-\bibcite{DBLP:journals/tkde/LiQYM16}{{59}{}{{}}{{}}}
-\bibcite{DBLP:conf/gis/RezaAC17}{{60}{}{{}}{{}}}
-\bibcite{DBLP:conf/ssd/HashemHAK13}{{61}{}{{}}{{}}}
-\bibcite{DBLP:conf/cikm/HashemBAKT15}{{62}{}{{}}{{}}}
-\bibcite{DBLP:conf/icra/LimR12}{{63}{}{{}}{{}}}
-\bibcite{DBLP:journals/pvldb/ZengTSC20}{{64}{}{{}}{{}}}
-\bibcite{DBLP:journals/pvldb/Zheng0Y18}{{65}{}{{}}{{}}}
-\bibcite{DBLP:conf/ssd/LiCHKT05}{{66}{}{{}}{{}}}
-\bibcite{DBLP:journals/vldb/SharifzadehKS08}{{67}{}{{}}{{}}}
-\bibcite{DBLP:journals/pvldb/CaoCCX12}{{68}{}{{}}{{}}}
-\bibcite{DBLP:conf/gis/0002TL11}{{69}{}{{}}{{}}}
-\bibcite{DBLP:journals/tkde/ZhengSHZZL17}{{70}{}{{}}{{}}}
-\bibcite{DBLP:journals/tkde/WenYPH17}{{71}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/LiCGYZ18}{{72}{}{{}}{{}}}
-\bibcite{DBLP:conf/edbt/JosseSS15}{{73}{}{{}}{{}}}
-\bibcite{DBLP:conf/cikm/ZhangLWS15}{{74}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/YawalkarR19}{{75}{}{{}}{{}}}
-\bibcite{DBLP:conf/gis/ChenKSZ08}{{76}{}{{}}{{}}}
-\bibcite{DBLP:journals/geoinformatica/ChenKSZ11}{{77}{}{{}}{{}}}
-\bibcite{DBLP:journals/tkde/LiYM13}{{78}{}{{}}{{}}}
-\bibcite{DBLP:journals/geoinformatica/SharifzadehS08}{{79}{}{{}}{{}}}
-\bibcite{DBLP:conf/ijcai/ZengCCQCX15}{{80}{}{{}}{{}}}
-\bibcite{DBLP:conf/dasfaa/LiYDX15}{{81}{}{{}}{{}}}
-\bibcite{DBLP:conf/gis/KanzaSSD08}{{82}{}{{}}{{}}}
-\bibcite{DBLP:conf/mdm/LuLT11}{{83}{}{{}}{{}}}
-\bibcite{DBLP:conf/gis/KanzaLSS09}{{84}{}{{}}{{}}}
-\bibcite{DBLP:journals/pvldb/LevinKSS10}{{85}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/RoyDAY11}{{86}{}{{}}{{}}}
-\bibcite{DBLP:conf/ssd/FanBS017}{{87}{}{{}}{{}}}
-\bibcite{DBLP:journals/geoinformatica/FanBSX18}{{88}{}{{}}{{}}}
-\bibcite{DBLP:journals/geoinformatica/LevinK14}{{89}{}{{}}{{}}}
-\bibcite{DBLP:conf/gis/SalgadoCT18}{{90}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/FengL0LSX20}{{91}{}{{}}{{}}}
-\bibcite{11159619}{{92}{}{{}}{{}}}
-\bibcite{朱进2017基于多重运动特征的轨迹相似性度量模型}{{93}{}{{}}{{}}}
-\bibcite{于海宁2024隐私保护的轨迹相似度计算方法}{{94}{}{{}}{{}}}
-\bibcite{周星星2018时空轨迹相似性度量方法综述}{{95}{}{{}}{{}}}
-\bibcite{DBLP:conf/fodo/AgrawalFS93}{{96}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/YiJF98}{{97}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/VlachosGK02}{{98}{}{{}}{{}}}
-\bibcite{DBLP:conf/vldb/ChenN04}{{99}{}{{}}{{}}}
-\bibcite{DBLP:conf/sigmod/ChenOO05}{{100}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/RanuPTDR15}{{101}{}{{}}{{}}}
-\bibcite{DBLP:conf/sigmod/SuZWHZ13}{{102}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/PerngWZP00}{{103}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/ChenNOT07}{{104}{}{{}}{{}}}
-\bibcite{曹翰林2021轨迹表示学习技术研究进展}{{105}{}{{}}{{}}}
-\bibcite{吴晨昊2023基于地理空间感知型表征学习的轨迹相似度计算}{{106}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/LiZCJW18}{{107}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/YaoCZB19}{{108}{}{{}}{{}}}
-\bibcite{DBLP:journals/pvldb/ZhouSCJK24}{{109}{}{{}}{{}}}
-\bibcite{11112942}{{110}{}{{}}{{}}}
-\bibcite{han2025bridging}{{111}{}{{}}{{}}}
-\bibcite{11113111}{{112}{}{{}}{{}}}
-\bibcite{liu2025gpe}{{113}{}{{}}{{}}}
-\bibcite{DBLP:journals/vldb/ShangCWJZK18}{{114}{}{{}}{{}}}
-\bibcite{DBLP:conf/gis/ChenP09}{{115}{}{{}}{{}}}
-\bibcite{DBLP:journals/tsas/TampakisDPT20}{{116}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/Yuan019}{{117}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/ChenSJ0K20}{{118}{}{{}}{{}}}
-\bibcite{Pan20}{{119}{}{{}}{{}}}
-\bibcite{Atev10}{{120}{}{{}}{{}}}
-\bibcite{Fang23}{{121}{}{{}}{{}}}
-\bibcite{ding2025parallel}{{122}{}{{}}{{}}}
-\bibcite{DBLP:journals/pvldb/JeungYZJS08}{{123}{}{{}}{{}}}
-\bibcite{DBLP:journals/pvldb/LiDHK10}{{124}{}{{}}{{}}}
-\bibcite{tang}{{125}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/ZhengZYS13}{{126}{}{{}}{{}}}
-\bibcite{王汝言2025群组感知的行人轨迹预测方法研究}{{127}{}{{}}{{}}}
-\bibcite{DBLP:conf/gis/VieiraBT09}{{128}{}{{}}{{}}}
-\bibcite{DBLP:journals/jidm/TanakaVK16}{{129}{}{{}}{{}}}
-\bibcite{DBLP:conf/hpcc/NaserianWXD16}{{130}{}{{}}{{}}}
-\bibcite{DBLP:journals/access/SheinPI20}{{131}{}{{}}{{}}}
-\bibcite{DBLP:journals/dke/WangLH06}{{132}{}{{}}{{}}}
-\bibcite{DBLP:journals/dke/LiBK15}{{133}{}{{}}{{}}}
-\bibcite{DBLP:conf/sigmod/FangGPCMJ20}{{134}{}{{}}{{}}}
-\bibcite{DBLP:journals/pvldb/ChenGFMJG19}{{135}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/Liu0CB20}{{136}{}{{}}{{}}}
-\bibcite{DBLP:journals/access/ZhaoCCYXG19}{{137}{}{{}}{{}}}
-\bibcite{web}{{138}{}{{}}{{}}}
-\bibcite{DBLP:journals/pvldb/Xu0B20}{{139}{}{{}}{{}}}
-\bibcite{DBLP:journals/corr/abs-2004-06653}{{140}{}{{}}{{}}}
-\bibcite{DBLP:journals/information/AlarabiBHA21}{{141}{}{{}}{{}}}
-\bibcite{zhang2024continuous}{{142}{}{{}}{{}}}
-\bibcite{10598064}{{143}{}{{}}{{}}}
-\bibcite{10107792}{{144}{}{{}}{{}}}
-\bibcite{DBLP:conf/icws/Zhang0LL019}{{145}{}{{}}{{}}}
-\bibcite{DBLP:conf/ijcnn/YaoZZHB17}{{146}{}{{}}{{}}}
-\bibcite{DBLP:conf/avss/BoyleNF17}{{147}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/FangDCHGC21}{{148}{}{{}}{{}}}
-\bibcite{唐科萍2012基于位置服务的研究综述}{{149}{}{{}}{{}}}
-\bibcite{DBLP:conf/wise/XuCYSZZL17}{{150}{}{{}}{{}}}
-\bibcite{DBLP:journals/tkde/ShangCWJWK16}{{151}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/Guo0HJ18}{{152}{}{{}}{{}}}
-\bibcite{DBLP:conf/kdd/ChenSJ0Z019}{{153}{}{{}}{{}}}
-\bibcite{DBLP:conf/aaai/ChenSG20}{{154}{}{{}}{{}}}
-\bibcite{DBLP:conf/aaai/ChenSYL20}{{155}{}{{}}{{}}}
-\bibcite{DBLP:journals/vldb/ShangDZJKZ14}{{156}{}{{}}{{}}}
-\bibcite{DafermosThe}{{157}{}{{}}{{}}}
-\bibcite{javani2019path}{{158}{}{{}}{{}}}
-\bibcite{彭晓燕2020无人驾驶汽车局部路径规划算法研究}{{159}{}{{}}{{}}}
-\bibcite{DBLP:journals/tkde/ZhengZYSZ14}{{160}{}{{}}{{}}}
-\bibcite{DBLP:conf/kdd/XuYFS07}{{161}{}{{}}{{}}}
-\bibcite{DBLP:conf/icdm/PelekisKKFT09}{{162}{}{{}}{{}}}
-\bibcite{DBLP:conf/sigmod/LeeHW07}{{163}{}{{}}{{}}}
-\bibcite{DBLP:conf/dasfaa/LiLLH10}{{164}{}{{}}{{}}}
-\bibcite{DBLP:journals/access/LiLWYLX18}{{165}{}{{}}{{}}}
-\bibcite{DBLP:conf/kdd/YuanZXS11}{{166}{}{{}}{{}}}
-\bibcite{DBLP:conf/gis/YuanZZXXSH10}{{167}{}{{}}{{}}}
-\bibcite{DBLP:conf/ijcai/ChenSFK21}{{168}{}{{}}{{}}}
-\bibcite{DBLP:journals/tkde/ShangCZJWK19}{{169}{}{{}}{{}}}
-\bibcite{react}{{170}{}{{}}{{}}}
-\bibcite{DBLP:conf/sigmod/FaloutsosRM94}{{171}{}{{}}{{}}}
-\bibcite{DBLP:journals/pvldb/AssentWKKS09}{{172}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/RongLSWLD17}{{173}{}{{}}{{}}}
-\bibcite{DBLP:journals/pvldb/XieLP17}{{174}{}{{}}{{}}}
-\bibcite{DBLP:ptop}{{175}{}{{}}{{}}}
-\bibcite{DBLP:journals/pami/TahaH15}{{176}{}{{}}{{}}}
-\bibcite{DBLP:journals/air/KongCHWX23}{{177}{}{{}}{{}}}
-\bibcite{DBLP:conf/icde/ZhangLRB08}{{178}{}{{}}{{}}}
-\bibcite{DBLP:journals/vldb/ZhangQLWW12}{{179}{}{{}}{{}}}
-\bibcite{DBLP:journals/ral/VishnuARMB23}{{180}{}{{}}{{}}}
-\bibcite{forrest2022moving}{{181}{}{{}}{{}}}
-\bibcite{DBLP:conf/ssd/PfoserJ99}{{182}{}{{}}{{}}}
-\bibcite{trajcevski2010uncertain}{{183}{}{{}}{{}}}
-\bibcite{DBLP:conf/uai/Moore00}{{184}{}{{}}{{}}}
-\bibcite{DBLP:journals/csur/Samet84}{{185}{}{{}}{{}}}
-\bibcite{DBLP:conf/huc/ZhengLCXM08}{{186}{}{{}}{{}}}
-\bibcite{DBLP:journals/debu/ZhengXM10}{{187}{}{{}}{{}}}
-\bibcite{DBLP:journals/tits/Moreira-MatiasGFMD13}{{188}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{攻读博士学位期间取得的成果}{134}{chapter*.65}\protected@file@percent }
+\bibcite{DBLP:conf/vldb/CiacciaPZ97}{{26}{}{{}}{{}}}
+\bibcite{DBLP:journals/jmlr/LiuMG06}{{27}{}{{}}{{}}}
+\bibcite{omohundro1989five}{{28}{}{{}}{{}}}
+\bibcite{DBLP:journals/corr/DolatshahHM15}{{29}{}{{}}{{}}}
+\bibcite{DBLP:conf/dasfaa/ChaoHLZ021}{{30}{}{{}}{{}}}
+\bibcite{DBLP:conf/edbt/ZhangRSL21}{{31}{}{{}}{{}}}
+\bibcite{DBLP:conf/aips/LikhachevFGST05}{{32}{}{{}}{{}}}
+\bibcite{余翔2024改进}{{33}{}{{}}{{}}}
+\bibcite{王云亮2025基于改进}{{34}{}{{}}{{}}}
+\bibcite{康丽丽2010最优交通路线搜索算法研究}{{35}{}{{}}{{}}}
+\bibcite{DBLP:journals/networks/CaiKW97}{{36}{}{{}}{{}}}
+\bibcite{DBLP:journals/ton/NarvaezST01}{{37}{}{{}}{{}}}
+\bibcite{DBLP:journals/ijrr/LimBGMR11}{{38}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/YangGJKS14}{{39}{}{{}}{{}}}
+\bibcite{DBLP:journals/pvldb/PedersenYJ20}{{40}{}{{}}{{}}}
+\bibcite{DBLP:conf/edbt/HuaP10}{{41}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/MalviyaMB11}{{42}{}{{}}{{}}}
+\bibcite{11090024}{{43}{}{{}}{{}}}
+\bibcite{DBLP:journals/vldb/0002GMJ15}{{44}{}{{}}{{}}}
+\bibcite{DBLP:journals/vldb/GuoYHJC20}{{45}{}{{}}{{}}}
+\bibcite{DBLP:conf/aaai/LetchnerKH06}{{46}{}{{}}{{}}}
+\bibcite{DBLP:conf/ssd/BalteanuJS13}{{47}{}{{}}{{}}}
+\bibcite{吴清霞2016基于用户兴趣和兴趣点流行度的个性化旅游路线推荐}{{48}{}{{}}{{}}}
+\bibcite{宋晓宇2013基于签到数据的短时间体验式路线搜索}{{49}{}{{}}{{}}}
+\bibcite{DBLP:journals/access/SundarrajRBGFN23}{{50}{}{{}}{{}}}
+\bibcite{DBLP:journals/tiv/SchoenbergD23}{{51}{}{{}}{{}}}
+\bibcite{yao2026drivesuprim}{{52}{}{{}}{{}}}
+\bibcite{DBLP:conf/kdd/GeXTXGP10}{{53}{}{{}}{{}}}
+\bibcite{DBLP:journals/tkde/HuangHSLZCS15}{{54}{}{{}}{{}}}
+\bibcite{DBLP:conf/icdm/YeXD18}{{55}{}{{}}{{}}}
+\bibcite{DBLP:journals/tkde/YeXGD19}{{56}{}{{}}{{}}}
+\bibcite{DBLP:conf/kdd/YeZXZGD18}{{57}{}{{}}{{}}}
+\bibcite{DBLP:conf/sigmod/ChenSZZX10}{{58}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/ZhengSYY13}{{59}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/ShangCWJWK17}{{60}{}{{}}{{}}}
+\bibcite{DBLP:journals/tkde/LiQYM16}{{61}{}{{}}{{}}}
+\bibcite{DBLP:conf/gis/RezaAC17}{{62}{}{{}}{{}}}
+\bibcite{DBLP:conf/ssd/HashemHAK13}{{63}{}{{}}{{}}}
+\bibcite{DBLP:conf/cikm/HashemBAKT15}{{64}{}{{}}{{}}}
+\bibcite{DBLP:conf/icra/LimR12}{{65}{}{{}}{{}}}
+\bibcite{DBLP:journals/pvldb/ZengTSC20}{{66}{}{{}}{{}}}
+\bibcite{DBLP:journals/pvldb/Zheng0Y18}{{67}{}{{}}{{}}}
+\bibcite{DBLP:conf/ssd/LiCHKT05}{{68}{}{{}}{{}}}
+\bibcite{DBLP:journals/vldb/SharifzadehKS08}{{69}{}{{}}{{}}}
+\bibcite{DBLP:journals/pvldb/CaoCCX12}{{70}{}{{}}{{}}}
+\bibcite{DBLP:conf/gis/0002TL11}{{71}{}{{}}{{}}}
+\bibcite{DBLP:journals/tkde/ZhengSHZZL17}{{72}{}{{}}{{}}}
+\bibcite{DBLP:journals/tkde/WenYPH17}{{73}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/LiCGYZ18}{{74}{}{{}}{{}}}
+\bibcite{DBLP:conf/edbt/JosseSS15}{{75}{}{{}}{{}}}
+\bibcite{DBLP:conf/cikm/ZhangLWS15}{{76}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/YawalkarR19}{{77}{}{{}}{{}}}
+\bibcite{DBLP:conf/gis/ChenKSZ08}{{78}{}{{}}{{}}}
+\bibcite{DBLP:journals/geoinformatica/ChenKSZ11}{{79}{}{{}}{{}}}
+\bibcite{DBLP:journals/tkde/LiYM13}{{80}{}{{}}{{}}}
+\bibcite{DBLP:journals/geoinformatica/SharifzadehS08}{{81}{}{{}}{{}}}
+\bibcite{DBLP:conf/ijcai/ZengCCQCX15}{{82}{}{{}}{{}}}
+\bibcite{DBLP:conf/dasfaa/LiYDX15}{{83}{}{{}}{{}}}
+\bibcite{DBLP:conf/gis/KanzaSSD08}{{84}{}{{}}{{}}}
+\bibcite{DBLP:conf/mdm/LuLT11}{{85}{}{{}}{{}}}
+\bibcite{DBLP:conf/gis/KanzaLSS09}{{86}{}{{}}{{}}}
+\bibcite{DBLP:journals/pvldb/LevinKSS10}{{87}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/RoyDAY11}{{88}{}{{}}{{}}}
+\bibcite{DBLP:conf/ssd/FanBS017}{{89}{}{{}}{{}}}
+\bibcite{DBLP:journals/geoinformatica/FanBSX18}{{90}{}{{}}{{}}}
+\bibcite{DBLP:journals/geoinformatica/LevinK14}{{91}{}{{}}{{}}}
+\bibcite{DBLP:conf/gis/SalgadoCT18}{{92}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/FengL0LSX20}{{93}{}{{}}{{}}}
+\bibcite{11159619}{{94}{}{{}}{{}}}
+\bibcite{朱进2017基于多重运动特征的轨迹相似性度量模型}{{95}{}{{}}{{}}}
+\bibcite{于海宁2024隐私保护的轨迹相似度计算方法}{{96}{}{{}}{{}}}
+\bibcite{周星星2018时空轨迹相似性度量方法综述}{{97}{}{{}}{{}}}
+\bibcite{DBLP:conf/fodo/AgrawalFS93}{{98}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/YiJF98}{{99}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/VlachosGK02}{{100}{}{{}}{{}}}
+\bibcite{DBLP:conf/vldb/ChenN04}{{101}{}{{}}{{}}}
+\bibcite{DBLP:conf/sigmod/ChenOO05}{{102}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/RanuPTDR15}{{103}{}{{}}{{}}}
+\bibcite{DBLP:conf/sigmod/SuZWHZ13}{{104}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/PerngWZP00}{{105}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/ChenNOT07}{{106}{}{{}}{{}}}
+\bibcite{曹翰林2021轨迹表示学习技术研究进展}{{107}{}{{}}{{}}}
+\bibcite{吴晨昊2023基于地理空间感知型表征学习的轨迹相似度计算}{{108}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/LiZCJW18}{{109}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/YaoCZB19}{{110}{}{{}}{{}}}
+\bibcite{DBLP:journals/pvldb/ZhouSCJK24}{{111}{}{{}}{{}}}
+\bibcite{11112942}{{112}{}{{}}{{}}}
+\bibcite{han2025bridging}{{113}{}{{}}{{}}}
+\bibcite{11113111}{{114}{}{{}}{{}}}
+\bibcite{liu2025gpe}{{115}{}{{}}{{}}}
+\bibcite{DBLP:journals/vldb/ShangCWJZK18}{{116}{}{{}}{{}}}
+\bibcite{DBLP:conf/gis/ChenP09}{{117}{}{{}}{{}}}
+\bibcite{DBLP:journals/tsas/TampakisDPT20}{{118}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/Yuan019}{{119}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/ChenSJ0K20}{{120}{}{{}}{{}}}
+\bibcite{Pan20}{{121}{}{{}}{{}}}
+\bibcite{Atev10}{{122}{}{{}}{{}}}
+\bibcite{Fang23}{{123}{}{{}}{{}}}
+\bibcite{ding2025parallel}{{124}{}{{}}{{}}}
+\bibcite{DBLP:journals/pvldb/JeungYZJS08}{{125}{}{{}}{{}}}
+\bibcite{DBLP:journals/pvldb/LiDHK10}{{126}{}{{}}{{}}}
+\bibcite{tang}{{127}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/ZhengZYS13}{{128}{}{{}}{{}}}
+\bibcite{王汝言2025群组感知的行人轨迹预测方法研究}{{129}{}{{}}{{}}}
+\bibcite{DBLP:conf/gis/VieiraBT09}{{130}{}{{}}{{}}}
+\bibcite{DBLP:journals/jidm/TanakaVK16}{{131}{}{{}}{{}}}
+\bibcite{DBLP:conf/hpcc/NaserianWXD16}{{132}{}{{}}{{}}}
+\bibcite{DBLP:journals/access/SheinPI20}{{133}{}{{}}{{}}}
+\bibcite{DBLP:journals/dke/WangLH06}{{134}{}{{}}{{}}}
+\bibcite{DBLP:journals/dke/LiBK15}{{135}{}{{}}{{}}}
+\bibcite{DBLP:journals/geoinformatica/TritsarolisCTPT24}{{136}{}{{}}{{}}}
+\bibcite{DBLP:conf/sigmod/FangGPCMJ20}{{137}{}{{}}{{}}}
+\bibcite{DBLP:journals/pvldb/ChenGFMJG19}{{138}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/Liu0CB20}{{139}{}{{}}{{}}}
+\bibcite{DBLP:journals/access/ZhaoCCYXG19}{{140}{}{{}}{{}}}
+\bibcite{web}{{141}{}{{}}{{}}}
+\bibcite{DBLP:journals/pvldb/Xu0B20}{{142}{}{{}}{{}}}
+\bibcite{DBLP:journals/corr/abs-2004-06653}{{143}{}{{}}{{}}}
+\bibcite{DBLP:journals/information/AlarabiBHA21}{{144}{}{{}}{{}}}
+\bibcite{zhang2024continuous}{{145}{}{{}}{{}}}
+\bibcite{10598064}{{146}{}{{}}{{}}}
+\bibcite{10107792}{{147}{}{{}}{{}}}
+\bibcite{DBLP:conf/dasfaa/WangCFS24}{{148}{}{{}}{{}}}
+\bibcite{DBLP:conf/icws/Zhang0LL019}{{149}{}{{}}{{}}}
+\bibcite{DBLP:conf/ijcnn/YaoZZHB17}{{150}{}{{}}{{}}}
+\bibcite{DBLP:conf/avss/BoyleNF17}{{151}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/FangDCHGC21}{{152}{}{{}}{{}}}
+\bibcite{唐科萍2012基于位置服务的研究综述}{{153}{}{{}}{{}}}
+\bibcite{DBLP:conf/wise/XuCYSZZL17}{{154}{}{{}}{{}}}
+\bibcite{DBLP:journals/tkde/ShangCWJWK16}{{155}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/Guo0HJ18}{{156}{}{{}}{{}}}
+\bibcite{DBLP:conf/kdd/ChenSJ0Z019}{{157}{}{{}}{{}}}
+\bibcite{DBLP:conf/aaai/ChenSG20}{{158}{}{{}}{{}}}
+\bibcite{DBLP:conf/aaai/ChenSYL20}{{159}{}{{}}{{}}}
+\bibcite{DBLP:journals/vldb/ShangDZJKZ14}{{160}{}{{}}{{}}}
+\bibcite{DafermosThe}{{161}{}{{}}{{}}}
+\bibcite{javani2019path}{{162}{}{{}}{{}}}
+\bibcite{彭晓燕2020无人驾驶汽车局部路径规划算法研究}{{163}{}{{}}{{}}}
+\bibcite{DBLP:journals/tkde/ZhengZYSZ14}{{164}{}{{}}{{}}}
+\bibcite{DBLP:conf/kdd/XuYFS07}{{165}{}{{}}{{}}}
+\bibcite{DBLP:conf/icdm/PelekisKKFT09}{{166}{}{{}}{{}}}
+\bibcite{DBLP:conf/sigmod/LeeHW07}{{167}{}{{}}{{}}}
+\bibcite{DBLP:conf/dasfaa/LiLLH10}{{168}{}{{}}{{}}}
+\bibcite{DBLP:journals/access/LiLWYLX18}{{169}{}{{}}{{}}}
+\bibcite{DBLP:conf/kdd/YuanZXS11}{{170}{}{{}}{{}}}
+\bibcite{DBLP:conf/gis/YuanZZXXSH10}{{171}{}{{}}{{}}}
+\bibcite{DBLP:conf/ijcai/ChenSFK21}{{172}{}{{}}{{}}}
+\bibcite{DBLP:journals/tkde/ShangCZJWK19}{{173}{}{{}}{{}}}
+\bibcite{react}{{174}{}{{}}{{}}}
+\bibcite{DBLP:conf/sigmod/FaloutsosRM94}{{175}{}{{}}{{}}}
+\bibcite{DBLP:journals/pvldb/AssentWKKS09}{{176}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/RongLSWLD17}{{177}{}{{}}{{}}}
+\bibcite{DBLP:journals/pvldb/XieLP17}{{178}{}{{}}{{}}}
+\bibcite{DBLP:ptop}{{179}{}{{}}{{}}}
+\bibcite{DBLP:journals/pami/TahaH15}{{180}{}{{}}{{}}}
+\bibcite{DBLP:journals/air/KongCHWX23}{{181}{}{{}}{{}}}
+\bibcite{DBLP:conf/icde/ZhangLRB08}{{182}{}{{}}{{}}}
+\bibcite{DBLP:journals/vldb/ZhangQLWW12}{{183}{}{{}}{{}}}
+\bibcite{DBLP:journals/ral/VishnuARMB23}{{184}{}{{}}{{}}}
+\bibcite{forrest2022moving}{{185}{}{{}}{{}}}
+\bibcite{DBLP:conf/ssd/PfoserJ99}{{186}{}{{}}{{}}}
+\bibcite{trajcevski2010uncertain}{{187}{}{{}}{{}}}
+\bibcite{DBLP:conf/uai/Moore00}{{188}{}{{}}{{}}}
+\bibcite{DBLP:journals/csur/Samet84}{{189}{}{{}}{{}}}
+\bibcite{DBLP:conf/huc/ZhengLCXM08}{{190}{}{{}}{{}}}
+\bibcite{DBLP:journals/debu/ZhengXM10}{{191}{}{{}}{{}}}
+\bibcite{DBLP:journals/tits/Moreira-MatiasGFMD13}{{192}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {chapter}{攻读博士学位期间取得的成果}{135}{chapter*.65}\protected@file@percent }
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
 \ttl@finishall
-\gdef \@abspage@last{149}
+\gdef \@abspage@last{151}
