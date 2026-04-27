@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  26 APR 2026 21:30
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.25)  27 APR 2026 14:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2175,6 +2175,11 @@ File: fig/section5/accuracy_Q4.png Graphic file (type bmp)
 File: fig/section5/accuracy_ep4.png Graphic file (type bmp)
 <fig/section5/accuracy_ep4.png>
 
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 460--465
+ [][][][] 
+ []
+
+
 
 [88]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2273,7 +2278,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [109]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3557) has occurred while \output is active []
 
 
 
@@ -2282,6 +2287,9 @@ File: fig/section6/geo-num-ctime.png Graphic file (type bmp)
 <fig/section6/geo-num-ctime.png>
 File: fig/section6/pt-num-ctime.png Graphic file (type bmp)
 <fig/section6/pt-num-ctime.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 [111]
@@ -2313,9 +2321,6 @@ File: fig/section6/geo-ep-ftime.png Graphic file (type bmp)
 <fig/section6/geo-ep-ftime.png>
 File: fig/section6/pt-ep-ftime.png Graphic file (type bmp)
 <fig/section6/pt-ep-ftime.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 
 [114]) (./latex/7_conclusion.tex
@@ -2391,10 +2396,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 86071024F9218CD9D10E947163EF0682;24735.
  ) 
 Here is how much of TeX's memory you used:
- 52333 strings out of 473832
- 1118869 string characters out of 5729481
+ 52342 strings out of 473832
+ 1119504 string characters out of 5729481
  1584060 words of memory out of 5000000
- 74417 multiletter control sequences out of 15000+600000
+ 74426 multiletter control sequences out of 15000+600000
  573524 words of font info for 180 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  125i,24n,134p,1627b,1832s stack positions out of 10000i,1000n,20000p,200000b,200000s

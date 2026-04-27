@@ -136,8 +136,8 @@
 \contentsline {subsubsection}{\numberline {6.6.1.1}数据准备}{109}{subsubsection.6.6.1.1}%
 \contentsline {subsubsection}{\numberline {6.6.1.2}算法评估}{110}{subsubsection.6.6.1.2}%
 \contentsline {subsubsection}{\numberline {6.6.1.3}运行环境}{110}{subsubsection.6.6.1.3}%
-\contentsline {subsection}{\numberline {6.6.2}实验结果与分析}{111}{subsection.6.6.2}%
-\contentsline {subsubsection}{\numberline {6.6.2.1}剪枝有效性评估}{111}{subsubsection.6.6.2.1}%
+\contentsline {subsection}{\numberline {6.6.2}实验结果与分析}{110}{subsection.6.6.2}%
+\contentsline {subsubsection}{\numberline {6.6.2.1}剪枝有效性评估}{110}{subsubsection.6.6.2.1}%
 \contentsline {subsubsection}{\numberline {6.6.2.2}移动对象数目的影响}{111}{subsubsection.6.6.2.2}%
 \contentsline {subsubsection}{\numberline {6.6.2.3}特征数量的影响}{112}{subsubsection.6.6.2.3}%
 \contentsline {subsubsection}{\numberline {6.6.2.4}时间段的影响}{113}{subsubsection.6.6.2.4}%

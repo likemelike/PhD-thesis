@@ -477,9 +477,6 @@ $。
 实验研究在两个真实世界的轨迹数据集上进行。第一个数据集 Geolife \cite{DBLP:conf/huc/ZhengLCXM08,DBLP:journals/debu/ZhengXM10} 包含来自 182 名用户、历时四年的 17,621 条轨迹，涵盖了多种户外移动行为，包括日常通勤以及购物、骑行等休闲活动。第二个数据集 波尔图~\cite{DBLP:journals/tits/Moreira-MatiasGFMD13} 包含在葡萄牙波尔图市 19 个月内记录的超过 170 万条出租车轨迹。波尔图 数据集的轨迹以 15 秒为采样间隔记录，而 Geolife 的采样频率则不固定。时间戳被限定在 24 小时范围内，而不考虑具体日期，因为大多数城市交通出行行为具有日常重复性。将对象的最大速度 $v_{max}$ 定义为其在给定时间段内观测到的最高速度。确定 $v_{max}$ 的真实取值或最优设置超出了\shad{本章}的研究范围。为保证实际应用相关性，剔除了采样间隔超过一小时的极端轨迹，因为这类轨迹在现实应用中实用性有限，因此不纳入本研究。注意到，在隧道等环境中 GPS 信号可能较弱甚至完全丢失，从而导致异常位置或较低的采样率。尽管对这类异常值进行显式建模超出了\shad{本章}的研究范围，数据预处理流程仍通过基于经度、纬度、轨迹长度和速度等约束过滤异常轨迹，从而在一定程度上缓解了这些影响。预处理后，Geolife 数据集中保留了 18,670 条轨迹中的 12,015 条有效轨迹，波尔图 数据集中保留了 1,710,670 条轨迹中的 1,392,385 条。随后，从数据集中随机选取两个包含相同数量移动对象的对象组。
 
 \subsubsection{算法评估}
-
-
-表\ref{join_tb:compared_alg}列举了实验研究中的比较算法。
 \begin{table}[!ht]
     \caption{比较算法}\label{join_tb:compared_alg}
     \begin{tabular}{ll}
@@ -493,6 +490,8 @@ $。
         \bottomrule
     \end{tabular}
 \end{table}
+
+表\ref{join_tb:compared_alg}列举了实验研究中的比较算法。
 将所提出的方法与一种设计良好的基于 M树 的连接算法进行对比，记为 MBJ-Alg，作为基线方法。为评估剪枝增强策略的影响，还测试了不包含剪枝增强策略的 HBJ-Alg，记为 HBJ-Alg\#。在效率评估方面，同时衡量剪枝率和 运行时间。剪枝率定义为 $1- |C|/|O|^2$，其中 $C$ 表示候选集。运行时间表示算法每一轮的平均运行时间。\shad{ 本实验使用 System.nanoTime() 方法对算法的运行时间进行测量。该方法具有纳秒级精度，能够提供更为精细的时间统计，同时不受系统时间调整的影响，保证了测量结果的稳定性与可靠性。为进一步降低偶然误差带来的影响，实验中对每个算法进行多次重复运行，并取其平均值作为最终的运行时间结果。} 此外，还评估了不采用重新划分策略的 HBJ-Alg，记为 HBJ-Alg$*$。
 
 
@@ -500,7 +499,7 @@ $。
 
 
 \subsubsection{运行环境}
-参数设置如表~\ref{tb:algorithm_para} 所示。M$^\ast$树 和 混合球树 的叶节点容量均设置为 10。默认情况下，重新划分阈值 $\alpha$ 设为 0.5。在实验中，特征集合 $\mathcal{F}$ 由随机生成的兴趣点构成。具体而言，首先确定所有轨迹的最小和最大经度与纬度值，在该空间范围内使用均匀分布随机生成固定数量的兴趣点。默认情况下，在 波尔图 数据集的坐标范围内生成 100,000 个兴趣点，在 Geolife 数据集中生成 600,000 个 兴趣点。默认距离度量采用欧氏距离。所有方法均使用 Java 实现，并在配备 AMD Ryzen 5 CPU（3.6GHz）和 32GB 内存的 Ubuntu 系统上进行评测，采用单线程执行。除非另有说明，实验结果均为 20 次独立实验的平均值，每次实验使用不同的轨迹数据和特征集。
+参数设置如表~\ref{tb:algorithm_para} 所示。M$^\ast$树 和 混合球树 的叶节点容量均设置为 10。重新划分阈值 $\alpha$ 设为 0.5。在实验中，特征集合 $\mathcal{F}$ 由随机生成的兴趣点构成。具体而言，首先确定所有轨迹的最小和最大经度与纬度值，在该空间范围内使用均匀分布随机生成固定数量的兴趣点。默认情况下，在 波尔图 数据集的坐标范围内生成 100,000 个兴趣点，在 Geolife 数据集中生成 600,000 个 兴趣点。默认距离度量采用欧氏距离。所有方法均使用 Java 实现，并在配备 AMD Ryzen 5 CPU（3.6GHz）和 32GB 内存的 Ubuntu 系统上进行评测，采用单线程执行。除非另有说明，实验结果均为 20 次独立实验的平均值，每次实验使用不同的轨迹数据和特征集。
 \begin{table}[!ht]
     \caption{评估参数设置}\label{tb:algorithm_para}
     \begin{tabular}{l|ll}
@@ -544,11 +543,11 @@ $。
 \begin{figure}[!ht]
     \centering
     \subfloat[]{
-    \includegraphics[width=0.4\textwidth]{fig/section6/geo-num-ctime.png}
+    \includegraphics[width=0.46\textwidth]{fig/section6/geo-num-ctime.png}
     \label{geo-num-ctime}
 }% 
 \subfloat[]{
-    \includegraphics[width=0.41\textwidth]{fig/section6/pt-num-ctime.png}
+    \includegraphics[width=0.47\textwidth]{fig/section6/pt-num-ctime.png}
     \label{pt-num-ctime}
 }% 
 \caption{不同移动对象数目下的构建时间。 \subref{geo-num-ctime}: Geolife； \subref{pt-num-ctime}:波尔图}
@@ -556,18 +555,20 @@ $。
 \end{figure}
 直观上，较大的移动对象数目 $|O|$ 会导致需要处理更多的时间段运动范围，因此所有算法的运行时间都将随之增加。首先，评估了 MBJ-Alg、HBJ-Alg 以及 HBJ-Alg$*$ 的索引构建时间，不同移动对象数目 $|O|$ 对算法性能的影响如图~\ref{img:vary_num_ctime} 所示。可以清楚地看到，MBJ-Alg 的构建开销明显高于 HBJ-Alg。与 HBJ-Alg$*$ 相比，HBJ-Alg 表现出相近且略有提升的性能。这一改进主要得益于 HBJ-Alg 中的再划分技术：尽管在触发再划分时会引入额外计算开销，但该技术能够减少总体分区数量，从而在整体上有助于降低构建时间。
 
-随着移动对象数量的增加，由于交集候选对数量增多，计算负载显著上升。从图~\ref{img:vary_num_ftime} 可以观察到，随着数据规模的扩大，MBJ-Alg 的 运行时间显著增加。例如，在 Geolife 数据集包含 12,000 个移动对象、波尔图 数据集包含 50,000 个移动对象时，MBJ-Alg 的查询时间分别超过 3 秒和 30 秒，计算开销较大。值得注意的是，HBJ-Alg 的 运行时间几乎没有明显退化，充分体现了所提出方法的良好可扩展性。此外，与 HBJ-Alg\# 相比，HBJ-Alg 的运行时间降低了约 30\%，突出了剪枝增强策略所带来的性能提升。具体而言，在 Geolife 数据集包含 12,000 个移动对象、波尔图 数据集包含 50,000 个移动对象时，HBJ-Alg 相比 MBJ-Alg 在 Geolife 上实现了 $3.1x$ 的加速，在 波尔图 上实现了 $3.3x$ 的加速。
+随着移动对象数量的增加，由于交集候选对数量增多，计算负载显著上升。从图~\ref{img:vary_num_ftime} 可以观察到，随着数据规模的扩大，MBJ-Alg 的 运行时间显著增加。例如，在 Geolife 数据集包含 12,000 个移动对象、波尔图 数据集包含 50,000 个移动对象时，MBJ-Alg 的查询时间分别超过 3 秒和 30 秒，计算开销较大。
+
+值得注意的是，HBJ-Alg 的 运行时间几乎没有明显退化，充分体现了所提出方法的良好可扩展性。此外，与 HBJ-Alg\# 相比，HBJ-Alg 的运行时间降低了约 30\%，突出了剪枝增强策略所带来的性能提升。具体而言，在 Geolife 数据集包含 12,000 个移动对象、波尔图 数据集包含 50,000 个移动对象时，HBJ-Alg 相比 MBJ-Alg 在 Geolife 上实现了 $3.1x$ 的加速，在 波尔图 上实现了 $3.3x$ 的加速。
 
 
 
 \begin{figure}[htp]
     \centering
     \subfloat[]{
-    \includegraphics[width=0.4\textwidth]{fig/section6/geo-num-ftime.png}
+    \includegraphics[width=0.46\textwidth]{fig/section6/geo-num-ftime.png}
     \label{geo-num-ftime}
 }% 
 \subfloat[]{
-    \includegraphics[width=0.41\textwidth]{fig/section6/pt-num-ftime.png}
+    \includegraphics[width=0.47\textwidth]{fig/section6/pt-num-ftime.png}
     \label{pt-num-ftime}
 }% 
 \caption{不同 移动对象数目下的查询时间。 \subref{geo-num-ftime}:Geolife； \subref{pt-num-ftime}:波尔图}
@@ -580,12 +581,12 @@ $。
 \begin{figure}[htp]
     \centering
     \subfloat[]{
-    \includegraphics[width=0.4\textwidth]{fig/section6/geo-poi-ftime.png}
+    \includegraphics[width=0.46\textwidth]{fig/section6/geo-poi-ftime.png}
     \label{geo-poi-ftime}
 }% 
 \hfill
  \subfloat[]{
-    \includegraphics[width=0.41\textwidth]{fig/section6/pt-poi-ftime.png}
+    \includegraphics[width=0.47\textwidth]{fig/section6/pt-poi-ftime.png}
     \label{pt-poi-ftime}
 }% 
 \caption{兴趣点数量对运行时间的影响。 \subref{geo-poi-ftime}:Geolife； \subref{pt-poi-ftime}:波尔图}
@@ -598,12 +599,12 @@ $。
 \begin{figure}[tb]
     \centering
     \subfloat[]{
-    \includegraphics[width=0.4\textwidth]{fig/section6/geo-I-ftime.png}
+    \includegraphics[width=0.46\textwidth]{fig/section6/geo-I-ftime.png}
     \label{geo-I-ftime}
 }% 
 \hfill
  \subfloat[]{
-    \includegraphics[width=0.4\textwidth]{fig/section6/pt-I-ftime.png}
+    \includegraphics[width=0.46\textwidth]{fig/section6/pt-I-ftime.png}
     \label{pt-I-ftime}
 }% 
 \caption{时间段对运行时间的影响。 \subref{geo-I-ftime}:Geolife； \subref{pt-I-ftime}:波尔图}
@@ -617,12 +618,12 @@ $。
 \begin{figure}[htp]
     \centering
     \subfloat[]{
-    \includegraphics[width=0.4\textwidth]{fig/section6/geo-ep-ftime.png}
+    \includegraphics[width=0.46\textwidth]{fig/section6/geo-ep-ftime.png}
     \label{geo-ep-ftime}
 }% 
 \hfill
  \subfloat[]{
-    \includegraphics[width=0.43\textwidth]{fig/section6/pt-ep-ftime.png}
+    \includegraphics[width=0.49\textwidth]{fig/section6/pt-ep-ftime.png}
     \label{pt-ep-ftime}
 }% 
 \caption{放宽参数对运行时间的影响。 \subref{geo-ep-ftime}:Geolife；\subref{pt-ep-ftime}:波尔图}
