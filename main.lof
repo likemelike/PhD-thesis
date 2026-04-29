@@ -4,8 +4,8 @@
 \cftsetpnumwidth {\widthof {12}-1bp}
 \contentsline {figure}{\numberline {1-2}{\ignorespaces 本研究组织结构}}{12}{figure.caption.7}%
 \addvspace {10\p@ }
-\cftsetpnumwidth {\widthof {15}-1bp}
-\contentsline {figure}{\numberline {2-1}{\ignorespaces 轨迹与路线示例}}{15}{figure.caption.8}%
+\cftsetpnumwidth {\widthof {16}-1bp}
+\contentsline {figure}{\numberline {2-1}{\ignorespaces 轨迹与路线示例}}{16}{figure.caption.8}%
 \cftsetpnumwidth {\widthof {19}-1bp}
 \contentsline {figure}{\numberline {2-2}{\ignorespaces 基于位置的路线搜索与基于关键词的路线搜索示例}}{19}{figure.caption.9}%
 \addvspace {10\p@ }
@@ -39,8 +39,8 @@
 \addvspace {10\p@ }
 \cftsetpnumwidth {\widthof {54}-1bp}
 \contentsline {figure}{\numberline {4-1}{\ignorespaces 伴随群体发现问题示例 \textcolor {red}{\ttfamily (空间距离阈值$\epsilon $为10米，联合移动的最小联合移动时长阈值为3分钟，伴随群体规模阈值为3)}}}{54}{figure.caption.23}%
-\cftsetpnumwidth {\widthof {62}-1bp}
-\contentsline {figure}{\numberline {4-2}{\ignorespaces 轨迹网格编号及网格编号序列示例}}{62}{figure.caption.26}%
+\cftsetpnumwidth {\widthof {61}-1bp}
+\contentsline {figure}{\numberline {4-2}{\ignorespaces 轨迹网格编号及网格编号序列示例}}{61}{figure.caption.26}%
 \cftsetpnumwidth {\widthof {66}-1bp}
 \contentsline {figure}{\numberline {4-3}{\ignorespaces 轨迹数目的影响。 \subref {cm_fig:北京数据集-ratios-num} 北京数据集上的命中率 \subref {cm_fig:北京数据集-time-num} 北京数据集上的运行时间 \subref {cm_fig:波尔图数据集-ratios-num} 波尔图数据集上的命中率 \subref {cm_fig:波尔图数据集-time-num} 波尔图数据集上的运行时间}}{66}{figure.caption.29}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{66}{subfigure.3.1}%
@@ -82,12 +82,12 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{87}{subfigure.4.2}%
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{87}{subfigure.4.3}%
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{87}{subfigure.4.4}%
-\cftsetpnumwidth {\widthof {89}-1bp}
-\contentsline {figure}{\numberline {5-5}{\ignorespaces 接触持续时长阈值的影响。\subref {contact_北京-k-CE} 北京数据集上暴露接触案例数量；\subref {contact_北京-k-CPU} 北京数据集上算法运行时间；\subref {contact_波尔图-k-CE} 波尔图数据集上暴露接触案例数量；\subref {contact_波尔图-k-CPU} 波尔图数据集上算法运行时间}}{89}{figure.caption.42}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{89}{subfigure.5.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{89}{subfigure.5.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{89}{subfigure.5.3}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{89}{subfigure.5.4}%
+\cftsetpnumwidth {\widthof {88}-1bp}
+\contentsline {figure}{\numberline {5-5}{\ignorespaces 接触持续时长阈值的影响。\subref {contact_北京-k-CE} 北京数据集上暴露接触案例数量；\subref {contact_北京-k-CPU} 北京数据集上算法运行时间；\subref {contact_波尔图-k-CE} 波尔图数据集上暴露接触案例数量；\subref {contact_波尔图-k-CPU} 波尔图数据集上算法运行时间}}{88}{figure.caption.42}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{88}{subfigure.5.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{88}{subfigure.5.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{88}{subfigure.5.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{88}{subfigure.5.4}%
 \cftsetpnumwidth {\widthof {89}-1bp}
 \contentsline {figure}{\numberline {5-6}{\ignorespaces 近似算法的评估。\subref {AGP-Q} 变化查询对象数目；\subref {AGP-ep} 变化接触阈值 }}{89}{figure.caption.43}%
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{89}{subfigure.6.1}%
