@@ -1,0 +1,18 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.lof
+*.log
+*.lot
+*.nlo
+*.out
+*.synctex.gz
+*.toc
+main.pdf
+main.fls
+main.run.xml
+
+# macOS metadata
+.DS_Store
+**/.DS_Store
